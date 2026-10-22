@@ -5,8 +5,8 @@
    recorded in LAB.miss so tools/check_pages.py can fail on it. */
 (function(){
   const PAGES=[
-    ['home','index.html','처음','Home'],
-    ['map','map.html','연구 아키텍처','Architecture'],
+    ['home','index.html','홈','Home'],
+    ['map','map.html','연구 분야','Research'],
     ['maia','maia.html','MAIA 진단','MAIA check'],
     ['record','record.html','실적','Track record'],
     ['open','open.html','개발 현황','Development'],
