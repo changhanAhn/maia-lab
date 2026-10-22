@@ -1,6 +1,6 @@
 /* Shared research content. Map state belongs to map.html, not this object. */
 (function(){
-const ST={sub:['투고','Submitted','#9fb8d0'],rev:['심사 중','In review','#c9a96e'],fix:['수정 중','Revising','#b4b1aa'],pre:['사전등록','Pre-registered','#8fae9a'],run:['운영 중','In use','#8fae9a'],dev:['진행 중','In progress','#b4b1aa'],win:['수상','Award','#b9a37a'],open:['공개','Open','#9fb8d0']};
+const ST={sub:['접수','Received','#9fb8d0'],rev:['심사 중','In review','#c9a96e'],fix:['수정 중','Revising','#b4b1aa'],pre:['사전등록','Pre-registered','#8fae9a'],run:['운영 중','In use','#8fae9a'],dev:['진행 중','In progress','#b4b1aa'],win:['수상','Award','#b9a37a'],open:['공개','Open','#9fb8d0']};
 const TR=[
   {id:'A',c:'#b9a37a',ko:'AI 적용성',en:'AI applicability',q:[['작업별','AI·사람 배분'],['Task allocation','between AI and people']],
    wko:'작업마다 점수와 관문으로 AI·협업·사람을 가립니다.',wen:'Scores and gates decide AI, together, or a person for each task.',
