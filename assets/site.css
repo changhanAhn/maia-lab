@@ -1,0 +1,108 @@
+:root{
+  --bg:#0f1318;--panel:#151a21;--line:rgba(236,232,225,.11);--txt:#ece8e1;--mute:#8d929b;
+  --brass:#b9a37a;--ai:#7fa3c7;--co:#c9a96e;--hu:#b77a6f;--sage:#8fae9a;
+  --head:"IBM Plex Sans KR","Malgun Gothic",sans-serif;--mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans KR",-apple-system,"Segoe UI","Malgun Gothic",sans-serif;-webkit-font-smoothing:antialiased;overflow:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+.stage{position:fixed;inset:0;display:grid;place-items:center;background:var(--bg)}
+.page{position:absolute;width:1280px;height:720px;transform-origin:center;overflow:hidden}
+/* top bar */
+.top{position:absolute;left:56px;right:56px;top:0;height:56px;display:flex;align-items:center;gap:18px;border-bottom:1px solid var(--line);z-index:5}
+.brand{display:flex;flex-shrink:0;align-items:center;gap:10px;font-family:var(--head);font-weight:600;letter-spacing:.3px;font-size:14px;white-space:nowrap}
+.brand svg{width:20px;height:20px}
+.brand small{font-size:10.5px;letter-spacing:0;font-weight:500;color:var(--mute)}
+.menu{flex:1;min-width:0;display:flex;justify-content:flex-end;gap:16px;font-size:12px;color:var(--mute);font-weight:500;white-space:nowrap}
+.menu a{padding:4px 0;border-bottom:1px solid transparent}
+.menu a:hover{color:var(--txt)}
+.menu a.on{color:var(--txt);border-bottom-color:var(--acc)}
+.menu a.soon{opacity:.4;pointer-events:none}
+.lang{display:flex;flex-shrink:0;gap:2px;font-size:12px;font-weight:600}
+.lang button{border:0;background:none;color:var(--mute);cursor:pointer;padding:3px 6px}
+.lang button.on{color:var(--txt)}
+/* common type */
+.kicker{font-size:11.5px;font-weight:600;letter-spacing:3.2px;color:var(--acc);text-transform:uppercase}
+.h2{margin:12px 0 0;font-family:var(--head);font-size:34px;line-height:1.25;letter-spacing:-.8px;font-weight:600}
+.h2 em{font-style:normal;color:var(--acc)}
+.lead{margin:12px 0 0;font-size:15px;color:#b4b1aa;line-height:1.6}
+.card{border-radius:4px;background:var(--panel);border:1px solid var(--line);padding:18px 20px;position:relative;overflow:hidden}
+.ck{font-size:11px;font-weight:600;letter-spacing:2px;color:var(--mute);display:flex;align-items:center;gap:8px;text-transform:uppercase}
+.foot{position:absolute;left:56px;right:56px;bottom:12px;height:40px;display:flex;align-items:center;gap:14px;border-top:1px solid var(--line);padding-top:10px;font-size:12px;color:var(--mute)}
+.foot a{font-weight:600;color:#cfcbc4}
+.foot .r{margin-left:auto}
+.ld{width:7px;height:7px;border-radius:50%;background:var(--sage);animation:ping 2.4s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(143,174,154,.5)}100%{box-shadow:0 0 0 8px rgba(143,174,154,0)}}
+.rise{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.pill{display:inline-block;font-size:11px;font-weight:600;padding:3px 10px;border-radius:2px;white-space:nowrap;border:1px solid;letter-spacing:.3px}
+/* Japanese and Chinese: Noto Sans JP / SC are loaded by site.js only when chosen */
+html[lang="ja"]{--head:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif}
+html[lang="zh-Hans"]{--head:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif}
+html[lang="ja"] body{font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif}
+html[lang="zh-Hans"] body{font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif}
+.foot .mt{font-size:11px;color:#6b7078}
+.mt.float{position:absolute;right:56px;top:66px;font-size:11px;color:#6b7078}
+/* Fact profiles and collaboration routes share the same one-screen frame. */
+.info-head{position:absolute;left:56px;top:80px;width:1168px}
+.info-grid{position:absolute;left:56px;top:200px;width:1168px;height:440px;display:grid;grid-template-columns:1fr 1.35fr;gap:18px}
+.info-grid .card{padding:24px}
+.info-grid h3,.routes h3{font-size:21px;font-weight:600;line-height:1.4;margin:10px 0 16px;color:var(--txt)}
+.facts{margin:0;display:grid;gap:16px}
+.facts dt{font-size:11px;color:var(--acc);margin-bottom:5px}
+.facts dd{font-size:14px;line-height:1.65;margin:0;color:#c8c7c4}
+.info-grid p{font-size:14px;line-height:1.7;color:#b4b1aa;margin:10px 0 18px}
+.info-links{display:flex;gap:20px;font-size:13px;margin-top:22px;color:var(--acc)}
+.contact-link{display:inline-block;border:1px solid color-mix(in srgb,var(--acc) 50%,transparent);padding:10px 14px;border-radius:3px;color:var(--acc);font-size:13px;font-weight:600}
+.contact-link:hover,.contact-link:focus-visible{background:color-mix(in srgb,var(--acc) 10%,transparent)}
+.routes{position:absolute;left:56px;top:200px;width:1168px;height:346px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.routes .card{display:flex;flex-direction:column;padding:24px}
+.routes p{font-size:14px;line-height:1.65;color:#b4b1aa;margin:0 0 16px}
+.routes .inputs{font-size:12px;line-height:1.65;color:var(--mute)}
+.routes .contact-link{margin-top:auto;align-self:flex-start}
+.work-flow{position:absolute;left:56px;top:568px;width:1168px;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px;font-size:13px;color:#b4b1aa;border-top:1px solid var(--line)}
+.work-flow a{color:var(--acc);white-space:nowrap}
+/* Research areas: question, procedure, scope and the existing outputs. */
+.area-head{position:absolute;left:56px;top:80px;width:1168px}
+.area-head .lead{margin-top:8px}
+.area-nav{position:absolute;right:56px;top:76px;display:flex;gap:6px}
+.area-nav a{display:grid;place-items:center;width:32px;height:28px;border:1px solid var(--line);border-radius:3px;font:12px var(--mono);color:var(--mute)}
+.area-nav a[aria-current]{color:var(--acc);border-color:var(--acc)}
+.area-nav a:focus-visible,.area-entry:focus-visible{outline:2px solid var(--acc);outline-offset:4px}
+.area-content{position:absolute;left:56px;top:212px;width:1168px;height:428px;display:grid;grid-template-columns:760px 390px;gap:18px}
+.area-main{display:grid;grid-template-rows:270px 140px;gap:18px}
+.area-process{padding:22px}
+.area-process>p{font-size:14px;line-height:1.65;color:#b4b1aa;margin:14px 0 20px;min-height:46px}
+.area-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.area-steps li{position:relative;min-height:112px;padding:16px 14px;border:1px solid var(--line);border-radius:3px;background:rgba(236,232,225,.025)}
+.area-steps li+li:before{content:'→';position:absolute;left:-19px;top:44px;color:var(--acc)}
+.area-steps small{display:block;font-size:11px;color:var(--acc);margin-bottom:12px}
+.area-steps strong{display:block;font-size:15px;line-height:1.5;font-weight:600}
+.area-boundary{padding:20px 22px}
+.area-boundary p{font-size:14px;color:#c8c7c4;line-height:1.6;margin:12px 0 10px}
+.area-boundary small{font-size:11px;color:var(--mute)}
+.area-products{display:flex;flex-direction:column;padding:22px}
+#area-products{display:flex;flex-direction:column;gap:12px;margin-top:18px}
+.area-output{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:start;border-bottom:1px solid var(--line);padding-bottom:12px;font-size:13px;line-height:1.5}
+.area-output a{text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--acc) 60%,transparent);text-underline-offset:4px}
+.area-output .pill{font-size:10px;padding:2px 6px}
+.area-products>.contact-link{margin-top:auto;align-self:flex-start}
+.p:target{outline:1px solid var(--acc);outline-offset:2px}
+
+/* Page accent. Muted tones at about the brass lightness; the brand mark stays brass on
+   every page and colours that encode data (series, map core) do not follow the accent. */
+:root{--acc:var(--brass)}
+body[data-page="map"]{--acc:#9fb8d0}
+body[data-page="maia"]{--acc:#7fa3c7}
+body[data-page="record"]{--acc:#c9a96e}
+body[data-page="open"]{--acc:#8fae9a}
+body[data-page="data"]{--acc:#7fb3ad}
+body[data-page="work"]{--acc:#c4907c}
+body[data-page="about"]{--acc:#aa9cc6}
+body[data-area="A"]{--acc:#7fa3c7}
+body[data-area="B"]{--acc:#c4907c}
+body[data-area="C"]{--acc:#cdb06a}
+body[data-area="D"]{--acc:#8fae9a}
+body[data-area="E"]{--acc:#aa9cc6}
+.page{background:radial-gradient(760px 360px at 100% 0,color-mix(in srgb,var(--acc) 9%,transparent),transparent 72%)}

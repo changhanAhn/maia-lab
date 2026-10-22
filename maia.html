@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MAIA check — AI for Energy &amp; Manufacturing Lab</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=20261022i">
+<style>
+.head{position:absolute;left:56px;top:68px;width:1168px}
+.head .ck{color:var(--acc);font-size:12px}
+.left{position:absolute;left:56px;top:186px;width:660px;height:466px;display:flex;flex-direction:column;padding:14px 20px}
+.right{position:absolute;left:732px;top:186px;width:492px;height:466px;display:flex;flex-direction:column;background:var(--panel);border-color:color-mix(in srgb,var(--acc) 35%,transparent)}
+.prow{display:flex;align-items:center;gap:10px}
+.prow .ck{font-size:11px;white-space:nowrap}
+.presets{display:flex;flex-wrap:wrap;gap:5px}
+.presets button{border:1px solid var(--line);background:transparent;border-radius:2px;padding:3px 9px;font-size:11.5px;font-weight:700;color:#cbd5e1;cursor:pointer}
+.presets button:hover,.presets button.on{border-color:var(--acc);color:#ece8e1;background:color-mix(in srgb,var(--acc) 12%,transparent)}
+.qs{margin-top:8px;display:flex;flex-direction:column}
+.q{display:grid;grid-template-columns:200px 1fr;align-items:center;gap:12px;height:48px;border-bottom:1px solid var(--line)}
+.q:last-child{border-bottom:0}
+.q .lb{font-size:13px;font-weight:700;line-height:1.25;white-space:nowrap}
+.q .lb b{font-family:var(--mono);font-weight:500;color:var(--acc);margin-right:6px}
+.q .lb i{font-style:normal;font-size:10px;font-weight:700;color:var(--hu);border:1px solid rgba(183,122,111,.6);border-radius:2px;padding:0 5px;margin-left:6px;vertical-align:1px}
+.q .lb small{display:block;font-weight:500;color:var(--mute);font-size:11px;margin-top:2px}
+.seg{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:2px;overflow:hidden}
+.seg button{border:0;border-left:1px solid var(--line);background:transparent;font-size:11.5px;font-weight:700;padding:7px 2px;cursor:pointer;color:var(--mute);white-space:nowrap}
+.seg button:first-child{border-left:0}
+.seg button:hover{color:#ece8e1}
+.seg button.on{background:#ece8e1;color:#0f1318}
+.seg.gate button.on[data-i="3"]{background:#b77a6f;color:#160b09}
+.vk{font-size:11px;font-weight:600;letter-spacing:2.4px;color:var(--acc)}
+.verdict{font-family:var(--head);font-size:40px;font-weight:600;letter-spacing:-.6px;margin-top:6px;line-height:1.05;transition:color .3s}
+.why{font-size:13.5px;line-height:1.55;color:#cbd5e1;margin-top:10px;min-height:63px}
+.rgrid{display:grid;grid-template-columns:176px 1fr;gap:16px;align-items:center;margin-top:4px}
+#radar{width:176px;height:176px}
+.meta{font-family:var(--mono);font-size:12.5px;color:#cbd5e1;line-height:1.8}
+.meta b{color:#fff}
+.flag{display:inline-block;margin-top:6px;font-size:11.5px;font-weight:600;color:#c9a96e;border:1px solid rgba(201,169,110,.5);border-radius:2px;padding:2px 9px;opacity:0;transition:opacity .3s}
+.flag.on{opacity:1}
+.scale{position:relative;height:6px;border-radius:0;margin-top:auto;background:linear-gradient(90deg,#b77a6f 0 50%,#c9a96e 50% 75%,#7fa3c7 75% 100%)}
+.scale i{position:absolute;top:-8px;width:2px;height:22px;background:#ece8e1;transform:translateX(-1px);transition:left .4s cubic-bezier(.2,.8,.2,1),opacity .3s}
+.scale-l{position:relative;height:16px;font-size:11.5px;color:#94a3b8;margin-top:8px}
+.scale-l span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+.scale-l span:first-child{transform:none}.scale-l span:last-child{transform:translateX(-100%)}
+.warn{font-size:11.5px;color:var(--mute);line-height:1.5;margin-top:10px}
+.foot .r a{color:var(--acc)}
+</style>
+</head>
+<body data-page="maia">
+<div class="stage" id="stage"><div class="page" id="page">
+
+  <div class="head">
+    <div class="ck" data-ko="MAIA 진단 · 직접 해 보기" data-en="MAIA CHECK · TRY IT"></div>
+    <div class="h2" data-ko="MAIA <em>작업 배분</em> 진단" data-en="MAIA <em>task allocation</em> check"></div>
+    <p class="lead" data-ko="내 업무 하나를 떠올리고 8문항에 답하면, 가중합 점수로 AI·협업·사람 중 하나를 제안합니다. C7·C8이 가장 높은 단계면 점수와 관계없이 사람이 맡습니다." data-en="Think of one task and answer eight questions; a weighted score proposes AI, AI with a person, or a person. If C7 or C8 is at its highest level, a person takes it regardless of score."></p>
+  </div>
+
+  <div class="card left">
+    <div class="prow">
+      <div class="ck" data-ko="예시 작업" data-en="EXAMPLES"></div>
+      <div class="presets" id="pr"></div>
+    </div>
+    <div class="qs" id="qs"></div>
+  </div>
+
+  <div class="card right">
+    <div class="vk" data-ko="제안 배분" data-en="PROPOSED ALLOCATION"></div>
+    <div class="verdict" id="verdict" aria-live="polite"></div>
+    <div class="why" id="why" aria-live="polite"></div>
+    <div class="rgrid">
+      <svg id="radar" viewBox="0 0 200 200" aria-hidden="true"></svg>
+      <div class="meta" id="meta"></div>
+    </div>
+    <div class="scale"><i id="marker"></i></div>
+    <div class="scale-l"><span style="left:0" data-ko="사람" data-en="Person"></span><span style="left:50%">0.50</span><span style="left:62.5%" data-ko="협업" data-en="Together"></span><span style="left:75%">0.75</span><span style="left:100%">AI</span></div>
+    <div class="warn" data-ko="공개 MAIA 자가진단과 같은 문항·가중치·관문입니다. 결과는 계획 제안이며 실행 권한이 아닙니다. 입력은 이 브라우저 밖으로 나가지 않습니다." data-en="Same questions, weights and gates as the public MAIA self-diagnosis. The result is a planning proposal, not execution authority. Inputs never leave this browser."></div>
+  </div>
+
+  <div class="foot"><a href="index.html" data-ko="← 처음으로" data-en="← Home"></a><span>Esc</span><span class="r"><a id="full" target="_blank" rel="noopener" data-ko="공개 MAIA 자가진단 열기 ↗" data-en="Open the public MAIA self-diagnosis ↗"></a></span></div>
+
+</div></div>
+<script src="assets/i18n.js?v=20261022i"></script>
+<script src="assets/site.js?v=20261022i"></script>
+<script>
+(function(){
+const L=window.LAB,NS='http://www.w3.org/2000/svg';
+// Same engine as the public self-diagnosis (changhanAhn/maia-diagnosis, diagnosis.html):
+// weighted sum of eight answers, C7/C8 inverted, and either one at its top option (1.0) is a gate.
+// o = [short label, full option text] per language pair; s = option score.
+const DIMS=[
+  {c:'C1',w:.20,n:['규칙·구조','Rules'],q:['정해진 규칙대로 하나','Done by fixed rules?'],s:[0,.3,.6,.9],
+   o:[['감·경험','Intuition','정해진 규칙 없이 사람의 감·경험으로 한다','Done purely by human intuition / experience, no fixed rules'],
+      ['일부 문서','Some docs','대체로 경험으로 하되 일부 기준·문서가 있다','Mostly experience, with some standards or documents'],
+      ['양식·기준','Checklist','정해진 양식·기준·체크리스트대로 한다','Done by a defined form, standard, or checklist'],
+      ['코드·수식','Code rules','수식·코드·데이터 규칙으로 완전히 정해져 있다','Fully defined by formulas, code, or data rules']]},
+  {c:'C2',w:.15,n:['정보 완전성','Information'],q:['정보가 시스템에 다 있나','Is the information all on file?'],s:[0,.4,.7,1],
+   o:[['현장 위주','On site','현장에 가야만 알 수 있는 게 많다','Much of it can only be known on-site'],
+      ['시스템+현장','Systems + site','일부는 시스템에, 일부는 현장 확인이 필요하다','Part in systems, part needs on-site verification'],
+      ['대부분 문서','Mostly docs','대부분 서류·화면으로 확인된다','Mostly verifiable through documents / screens'],
+      ['전부 디지털','All digital','모든 정보가 파일·시스템에 디지털로 있다','All information lives digitally in files / systems']]},
+  {c:'C3',w:.20,n:['보편성','Commonality'],q:['다른 곳에서도 흔한 일인가','Common elsewhere?'],s:[0,.3,.6,.8],
+   o:[['우리만','Only us','우리 회사만의 아주 특수한 일이다','Highly specific to our company'],
+      ['가끔','Sometimes','업계에서 가끔 보이는 일이다','Occasionally seen in the industry'],
+      ['업종 공통','Industry-wide','같은 업종이면 대부분 하는 일이다','Most companies in the same industry do it'],
+      ['어디서나','Everywhere','업종 불문 어디서나 하는 표준 업무다','A standard task done everywhere across industries']]},
+  {c:'C4',w:.15,n:['디지털화','Digital'],q:['주로 무엇으로 하나','Mostly done with?'],s:[0,.3,.6,.9],
+   o:[['손·기계','Hands','몸으로 하는 현장 작업이다 (손·기계)','Physical work on-site (hands / machines)'],
+      ['종이·전화','Paper, phone','종이·전화·대면 위주로 한다','Mostly paper, phone, or face-to-face'],
+      ['프로그램','Software','컴퓨터 프로그램으로 한다 (엑셀·사내 시스템 등)','Computer programs (Excel, internal systems, etc.)'],
+      ['여러 시스템','Many systems','여러 시스템을 오가며 디지털로만 한다','Across multiple digital systems only']]},
+  {c:'C5',w:.10,n:['결과 검증','Verification'],q:['결과를 어떻게 확인하나','How is the result checked?'],s:[0,.3,.6,.9],
+   o:[['현장 확인','On site','현장에서 직접 물건·설비를 봐야 안다','Must inspect the physical thing / equipment on-site'],
+      ['눈으로 검토','By eye','담당자가 눈으로 일일이 검토한다','A person manually reviews every item by eye'],
+      ['일부 자동','Partly auto','일부는 숫자·시스템이 자동으로 걸러준다','Some auto-filtering by numbers / systems'],
+      ['자동 검증','Auto-checked','시스템이 맞는지 자동으로 검증해준다','A system automatically verifies correctness']]},
+  {c:'C6',w:.10,n:['오류 영향','Error impact'],q:['실수하면 어떻게 되나','What if it goes wrong?'],s:[0,.3,.6,.9],
+   o:[['안전사고','Safety risk','안전사고·설비 파손으로 이어진다','Could cause a safety incident or equipment damage'],
+      ['고객 피해','Customer harm','서비스 중단·고객 피해가 생긴다','Causes service disruption or customer harm'],
+      ['재작업','Rework','재작업이 필요하다 (안전과는 무관)','Requires rework (no safety implications)'],
+      ['거의 무해','Harmless','거의 무해하고 금방 바로잡는다','Nearly harmless, easily corrected']]},
+  {c:'C7',w:.05,inv:1,gate:1,n:['물리 의존성','Physical work'],q:['손으로 하는 물리 작업','Hands-on physical work?'],s:[0,.4,.7,1],
+   o:[['없음','None','없다 — 컴퓨터·서류상으로만 이뤄진다','None — only happens on computers / paper'],
+      ['가끔','Sometimes','가끔 현장에서 물건·설비를 직접 확인·조작해야 한다','Occasionally need to physically inspect or operate something on-site'],
+      ['상당 부분','Much','상당 부분 사람이 직접 다뤄야 한다','A significant portion must be done by hand'],
+      ['대부분','Mostly','대부분 사람 손 작업이다 (조립·배선·운반·계측 등)','Mostly hands-on work (assembly, wiring, transport, measurement, etc.)']]},
+  {c:'C8',w:.05,inv:1,gate:1,n:['안전·법적 판단','Safety & legal'],q:['법적·안전 책임 판단','Legal or safety accountability?'],s:[0,.3,.7,1],
+   o:[['불필요','None','필요 없다 — 일반 사무 결과물이다','Not required — ordinary office output'],
+      ['검토·컨펌','Review','AI가 만들고 사람이 검토·컨펌하면 된다','AI generates, a human reviews and confirms'],
+      ['공식 승인','Approval','법적·안전상 사람의 공식 승인이 꼭 필요하다','Formal human approval is legally / safety-wise required'],
+      ['단독 책임','Sole liability','사람이 법적·안전 책임을 단독 판단해야 한다 (서명 등)','A human must independently bear legal / safety responsibility (e.g. signature)']]}
+];
+// why a dimension holds a task back (low) or helps it (high); same wording as the public engine
+const LOW=[['정해진 규칙 없이 사람의 감으로 하는 점','work runs on intuition rather than rules'],['현장에 가야만 알 수 있는 정보가 많은 점','much of the information is only on site'],['우리 회사만의 특수한 일이라는 점','the task is specific to one company'],['컴퓨터가 아니라 현장·종이로 처리하는 점','it is done on site or on paper, not on a computer'],['결과가 맞는지 사람이 직접 확인해야 하는 점','a person has to check every result'],['실수가 큰 사고로 이어질 수 있는 점','a mistake can lead to a serious accident'],['사람 손이 꼭 필요한 작업인 점','it needs human hands'],['사람이 직접 책임지고 판단해야 하는 점','a person must take responsibility for the call']];
+const HIGH=[['업무가 규칙·문서로 잘 정리돼 있는 점','the work is well defined by rules and documents'],['필요한 정보를 화면으로 다 볼 수 있는 점','all the information is on screen'],['어디서나 하는 보편적인 일이라는 점','it is a common task everywhere'],['이미 컴퓨터·시스템으로 하고 있는 점','it already runs on computers and systems'],['결과를 시스템이 자동으로 확인해 주는 점','a system checks the result automatically'],['실수가 나도 크게 위험하지 않은 점','a mistake is not dangerous'],['손으로 하는 작업이 거의 없는 점','there is almost no hands-on work'],['안전·법적 판단 부담이 적은 점','there is little safety or legal burden']];
+// same illustrative tasks as the home animation, answered with the engine's options
+const PRESETS=[
+  {ko:'외관 검사 판정',en:'Visual inspection call',a:[2,3,2,3,2,2,0,1]},
+  {ko:'PLC 로그 대조',en:'PLC log conformance',a:[3,3,2,3,3,2,0,1]},
+  {ko:'15분 전력 계획',en:'15-min power plan',a:[3,3,1,3,2,1,0,1]},
+  {ko:'불량 원인 분석',en:'Defect root cause',a:[1,2,2,2,1,2,1,1]},
+  {ko:'센서 결선',en:'Sensor wiring',a:[2,2,2,0,0,0,3,1]},
+  {ko:'안전 정지 최종 승인',en:'Safety-stop sign-off',a:[2,2,2,2,1,0,1,3]}
+];
+const ans=new Array(DIMS.length).fill(null);
+const pr=document.getElementById('pr'),qs=document.getElementById('qs');
+
+let preset=-1;  // highlighted example, kept across language redraws
+function drawPresets(){pr.innerHTML='';PRESETS.forEach((p,i)=>{const b=document.createElement('button');b.textContent=L.T(p.ko,p.en);b.classList.toggle('on',i===preset);b.onclick=()=>load(i);pr.appendChild(b)})}
+function pick(k,i){ans[k]=i;mark(k);preset=-1;pr.querySelectorAll('button').forEach(x=>x.classList.remove('on'));update()}
+function drawQuestions(){
+  qs.innerHTML='';
+  DIMS.forEach((d,k)=>{
+    const row=document.createElement('div');row.className='q';
+    const id='q'+k;
+    // one radio group per question; the full option text is the accessible name, the short label is what fits
+    row.innerHTML='<div class="lb" id="'+id+'"><b>'+d.c+'</b>'+L.T(d.n[0],d.n[1])+(d.gate?'<i>'+L.T('관문','GATE')+'</i>':'')+'<small>'+L.T(d.q[0],d.q[1])+'</small></div>'
+      +'<div class="seg'+(d.gate?' gate':'')+'" role="radiogroup" aria-labelledby="'+id+'">'
+      +d.o.map((o,i)=>'<button role="radio" data-i="'+i+'" title="'+L.T(o[2],o[3])+'" aria-label="'+L.T(o[2],o[3])+'">'+L.T(o[0],o[1])+'</button>').join('')+'</div>';
+    const seg=row.querySelector('.seg');
+    seg.addEventListener('click',e=>{const b=e.target.closest('button');if(b)pick(k,+b.dataset.i)});
+    seg.addEventListener('keydown',e=>{
+      const step={ArrowRight:1,ArrowDown:1,ArrowLeft:-1,ArrowUp:-1}[e.key];if(!step)return;
+      e.preventDefault();const i=((ans[k]===null?(step>0?-1:0):ans[k])+step+4)%4;pick(k,i);seg.children[i].focus();
+    });
+    qs.appendChild(row);mark(k);
+  });
+}
+function mark(k){qs.children[k].querySelectorAll('.seg button').forEach(b=>{const i=+b.dataset.i,on=i===ans[k];b.classList.toggle('on',on);b.setAttribute('aria-checked',on);b.tabIndex=(ans[k]===null?i===0:on)?0:-1})}
+function load(i){preset=i;PRESETS[i].a.forEach((v,k)=>{ans[k]=v;mark(k)});pr.querySelectorAll('button').forEach((b,j)=>b.classList.toggle('on',j===i));update()}
+
+// radar: one axis per question, inverted dimensions drawn as "AI-friendliness" like the score
+const R=document.getElementById('radar'),cx=100,cy=100,RR=70,N=DIMS.length;
+function pt(i,r){const a=-Math.PI/2+i*2*Math.PI/N;return [cx+Math.cos(a)*r,cy+Math.sin(a)*r]}
+const ring=k=>[...Array(N).keys()].map(i=>pt(i,RR*k).join(',')).join(' ');
+for(let k=1;k<=4;k++){const p=document.createElementNS(NS,'polygon');p.setAttribute('points',ring(k/4));p.setAttribute('fill','none');p.setAttribute('stroke','rgba(255,255,255,'+(k===4?.25:.1)+')');R.appendChild(p)}
+const thr=document.createElementNS(NS,'polygon');thr.setAttribute('points',ring(.75));thr.setAttribute('fill','none');thr.setAttribute('stroke','rgba(127,163,199,.55)');thr.setAttribute('stroke-dasharray','3 4');R.appendChild(thr);
+const poly=document.createElementNS(NS,'polygon');poly.setAttribute('fill','rgba(185,163,122,.22)');poly.setAttribute('stroke','#b9a37a');poly.setAttribute('stroke-width','1.4');R.appendChild(poly);
+DIMS.forEach((d,i)=>{const [x,y]=pt(i,RR+15);const t=document.createElementNS(NS,'text');t.setAttribute('x',x);t.setAttribute('y',y+4);t.setAttribute('text-anchor','middle');t.setAttribute('font-size','11');t.setAttribute('font-weight','600');t.setAttribute('fill',d.gate?'#b77a6f':'#b9a37a');t.textContent=d.c;R.appendChild(t)});
+let cur=new Array(N).fill(0),target=cur.slice();
+(function anim(){cur=cur.map((v,i)=>v+(target[i]-v)*.18);poly.setAttribute('points',cur.map((v,i)=>pt(i,RR*v).join(',')).join(' '));requestAnimationFrame(anim)})();
+
+function update(){
+  const eff=DIMS.map((d,k)=>ans[k]===null?null:(d.inv?1-d.s[ans[k]]:d.s[ans[k]]));
+  target=eff.map(v=>v===null?0:v);
+  const vEl=document.getElementById('verdict'),why=document.getElementById('why'),meta=document.getElementById('meta'),mk=document.getElementById('marker');
+  const MN={ai:L.T('AI가 수행','AI does it'),co:L.T('사람과 AI 협업','Together'),hu:L.T('전문가 판단 필요','Specialist review')};
+  const COL={ai:'#7fa3c7',co:'#c9a96e',hu:'#b77a6f'};
+  const left=ans.filter(v=>v===null).length;
+  if(left){
+    vEl.textContent='—';vEl.style.color='#94a3b8';
+    why.textContent=L.T('8문항을 모두 고르면 배분이 나옵니다. 남은 문항: ','Answer all eight questions to see the allocation. Remaining: ')+left;
+    meta.innerHTML='S = —';mk.style.opacity=0;return;
+  }
+  const gated=DIMS.filter((d,k)=>d.gate&&d.s[ans[k]]===1);
+  // like the public engine, a fired gate means no score at all
+  const S=gated.length?null:Math.round(DIMS.reduce((a,d,k)=>a+eff[k]*d.w,0)*1000)/1000;
+  const mode=gated.length?'hu':S>=.75?'ai':S>=.5?'co':'hu',d=S===null?null:Math.min(Math.abs(S-.5),Math.abs(S-.75));
+  // the dimension that holds the task back most / helps it most (ties go to the heavier weight)
+  const idx=DIMS.map((x,k)=>k);
+  const lo=idx.slice().sort((a,b)=>eff[a]-eff[b]||DIMS[b].w-DIMS[a].w)[0];
+  const hi=idx.slice().sort((a,b)=>eff[b]-eff[a]||DIMS[b].w-DIMS[a].w)[0];
+  let t;
+  if(gated.length)t=L.T('관문 작동: ','Gate fired: ')+gated.map(x=>x.c+' '+L.T(x.n[0],x.n[1])).join(', ')+L.T('. 관문은 어떤 점수보다 앞섭니다.','. Gates override any score.');
+  else if(mode==='ai')t=L.T('AI가 맡아 처리할 수 있는 일입니다. 사람은 결과를 확인합니다. 유리한 점: ','AI can take this on; a person checks the result. In its favour: ')+L.T(HIGH[hi][0],HIGH[hi][1])+'.';
+  else if(mode==='co')t=L.T('AI가 초안을 만들고, 사람이 확인하고 결정합니다.','AI drafts; a person checks and decides.')+' '+L.T('가장 걸리는 점: ','Main obstacle: ')+L.T(LOW[lo][0],LOW[lo][1])+'.';
+  else t=L.T('사람의 손이 큰 영역입니다. 업무를 나누면 협업으로 올라갈 수 있습니다. 가장 걸리는 점: ','Human hands carry most of this; split the task and parts may move up to Together. Main obstacle: ')+L.T(LOW[lo][0],LOW[lo][1])+'.';
+  vEl.textContent=MN[mode];vEl.style.color=COL[mode];why.textContent=t;
+  const gates=L.T('관문: ','Gates: ')+(gated.length?gated.map(x=>x.c).join(' · '):L.T('통과','clear'));
+  if(S===null){mk.style.opacity=0;meta.innerHTML='S = —<br>'+gates;return}
+  mk.style.opacity=1;mk.style.left=(S*100)+'%';
+  meta.innerHTML='S = <b>'+S.toFixed(3)+'</b><br>d = '+d.toFixed(2)+L.T(' (가까운 임계값까지)',' (to nearest threshold)')+'<br>'+gates+'<br><span class="flag'+(d<.05?' on':'')+'">'+L.T('임계값 근처 · 사람 검토','near threshold · human review')+'</span>';
+}
+function setFull(){const l=L.lang();document.getElementById('full').href='https://changhanahn.github.io/maia-diagnosis/'+(l==='ko'?'diagnosis.html':'en.html')}
+L.onLang.push(()=>{drawPresets();drawQuestions();update();setFull()});
+drawPresets();drawQuestions();update();setFull();
+})();
+</script>
+</body>
+</html>
