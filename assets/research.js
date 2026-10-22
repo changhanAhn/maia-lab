@@ -16,7 +16,7 @@ const TR=[
    leaves:[['로봇 공장 마이크로그리드 계층형 에너지 관리','Hierarchical energy management for a robotic factory microgrid','rev'],['PV·ESS·라인 부하 트윈','PV · storage · line-load twin','dev'],['엣지 AI 부하 전력 계측','Edge-AI load power measurement','dev']],short:[['마이크로그리드 EMS','Microgrid EMS'],['PV·ESS 트윈','PV·ESS twin'],['엣지 AI 부하','Edge-AI load']]},
   {id:'E',c:'#8fae9a',ko:'교육·기술이전',en:'Education',q:[['판단 기준의','교육·이전'],['Teaching and','transferring the rules']],
    wko:'검증된 방법을 수업과 실습으로 옮깁니다.',wen:'We turn verified methods into courses and hands-on work.',
-   leaves:[['비전공자 PLC·비전·데이터 실습','Hands-on PLC, vision and data for non-majors','run'],['학생 포트폴리오','Student portfolios','run'],['2026 MECA KOREA CUP 최우수상(지도)','2026 MECA KOREA CUP Grand Prize (advisor)','win']],short:[['비전공 실습','Hands-on courses'],['학생 포트폴리오','Student portfolios'],['MECA 최우수상','MECA Grand Prize']]}
+   leaves:[['비전공자 PLC·비전·데이터 실습','Hands-on PLC, vision and data for non-majors','run'],['학생 포트폴리오','Student portfolios','run'],['재직자·직업계고 PLC 교육(중소벤처기업진흥공단)','PLC training for workers and vocational students (KOSME)','run']],short:[['비전공 실습','Hands-on courses'],['학생 포트폴리오','Student portfolios'],['재직자 교육','Industry training']]}
 ];
 
 
@@ -161,13 +161,13 @@ const EXTRA={
       ]
     ],
     "limit": [
-      "수업·실습과 지도 수상 사례입니다. 학습 산출물은 설비 성능의 증거와 구분합니다.",
-      "These are teaching, practice and advising cases. Learning outputs are distinct from evidence of equipment performance."
+      "수업·실습과 대외 교육 사례입니다. 학습 산출물은 설비 성능의 증거와 구분합니다.",
+      "These are teaching, practice and outside training cases. Learning outputs are distinct from evidence of equipment performance."
     ],
     "links": [
       null,
       null,
-      "record.html#award"
+      null
     ],
     "action": [
       "data.html",
