@@ -14,13 +14,36 @@
 <meta property="og:url" content="https://changhanahn.github.io/maia-lab/about.html">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=20261023c">
+<link rel="stylesheet" href="assets/site.css?v=20261023e">
 <style>
-/* the PI card carries five facts; tighter rhythm than the shared two-fact layout */
-.info-grid .card:first-child h3{margin:6px 0 10px}
-.info-grid .card:first-child .facts{gap:9px}
-.info-grid .card:first-child .facts dt{margin-bottom:2px}
-.info-grid .card:first-child .facts dd{font-size:13px;line-height:1.5}
+/* PI card: three facts, career split into current and former */
+.info-grid .card:first-child h3{margin:6px 0 14px}
+.info-grid .card:first-child .facts{gap:22px}
+.info-grid .card:first-child .facts dt{margin-bottom:5px}
+.info-grid .card:first-child .facts dd{font-size:13.5px;line-height:1.6;word-break:keep-all}
+.facts .cr{display:grid;grid-template-columns:32px 1fr;gap:6px;margin-bottom:9px}
+.facts .cr:last-child{margin-bottom:0}
+/* English runs longer (thesis title, role names): tighter rhythm keeps the card on one screen */
+html[lang="en"] .info-grid .card:first-child .facts{gap:12px}
+html[lang="en"] .info-grid .card:first-child .facts dd{font-size:12.5px;line-height:1.5}
+html[lang="en"] .facts .cr{margin-bottom:5px}
+html[lang="en"] .info-grid .card:first-child h3{margin:4px 0 10px}
+html[lang="en"] .dogrid a{padding:8px 14px}
+html[lang="en"] .do .say{margin-bottom:10px}
+.facts .cr b{font-weight:600;color:var(--acc);font-size:12px;line-height:1.65}
+.facts .cr small{display:block;font-size:12px;color:var(--mute)}
+/* what the lab does: statement, four lines of work, contact */
+.info-grid .card.do{display:flex;flex-direction:column}
+.info-grid .card.do h3{margin:6px 0 10px}
+.do .say{font-size:13.5px;line-height:1.65;color:#c8c7c4;margin:0 0 12px}
+.dogrid{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.dogrid a{display:flex;flex-direction:column;gap:4px;padding:10px 14px;border:1px solid var(--line);border-radius:3px;background:rgba(236,232,225,.025);transition:border-color .25s,background .25s}
+.dogrid a:hover,.dogrid a:focus-visible{outline:none;border-color:color-mix(in srgb,var(--acc) 55%,transparent);background:color-mix(in srgb,var(--acc) 7%,transparent)}
+.dogrid small{font:11px var(--mono);color:var(--acc)}
+.dogrid strong{font-size:14.5px;font-weight:600;color:var(--txt)}
+.dogrid span{font-size:12px;line-height:1.5;color:#b4b1aa}
+.do .bottom{display:flex;align-items:center;gap:22px}
+.do .bottom .info-links{margin-top:0}
 </style>
 </head>
 <body data-page="about">
@@ -35,25 +58,22 @@
       <div class="ck" data-ko="연구책임자" data-en="PRINCIPAL INVESTIGATOR"></div>
       <h3 data-ko="안창한 · Changhan Ahn" data-en="Changhan Ahn · 안창한"></h3>
       <dl class="facts">
-        <div><dt data-ko="소속·직위" data-en="AFFILIATION · ROLE"></dt><dd data-ko="한국폴리텍대학 대구캠퍼스<br>이차전지시스템과 부교수" data-en="Daegu Campus of Korea Polytechnics<br>Secondary Battery Systems · Associate Professor"></dd></div>
-        <div><dt data-ko="학위" data-en="EDUCATION"></dt><dd data-ko="경북대학교 학사·석사·박사<br>박사 전공 전력계통" data-en="Kyungpook National University · BS, MS, PhD<br>PhD in power systems"></dd></div>
-        <div><dt data-ko="표준·대외 활동" data-en="STANDARDS · OUTREACH"></dt><dd data-ko="산업표준심의회 IEC TC32(퓨즈류) 대표전문위원<br>IEC TC109(저압전기기기) 전문위원<br>중소벤처기업진흥공단 연수원 강사 · 현대자동차 사외강사" data-en="Lead expert, KS committee for IEC TC32 (fuses)<br>Expert, KS committee for IEC TC109 (low-voltage equipment)<br>Instructor, KOSME training institute · Hyundai Motor Company"></dd></div>
-        <div><dt data-ko="특허" data-en="PATENTS"></dt><dd data-ko="등록 4건 · LG전자 직무발명(발명자)" data-en="4 granted (KR) · LG Electronics, as inventor"></dd></div>
-        <div><dt data-ko="산업 경력" data-en="INDUSTRY"></dt><dd data-ko="LG전자 HA연구소 선행제어연구팀<br>스마트그리드 가전의 Wi-Fi·ZigBee 통신 HW·SW 개발, SEP 1.1·2.0 인증" data-en="LG Electronics · HA R&amp;D Lab, Advanced Control Team<br>Wi-Fi and ZigBee hardware and software for smart-grid appliances; SEP 1.1 and 2.0 certification"></dd></div>
+        <div><dt data-ko="경력" data-en="CAREER" data-ja="経歴" data-zh="经历"></dt><dd><div class="cr"><b data-ko="현" data-en="Now" data-ja="現" data-zh="现"></b><div><span data-ko="한국폴리텍대학 대구캠퍼스 이차전지시스템과 부교수" data-en="Associate Professor, Secondary Battery Systems, Daegu Campus of Korea Polytechnics" data-ja="韓国ポリテク大学 大邱キャンパス 二次電池システム科 准教授" data-zh="韩国理工大学 大邱校区 二次电池系统系 副教授"></span><small data-ko="2017 –" data-en="2017 –" data-ja="2017 –" data-zh="2017 –"></small></div></div><div class="cr"><b data-ko="전" data-en="Prev" data-ja="前" data-zh="前"></b><div><span data-ko="LG전자 HA연구소 선행제어연구팀 주임연구원" data-en="Research Engineer, Advanced Control Team, LG Electronics HA R&amp;D Lab" data-ja="LG電子 HA研究所 先行制御研究チーム 主任研究員" data-zh="LG电子 HA研究所 先行控制研究组 主任研究员"></span><small data-ko="2011 – 2016 · 스마트그리드 가전 통신 개발 · SEP 1.1/2.0 인증" data-en="2011 – 2016 · smart-grid appliance communications · SEP 1.1/2.0 certification" data-ja="2011 – 2016 · スマートグリッド家電の通信開発 · SEP 1.1/2.0認証" data-zh="2011 – 2016 · 智能电网家电通信开发 · SEP 1.1/2.0认证"></small></div></div></dd></div>
+        <div><dt data-ko="학위" data-en="EDUCATION" data-ja="学位" data-zh="学位"></dt><dd data-ko="경북대학교 학사·석사·공학박사(2015)<br>학위논문 「정수선형계획법을 이용한 전력계통 무효전력보상장치의 최적협조제어」" data-en="Kyungpook National University · BS, MS, PhD (2015)<br>Thesis: Optimal Coordination Control of Voltage Between Reactive Power Compensation Devices of Power System Using ILP" data-ja="慶北大学校 学士・修士・工学博士（2015）<br>学位論文「整数線形計画法を用いた電力系統無効電力補償装置の最適協調制御」" data-zh="庆北大学 学士·硕士·工学博士（2015）<br>学位论文《基于整数线性规划的电力系统无功补偿装置最优协调控制》"></dd></div>
+        <div><dt data-ko="대외활동" data-en="ACTIVITIES" data-ja="対外活動" data-zh="对外活动"></dt><dd data-ko="산업표준심의회 IEC TC32(퓨즈류) 대표전문위원<br>산업표준심의회 IEC TC109(저압전기기기) 전문위원<br>중소벤처기업진흥공단 연수원 강사 · 현대자동차 사외강사" data-en="Lead expert, KS committee for IEC TC32 (fuses)<br>Expert, KS committee for IEC TC109 (low-voltage equipment)<br>Instructor, KOSME training institute · Hyundai Motor Company" data-ja="産業標準審議会 IEC TC32（ヒューズ）代表専門委員<br>産業標準審議会 IEC TC109（低圧電気機器）専門委員<br>中小ベンチャー企業振興公団 研修院講師 · 現代自動車 社外講師" data-zh="产业标准审议会 IEC TC32（熔断器）首席专家委员<br>产业标准审议会 IEC TC109（低压电气设备）专家委员<br>中小风险企业振兴公团 研修院讲师 · 现代汽车 外聘讲师"></dd></div>
       </dl>
     </section>
-    <section class="card rise" style="animation-delay:.12s">
+    <section class="card rise do" style="animation-delay:.12s">
       <div class="ck" data-ko="연구실이 하는 일" data-en="WHAT WE DO"></div>
       <h3 data-ko="현장 데이터로 AI의 역할을 정합니다" data-en="Field data decides the role of AI"></h3>
-      <p data-ko="연구 분야는 AI 적용성, 제조·피지컬 AI, 에너지·계통, 에너지와 제조의 연계, 교육·기술이전입니다." data-en="Research areas cover AI applicability, manufacturing and physical AI, energy and power systems, energy–manufacturing links, and education and technology transfer."></p>
-      <p data-ko="실측과 시연을 구분하고, 판단 근거와 한계를 함께 공개합니다. 논문 진행 상태·공개 데이터·개발 기록은 이 사이트에서 바로 확인할 수 있습니다." data-en="We keep measurements apart from demonstrations and publish the evidence and limits behind each decision. Paper status, open data and development records can be checked on this site."></p>
-      <a class="contact-link" href="mailto:chahn@kopo.ac.kr">chahn@kopo.ac.kr ↗</a>
-      <div class="info-links"><a href="record.html" data-ko="실적 →" data-en="Track record →"></a><a href="data.html" data-ko="공개 자료 →" data-en="Data &amp; code →"></a><a href="work.html" data-ko="협업 문의 →" data-en="Discuss collaboration →"></a></div>
+      <p class="say" data-ko="실측과 시연을 구분하고, 판단 근거와 한계를 함께 공개합니다.<br>논문 진행 상태·공개 데이터·개발 기록은 이 사이트에서 바로 확인할 수 있습니다." data-en="We keep measurements apart from demonstrations and publish the evidence and limits behind each decision.<br>Paper status, open data and development records can be checked on this site." data-ja="実測とデモを区別し、判断の根拠と限界をあわせて公開します。<br>論文の進行状況・公開データ・開発記録はこのサイトで確認できます。" data-zh="我们区分实测与演示，并同时公开判断依据与局限。<br>论文进展、公开数据和开发记录都可在本网站查看。"></p>
+      <div class="dogrid"><a href="maia.html"><small>01</small><strong data-ko="작업 배분 진단" data-en="Task allocation check" data-ja="作業配分の診断" data-zh="任务分配诊断"></strong><span data-ko="MAIA로 작업마다 AI·협업·사람 중 누가 맡을지 정합니다." data-en="MAIA decides, task by task, whether AI, a team or a person takes it on." data-ja="MAIAで作業ごとにAI・協働・人のどれが担うかを決めます。" data-zh="用MAIA逐项确定由AI、协作还是人来承担。"></span></a><a href="research-manufacturing.html"><small>02</small><strong data-ko="실설비 검증" data-en="Testing on real equipment" data-ja="実設備での検証" data-zh="真实设备验证"></strong><span data-ko="코인셀 MPS 라인의 PLC·로봇·카메라에서 직접 측정합니다." data-en="We measure on the coin-cell MPS line: PLC, robot and cameras." data-ja="コインセルMPSラインのPLC・ロボット・カメラで直接計測します。" data-zh="在纽扣电池MPS产线的PLC、机器人和相机上直接测量。"></span></a><a href="research-energy.html"><small>03</small><strong data-ko="에너지·계통" data-en="Energy and power systems" data-ja="エネルギー・電力系統" data-zh="能源与电力系统"></strong><span data-ko="제조 마이크로그리드의 요금 구간 제어와 순간 보호를 다룹니다." data-en="Billing-window control and instantaneous protection for manufacturing microgrids." data-ja="製造マイクログリッドの料金時間帯制御と瞬時保護を扱います。" data-zh="研究制造微电网的计费时段控制与瞬时保护。"></span></a><a href="research-education.html"><small>04</small><strong data-ko="교육·기술이전" data-en="Education and transfer" data-ja="教育・技術移転" data-zh="教育与技术转移"></strong><span data-ko="연구 절차를 실습 과정과 기업 협업으로 옮깁니다." data-en="Research procedures move into lab courses and industry work." data-ja="研究手順を実習課程と企業との協働に移します。" data-zh="将研究流程转入实训课程和企业合作。"></span></a></div>
+      <div class="bottom"><a class="contact-link" href="mailto:chahn@kopo.ac.kr">chahn@kopo.ac.kr ↗</a><div class="info-links"><a href="record.html" data-ko="실적 →" data-en="Track record →"></a><a href="data.html" data-ko="공개 자료 →" data-en="Data &amp; code →"></a><a href="work.html" data-ko="협업 문의 →" data-en="Discuss collaboration →"></a></div></div>
     </section>
   </div>
-  <div class="foot"><a href="index.html" data-ko="← 홈으로" data-en="← Home"></a><span>Esc</span><span class="r" data-ko="2026년 10월 22일 기준" data-en="As of 22 October 2026"></span></div>
+  <div class="foot"><a href="index.html" data-ko="← 홈으로" data-en="← Home"></a><span>Esc</span><span class="r" data-ko="2026년 10월 23일 기준" data-en="As of 23 October 2026"></span></div>
 </div></div>
-<script src="assets/i18n.js?v=20261023c"></script>
-<script src="assets/site.js?v=20261023c"></script>
+<script src="assets/i18n.js?v=20261023e"></script>
+<script src="assets/site.js?v=20261023e"></script>
 </body>
 </html>
