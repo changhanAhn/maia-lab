@@ -19,9 +19,12 @@ button{font:inherit;color:inherit}
 .menu a:hover{color:var(--txt)}
 .menu a.on{color:var(--txt);border-bottom-color:var(--acc)}
 .menu a.soon{opacity:.4;pointer-events:none}
-.lang{display:flex;flex-shrink:0;gap:2px;font-size:12px;font-weight:600}
-.lang button{border:0;background:none;color:var(--mute);cursor:pointer;padding:3px 6px}
-.lang button.on{color:var(--txt)}
+/* language tabs: one segmented control, the chosen language filled with the page accent */
+.lang{display:flex;flex-shrink:0;gap:0;padding:2px;border:1px solid var(--line);border-radius:4px;background:rgba(236,232,225,.03);font-size:11.5px;font-weight:600;letter-spacing:.4px}
+.lang button{border:0;background:none;color:var(--mute);cursor:pointer;padding:4px 9px;border-radius:3px;transition:color .2s,background .2s}
+.lang button:hover{color:var(--txt);background:rgba(236,232,225,.05)}
+.lang button.on{color:var(--acc);background:color-mix(in srgb,var(--acc) 16%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--acc) 45%,transparent)}
+.lang button:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
 /* common type */
 .kicker{font-size:11.5px;font-weight:600;letter-spacing:3.2px;color:var(--acc);text-transform:uppercase}
 .h2{margin:12px 0 0;font-family:var(--head);font-size:34px;line-height:1.25;letter-spacing:-.8px;font-weight:600}
@@ -105,4 +108,22 @@ body[data-area="B"]{--acc:#c4907c}
 body[data-area="C"]{--acc:#cdb06a}
 body[data-area="D"]{--acc:#8fae9a}
 body[data-area="E"]{--acc:#aa9cc6}
-.page{background:radial-gradient(760px 360px at 100% 0,color-mix(in srgb,var(--acc) 9%,transparent),transparent 72%)}
+.page{background:
+  radial-gradient(760px 380px at 100% 0,color-mix(in srgb,var(--acc) 15%,transparent),transparent 72%),
+  radial-gradient(620px 300px at 0 100%,color-mix(in srgb,var(--acc) 6%,transparent),transparent 70%)}
+
+/* Page highlight: one accent hairline over the top bar, a lit top edge on each card,
+   the heading's emphasised word in an accent sweep and a short bar before the section label.
+   Kept to the page accent so each page reads in its own colour without competing marks. */
+.page:before{content:'';position:absolute;left:0;right:0;top:0;height:2px;z-index:6;pointer-events:none;
+  background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--acc) 85%,transparent) 30%,var(--acc) 50%,color-mix(in srgb,var(--acc) 85%,transparent) 70%,transparent)}
+.menu a.on{box-shadow:0 6px 10px -8px var(--acc)}
+.card:before{content:'';position:absolute;left:0;right:0;top:0;height:2px;pointer-events:none;
+  background:linear-gradient(90deg,var(--acc),color-mix(in srgb,var(--acc) 35%,transparent) 40%,transparent 75%)}
+.card .ck{color:color-mix(in srgb,var(--acc) 72%,var(--mute))}
+.card{transition:border-color .25s}
+.card:hover{border-color:color-mix(in srgb,var(--acc) 30%,var(--line))}
+.h2 em{background:linear-gradient(100deg,var(--acc),color-mix(in srgb,var(--acc) 55%,#fff));-webkit-background-clip:text;background-clip:text;color:transparent}
+.head>.ck:first-child,.info-head>.ck:first-child,.area-head>.ck:first-child{color:var(--acc)}
+.head>.ck:first-child:before,.info-head>.ck:first-child:before,.area-head>.ck:first-child:before,.kicker:before{content:'';display:inline-block;width:18px;height:2px;margin-right:2px;vertical-align:middle;background:var(--acc);border-radius:1px}
+.head>.ck:has(.status-dot):before{display:none}
