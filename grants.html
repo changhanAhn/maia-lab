@@ -12,9 +12,13 @@
 <meta property="og:title" content="Grants — AI for Energy &amp; Manufacturing Lab">
 <meta property="og:description" content="AI for Energy &amp; Manufacturing Lab, Korea Polytechnics (Daegu). We decide, task by task, what AI should take on in energy and manufacturing sites and verify it on real equipment: papers, open data and code, and the MAIA task-allocation check.">
 <meta property="og:url" content="https://changhanahn.github.io/maia-lab/grants.html">
-<meta name="twitter:card" content="summary">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=20261023e">
+<meta property="og:image" content="https://changhanahn.github.io/maia-lab/media/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI for Energy &amp; Manufacturing Lab">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="assets/site.css?v=20261024a">
 <style>
 .head{position:absolute;left:56px;top:68px;width:1168px}
 .head .ck{color:var(--acc);font-size:12px}
@@ -30,19 +34,18 @@
 .dem .gr{grid-template-columns:62px 1fr;padding:2px 0}
 .dem .gr b{font-size:12px;line-height:1.2}
 .dem .gr small{margin-top:0;line-height:1.25}
-.note{margin-top:6px;padding-top:6px;border-top:1px solid var(--line);font-size:11.5px;color:var(--mute);line-height:1.5}
 .s-sub{color:#9fb8d0;border-color:rgba(159,184,208,.5)}
 .s-rev{color:#c9a96e;border-color:rgba(201,169,110,.5)}
 .s-pre{color:#8fae9a;border-color:rgba(143,174,154,.5)}
 </style>
 </head>
-<body data-page="record">
+<body data-page="record" data-back="record.html">
 <div class="stage" id="stage"><div class="page" id="page">
 
   <div class="head">
-    <div class="ck" data-ko="실적 · 정부과제" data-en="TRACK RECORD · GRANTS"></div>
-    <div class="h2" data-ko="<em>정부과제</em> 진행 현황" data-en="<em>Grant</em> activity"></div>
-    <p class="lead" data-ko="신청·평가가 진행 중인 과제와 제출한 기술수요조사입니다. 일정이 바뀌면 이 표를 고칩니다." data-en="Applications under way and technology demand surveys submitted. The tables are updated as each stage changes."></p>
+    <div class="ck" data-ko="<a class=&quot;up&quot; href=&quot;record.html&quot;>← 실적</a> · 정부과제" data-en="<a class=&quot;up&quot; href=&quot;record.html&quot;>← TRACK RECORD</a> · GRANTS"><a class="up" href="record.html">← 실적</a> · 정부과제</div>
+    <div class="h2" data-ko="<em>정부과제</em> 진행 현황" data-en="<em>Grant</em> activity"><em>정부과제</em> 진행 현황</div>
+    <p class="lead" data-ko="신청·평가가 진행 중인 과제와 제출한 기술수요조사입니다. 일정이 바뀌면 이 표를 고칩니다." data-en="Applications under way and technology demand surveys submitted. The tables are updated as each stage changes.">신청·평가가 진행 중인 과제와 제출한 기술수요조사입니다. 일정이 바뀌면 이 표를 고칩니다.</p>
   </div>
 
   <div class="card run rise">
@@ -53,10 +56,9 @@
   <div class="card dem rise" style="animation-delay:.08s">
     <div class="ck" id="demHead"></div>
     <div class="rows" id="demRows"></div>
-    <div class="note" data-ko="기술수요조사는 다음 연도 사업 기획용 기술 제안으로, 연구비 지원 과제가 아닙니다." data-en="A demand survey proposes a topic for next year's programmes; it is not a funded award."></div>
   </div>
 
-  <div class="foot"><a href="record.html" data-ko="← 실적" data-en="← Track record"></a><span>Esc</span><span class="r" data-ko="2026년 10월 22일 기준" data-en="As of 22 October 2026"></span></div>
+  <div class="foot"><a href="record.html" data-ko="← 실적" data-en="← Track record">← 실적</a><span>Esc</span><span class="r" data-ko="2026년 10월 22일 기준" data-en="As of 22 October 2026">2026년 10월 22일 기준</span></div>
 
 </div></div>
 <script>
@@ -69,7 +71,6 @@ const RUN = [
   ['11/04', 'KEIT 2027 국가표준기술력향상 기술수요조사', 'KEIT 2027 national standards demand survey', 'AI 권고·설비 제어 권한 분리 인터록 적합성 시험', 'conformance test for separating AI advice from control authority', 'pre'],
   ['11/12', '산업부 지역거점 AX 실증(공정·응용 솔루션)', 'MOTIE regional AX demonstration (process solutions)', '공동기관 구성·계획서 작성', 'consortium · plan drafting', 'pre'],
   ['11/23', 'KETEP 2027 에너지기술개발 기술수요조사', 'KETEP 2027 energy technology demand survey', '주제 공시 확인 후 작성', 'drafting after topic notice', 'pre'],
-  ['2027', 'KPX 연구개발과제 · 계통해석모델 검증', 'KPX R&amp;D · grid model validation', '입찰 자격 등록·제안서 준비', 'bid registration · proposal drafting', 'pre'],
   ['2027', 'NRF 개인기초연구', 'NRF basic research', '연구계획 준비', 'research plan drafting', 'pre'],
 ];
 const DEM = [
@@ -85,19 +86,16 @@ const DEM = [
   ['10/15', 'KEIT 제품안전관리기술', 'KEIT product safety', '소형전지 탑재 제품의 안전검사 누락·판정 충돌 방지와 출하 차단 검증', 'Preventing missed safety checks and blocking shipment for small-battery products'],
   ['10/15', 'KETEP 전력정보화·정책지원', 'KETEP power informatics and policy', '직류 수용가의 시설·검사·인증 제도 공백 분석과 제도개선 로드맵', 'Gaps in facility, inspection and certification rules for DC customers'],
 ];
-const ST = {sub:['완료','Done'], rev:['완료','Done'], pre:['준비','Preparing']};
-document.getElementById('runHead').outerHTML = '<div class="ck" data-ko="진행 중 ' + RUN.length + '건" data-en="IN PROGRESS · ' + RUN.length + '" data-ja="進行中 ' + RUN.length + '件" data-zh="进行中 ' + RUN.length + '项"></div>';
-document.getElementById('demHead').outerHTML = '<div class="ck" data-ko="기술수요조사 제출 ' + DEM.length + '건 · 2026" data-en="DEMAND SURVEYS SUBMITTED · ' + DEM.length + ' · 2026" data-ja="技術需要調査 提出 ' + DEM.length + '件 · 2026" data-zh="技术需求调查 已提交 ' + DEM.length + '项 · 2026"></div>';
+const ST = {sub:['제출 완료','Submitted'], rev:['평가 완료','Reviewed'], pre:['준비','Preparing']};
+document.getElementById('runHead').outerHTML = '<div class="ck" data-ko="진행 중 ' + RUN.length + '건" data-en="IN PROGRESS · ' + RUN.length + '" data-ja="進行中 ' + RUN.length + '件" data-zh="进行中 ' + RUN.length + '项">진행 중 ' + RUN.length + '건</div>';
+document.getElementById('demHead').outerHTML = '<div class="ck" data-ko="기술수요조사 제출 ' + DEM.length + '건 · 2026" data-en="DEMAND SURVEYS SUBMITTED · ' + DEM.length + ' · 2026" data-ja="技術需要調査 提出 ' + DEM.length + '件 · 2026" data-zh="技术需求调查 已提交 ' + DEM.length + '项 · 2026">기술수요조사 제출 ' + DEM.length + '건 · 2026</div>';
 document.getElementById('runRows').innerHTML = RUN.map(r =>
-  '<div class="gr"><span class="d">' + r[0] + '</span><div><b data-ko="' + r[1] + '" data-en="' + r[2] + '"></b><small data-ko="' + r[3] + '" data-en="' + r[4] + '"></small></div>' +
-  '<span class="pill s-' + r[5] + '" data-ko="' + ST[r[5]][0] + '" data-en="' + ST[r[5]][1] + '"></span></div>').join('');
+  '<div class="gr"><span class="d">' + r[0] + '</span><div><b data-ko="' + r[1] + '" data-en="' + r[2] + '">' + r[1] + '</b><small data-ko="' + r[3] + '" data-en="' + r[4] + '">' + r[3] + '</small></div>' +
+  '<span class="pill s-' + r[5] + '" data-ko="' + ST[r[5]][0] + '" data-en="' + ST[r[5]][1] + '">' + ST[r[5]][0] + '</span></div>').join('');
 document.getElementById('demRows').innerHTML = DEM.map(r =>
-  '<div class="gr"><span class="d">' + r[0] + '</span><div><b data-ko="' + r[1] + '" data-en="' + r[2] + '"></b><small data-ko="' + r[3] + '" data-en="' + r[4] + '"></small></div></div>').join('');
+  '<div class="gr"><span class="d">' + r[0] + '</span><div><b data-ko="' + r[1] + '" data-en="' + r[2] + '">' + r[1] + '</b><small data-ko="' + r[3] + '" data-en="' + r[4] + '">' + r[3] + '</small></div></div>').join('');
 </script>
-<script src="assets/i18n.js?v=20261023e"></script>
-<script src="assets/site.js?v=20261023e"></script>
-<script>
-document.addEventListener('keydown', e => { if (e.key === 'Escape') { e.stopImmediatePropagation(); location.href = 'record.html'; } }, true);
-</script>
+<script src="assets/i18n.js?v=20261024a"></script>
+<script src="assets/site.js?v=20261024a"></script>
 </body>
 </html>

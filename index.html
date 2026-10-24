@@ -12,9 +12,13 @@
 <meta property="og:title" content="AI for Energy &amp; Manufacturing Lab">
 <meta property="og:description" content="AI for Energy &amp; Manufacturing Lab, Korea Polytechnics (Daegu). We decide, task by task, what AI should take on in energy and manufacturing sites and verify it on real equipment: papers, open data and code, and the MAIA task-allocation check.">
 <meta property="og:url" content="https://changhanahn.github.io/maia-lab/">
-<meta name="twitter:card" content="summary">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=20261023e">
+<meta property="og:image" content="https://changhanahn.github.io/maia-lab/media/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI for Energy &amp; Manufacturing Lab">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="assets/site.css?v=20261024a">
 <style>
 .head{position:absolute;left:56px;top:84px;width:1168px}
 h1{margin:14px 0 0;font-family:var(--head);font-size:40px;line-height:1.2;letter-spacing:-.8px;font-weight:600}
@@ -64,15 +68,26 @@ h1 em{font-style:normal;color:var(--brass)}
 .strip .go a{font-size:12.5px;font-weight:600;border-radius:2px;padding:7px 16px;white-space:nowrap;letter-spacing:.3px}
 .strip .go .m{background:#ece8e1;color:#0f1318}
 .strip .go .o{border:1px solid var(--line);color:#cfcbc4;display:flex;align-items:center;gap:8px}
+/* phones: the allocation animation is unreadable at phone width; keep the text and links */
+@media (max-width:900px),(max-height:500px){
+  #anim{display:none}
+  h1{font-size:30px;letter-spacing:-.5px}
+  .sub{font-size:15px;line-height:1.6}
+  .strip{flex-direction:column;align-items:stretch;gap:0;padding-top:14px}
+  .strip .sk{margin:0 0 4px;padding:9px 0}
+  .br{border-right:0;border-bottom:1px solid var(--line);padding:13px 0;margin:0;font-size:14.5px}
+  .strip .go{margin:18px 0 0;flex-direction:column}
+  .strip .go a{justify-content:center;text-align:center;padding:13px 16px;font-size:14px}
+}
 </style>
 </head>
 <body data-page="home">
 <div class="stage" id="stage"><div class="page" id="page">
 
   <div class="head">
-    <div class="kicker" data-ko="에너지 · 제조 · AI" data-en="ENERGY · MANUFACTURING · AI"></div>
-    <h1 data-ko="에너지·제조 현장에서 AI에 무엇을, <em>어디까지</em> 맡길까" data-en="In energy and manufacturing, what should AI be <em>trusted with?</em>"></h1>
-    <p class="sub" data-ko="작업 단위로 AI 적용 범위를 진단하고, 그 결과를 실제 설비에서 검증합니다." data-en="We assess, task by task, where AI can be applied and verify the assessment on real equipment."></p>
+    <div class="kicker" data-ko="에너지 · 제조 · AI" data-en="ENERGY · MANUFACTURING · AI">에너지 · 제조 · AI</div>
+    <h1 data-ko="에너지·제조 현장에서 AI에 무엇을, <em>어디까지</em> 맡길까" data-en="In energy and manufacturing, what should AI be <em>trusted with?</em>">에너지·제조 현장에서 AI에 무엇을, <em>어디까지</em> 맡길까</h1>
+    <p class="sub" data-ko="작업 단위로 AI 적용 범위를 진단하고, 그 결과를 실제 설비에서 검증합니다." data-en="We assess, task by task, where AI can be applied and verify the assessment on real equipment.">작업 단위로 AI 적용 범위를 진단하고, 그 결과를 실제 설비에서 검증합니다.</p>
   </div>
 
   <svg id="anim" viewBox="0 0 1168 454">
@@ -88,27 +103,27 @@ h1 em{font-style:normal;color:var(--brass)}
     <g id="fly"></g>
     <g class="cap" id="cap">
       <line x1="30" y1="34" x2="62" y2="34" stroke="#b9a37a"/>
-      <text x="74" y="39" font-size="17" font-weight="500" fill="#ece8e1" data-ko="배분 결과(예시): AI 2건 · 협업 2건 · 사람 2건" data-en="Allocation (example): AI 2 · together 2 · person 2"></text>
+      <text x="74" y="39" font-size="17" font-weight="500" fill="#ece8e1" data-ko="배분 결과(예시): AI 2건 · 협업 2건 · 사람 2건" data-en="Allocation (example): AI 2 · together 2 · person 2">배분 결과(예시): AI 2건 · 협업 2건 · 사람 2건</text>
     </g>
   </svg>
 
   <div class="strip">
-    <a class="sk" href="map.html" data-ko="연구 아키텍처" data-en="ARCHITECTURE"></a>
+    <a class="sk" href="map.html" data-ko="연구 분야" data-en="RESEARCH">연구 분야</a>
     <a class="br area-entry" data-area="A" href="research-ai.html"><i></i><span></span></a>
     <a class="br area-entry" data-area="B" href="research-manufacturing.html"><i></i><span></span></a>
     <a class="br area-entry" data-area="C" href="research-energy.html"><i></i><span></span></a>
     <a class="br area-entry" data-area="D" href="research-energy-manufacturing.html"><i></i><span></span></a>
     <a class="br area-entry" data-area="E" href="research-education.html"><i></i><span></span></a>
     <span class="go">
-      <a class="m" href="maia.html" data-ko="MAIA 진단 해 보기 →" data-en="Try MAIA →"></a>
-      <a class="o" href="open.html"><span data-ko="개발 현황" data-en="Development"></span> →</a>
+      <a class="m" href="maia.html" data-ko="MAIA 진단 해 보기 →" data-en="Try MAIA →">MAIA 진단 해 보기 →</a>
+      <a class="o" href="work.html"><span data-ko="문의하기" data-en="Contact">문의하기</span> →</a>
     </span>
   </div>
 
 </div></div>
-<script src="assets/research.js?v=20261023e"></script>
-<script src="assets/i18n.js?v=20261023e"></script>
-<script src="assets/site.js?v=20261023e"></script>
+<script src="assets/research.js?v=20261024a"></script>
+<script src="assets/i18n.js?v=20261024a"></script>
+<script src="assets/site.js?v=20261024a"></script>
 <script>
 (function(){
 const NS='http://www.w3.org/2000/svg',L=window.LAB;
@@ -207,11 +222,11 @@ const BX=984,BW=184,BH=96,BG=14,BY0=RY0;const binInfo={};
   binInfo[k]={x:BX+BW/2,y:y+BH/2,n,count:0};
 });
 const lg=el('text',{x:RX,y:RY0+6*RG+14,'font-size':11.5,fill:'#8b98ad'},bins);
-lg.dataset.ko='점수 S ≥ 0.75 → AI · 0.50~0.75 → 협업 · 관문이 걸리면 점수와 무관하게 사람';
-lg.dataset.en='S ≥ 0.75 → AI · 0.50–0.75 → together · any gate → person, whatever the score';
+lg.dataset.ko='점수 S ≥ 0.75 → AI · 0.50~0.75 → 협업 · 관문(손 작업·법적 책임)이 걸리면 점수와 무관하게 사람';
+lg.dataset.en='S ≥ 0.75 → AI · 0.50–0.75 → together · a gate (hands-on work, legal duty) → person, whatever the score';
 const demo=el('text',{x:RX,y:RY0+6*RG+34,class:'demo'},bins);
-demo.dataset.ko='예시 작업과 예시 점수 · 실측·성능 주장 아님 · MAIA v1.1 운영판 식';
-demo.dataset.en='Illustrative tasks and scores · not measurements · MAIA v1.1 operational rule';
+demo.dataset.ko='MAIA: 작업별 AI 적용성 점수 · HARI: 근거가 모자라면 판정하지 않고(기권) 사람에게 넘김 · 예시 값, 실측 아님';
+demo.dataset.en='MAIA: per-task AI applicability score · HARI: abstains and hands over when evidence is short · illustrative, not measured';
 
 /* ---------- timeline (24 s loop) ---------- */
 let timers=[];

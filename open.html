@@ -12,136 +12,157 @@
 <meta property="og:title" content="Development — AI for Energy &amp; Manufacturing Lab">
 <meta property="og:description" content="AI for Energy &amp; Manufacturing Lab, Korea Polytechnics (Daegu). We decide, task by task, what AI should take on in energy and manufacturing sites and verify it on real equipment: papers, open data and code, and the MAIA task-allocation check.">
 <meta property="og:url" content="https://changhanahn.github.io/maia-lab/open.html">
-<meta name="twitter:card" content="summary">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=20261023e">
+<meta property="og:image" content="https://changhanahn.github.io/maia-lab/media/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI for Energy &amp; Manufacturing Lab">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="assets/site.css?v=20261024a">
 <script src="pulse.js"></script>
+<script src="assets/progress.js?v=20261024a"></script>
 <style>
 .head{position:absolute;left:56px;top:68px;width:1168px}
-.head .ck{color:var(--acc);font-size:12px}
-.upd{position:absolute;right:0;top:0;max-width:760px;font-size:11px;color:var(--mute);font-weight:600;text-align:right}
+.upd{position:absolute;right:0;top:0;font-size:11px;color:var(--mute);font-weight:600;text-align:right}
+/* projects and their steps */
+.track{position:absolute;left:56px;top:178px;width:784px;height:478px;display:flex;flex-direction:column}
+.rows{display:flex;flex-direction:column;margin-top:8px}
+.pr{display:grid;grid-template-columns:232px 1fr;gap:12px;align-items:center;min-height:35px;padding:2px 0;border-top:1px solid rgba(236,232,225,.07)}
+.pr .nm{display:flex;align-items:center;gap:9px;font-size:12.5px;font-weight:600;color:#e2e8f0;line-height:1.3}
+.pr .nm i{flex:none;width:7px;height:7px;border-radius:50%}
+.pr .nm a{color:inherit}
+.chain{display:flex;align-items:center;gap:4px 6px;flex-wrap:wrap}
+.stp{display:flex;align-items:baseline;gap:5px;font-size:11.5px;color:var(--mute);white-space:nowrap}
+.stp b{font-weight:500}
+.stp small{font-family:var(--mono);font-size:10.5px;color:#6b7078}
+.chain .sep{font-style:normal;color:#4b5058}
+.stp.done b{color:#b4b1aa}
+.stp.now b{color:var(--acc);font-weight:700}
+.stp.now{padding:1px 7px;border:1px solid color-mix(in srgb,var(--acc) 55%,transparent);border-radius:3px}
+.stp.next{opacity:.55}
+/* recent outputs and the commit record */
+.side{position:absolute;left:856px;top:178px;width:368px;height:478px;display:flex;flex-direction:column;gap:12px}
+.recent{flex:1;min-height:0}
+.ev{display:grid;grid-template-columns:44px 1fr;gap:10px;padding:7px 0;border-top:1px solid rgba(236,232,225,.07);font-size:12px;line-height:1.4}
+.ev em{font-style:normal;font-family:var(--mono);font-size:11px;color:var(--acc)}
+.ev b{font-weight:600;color:#e2e8f0}
+.ev span{color:var(--mute)}
+.work{height:176px;display:flex;flex-direction:column}
+.work .fresh{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--mute);margin-top:6px}
 .status-dot{width:7px;height:7px;border-radius:50%;background:var(--mute)}
 .status-dot[data-state="current"]{background:var(--sage)}
 .status-dot[data-state="delayed"]{background:var(--brass)}
 .status-dot[data-state="error"]{background:var(--hu)}
-.kpis{position:absolute;left:56px;top:178px;width:1168px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.kpi{height:128px}
-.kpi small{display:block;font-size:12px;color:var(--mute);font-weight:700;letter-spacing:.3px}
-.kpi b{display:block;font-family:var(--mono);font-size:36px;font-weight:500;letter-spacing:-.8px;font-variant-numeric:tabular-nums;margin-top:6px;line-height:1.05}
-.kpi i{display:block;font-style:normal;font-size:12px;font-weight:700;margin-top:8px;white-space:nowrap}
-.kpi i.up{color:#8fae9a}.kpi i.n{color:#94a3b8}
-.kpi.tok b{color:#ece8e1}
-.charts{position:absolute;left:56px;top:320px;width:1168px;height:280px;display:grid;grid-template-columns:1.25fr 1fr .95fr;gap:14px}
-.chart{display:flex;flex-direction:column}
-.chart svg{flex:1;width:100%;margin-top:10px}
-.leg{display:flex;gap:14px;font-size:11.5px;color:var(--mute);margin-top:6px}
-.leg i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:-1px}
-.feed{display:flex;flex-direction:column;gap:8px;margin-top:10px}
-.fi{display:grid;grid-template-columns:10px 1fr auto;gap:10px;align-items:start;opacity:0;transform:translateY(6px);transition:all .45s}
-.fi.on{opacity:1;transform:none}
-.fi i{width:6px;height:6px;border-radius:50%;background:#7fa3c7;margin-top:6px}
-.fi:first-child i{background:#8fae9a}
-.fi b{display:block;font-size:12.5px;font-weight:600;color:#ece8e1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:215px}
-.fi span{display:block;font-size:11.5px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:215px}
-.fi em{font-style:normal;font-size:11px;color:var(--mute);white-space:nowrap}
-.note{position:absolute;left:56px;top:612px;width:1168px;font-size:11.5px;color:var(--mute);line-height:1.6}
+.work svg{flex:1;width:100%;margin-top:6px}
+@media (max-width:900px),(max-height:500px){
+  .upd{position:static;text-align:left;margin-top:6px}
+  .pr{grid-template-columns:1fr;gap:6px;padding:10px 0}
+  .pr .nm a{display:inline-block;padding:8px 0}
+  .side{gap:14px}
+  .work{height:auto}
+  .work svg{flex:none;height:140px}
+}
 </style>
 </head>
 <body data-page="open">
 <div class="stage" id="stage"><div class="page" id="page">
 
   <div class="head">
-    <div class="ck"><span class="status-dot" id="freshDot"></span><span id="freshLabel"></span></div>
-    <div class="h2" data-ko="<em>개발</em> 현황" data-en="<em>Development</em> activity"></div>
-    <p class="lead" data-ko="커밋 수, AI 토큰 사용량, 3AI 교차 질의 건수를 연구실 개발 기록에서 집계합니다. 출처와 집계 범위는 아래에 적습니다." data-en="Commit counts, AI token use and three-AI cross-check counts are aggregated from the lab's development records. Sources and scope are listed below."></p>
+    <div class="ck" data-ko="개발 현황" data-en="DEVELOPMENT">개발 현황</div>
+    <div class="h2" data-ko="무엇을 <em>어디까지</em> 했나" data-en="What is under way, and <em>how far</em> it has come">무엇을 <em>어디까지</em> 했나</div>
+    <p class="lead" data-ko="과제마다 지금 단계를 보여 줍니다. 실적·공개 자료 페이지와 같은 사실과 날짜만 씁니다." data-en="Each project and the step it has reached, using only the facts and dates on the record and data pages.">과제마다 지금 단계를 보여 줍니다. 실적·공개 자료 페이지와 같은 사실과 날짜만 씁니다.</p>
     <div class="upd" id="upd"></div>
   </div>
 
-  <div class="kpis">
-    <div class="card kpi rise"><small data-ko="커밋 · 개발 기록" data-en="Commits"></small><b id="kC">0</b><i class="up" id="kCd"></i></div>
-    <div class="card kpi tok rise" style="animation-delay:.08s"><small data-ko="AI 토큰 · 최근 30일" data-en="AI tokens · last 30 days"></small><b id="kT">0</b><i class="up" id="kTd"></i></div>
-    <div class="card kpi rise" style="animation-delay:.16s"><small data-ko="3AI 교차 질의" data-en="Three-AI cross-checks"></small><b id="kA">0</b><i class="n" id="kAd"></i></div>
-    <a href="data.html" class="card kpi rise" style="animation-delay:.24s;display:block"><small data-ko="공개 데이터·코드" data-en="Open data & code"></small><b id="kD">0</b><i class="n" data-ko="Zenodo DOI · 공개 자료 보기 →" data-en="Zenodo DOI · see data →"></i></a>
+  <div class="card track rise">
+    <div class="ck" data-ko="과제 · 진행 단계" data-en="PROJECTS · STEPS">과제 · 진행 단계</div>
+    <div class="rows" id="rows"><div class="pr"><div class="nm">인라인 검사 엔진</div><div class="chain"><span class="stp done"><b>라인 실측</b> <small>2026-10-15</small></span> → <span class="stp done"><b>데이터 공개</b> <small>2026-10-15</small></span> → <span class="stp done"><b>투고</b> <small>2026-10-15</small></span> → <span class="stp now"><b>심사 중</b></span></div></div><div class="pr"><div class="nm">반복 검사 정밀도</div><div class="chain"><span class="stp done"><b>데이터 공개</b> <small>2026-10-11</small></span> → <span class="stp done"><b>투고</b> <small>2026-10-11</small></span> → <span class="stp now"><b>심사 중</b></span></div></div><div class="pr"><div class="nm">래더 적합성 검사</div><div class="chain"><span class="stp done"><b>사전등록</b></span> → <span class="stp done"><b>라인 실측</b> <small>2026-10-17</small></span> → <span class="stp done"><b>데이터 공개</b> <small>2026-10-17</small></span> → <span class="stp now"><b>투고 준비</b></span></div></div><div class="pr"><div class="nm">MAIA 적용성 지수</div><div class="chain"><span class="stp done"><b>투고</b> <small>2026-09-19</small></span> → <span class="stp now"><b>수정 중</b></span></div></div><div class="pr"><div class="nm">비보상 관문 계약</div><div class="chain"><span class="stp done"><b>투고</b> <small>2026-09-20</small></span> → <span class="stp now"><b>접수</b></span></div></div><div class="pr"><div class="nm">마이크로그리드 계층형 에너지 관리</div><div class="chain"><span class="stp done"><b>투고</b> <small>2026-09-25</small></span> → <span class="stp now"><b>심사 중</b></span></div></div><div class="pr"><div class="nm">공정 이벤트 동기 전력 분해</div><div class="chain"><span class="stp now"><b>설계</b></span> → <span class="stp next"><b>실측</b></span></div></div><div class="pr"><div class="nm">PV·ESS·라인 부하 트윈</div><div class="chain"><span class="stp now"><b>진행 중</b></span></div></div><div class="pr"><div class="nm">엣지 AI 부하 전력 계측</div><div class="chain"><span class="stp now"><b>진행 중</b></span></div></div><div class="pr"><div class="nm">코인셀 시험 라인</div><div class="chain"><span class="stp now"><b>운영 중</b></span></div></div><div class="pr"><div class="nm">비전공자 PLC·비전·데이터 실습</div><div class="chain"><span class="stp now"><b>운영 중</b></span></div></div></div>
   </div>
 
-  <div class="charts">
-    <div class="card chart rise" style="animation-delay:.3s">
-      <div class="ck" data-ko="AI 토큰 · 최근 14일" data-en="AI TOKENS · LAST 14 DAYS"></div>
-      <div class="leg"><span><i style="background:#b9a37a"></i>Claude Code</span><span><i style="background:#7fa3c7"></i>Codex</span></div>
-      <svg id="cTok" viewBox="0 0 460 190" preserveAspectRatio="none"></svg>
+  <div class="side">
+    <div class="card recent rise" style="animation-delay:.08s">
+      <div class="ck" data-ko="최근 산출물" data-en="RECENT OUTPUTS">최근 산출물</div>
+      <div id="recent"></div>
     </div>
-    <div class="card chart rise" style="animation-delay:.38s">
-      <div class="ck" data-ko="커밋 · 최근 14일" data-en="COMMITS · LAST 14 DAYS"></div>
-      <div class="leg"><span id="cWeek"></span></div>
-      <svg id="cCom" viewBox="0 0 370 190" preserveAspectRatio="none"></svg>
-    </div>
-    <div class="card chart rise" style="animation-delay:.46s">
-      <div class="ck" data-ko="최근 개발 기록" data-en="RECENT ACTIVITY"></div>
-      <div class="feed" id="feed"></div>
+    <div class="card work rise" style="animation-delay:.16s">
+      <div class="ck" data-ko="작업 기록 · 최근 14일 커밋" data-en="WORK LOG · COMMITS, LAST 14 DAYS">작업 기록 · 최근 14일 커밋</div>
+      <div class="fresh"><span class="status-dot" id="freshDot"></span><span id="freshLabel"></span></div>
+      <svg id="cCom" viewBox="0 0 330 100" preserveAspectRatio="none"></svg>
     </div>
   </div>
 
-  <div class="note"><span data-ko="출처: 이 저장소 git·3AI 호출 원장, 이 PC의 모든 프로젝트 Claude Code·Codex 기록. 캐시 읽기 포함, Gemini 토큰 제외. 기록된 사용량만 집계하며 성과 지표가 아닙니다. 기간 집계 방식 v2: 이벤트 시각 기준." data-en="Sources: this repository's git and three-AI ledger; recorded Claude Code and Codex sessions across all projects on this PC. Includes cache reads, excludes Gemini tokens. Recorded usage measures effort. Period method v2 uses event timestamps."></span><br><span id="coverage"></span></div>
-
-  <div class="foot"><a href="index.html" data-ko="← 홈으로" data-en="← Home"></a><span>Esc</span><span class="r" data-ko="연구실 개발 기록에서 직접 집계" data-en="Counted directly from the lab's records"></span></div>
+  <div class="foot"><a href="index.html" data-ko="← 홈으로" data-en="← Home">← 홈으로</a><span>Esc</span><span class="r" data-ko="단계는 실적·공개 자료와 같은 기준 · 커밋은 하루 1회 갱신" data-en="Steps follow the record and data pages · commits refresh once a day">단계는 실적·공개 자료와 같은 기준 · 커밋은 하루 1회 갱신</span></div>
 
 </div></div>
-<script src="assets/i18n.js?v=20261023e"></script>
-<script src="assets/site.js?v=20261023e"></script>
+<script src="assets/research.js?v=20261024a"></script>
+<script src="assets/i18n.js?v=20261024a"></script>
+<script src="assets/site.js?v=20261024a"></script>
 <script>
 (function(){
-const L=window.LAB,NS='http://www.w3.org/2000/svg';
-let P=window.PULSE,shown={c:0,t:0,a:0,d:0},reloadFailed=false;
+const L=window.LAB,NS='http://www.w3.org/2000/svg',G=window.PROGRESS,R=window.RESEARCH;
+const tr=a=>L.T(a[0],a[1],a[2],a[3]);
+const md=iso=>iso?(+iso.slice(5,7))+'/'+(+iso.slice(8,10)):'';
+const STATE={done:['완료','done','完了','已完成'],now:['현재 단계','current step','現在の段階','当前阶段'],next:['예정','next','予定','计划中']};
+function drawProjects(){
+  const rows=document.getElementById('rows');rows.innerHTML='';
+  G.projects.forEach(p=>{
+    const area=R.areas.find(a=>a.id===p.leaf[0]),row=document.createElement('div');row.className='pr';
+    // a paper links to its row on the record page, anything else to its research area
+    const u=new URL(p.rec?'record.html#'+p.rec:area.href,location.href);u.searchParams.set('lang',L.lang());
+    row.innerHTML='<div class="nm"><i style="background:'+area.c+'"></i><a></a></div><div class="chain"></div>';
+    const a=row.querySelector('a');a.href=u.href;a.textContent=tr(p.name);
+    const chain=row.querySelector('.chain');
+    p.steps.forEach(([k,date,state],i)=>{
+      if(i){const sep=document.createElement('i');sep.className='sep';sep.textContent='→';sep.setAttribute('aria-hidden','true');chain.appendChild(sep)}
+      const s=document.createElement('span');s.className='stp '+state;
+      // screen readers hear whether a step is done, current or still ahead
+      s.innerHTML='<b></b>'+(date?'<small>'+md(date)+'</small>':'')+'<span class="sr"></span>';s.querySelector('b').textContent=tr(G.steps[k]);
+      s.querySelector('.sr').textContent=' ('+tr(STATE[state])+')';if(state==='now')s.setAttribute('aria-current','step');chain.appendChild(s)});
+    rows.appendChild(row);
+  });
+  // newest dated steps across all projects; one line per project and day
+  const ev=[];G.projects.forEach(p=>p.steps.forEach(([k,date,state])=>{if(!date||state==='next')return;
+    const same=ev.find(e=>e.date===date&&e.p===p);if(same)same.step+=' · '+tr(G.steps[k]);else ev.push({date,p,name:tr(p.name),step:tr(G.steps[k])})}));
+  ev.sort((a,b)=>a.date<b.date?1:a.date>b.date?-1:0);
+  const box=document.getElementById('recent');box.innerHTML='';
+  ev.slice(0,6).forEach(e=>{const d=document.createElement('div');d.className='ev';d.innerHTML='<em></em><div><b></b> <span></span></div>';
+    d.querySelector('em').textContent=md(e.date);d.querySelector('b').textContent=e.name;d.querySelector('span').textContent='· '+e.step;box.appendChild(d)});
+  document.getElementById('upd').textContent=L.T('단계 기준 ','Steps as of ','段階の基準日 ','阶段基准日 ')+G.asof;
+}
+let P=window.PULSE,reloadFailed=false;
 function valid(p){
-  const nums=a=>Array.isArray(a)&&a.length===14&&a.every(n=>Number.isFinite(n)&&n>=0);
   const iso=s=>typeof s==='string'&&Number.isFinite(Date.parse(s));
-  return p&&p.schema_version===2&&p.commits&&p.tokens&&p.agents&&p.coverage&&p.period
-    &&[p.commits.total,p.commits.day,p.commits.week,p.tokens.d30,p.tokens.d1,p.agents.total,p.datasets,p.coverage.skipped_records].every(n=>Number.isFinite(n)&&n>=0)
-    &&nums(p.commits.spark14)&&nums(p.tokens.claude14)&&nums(p.tokens.codex14)
-    &&Array.isArray(p.tokens.days14)&&p.tokens.days14.length===14&&p.tokens.days14.every(s=>/^\d{4}-\d{2}-\d{2}$/.test(s))
-    &&Array.isArray(p.commits.feed)&&p.commits.feed.every(x=>typeof x.ko==='string'&&typeof x.en==='string'&&Number.isFinite(Date.parse(x.t)))
-    &&iso(p.generated_at)&&iso(p.period.start30)&&iso(p.period.end);
+  return p&&p.schema_version===2&&p.commits&&p.period
+    &&[p.commits.total,p.commits.day,p.commits.week].every(n=>Number.isFinite(n)&&n>=0)
+    &&Array.isArray(p.commits.spark14)&&p.commits.spark14.length===14&&p.commits.spark14.every(n=>Number.isFinite(n)&&n>=0)
+    &&iso(p.generated_at)&&iso(p.period.end);
 }
 if(!valid(P))P=null;
 function el(tag,attrs,parent){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e}
-function countFrom(node,from,to,ms,fmt){const t0=performance.now();(function f(n){const k=Math.min(1,(n-t0)/ms);const e=1-Math.pow(1-k,3);node.textContent=fmt(from+(to-from)*e);if(k<1)requestAnimationFrame(f)})(t0)}
-function dayLabel(iso){const d=new Date(iso+'T00:00:00');return (d.getMonth()+1)+'/'+d.getDate()}
-function bars(svg,series,colors,W,Hh){
-  svg.innerHTML='';const n=series[0].length,max=Math.max(1,...series[0].map((_,i)=>series.reduce((a,s)=>a+s[i],0)));
-  const bw=W/n,base=Hh-18;
-  for(let g=1;g<=3;g++)el('line',{x1:0,x2:W,y1:base-(base-6)*g/3,y2:base-(base-6)*g/3,stroke:'rgba(148,163,184,.12)'},svg);
-  for(let i=0;i<n;i++){let y=base;series.forEach((s,k)=>{const h=(base-6)*s[i]/max;const r=el('rect',{x:i*bw+bw*.18,y:y-h,width:bw*.64,height:Math.max(0,h),rx:2,fill:colors[k],opacity:i===n-1?1:.75},svg);
-      r.style.transformBox='fill-box';r.style.transformOrigin='50% 100%';
-      r.animate([{transform:'scaleY(0)'},{transform:'scaleY(1)'}],{duration:700,delay:300+i*45,easing:'cubic-bezier(.2,.8,.2,1)',fill:'backwards'});y-=h});
-    if(i%2===1||i===n-1){const t=el('text',{x:i*bw+bw/2,y:Hh-3,'text-anchor':'middle','font-size':10,fill:i===n-1?'#ece8e1':'#6b7078'},svg);t.textContent=dayLabel(P.tokens.days14[i])}}
+// Day labels follow the snapshot's own calendar date, not the visitor's time zone.
+function dayLabel(i){const [y,m,dd]=P.period.end.slice(0,10).split('-').map(Number),d=new Date(Date.UTC(y,m-1,dd)-(13-i)*86400000);return (d.getUTCMonth()+1)+'/'+d.getUTCDate()}
+function bars(svg,values,W,Hh){
+  svg.innerHTML='';const n=values.length,max=Math.max(1,...values),bw=W/n,base=Hh-16;
+  for(let i=0;i<n;i++){const h=(base-4)*values[i]/max;
+    el('rect',{x:i*bw+bw*.2,y:base-h,width:bw*.6,height:Math.max(0,h),rx:2,fill:'#8fae9a',opacity:i===n-1?1:.7},svg);
+    // the last label is anchored at the right edge so it is never cut off
+    if(i%3===1||i===n-1){const last=i===n-1,t=el('text',{x:last?W-1:i*bw+bw/2,y:Hh-3,'text-anchor':last?'end':'middle','font-size':10,fill:last?'#ece8e1':'#6b7078'},svg);t.textContent=dayLabel(i)}}
 }
-function render(first){
-  if(!P){['kC','kT','kA','kD'].forEach(id=>document.getElementById(id).textContent='—');tick();return}
-  const c=P.commits,t=P.tokens,a=P.agents;
-  countFrom(document.getElementById('kC'),shown.c,c.total,first?1600:900,v=>L.num(v));
-  countFrom(document.getElementById('kT'),shown.t,t.d30,first?1900:900,L.big);
-  countFrom(document.getElementById('kA'),shown.a,a.total,first?1400:900,v=>L.num(v));
-  countFrom(document.getElementById('kD'),shown.d,P.datasets,first?900:600,v=>Math.round(v));
-  shown={c:c.total,t:t.d30,a:a.total,d:P.datasets};
-  document.getElementById('kCd').textContent=L.T('최근 24시간 +'+c.day+' · 7일 +'+c.week,'24h +'+c.day+' · 7d +'+c.week,'直近24時間 +'+c.day+' · 7日 +'+c.week,'近24小时 +'+c.day+' · 7天 +'+c.week);
-  document.getElementById('kTd').textContent=L.T('최근 24시간 +'+L.big(t.d1),'Last 24h +'+L.big(t.d1),'直近24時間 +'+L.big(t.d1),'近24小时 +'+L.big(t.d1));
-  document.getElementById('kAd').textContent='Codex '+L.num(a.codex)+' · Claude '+L.num(a.claude)+' · Gemini '+L.num(a.gemini);
-  bars(document.getElementById('cTok'),[t.claude14,t.codex14],['#b9a37a','#7fa3c7'],460,190);
-  bars(document.getElementById('cCom'),[c.spark14],['#8fae9a'],370,190);
-  document.getElementById('cWeek').textContent=L.T('7일 '+c.week+'회 · 최근 24시간 '+c.day+'회',c.week+' in 7d · '+c.day+' in 24h','7日 '+c.week+'件 · 直近24時間 '+c.day+'件','7天 '+c.week+'次 · 近24小时 '+c.day+'次');
-  const f=document.getElementById('feed');f.innerHTML='';
-  c.feed.slice(0,5).forEach((x,i)=>{const d=document.createElement('div');d.className='fi';d.innerHTML='<i></i><div><b>'+L.T(x.ko,x.en)+'</b>'+(x.text&&(L.lang()==='ko'||!/[가-힣]/.test(x.text))?'<span>'+x.text.replace(/</g,'&lt;')+'</span>':'')+'</div><em data-t="'+x.t+'">'+L.ago(x.t)+'</em>';f.appendChild(d);setTimeout(()=>d.classList.add('on'),400+i*140)});
+function drawWork(){
+  const cc=document.getElementById('cCom');
+  if(!P){cc.innerHTML='';tick();return}
+  // draw at the chart's own size so the axis text is never stretched
+  const cw=Math.max(200,Math.round(cc.clientWidth||330)),ch=Math.max(80,Math.round(cc.clientHeight||100));cc.setAttribute('viewBox','0 0 '+cw+' '+ch);
+  bars(cc,P.commits.spark14,cw,ch);
   tick();
 }
 function tick(){
   const state=reloadFailed?'error':L.freshness(P);
   document.getElementById('freshDot').dataset.state=state;
   const labels={current:['최근 집계','Recent snapshot'],delayed:['갱신 지연','Update delayed'],stale:['오래된 집계','Old snapshot'],unknown:['집계 확인 불가','Snapshot unavailable'],error:['재독 실패 · 이전 집계','Reload failed · previous snapshot']};
-  document.getElementById('freshLabel').textContent=L.T(...labels[state]);
-  const date=iso=>iso.replace('T',' ').replace(/:\d{2}(?:\.\d+)?(?=Z|[+-]\d{2}:\d{2}$)/,'');
-  document.getElementById('upd').textContent=P?date(P.generated_at)+' · '+(state==='unknown'?'—':L.ago(P.generated_at)):'';
-  document.getElementById('coverage').textContent=P?L.T('하루 일과 후 하루 1회 갱신 · 제외 기록 '+P.coverage.skipped_records+'건','Updated once a day after work · excluded records: '+P.coverage.skipped_records,'1日の作業終了後に1回更新 · 除外記録 '+P.coverage.skipped_records+'件','每天工作结束后更新一次 · 排除记录 '+P.coverage.skipped_records+'条')+' · '+date(P.period.start30)+' → '+date(P.period.end):'';
-  document.querySelectorAll('#feed em').forEach(e=>e.textContent=L.ago(e.dataset.t));
+  const c=P&&P.commits,ago=P?L.ago(P.generated_at):'';
+  // the age is how old today's snapshot is; the snapshot itself is made once a day
+  document.getElementById('freshLabel').textContent=(c?L.T('7일 '+c.week+'회','7 days: '+c.week,'7日 '+c.week+'件','7天 '+c.week+'次')+' · ':'')+L.T(...labels[state])+(c?' '+ago:'');
 }
 setInterval(tick,15000);
 // Read a new snapshot without losing the previous valid one on network/schema errors.
@@ -156,12 +177,14 @@ async function refresh(){
     const next=match?JSON.parse(match[1]):null;
     if(controller.signal.aborted||!valid(next)||L.freshness(next)==='unknown')throw new Error('invalid snapshot');
     const changed=!P||next.generated_at!==P.generated_at;P=next;window.PULSE=P;reloadFailed=false;
-    if(changed)render(false);
+    if(changed)drawWork();
   }catch(_){reloadFailed=true}
   finally{clearTimeout(timer);refreshing=false;tick()}
 }
 setInterval(refresh,300000);
-L.onLang.push(()=>render(true));
+L.onLang.push(()=>{drawProjects();drawWork()});
+// redraw the chart at its new size after a resize or rotation
+let resizing=null;window.addEventListener('resize',()=>{clearTimeout(resizing);resizing=setTimeout(drawWork,150)});
 })();
 </script>
 </body>

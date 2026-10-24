@@ -12,9 +12,13 @@
 <meta property="og:title" content="About — AI for Energy &amp; Manufacturing Lab">
 <meta property="og:description" content="AI for Energy &amp; Manufacturing Lab, Korea Polytechnics (Daegu). We decide, task by task, what AI should take on in energy and manufacturing sites and verify it on real equipment: papers, open data and code, and the MAIA task-allocation check.">
 <meta property="og:url" content="https://changhanahn.github.io/maia-lab/about.html">
-<meta name="twitter:card" content="summary">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=20261023e">
+<meta property="og:image" content="https://changhanahn.github.io/maia-lab/media/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI for Energy &amp; Manufacturing Lab">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="assets/site.css?v=20261024a">
 <style>
 /* PI card: three facts, career split into current and former */
 .info-grid .card:first-child h3{margin:6px 0 14px}
@@ -47,37 +51,41 @@ html[lang="en"] .do .say{margin-bottom:10px}
 .facts .th{display:block;white-space:nowrap;font-size:13px;letter-spacing:-.2px;color:var(--mute);margin-top:2px}
 .info-grid>.card,.facts>div,.facts dd{min-width:0}
 html[lang="en"] .facts .th{font-size:9.6px;letter-spacing:-.15px}
+/* phones: the thesis title wraps instead of shrinking to one line */
+@media (max-width:900px),(max-height:500px){
+  .facts .th,html[lang="en"] .facts .th{white-space:normal;word-break:normal;font-size:12.5px!important;letter-spacing:0}
+}
 </style>
 </head>
 <body data-page="about">
 <div class="stage" id="stage"><div class="page" id="page">
   <div class="info-head">
-    <div class="ck" data-ko="소개" data-en="ABOUT"></div>
-    <h1 class="h2" data-ko="AI for Energy &amp;amp; <em>Manufacturing</em> Lab" data-en="AI for Energy &amp;amp; <em>Manufacturing</em> Lab" data-ja="AI for Energy &amp;amp; <em>Manufacturing</em> Lab" data-zh="AI for Energy &amp;amp; <em>Manufacturing</em> Lab"></h1>
-    <p class="lead" data-ko="에너지·제조 현장에서 AI가 맡을 일과 사람이 맡을 일을 실측 자료로 가려내고, 그 방법을 공개합니다." data-en="We use measured data to sort out which work in energy and manufacturing AI should take on and which should stay with people, and we publish how."></p>
+    <div class="ck" data-ko="소개" data-en="ABOUT">소개</div>
+    <h1 class="h2" data-ko="AI for Energy &amp;amp; <em>Manufacturing</em> Lab" data-en="AI for Energy &amp;amp; <em>Manufacturing</em> Lab" data-ja="AI for Energy &amp;amp; <em>Manufacturing</em> Lab" data-zh="AI for Energy &amp;amp; <em>Manufacturing</em> Lab">AI for Energy &amp; <em>Manufacturing</em> Lab</h1>
+    <p class="lead" data-ko="에너지·제조 현장에서 AI가 맡을 일과 사람이 맡을 일을 실측 자료로 가려내고, 그 방법을 공개합니다." data-en="We use measured data to sort out which work in energy and manufacturing AI should take on and which should stay with people, and we publish how.">에너지·제조 현장에서 AI가 맡을 일과 사람이 맡을 일을 실측 자료로 가려내고, 그 방법을 공개합니다.</p>
   </div>
   <div class="info-grid">
     <section class="card rise">
-      <div class="ck" data-ko="연구책임자" data-en="PRINCIPAL INVESTIGATOR"></div>
-      <h3 data-ko="안창한 · Changhan Ahn" data-en="Changhan Ahn · 안창한"></h3>
+      <div class="ck" data-ko="연구책임자" data-en="PRINCIPAL INVESTIGATOR">연구책임자</div>
+      <h3 data-ko="안창한" data-en="Changhan Ahn">안창한</h3>
       <dl class="facts">
-        <div><dt data-ko="경력" data-en="CAREER" data-ja="経歴" data-zh="经历"></dt><dd><div class="cr"><b data-ko="現" data-en="Now" data-ja="現" data-zh="现"></b><div><span data-ko="한국폴리텍대학 대구캠퍼스 이차전지시스템과 부교수" data-en="Associate Professor, Secondary Battery Systems, Daegu Campus of Korea Polytechnics" data-ja="韓国ポリテク大学 大邱キャンパス 二次電池システム科 准教授" data-zh="韩国理工大学 大邱校区 二次电池系统系 副教授"></span></div></div><div class="cr"><b data-ko="前" data-en="Prev" data-ja="前" data-zh="前"></b><div><span data-ko="LG전자 HA연구소 선행제어연구팀 엔지니어" data-en="Engineer, Advanced Control Team, LG Electronics HA R&amp;D Lab" data-ja="LG電子 HA研究所 先行制御研究チーム エンジニア" data-zh="LG电子 HA研究所 先行控制研究组 工程师"></span><small data-ko="스마트그리드 가전 통신 개발 · SEP 1.1/2.0 인증" data-en="smart-grid appliance communications · SEP 1.1/2.0 certification" data-ja="スマートグリッド家電の通信開発 · SEP 1.1/2.0認証" data-zh="智能电网家电通信开发 · SEP 1.1/2.0认证"></small></div></div></dd></div>
-        <div><dt data-ko="학위" data-en="EDUCATION" data-ja="学位" data-zh="学位"></dt><dd><span data-ko="경북대학교 전자전기컴퓨터 학사·석사·박사" data-en="Kyungpook National University · Electrical, Electronic and Computer Engineering · BS, MS, PhD" data-ja="慶北大学校 電子電気コンピュータ 学士・修士・博士" data-zh="庆北大学 电子电气计算机 学士·硕士·博士"></span><span class="th" data-ko="「정수선형계획법을 이용한 전력계통 무효전력보상장치의 최적협조제어」" data-en="Optimal Coordination Control of Voltage Between Reactive Power Compensation Devices of Power System Using ILP" data-ja="「整数線形計画法を用いた電力系統無効電力補償装置の最適協調制御」" data-zh="《基于整数线性规划的电力系统无功补偿装置最优协调控制》"></span></dd></div>
-        <div><dt data-ko="대외활동" data-en="ACTIVITIES" data-ja="対外活動" data-zh="对外活动"></dt><dd data-ko="산업표준심의회 IEC TC32(퓨즈류) 대표전문위원<br>산업표준심의회 IEC TC109(저압전기기기) 전문위원<br>중소벤처기업진흥공단 연수원 강사<br>현대자동차 사외강사" data-en="Lead expert, KS committee for IEC TC32 (fuses)<br>Expert, KS committee for IEC TC109 (low-voltage equipment)<br>Instructor, KOSME training institute<br>Instructor, Hyundai Motor Company" data-ja="産業標準審議会 IEC TC32（ヒューズ）代表専門委員<br>産業標準審議会 IEC TC109（低圧電気機器）専門委員<br>中小ベンチャー企業振興公団 研修院講師<br>現代自動車 社外講師" data-zh="产业标准审议会 IEC TC32（熔断器）首席专家委员<br>产业标准审议会 IEC TC109（低压电气设备）专家委员<br>中小风险企业振兴公团 研修院讲师<br>现代汽车 外聘讲师"></dd></div>
+        <div><dt data-ko="경력" data-en="CAREER" data-ja="経歴" data-zh="经历">경력</dt><dd><div class="cr"><b data-ko="現" data-en="Now" data-ja="現" data-zh="现">現</b><div><span data-ko="한국폴리텍대학 대구캠퍼스 이차전지시스템과 부교수" data-en="Associate Professor, Secondary Battery Systems, Daegu Campus of Korea Polytechnics" data-ja="韓国ポリテク大学 大邱キャンパス 二次電池システム科 准教授" data-zh="韩国理工大学 大邱校区 二次电池系统系 副教授">한국폴리텍대학 대구캠퍼스 이차전지시스템과 부교수</span></div></div><div class="cr"><b data-ko="前" data-en="Prev" data-ja="前" data-zh="前">前</b><div><span data-ko="LG전자 HA연구소 선행제어연구팀 엔지니어" data-en="Engineer, Advanced Control Team, LG Electronics HA R&amp;D Lab" data-ja="LG電子 HA研究所 先行制御研究チーム エンジニア" data-zh="LG电子 HA研究所 先行控制研究组 工程师">LG전자 HA연구소 선행제어연구팀 엔지니어</span><small data-ko="스마트그리드 가전 통신 개발 · SEP 1.1/2.0 인증" data-en="smart-grid appliance communications · SEP 1.1/2.0 certification" data-ja="スマートグリッド家電の通信開発 · SEP 1.1/2.0認証" data-zh="智能电网家电通信开发 · SEP 1.1/2.0认证">스마트그리드 가전 통신 개발 · SEP 1.1/2.0 인증</small></div></div></dd></div>
+        <div><dt data-ko="학위" data-en="EDUCATION" data-ja="学位" data-zh="学位">학위</dt><dd><span data-ko="경북대학교 전자전기컴퓨터 학사·석사·박사" data-en="Kyungpook National University · Electrical, Electronic and Computer Engineering · BS, MS, PhD" data-ja="慶北大学校 電子電気コンピュータ 学士・修士・博士" data-zh="庆北大学 电子电气计算机 学士·硕士·博士">경북대학교 전자전기컴퓨터 학사·석사·박사</span><span class="th" data-ko="「정수선형계획법을 이용한 전력계통 무효전력보상장치의 최적협조제어」" data-en="Optimal Coordination Control of Voltage Between Reactive Power Compensation Devices of Power System Using ILP" data-ja="「整数線形計画法を用いた電力系統無効電力補償装置の最適協調制御」" data-zh="《基于整数线性规划的电力系统无功补偿装置最优协调控制》">「정수선형계획법을 이용한 전력계통 무효전력보상장치의 최적협조제어」</span></dd></div>
+        <div><dt data-ko="대외활동" data-en="ACTIVITIES" data-ja="対外活動" data-zh="对外活动">대외활동</dt><dd data-ko="산업표준심의회 IEC TC32(퓨즈류) 대표전문위원<br>산업표준심의회 IEC TC109(저압전기기기) 전문위원<br>중소벤처기업진흥공단 연수원 강사<br>현대자동차 사외강사" data-en="Lead expert, KS committee for IEC TC32 (fuses)<br>Expert, KS committee for IEC TC109 (low-voltage equipment)<br>Instructor, KOSME training institute<br>Instructor, Hyundai Motor Company" data-ja="産業標準審議会 IEC TC32（ヒューズ）代表専門委員<br>産業標準審議会 IEC TC109（低圧電気機器）専門委員<br>中小ベンチャー企業振興公団 研修院講師<br>現代自動車 社外講師" data-zh="产业标准审议会 IEC TC32（熔断器）首席专家委员<br>产业标准审议会 IEC TC109（低压电气设备）专家委员<br>中小风险企业振兴公团 研修院讲师<br>现代汽车 外聘讲师">산업표준심의회 IEC TC32(퓨즈류) 대표전문위원<br>산업표준심의회 IEC TC109(저압전기기기) 전문위원<br>중소벤처기업진흥공단 연수원 강사<br>현대자동차 사외강사</dd></div>
       </dl>
     </section>
     <section class="card rise do" style="animation-delay:.12s">
-      <div class="ck" data-ko="연구실이 하는 일" data-en="WHAT WE DO"></div>
-      <h3 data-ko="현장 데이터로 AI의 역할을 정합니다" data-en="Field data decides the role of AI"></h3>
-      <p class="say" data-ko="실측과 시연을 구분하고, 판단 근거와 한계를 함께 공개합니다.<br>논문 진행 상태·공개 데이터·개발 기록은 이 사이트에서 바로 확인할 수 있습니다." data-en="We keep measurements apart from demonstrations and publish the evidence and limits behind each decision.<br>Paper status, open data and development records can be checked on this site." data-ja="実測とデモを区別し、判断の根拠と限界をあわせて公開します。<br>論文の進行状況・公開データ・開発記録はこのサイトで確認できます。" data-zh="我们区分实测与演示，并同时公开判断依据与局限。<br>论文进展、公开数据和开发记录都可在本网站查看。"></p>
-      <div class="dogrid"><a href="maia.html"><small>01</small><strong data-ko="작업 배분 진단" data-en="Task allocation check" data-ja="作業配分の診断" data-zh="任务分配诊断"></strong><span data-ko="MAIA로 작업마다 AI·협업·사람 중 누가 맡을지 정합니다." data-en="MAIA decides, task by task, whether AI, a team or a person takes it on." data-ja="MAIAで作業ごとにAI・協働・人のどれが担うかを決めます。" data-zh="用MAIA逐项确定由AI、协作还是人来承担。"></span></a><a href="research-manufacturing.html"><small>02</small><strong data-ko="실설비 검증" data-en="Testing on real equipment" data-ja="実設備での検証" data-zh="真实设备验证"></strong><span data-ko="코인셀 MPS 라인의 PLC·로봇·카메라에서 직접 측정합니다." data-en="We measure on the coin-cell MPS line: PLC, robot and cameras." data-ja="コインセルMPSラインのPLC・ロボット・カメラで直接計測します。" data-zh="在纽扣电池MPS产线的PLC、机器人和相机上直接测量。"></span></a><a href="research-energy.html"><small>03</small><strong data-ko="에너지·계통" data-en="Energy and power systems" data-ja="エネルギー・電力系統" data-zh="能源与电力系统"></strong><span data-ko="제조 마이크로그리드의 요금 구간 제어와 순간 보호를 다룹니다." data-en="Billing-window control and instantaneous protection for manufacturing microgrids." data-ja="製造マイクログリッドの料金時間帯制御と瞬時保護を扱います。" data-zh="研究制造微电网的计费时段控制与瞬时保护。"></span></a><a href="research-education.html"><small>04</small><strong data-ko="교육·기술이전" data-en="Education and transfer" data-ja="教育・技術移転" data-zh="教育与技术转移"></strong><span data-ko="연구 절차를 실습 과정과 기업 협업으로 옮깁니다." data-en="Research procedures move into lab courses and industry work." data-ja="研究手順を実習課程と企業との協働に移します。" data-zh="将研究流程转入实训课程和企业合作。"></span></a></div>
-      <div class="bottom"><a class="contact-link" href="mailto:chahn@kopo.ac.kr">chahn@kopo.ac.kr ↗</a><div class="info-links"><a href="record.html" data-ko="실적 →" data-en="Track record →"></a><a href="data.html" data-ko="공개 자료 →" data-en="Data &amp; code →"></a><a href="work.html" data-ko="협업 문의 →" data-en="Discuss collaboration →"></a></div></div>
+      <div class="ck" data-ko="연구실이 하는 일" data-en="WHAT WE DO">연구실이 하는 일</div>
+      <h3 data-ko="현장 데이터로 AI의 역할을 정합니다" data-en="Field data decides the role of AI">현장 데이터로 AI의 역할을 정합니다</h3>
+      <p class="say" data-ko="실측과 시연을 구분하고, 판단 근거와 한계를 함께 공개합니다.<br>논문 진행 상태·공개 데이터·개발 기록은 이 사이트에서 바로 확인할 수 있습니다." data-en="We keep measurements apart from demonstrations and publish the evidence and limits behind each decision.<br>Paper status, open data and development records can be checked on this site." data-ja="実測とデモを区別し、判断の根拠と限界をあわせて公開します。<br>論文の進行状況・公開データ・開発記録はこのサイトで確認できます。" data-zh="我们区分实测与演示，并同时公开判断依据与局限。<br>论文进展、公开数据和开发记录都可在本网站查看。">실측과 시연을 구분하고, 판단 근거와 한계를 함께 공개합니다.<br>논문 진행 상태·공개 데이터·개발 기록은 이 사이트에서 바로 확인할 수 있습니다.</p>
+      <div class="dogrid"><a href="maia.html"><small>01</small><strong data-ko="작업 배분 진단" data-en="Task allocation check" data-ja="作業配分の診断" data-zh="任务分配诊断">작업 배분 진단</strong><span data-ko="MAIA로 작업마다 AI·협업·사람 중 누가 맡을지 제안합니다." data-en="MAIA proposes, task by task, whether AI, a team or a person takes it on." data-ja="MAIAで作業ごとにAI・協働・人のどれが担うかを提案します。" data-zh="用MAIA逐项建议由AI、协作还是人来承担。">MAIA로 작업마다 AI·협업·사람 중 누가 맡을지 제안합니다.</span></a><a href="research-manufacturing.html"><small>02</small><strong data-ko="실설비 검증" data-en="Testing on real equipment" data-ja="実設備での検証" data-zh="真实设备验证">실설비 검증</strong><span data-ko="코인셀 시험 라인의 PLC·로봇·카메라에서 직접 측정합니다." data-en="We measure on the coin-cell test line: PLC, robot and cameras." data-ja="コインセル試験ラインのPLC・ロボット・カメラで直接計測します。" data-zh="在纽扣电池试验线的PLC、机器人和相机上直接测量。">코인셀 시험 라인의 PLC·로봇·카메라에서 직접 측정합니다.</span></a><a href="research-energy.html"><small>03</small><strong data-ko="에너지·계통" data-en="Energy and power systems" data-ja="エネルギー・電力系統" data-zh="能源与电力系统">에너지·계통</strong><span data-ko="제조 마이크로그리드의 요금 구간 제어와 순간 보호를 다룹니다." data-en="Billing-window control and instantaneous protection for manufacturing microgrids." data-ja="製造マイクログリッドの料金時間帯制御と瞬時保護を扱います。" data-zh="研究制造微电网的计费时段控制与瞬时保护。">제조 마이크로그리드의 요금 구간 제어와 순간 보호를 다룹니다.</span></a><a href="research-education.html"><small>04</small><strong data-ko="교육·기술이전" data-en="Education and transfer" data-ja="教育・技術移転" data-zh="教育与技术转移">교육·기술이전</strong><span data-ko="연구 절차를 실습 과정과 기업 협업으로 옮깁니다." data-en="Research procedures move into lab courses and industry work." data-ja="研究手順を実習課程と企業との協働に移します。" data-zh="将研究流程转入实训课程和企业合作。">연구 절차를 실습 과정과 기업 협업으로 옮깁니다.</span></a></div>
+      <div class="bottom"><a class="contact-link" href="mailto:chahn@kopo.ac.kr">chahn@kopo.ac.kr ↗</a><div class="info-links"><a href="record.html" data-ko="실적 →" data-en="Track record →">실적 →</a><a href="data.html" data-ko="공개 자료 →" data-en="Data &amp; code →">공개 자료 →</a><a href="work.html" data-ko="협업 문의 →" data-en="Discuss collaboration →">협업 문의 →</a></div></div>
     </section>
   </div>
-  <div class="foot"><a href="index.html" data-ko="← 홈으로" data-en="← Home"></a><span>Esc</span><span class="r" data-ko="2026년 10월 23일 기준" data-en="As of 23 October 2026"></span></div>
+  <div class="foot"><a href="index.html" data-ko="← 홈으로" data-en="← Home">← 홈으로</a><span>Esc</span><span class="r" data-ko="2026년 10월 23일 기준" data-en="As of 23 October 2026">2026년 10월 23일 기준</span></div>
 </div></div>
-<script src="assets/i18n.js?v=20261023e"></script>
-<script src="assets/site.js?v=20261023e"></script>
+<script src="assets/i18n.js?v=20261024a"></script>
+<script src="assets/site.js?v=20261024a"></script>
 <script>
 // keep the thesis title on one line: shrink it until it fits its column
 (()=>{const fit=()=>document.querySelectorAll('.facts .th').forEach(t=>{t.style.fontSize='';let f=parseFloat(getComputedStyle(t).fontSize);while(t.scrollWidth>t.clientWidth&&f>8){f-=.2;t.style.fontSize=f+'px'}});fit();new MutationObserver(fit).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});document.fonts&&document.fonts.ready.then(fit)})();
