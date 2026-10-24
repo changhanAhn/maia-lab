@@ -4,10 +4,10 @@ const ST={sub:['접수','Received','#9fb8d0'],rev:['심사 중','In review','#c9
 const TR=[
   {id:'A',c:'#b9a37a',ko:'AI 적용성',en:'AI applicability',q:[['작업별','AI·사람 배분'],['Task allocation','between AI and people']],
    wko:'작업마다 점수와 관문으로 AI·협업·사람을 가립니다.',wen:'Scores and gates decide AI, together, or a person for each task.',
-   leaves:[['MAIA 적용성 지수','MAIA applicability index','fix'],['비보상 관문 계약','Non-compensatory gate contract','sub'],['MAIA 진단 체험','Try the MAIA check','open','maia.html']],short:[['MAIA 지수','MAIA index'],['비보상 관문','Gate contract'],['MAIA 진단','MAIA check']]},
+   leaves:[['MAIA 적용성 지수','MAIA applicability index','rev'],['비보상 관문 계약','Non-compensatory gate contract','sub'],['MAIA 진단 체험','Try the MAIA check','open','maia.html']],short:[['MAIA 지수','MAIA index'],['비보상 관문','Gate contract'],['MAIA 진단','MAIA check']]},
   {id:'B',c:'#a3b5c6',ko:'제조·피지컬 AI',en:'Physical AI',q:[['현장 AI 판정의','안전 확보'],['Safe AI decisions','on the shop floor']],
    wko:'AI는 판정만 하고, 제어는 PLC가 맡는 구조를 실제 라인에서 시험합니다.',wen:'AI only judges and the PLC keeps control — tested on a real line.',
-   leaves:[['인라인 검사: 차단 경로와 PLC 관측 지연','Inline inspection: fail-closed routing and PLC-observed latency','rev'],['고정 검사의 반복 정밀도','Precision of a frozen inspection procedure','rev'],['래더 프로그램 적합성 검사','Ladder-program conformance checking','pre'],['코인셀 시험 라인','Coin-cell test line','run']],short:[['인라인 검사','Inline inspection'],['반복 정밀도','Repeat precision'],['래더 적합성','Ladder conformance'],['코인셀 시험 라인','Coin-cell test line']]},
+   leaves:[['인라인 검사: 차단 경로와 PLC 관측 지연','Inline inspection: fail-closed routing and PLC-observed latency','rev'],['고정 검사의 반복 정밀도','Precision of a frozen inspection procedure','rev'],['래더 프로그램 적합성 검사','Ladder-program conformance checking','pre'],['코인셀 MPS 시험 라인','Coin-cell MPS test line','run']],short:[['인라인 검사','Inline inspection'],['반복 정밀도','Repeat precision'],['래더 적합성','Ladder conformance'],['코인셀 시험 라인','Coin-cell test line']]},
   {id:'D',c:'#b0a690',ko:'에너지×제조',en:'Energy × mfg',q:[['전력과 품질의','동시 분석'],['Joint analysis of','power and quality']],
    wko:'공정 이벤트와 전력을 동기화해 분석하는 연구 절차를 설계합니다.',wen:'We design a procedure to align process events and power records for analysis.',
    leaves:[['공정 이벤트 동기 전력 분해','Event-synchronized power disaggregation','dev']],short:[['공정 동기 전력 분해','Event-synced power']]},
@@ -69,8 +69,8 @@ const EXTRA={
       ]
     ],
     "limit": [
-      "공개 결과는 해당 시험 조건에 한정됩니다. 정지 버튼(PB2)의 운전정지와 하드웨어 비상정지는 구분합니다.",
-      "Public results apply to their test conditions. The stop button (PB2) halts operation; it is not a hardware emergency stop."
+      "공개 결과는 해당 시험 조건에 한정됩니다. PB2 운전정지와 하드웨어 비상정지는 구분합니다.",
+      "Public results apply to their test conditions. PB2 operational stop is distinct from a hardware emergency stop."
     ],
     "links": [
       "record.html#inline",
@@ -170,9 +170,9 @@ const EXTRA={
       null
     ],
     "action": [
-      "work.html",
-      "교육·실습 문의 →",
-      "Discuss teaching →"
+      "data.html",
+      "공개 자료 →",
+      "Open resources →"
     ]
   }
 };

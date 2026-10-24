@@ -12,13 +12,9 @@
 <meta property="og:title" content="MAIA check — AI for Energy &amp; Manufacturing Lab">
 <meta property="og:description" content="AI for Energy &amp; Manufacturing Lab, Korea Polytechnics (Daegu). We decide, task by task, what AI should take on in energy and manufacturing sites and verify it on real equipment: papers, open data and code, and the MAIA task-allocation check.">
 <meta property="og:url" content="https://changhanahn.github.io/maia-lab/maia.html">
-<meta property="og:image" content="https://changhanahn.github.io/maia-lab/media/og-card.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="AI for Energy &amp; Manufacturing Lab">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="assets/site.css?v=20261024a">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=20261023e">
 <style>
 .head{position:absolute;left:56px;top:68px;width:1168px}
 .head .ck{color:var(--acc);font-size:12px}
@@ -51,52 +47,34 @@
 .meta b{color:#fff}
 .flag{display:inline-block;margin-top:6px;font-size:11.5px;font-weight:600;color:#c9a96e;border:1px solid rgba(201,169,110,.5);border-radius:2px;padding:2px 9px;opacity:0;transition:opacity .3s}
 .flag.on{opacity:1}
-.flag[hidden]{display:none}
 .scale{position:relative;height:6px;border-radius:0;margin-top:auto;background:linear-gradient(90deg,#b77a6f 0 50%,#c9a96e 50% 75%,#7fa3c7 75% 100%)}
 .scale i{position:absolute;top:-8px;width:2px;height:22px;background:#ece8e1;transform:translateX(-1px);transition:left .4s cubic-bezier(.2,.8,.2,1),opacity .3s}
 .scale-l{position:relative;height:16px;font-size:11.5px;color:#94a3b8;margin-top:8px}
 .scale-l span{position:absolute;transform:translateX(-50%);white-space:nowrap}
 .scale-l span:first-child{transform:none}.scale-l span:last-child{transform:translateX(-100%)}
 .warn{font-size:11.5px;color:var(--mute);line-height:1.5;margin-top:10px}
-.foot .ask{color:var(--acc)}
-/* phone-only bar that keeps the result in view while answering */
-.mbar{display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border:1px solid color-mix(in srgb,var(--acc) 50%,transparent);border-radius:4px;background:var(--panel);box-shadow:0 10px 30px rgba(0,0,0,.5);font-size:13.5px;font-weight:600;color:var(--txt)}
-.mbar b{color:var(--acc);white-space:nowrap}
 .foot .r a{color:var(--acc)}
-@media (max-width:900px),(max-height:500px){
-  .prow{flex-direction:column;align-items:flex-start}
-  .q{grid-template-columns:1fr;height:auto;gap:8px;padding:12px 0}
-  .seg button{font-size:12.5px;padding:10px 2px}
-  .left{padding:14px 16px}
-  .rgrid{grid-template-columns:1fr;justify-items:center}
-  .scale-l{height:34px}
-  .scale-l span:nth-child(3){top:17px}
-  .presets button{min-height:36px;padding:6px 11px;font-size:12.5px}
-  .mbar:not([hidden]){display:flex}
-  .page{padding-bottom:84px}
-  .foot .ask{order:-1;flex-basis:100%;padding:13px;border:1px solid color-mix(in srgb,var(--acc) 50%,transparent);border-radius:3px;text-align:center;font-weight:600;font-size:13.5px}
-}
 </style>
 </head>
 <body data-page="maia">
 <div class="stage" id="stage"><div class="page" id="page">
 
   <div class="head">
-    <div class="ck" data-ko="MAIA(작업별 AI 적용성 지수) · 직접 해 보기" data-en="MAIA (TASK-LEVEL AI APPLICABILITY INDEX) · TRY IT">MAIA(작업별 AI 적용성 지수) · 직접 해 보기</div>
-    <div class="h2" data-ko="MAIA <em>작업 배분</em> 진단" data-en="MAIA <em>task allocation</em> check">MAIA <em>작업 배분</em> 진단</div>
-    <p class="lead" data-ko="내 업무 하나를 떠올리고 8문항에 답하면, 가중합 점수 S로 AI·협업·사람 중 하나를 제안합니다. C7·C8이 가장 높은 단계면 점수와 관계없이 사람이 맡습니다." data-en="Answer eight questions on one task; a weighted score S proposes AI, together or a person. A top answer on C7 or C8 sends it to a person.">내 업무 하나를 떠올리고 8문항에 답하면, 가중합 점수 S로 AI·협업·사람 중 하나를 제안합니다. C7·C8이 가장 높은 단계면 점수와 관계없이 사람이 맡습니다.</p>
+    <div class="ck" data-ko="MAIA 진단 · 직접 해 보기" data-en="MAIA CHECK · TRY IT"></div>
+    <div class="h2" data-ko="MAIA <em>작업 배분</em> 진단" data-en="MAIA <em>task allocation</em> check"></div>
+    <p class="lead" data-ko="내 업무 하나를 떠올리고 8문항에 답하면, 가중합 점수로 AI·협업·사람 중 하나를 제안합니다. C7·C8이 가장 높은 단계면 점수와 관계없이 사람이 맡습니다." data-en="Think of one task and answer eight questions; a weighted score proposes AI, AI with a person, or a person. If C7 or C8 is at its highest level, a person takes it regardless of score."></p>
   </div>
 
   <div class="card left">
     <div class="prow">
-      <div class="ck" data-ko="예시 작업" data-en="EXAMPLES">예시 작업</div>
+      <div class="ck" data-ko="예시 작업" data-en="EXAMPLES"></div>
       <div class="presets" id="pr"></div>
     </div>
     <div class="qs" id="qs"></div>
   </div>
 
-  <div class="card right" id="result">
-    <div class="vk" data-ko="제안 배분" data-en="PROPOSED ALLOCATION">제안 배분</div>
+  <div class="card right">
+    <div class="vk" data-ko="제안 배분" data-en="PROPOSED ALLOCATION"></div>
     <div class="verdict" id="verdict" aria-live="polite"></div>
     <div class="why" id="why" aria-live="polite"></div>
     <div class="rgrid">
@@ -104,17 +82,15 @@
       <div class="meta" id="meta"></div>
     </div>
     <div class="scale"><i id="marker"></i></div>
-    <div class="scale-l"><span style="left:0" data-ko="사람" data-en="Person">사람</span><span style="left:50%">0.50</span><span style="left:62.5%" data-ko="협업" data-en="Together">협업</span><span style="left:75%">0.75</span><span style="left:100%">AI</span></div>
-    <div class="warn" data-ko="공개 MAIA 자가진단과 같은 문항·가중치·관문입니다. 결과는 계획 제안이며 실행 권한이 아닙니다. 입력은 「이 결과로 문의하기」를 누를 때만 메일 앱으로 넘어갑니다." data-en="Same questions, weights and gates as the public MAIA self-diagnosis. The result is a planning proposal, not execution authority. Inputs go to your mail app only when you press “Ask about this result”.">공개 MAIA 자가진단과 같은 문항·가중치·관문입니다. 결과는 계획 제안이며 실행 권한이 아닙니다. 입력은 「이 결과로 문의하기」를 누를 때만 메일 앱으로 넘어갑니다.</div>
+    <div class="scale-l"><span style="left:0" data-ko="사람" data-en="Person"></span><span style="left:50%">0.50</span><span style="left:62.5%" data-ko="협업" data-en="Together"></span><span style="left:75%">0.75</span><span style="left:100%">AI</span></div>
+    <div class="warn" data-ko="공개 MAIA 자가진단과 같은 문항·가중치·관문입니다. 결과는 계획 제안이며 실행 권한이 아닙니다. 입력은 이 브라우저 밖으로 나가지 않습니다." data-en="Same questions, weights and gates as the public MAIA self-diagnosis. The result is a planning proposal, not execution authority. Inputs never leave this browser."></div>
   </div>
 
-  <div class="foot"><a href="index.html" data-ko="← 홈으로" data-en="← Home">← 홈으로</a><span>Esc</span><a id="ask" class="ask" data-ko="이 결과로 문의하기 ↗ chahn@kopo.ac.kr" data-en="Ask about this result ↗ chahn@kopo.ac.kr">이 결과로 문의하기 ↗ chahn@kopo.ac.kr</a><span class="r"><a id="full" target="_blank" rel="noopener" data-ko="공개 MAIA 자가진단 열기 ↗" data-en="Open the public MAIA self-diagnosis ↗">공개 MAIA 자가진단 열기 ↗</a></span></div>
+  <div class="foot"><a href="index.html" data-ko="← 홈으로" data-en="← Home"></a><span>Esc</span><span class="r"><a id="full" target="_blank" rel="noopener" data-ko="공개 MAIA 자가진단 열기 ↗" data-en="Open the public MAIA self-diagnosis ↗"></a></span></div>
 
-</div>
-<a class="mbar" id="mbar" href="#result" hidden><span id="mbarT"></span><b data-ko="결과 보기 ↓" data-en="See result ↓">결과 보기 ↓</b></a>
-</div>
-<script src="assets/i18n.js?v=20261024a"></script>
-<script src="assets/site.js?v=20261024a"></script>
+</div></div>
+<script src="assets/i18n.js?v=20261023e"></script>
+<script src="assets/site.js?v=20261023e"></script>
 <script>
 (function(){
 const L=window.LAB,NS='http://www.w3.org/2000/svg';
@@ -176,7 +152,6 @@ const PRESETS=[
   {ko:'안전 정지 최종 승인',en:'Safety-stop sign-off',a:[2,2,2,2,1,0,1,3]}
 ];
 const ans=new Array(DIMS.length).fill(null);
-let last=null;  // latest complete result, carried into the inquiry mail
 const pr=document.getElementById('pr'),qs=document.getElementById('qs');
 
 let preset=-1;  // highlighted example, kept across language redraws
@@ -214,9 +189,7 @@ DIMS.forEach((d,i)=>{const [x,y]=pt(i,RR+15);const t=document.createElementNS(NS
 let cur=new Array(N).fill(0),target=cur.slice();
 (function anim(){cur=cur.map((v,i)=>v+(target[i]-v)*.18);poly.setAttribute('points',cur.map((v,i)=>pt(i,RR*v).join(',')).join(' '));requestAnimationFrame(anim)})();
 
-function update(){result();ask();bar()}
-function result(){
-  last=null;
+function update(){
   const eff=DIMS.map((d,k)=>ans[k]===null?null:(d.inv?1-d.s[ans[k]]:d.s[ans[k]]));
   target=eff.map(v=>v===null?0:v);
   const vEl=document.getElementById('verdict'),why=document.getElementById('why'),meta=document.getElementById('meta'),mk=document.getElementById('marker');
@@ -243,24 +216,9 @@ function result(){
   else t=L.T('사람의 손이 큰 영역입니다. 업무를 나누면 협업으로 올라갈 수 있습니다. 가장 걸리는 점: ','Human hands carry most of this; split the task and parts may move up to Together. Main obstacle: ')+L.T(LOW[lo][0],LOW[lo][1])+'.';
   vEl.textContent=MN[mode];vEl.style.color=COL[mode];why.textContent=t;
   const gates=L.T('관문: ','Gates: ')+(gated.length?gated.map(x=>x.c).join(' · '):L.T('통과','clear'));
-  last={verdict:MN[mode],S,gates};
   if(S===null){mk.style.opacity=0;meta.innerHTML='S = —<br>'+gates;return}
   mk.style.opacity=1;mk.style.left=(S*100)+'%';
-  meta.innerHTML='S = <b>'+S.toFixed(3)+'</b><br>d = '+d.toFixed(2)+L.T(' (0.50·0.75 경계까지 거리)',' (distance to 0.50 or 0.75)')+'<br>'+gates+'<br><span class="flag'+(d<.05?' on"':'" hidden')+'>'+L.T('임계값 근처 · 사람 검토','near threshold · human review')+'</span>';
-}
-function bar(){
-  const left=ans.filter(v=>v===null).length;
-  document.getElementById('mbarT').textContent=last?last.verdict+(last.S===null?'':' · S = '+last.S.toFixed(2)):L.T('남은 문항 '+left,'Remaining: '+left,'残りの設問 '+left,'剩余题目 '+left);
-}
-// the bar shows only while the result card is off screen
-// the top 70 px sit under the pinned top bar, so they do not count as seen
-new IntersectionObserver(es=>{document.getElementById('mbar').hidden=es[0].isIntersecting},{rootMargin:'-70px 0px 0px 0px'}).observe(document.getElementById('result'));
-function ask(){
-  const task=preset>=0?L.T(PRESETS[preset].ko,PRESETS[preset].en):L.T('직접 고른 작업','My own task');
-  const lines=last?[L.T('작업: ','Task: ')+task,L.T('제안 배분: ','Proposed allocation: ')+last.verdict,'S = '+(last.S===null?'—':last.S.toFixed(3))+' · '+last.gates]
-    .concat(DIMS.map((d,k)=>d.c+' '+L.T(d.n[0],d.n[1])+': '+L.T(d.o[ans[k]][0],d.o[ans[k]][1]))).concat(['']):[];
-  const body=lines.concat([L.T('현장 작업과 궁금한 점:','Our task and questions:'),'']).join('\n');
-  document.getElementById('ask').href='mailto:chahn@kopo.ac.kr?subject='+encodeURIComponent('[AI for Energy & Manufacturing Lab] '+L.T('MAIA 진단 결과 문의','MAIA check follow-up'))+'&body='+encodeURIComponent(body);
+  meta.innerHTML='S = <b>'+S.toFixed(3)+'</b><br>d = '+d.toFixed(2)+L.T(' (가까운 임계값까지)',' (to nearest threshold)')+'<br>'+gates+'<br><span class="flag'+(d<.05?' on':'')+'">'+L.T('임계값 근처 · 사람 검토','near threshold · human review')+'</span>';
 }
 function setFull(){const l=L.lang();document.getElementById('full').href='https://changhanahn.github.io/maia-diagnosis/'+(l==='ko'?'diagnosis.html':'en.html')}
 L.onLang.push(()=>{drawPresets();drawQuestions();update();setFull()});

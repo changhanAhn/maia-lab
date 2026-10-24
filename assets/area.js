@@ -8,9 +8,7 @@
   const set=(id,text)=>document.getElementById(id).textContent=text;
   function render(){
     const active=document.activeElement&&document.activeElement.dataset.focus;
-    // the label doubles as the way back to the research map
-    const up=document.createElement('a');up.className='up';up.href=local('map.html?area='+area.id);up.textContent=L.T('← 연구 분야','← Research');
-    document.getElementById('area-kicker').replaceChildren(up,' · '+L.T('연구 분야 ','AREA ')+area.id);
+    set('area-kicker',L.T('연구 분야 ','AREA ')+area.id);
     set('area-title',L.T(area.ko,area.en));
     set('area-question',L.T(area.q[0].join(' '),area.q[1].join(' ')));
     set('area-summary',L.T(area.wko,area.wen));

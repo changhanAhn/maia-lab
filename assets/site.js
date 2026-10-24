@@ -1,4 +1,4 @@
-/* Shared chrome for every lab page: top bar, language, full-window fit, Esc to home.
+/* Shared chrome for every lab page: top bar, language, 1280x720 fit, Esc to home.
    Korean is the source text. English sits next to it in data-en or the second
    argument of LAB.T. Japanese and Chinese (Simplified) come from assets/i18n.js,
    keyed by the Korean text; a missing entry falls back to English and is
@@ -52,12 +52,8 @@
 
   const top=document.createElement('div');top.className='top';
   top.innerHTML='<a class="brand" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="#b9a37a" stroke-width="1.4"><path d="M3 8 12 3l9 5-9 5z"/><path d="M3 12.5 12 17.5l9-5"/><path d="M3 17l9 5 9-5"/></svg><span data-ko="AI for Energy &amp; Manufacturing Lab" data-en="AI for Energy &amp; Manufacturing Lab" data-ja="AI for Energy &amp; Manufacturing Lab" data-zh="AI for Energy &amp; Manufacturing Lab"></span></a>'
-    // phones fold the menu behind this button (site.css); desktops always show the menu
-    +'<button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-menu"><span></span><i aria-hidden="true">☰</i></button>'
-    +'<nav class="menu" id="site-menu">'+PAGES.map(p=>'<a href="'+p[1]+'" class="'+(p[0]===here?'on':'')+(p[4]?' soon':'')+'" data-ko="'+p[2]+'" data-en="'+p[3]+'"></a>').join('')+'</nav>'
-    // language picker: the current language only, the four choices open on click
-    +'<div class="lang"><button class="lang-cur" type="button" aria-haspopup="true" aria-expanded="false"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M1.8 8h12.4M8 1.8c1.8 1.9 2.6 3.9 2.6 6.2S9.8 12.3 8 14.2M8 1.8C6.2 3.7 5.4 5.7 5.4 8s.8 4.3 2.6 6.2"/></svg><span></span><i aria-hidden="true">▾</i></button>'
-    +'<div class="lang-menu" role="menu" hidden>'+LANGS.map(l=>'<button type="button" role="menuitemradio" data-l="'+l[0]+'" lang="'+HTML_LANG[l[0]]+'">'+l[2]+'</button>').join('')+'</div></div>';
+    +'<nav class="menu">'+PAGES.map(p=>'<a href="'+p[1]+'" class="'+(p[0]===here?'on':'')+(p[4]?' soon':'')+'" data-ko="'+p[2]+'" data-en="'+p[3]+'"></a>').join('')+'</nav>'
+    +'<div class="lang">'+LANGS.map(l=>'<button data-l="'+l[0]+'" title="'+l[2]+'" aria-label="'+l[2]+'">'+l[1]+'</button>').join('')+'</div>';
   document.getElementById('page').prepend(top);
 
   function font(){
@@ -82,41 +78,19 @@
       if(v==null)v=s.ko;
       if(e instanceof SVGElement)e.textContent=v;else e.innerHTML=v;
     });
-    // links between pages carry the chosen language, so a copied address opens in it
-    document.querySelectorAll('a[href]').forEach(a=>{const h=a.getAttribute('href');if(!/^[\w-]+\.html(\?[^#]*)?(#.*)?$/.test(h))return;
-      const u=new URL(h,location.href);u.searchParams.set('lang',lang);a.setAttribute('href',h.split(/[?#]/)[0]+u.search+u.hash)});
-    top.querySelector('.menu-btn span').textContent=T('메뉴','Menu','メニュー','菜单');
-    document.querySelectorAll('.lang-menu button').forEach(b=>{const on=b.dataset.l===lang;b.classList.toggle('on',on);b.setAttribute('aria-checked',on)});
-    const cur=document.querySelector('.lang-cur');cur.querySelector('span').textContent=LANGS.find(l=>l[0]===lang)[2];
-    cur.setAttribute('aria-label',T('언어 선택','Choose language','言語を選択','选择语言')+': '+LANGS.find(l=>l[0]===lang)[2]);
+    document.querySelectorAll('.lang button').forEach(b=>{const on=b.dataset.l===lang;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on)});
     note();
     window.LAB.onLang.forEach(f=>f());
   }
   window.LAB.apply=apply;
-  const langMenu=top.querySelector('.lang-menu'),langCur=top.querySelector('.lang-cur');
-  function openLang(on){langMenu.hidden=!on;langCur.setAttribute('aria-expanded',on);if(on)(langMenu.querySelector('.on')||langMenu.firstChild).focus()}
-  const menuBtn=top.querySelector('.menu-btn');
-  function openMenu(on){top.classList.toggle('open',on);menuBtn.setAttribute('aria-expanded',on)}
-  document.addEventListener('click',e=>{
-    if(e.target.closest('.menu-btn')){openMenu(!top.classList.contains('open'));return}
-    if(top.classList.contains('open')&&!e.target.closest('.menu'))openMenu(false);
-    if(e.target.closest('.lang-cur')){openLang(langMenu.hidden);return}
-    const b=e.target.closest('.lang-menu button');
-    if(!b){if(!langMenu.hidden)openLang(false);return}
-    lang=b.dataset.l;openLang(false);langCur.focus();
+  document.addEventListener('click',e=>{const b=e.target.closest('.lang button');if(!b)return;lang=b.dataset.l;
     try{localStorage.setItem('lab-lang',lang)}catch(_){}
     try{const u=new URL(location.href);u.searchParams.set('lang',lang);history.replaceState(null,'',u)}catch(_){}
     apply()});
-  langMenu.addEventListener('keydown',e=>{
-    const step={ArrowDown:1,ArrowUp:-1}[e.key];if(!step)return;e.preventDefault();
-    const items=[...langMenu.children],i=items.indexOf(document.activeElement);items[(i+step+items.length)%items.length].focus()});
-  document.addEventListener('keydown',e=>{
-    if(e.key==='Escape'&&!langMenu.hidden){openLang(false);langCur.focus();return}  // Esc closes the picker before it leaves the page
-    if(e.key==='Escape'&&top.classList.contains('open')){openMenu(false);menuBtn.focus();return}
-    if(e.key==='Escape'&&here!=='home'&&!e.target.matches('input')){
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&here!=='home'&&!e.target.matches('input')){
     const back=document.body.dataset.back;
     if(back){const u=new URL(back,location.href);u.searchParams.set('lang',lang);location.href=u.href}
-    else location.href='index.html?lang='+lang;
+    else location.href='index.html';
   }});
   window.LAB.onLang.push(()=>document.querySelectorAll('.area-entry').forEach(a=>{
     const R=window.RESEARCH,t=R&&R.areas.find(t=>t.id===a.dataset.area);
@@ -126,16 +100,7 @@
     const color=id=>R.areas.find(t=>t.id===id).c;
     a.querySelector('i').style.background=t.id==='D'?'linear-gradient(90deg,'+color('C')+','+color('B')+')':t.c;
   }));
-  // Phones use the stacked layout in site.css instead of a shrunken canvas.
-  const phone=window.matchMedia('(max-width:900px),(max-height:500px)');
-  function fit(){const s=document.getElementById('stage'),p=document.getElementById('page');
-    if(phone.matches){p.style.transform=p.style.width=p.style.height='';p.style.removeProperty('--ox');p.style.removeProperty('--oy');return}
-    // The 1280x720 layout keeps its size; the canvas widens (or deepens) to the window's
-    // ratio so the top bar, footer and background reach every edge with no side bands.
-    const k=Math.min(s.clientWidth/1280,s.clientHeight/720),W=Math.max(1280,s.clientWidth/k),H=Math.max(720,s.clientHeight/k);
-    p.style.width=W+'px';p.style.height=H+'px';
-    p.style.setProperty('--ox',(W-1280)/2+'px');p.style.setProperty('--oy',(H-720)/2+'px');
-    p.style.transform='scale('+k+')'}
+  function fit(){const s=document.getElementById('stage');const k=Math.min(s.clientWidth/1280,s.clientHeight/720);document.getElementById('page').style.transform='scale('+k+')'}
   window.addEventListener('resize',fit);fit();
   const AGO={ko:['초 전','분 전','시간 전','일 전'],en:['s ago','m ago','h ago','d ago'],ja:['秒前','分前','時間前','日前'],zh:['秒前','分钟前','小时前','天前']};
   window.LAB.ago=function(iso){const t=new Date(iso).getTime();if(!isFinite(t))return '—';
