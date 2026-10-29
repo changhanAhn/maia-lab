@@ -12,9 +12,13 @@
 <meta property="og:title" content="Research architecture — AI for Energy &amp; Manufacturing Lab">
 <meta property="og:description" content="AI for Energy &amp; Manufacturing Lab, Korea Polytechnics (Daegu). We decide, task by task, what AI should take on in energy and manufacturing sites and verify it on real equipment: papers, open data and code, and the MAIA task-allocation check.">
 <meta property="og:url" content="https://changhanahn.github.io/maia-lab/map.html">
-<meta name="twitter:card" content="summary">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=20261023e">
+<meta property="og:image" content="https://changhanahn.github.io/maia-lab/media/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI for Energy &amp; Manufacturing Lab">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="assets/site.css?v=20261024a">
 <style>
 .head{position:absolute;left:56px;top:68px;width:1168px}
 #arch{position:absolute;left:40px;top:182px;width:860px;height:478px}
@@ -51,27 +55,38 @@
 .legend b{font-size:11px;font-weight:600;letter-spacing:1px;color:var(--brass);padding-top:2px}
 .legend span{color:#b4b1aa}
 .pn .more{margin-top:auto;font-size:12px;color:var(--mute)}
+/* phones: the diagram labels are too small to read, so the areas are also listed as links */
+.m-areas{display:none}
+@media (max-width:900px),(max-height:500px){
+  #arch,#panel{display:none}
+  .m-areas{display:flex;flex-direction:column}
+  .m-areas a{display:flex;align-items:center;gap:10px;padding:13px 0;border-bottom:1px solid var(--line);font-size:14.5px;font-weight:500;color:#cfcbc4}
+  .m-areas a i{width:7px;height:7px;border-radius:50%}
+  .m-areas a:after{content:'→';margin-left:auto;color:var(--acc)}
+  .m-areas a[aria-current]{color:var(--acc);font-weight:600}
+}
 </style>
 </head>
 <body data-page="map">
 <div class="stage" id="stage"><div class="page" id="page">
 
   <div class="head">
-    <div class="kicker" data-ko="연구 아키텍처" data-en="RESEARCH ARCHITECTURE"></div>
-    <div class="h2" data-ko="연구 분야와 <em>공통 판단 기준</em>" data-en="Research areas and the <em>common decision rule</em>"></div>
-    <p class="lead" data-ko="현장 데이터와 도메인 지식을 바탕으로 연구 분야를 나누고, 각 분야의 결과를 MAIA 판단 기준으로 검증합니다." data-en="Research areas build on field data and domain knowledge, and each area's results are checked against the MAIA rule."></p>
+    <div class="kicker" data-ko="연구 아키텍처" data-en="RESEARCH ARCHITECTURE">연구 아키텍처</div>
+    <div class="h2" data-ko="연구 분야와 <em>공통 판단 기준</em>" data-en="Research areas and the <em>common decision rule</em>">연구 분야와 <em>공통 판단 기준</em></div>
+    <p class="lead" data-ko="현장 데이터와 도메인 지식을 바탕으로 연구 분야를 나누고, 각 분야의 결과를 MAIA 판단 기준으로 검증합니다." data-en="Research areas build on field data and domain knowledge, and each area's results are checked against the MAIA rule.">현장 데이터와 도메인 지식을 바탕으로 연구 분야를 나누고, 각 분야의 결과를 MAIA 판단 기준으로 검증합니다.</p>
   </div>
 
   <svg id="arch" viewBox="0 0 860 478"></svg>
 
+  <nav class="m-areas" id="m-areas"><a class="area-entry" data-area="A" href="research-ai.html"><i></i><span></span></a><a class="area-entry" data-area="B" href="research-manufacturing.html"><i></i><span></span></a><a class="area-entry" data-area="C" href="research-energy.html"><i></i><span></span></a><a class="area-entry" data-area="D" href="research-energy-manufacturing.html"><i></i><span></span></a><a class="area-entry" data-area="E" href="research-education.html"><i></i><span></span></a></nav>
   <div class="card panel pn" id="panel"></div>
 
-  <div class="foot"><a href="index.html" data-ko="← 홈으로" data-en="← Home"></a><span>Esc</span><span class="r" data-ko="각 연구 분야는 MAIA 판단 기준으로 검증합니다. 모든 연구가 MAIA에서 나온 것은 아닙니다." data-en="Each research area is checked against the MAIA rule; not every area originates from MAIA."></span></div>
+  <div class="foot"><a href="index.html" data-ko="← 홈으로" data-en="← Home">← 홈으로</a><span>Esc</span><span class="r" data-ko="각 연구 분야는 MAIA 판단 기준으로 검증합니다. 모든 연구가 MAIA에서 나온 것은 아닙니다." data-en="Each research area is checked against the MAIA rule; not every area originates from MAIA.">각 연구 분야는 MAIA 판단 기준으로 검증합니다. 모든 연구가 MAIA에서 나온 것은 아닙니다.</span></div>
 
 </div></div>
-<script src="assets/research.js?v=20261023e"></script>
-<script src="assets/i18n.js?v=20261023e"></script>
-<script src="assets/site.js?v=20261023e"></script>
+<script src="assets/research.js?v=20261029a"></script>
+<script src="assets/i18n.js?v=20261024a"></script>
+<script src="assets/site.js?v=20261024a"></script>
 <script>
 (function(){
 const L=window.LAB,NS='http://www.w3.org/2000/svg',svg=document.getElementById('arch');
@@ -159,6 +174,9 @@ const at=(ms,f)=>setTimeout(f,ms);
 TR.forEach((t,i)=>at(1700+i*140,()=>t.g.classList.add('on')));
 let k=0;TR.forEach(t=>t.outs.forEach(o=>at(2800+(k++)*90,()=>o.classList.add('on'))));
 
+// on phones the area you came back from is marked in the list
+const back=new URLSearchParams(location.search).get('area'),mark=back&&document.querySelector('.m-areas a[data-area="'+back+'"]');if(mark)mark.setAttribute('aria-current','true');
+L.onLang.push(()=>document.getElementById('m-areas').setAttribute('aria-label',L.T('연구 분야','Research areas','研究分野','研究方向')));
 L.onLang.push(()=>{
   const wasDetail=document.activeElement&&document.activeElement.classList.contains('area-detail');
   TR.forEach(t=>t.g.setAttribute('aria-label',L.T(t.ko,t.en)));
