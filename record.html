@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko">
+<html data-published="2026-11-05" lang="ko">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,7 +50,7 @@
 .glist{display:flex;flex-direction:column;gap:9px;margin-top:8px}
 .g{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;font-size:12.5px;font-weight:600;color:#e2e8f0}
 .g small{display:block;font-size:11px;color:var(--mute);font-weight:500}
-/* paper videos: English narration with burned-in English captions; KO/JA/ZH cover that band */
+/* paper videos: English narration; captions in EN/KO/JA/ZH drawn by the page */
 .p.hv{grid-template-columns:92px 1fr 150px;padding:8px 8px 8px 12px;background:linear-gradient(90deg,rgba(236,232,225,.02),color-mix(in srgb,var(--acc) 7%,transparent));border-color:color-mix(in srgb,var(--acc) 26%,rgba(236,232,225,.07))}
 .vthumb{position:relative;display:block;width:150px;height:72px;padding:0;border:1px solid color-mix(in srgb,var(--acc) 45%,transparent);border-radius:3px;overflow:hidden;background:#000;cursor:pointer;transition:border-color .25s,box-shadow .25s}
 .vthumb video{position:absolute;inset:0;width:150px;height:72px;object-fit:cover;filter:saturate(.85) brightness(.8);transition:filter .3s,transform .5s}
@@ -83,10 +83,12 @@
 .vfsbox:fullscreen .vctl{width:min(100vw,calc((100vh - 42px) * 16 / 9));margin:0 auto;border:0}
 .vstage{position:relative;aspect-ratio:16/9;container-type:inline-size;margin:auto}
 .vstage video{position:absolute;left:0;top:0;width:100cqw;height:56.25cqw;display:block;background:#000;cursor:pointer}
-/* overlay captions sit above the English captions burned into the video; no box, so nothing behind them is covered */
-.vcap{position:absolute;left:7%;right:7%;bottom:16%;display:none;align-items:center;justify-content:center;padding:.4cqw 2cqw;pointer-events:none;text-align:center}
+/* captions are off until a language is picked, and are bare outlined text with no box, so the picture
+   behind stays visible. The MAIA video has its English burned in; a translation sits just above that line
+   (place from media/maia-video.band.vtt) */
+.vcap{position:absolute;left:50%;bottom:4.5%;display:none;justify-content:center;box-sizing:border-box;width:90%;transform:translateX(-50%);pointer-events:none;text-align:center}
 .vcap.on{display:flex}
-.vcap span{font-size:2.15cqw;line-height:1.45;color:#f1efea;font-weight:500;text-shadow:0 0 .35cqw #000,0 0 .9cqw #000,0 .12cqw .3cqw rgba(0,0,0,.95)}
+.vcap span{font-size:2.15cqw;line-height:1.4;color:#f6f4ef;font-weight:600;white-space:pre-line;text-shadow:-.1cqw -.1cqw 0 #000,.1cqw -.1cqw 0 #000,-.1cqw .1cqw 0 #000,.1cqw .1cqw 0 #000,0 0 .35cqw #000,0 .12cqw .4cqw rgba(0,0,0,.9)}
 .vfoot{display:flex;align-items:center;gap:12px;margin-top:12px;font-size:11.5px;color:var(--mute)}
 .vfoot .ck{letter-spacing:1.5px}
 .vfoot .vnote{flex:1;min-width:0}
@@ -99,7 +101,7 @@
   .p,.p.hv{grid-template-columns:1fr;gap:8px;padding:12px}
   .p>.pill{justify-self:start}
   .vthumb{width:auto;height:auto;aspect-ratio:2/1;container-type:inline-size}
-  .vthumb video{width:100cqw;height:50cqw}
+  .vthumb video{width:100%;height:100%}
   .vmodal{position:fixed;z-index:40}
   .vx{width:40px;height:40px}
   .vbox{width:calc(100vw - 24px);padding:12px}
@@ -116,13 +118,14 @@
 
   <div class="card papers rise">
     <div class="plist">
-      <div class="ck" data-ko="게재 전 원고 6편" data-en="SIX MANUSCRIPTS · NOT YET PUBLISHED">게재 전 원고 6편</div>
+      <div class="ck" data-ko="게재 전 원고 7편" data-en="SEVEN MANUSCRIPTS · NOT YET PUBLISHED">게재 전 원고 7편</div>
       <div class="p hv" id="inline"><span class="pill s-rev" data-ko="심사 중" data-en="In review">심사 중</span><div><b>Layered equivalence, fail-closed routing and PLC-observed latency for an optimized inline inspection engine</b><span class="jr"><em>2026.10.15 · </em>IEEE Access</span><i class="scie">SCIE</i><a class="dl" href="data.html#d-inline" data-ko="공개 데이터 →" data-en="Open data →">공개 데이터 →</a></div><button class="vthumb" type="button" data-video="inline" aria-haspopup="dialog"><video muted loop playsinline preload="none" poster="media/inline-thumb.jpg" src="media/inline-preview.mp4" aria-hidden="true"></video><i class="vring"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4 2.5v7l6-3.5z" fill="currentColor"/></svg></i><span class="vlabel" data-ko="소개 영상" data-en="Video" data-ja="紹介動画" data-zh="介绍视频">소개 영상</span></button></div>
-      <div class="p" id="repeat"><span class="pill s-sub" data-ko="접수" data-en="Received">접수</span><div><b>Qualifying an automated visual inspection station as an attribute gauge: replicate agreement, acquisition-state sensitivity and disposition of undecided items in a coin-cell case study</b><span class="jr"><em>2026.10.25 · </em>Quality and Reliability Engineering International (Wiley)</span><i class="scie">SCIE</i><a class="dl" href="data.html#d-repeat" data-ko="공개 데이터 →" data-en="Open data →">공개 데이터 →</a></div></div>
-      <div class="p" id="hari"><span class="pill s-sub" data-ko="접수" data-en="Received">접수</span><div><b>A non-compensatory gate contract for screening manufacturing execution architectures: typed abstention and uncertainty-charged trial evidence</b><span class="jr"><em>2026.09.20 · </em>Engineering Applications of Artificial Intelligence (Elsevier)</span><i class="scie">SCIE</i></div></div>
-      <div class="p" id="energy"><span class="pill s-rev" data-ko="심사 중" data-en="In review">심사 중</span><div><b>Hierarchical Energy Management for a Robotic Manufacturing Microgrid: Separating 15-Minute Billing-Window Control from Instantaneous Import Protection</b><span class="jr"><em>2026.09.25 · </em>Sustainable Energy, Grids and Networks (Elsevier)</span><i class="scie">SCIE</i></div></div>
+      <div class="p" id="repeat"><span class="pill s-screen" data-ko="초기 검토 중" data-en="In screening">초기 검토 중</span><div><b>Qualifying an automated visual inspection station as an attribute gauge: replicate agreement, acquisition-state sensitivity and disposition of undecided items in a coin-cell case study</b><span class="jr"><em>2026.10.25 · </em>Quality and Reliability Engineering International (Wiley)</span><i class="scie">SCIE</i><a class="dl" href="data.html#d-repeat" data-ko="공개 데이터 →" data-en="Open data →">공개 데이터 →</a></div></div>
+      <div class="p" id="hari"><span class="pill s-check" data-ko="초기 검수 중" data-en="Initial checks">초기 검수 중</span><div><b>A non-compensatory gate contract for screening manufacturing execution architectures: typed abstention and uncertainty-charged trial evidence</b><span class="jr"><em>2026.09.20 · </em>Engineering Applications of Artificial Intelligence (Elsevier)</span><i class="scie">SCIE</i></div></div>
+      <div class="p" id="energy"><span class="pill s-editor" data-ko="편집 검토 중" data-en="With editor">편집 검토 중</span><div><b>Hierarchical Energy Management for a Robotic Manufacturing Microgrid: Separating 15-Minute Billing-Window Control from Instantaneous Import Protection</b><span class="jr"><em>2026.09.25 · </em>Sustainable Energy, Grids and Networks (Elsevier)</span><i class="scie">SCIE</i></div></div>
       <div class="p hv" id="maia-index"><span class="pill s-fix" data-ko="수정 중" data-en="Revising">수정 중</span><div><b>Multi-dimensional AI Applicability Index (MAIA): A Pilot Planning Rubric and Scoring-Reliability Study in Industrial Digital Twin Development</b><span class="jr"><em>2026.09.19 · </em>IEEE Access</span><i class="scie">SCIE</i></div><button class="vthumb" type="button" data-video="maia" aria-haspopup="dialog"><video muted loop playsinline preload="none" poster="media/maia-thumb.jpg" src="media/maia-preview.mp4" aria-hidden="true"></video><i class="vring"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4 2.5v7l6-3.5z" fill="currentColor"/></svg></i><span class="vlabel" data-ko="소개 영상" data-en="Video" data-ja="紹介動画" data-zh="介绍视频">소개 영상</span></button></div>
-      <div class="p" id="ladder"><span class="pill s-rev" data-ko="심사 중" data-en="In review">심사 중</span><div><b>Conformance checking of polled controller bit logs against the controller's own ladder program</b><span class="jr"><em>2026.10.26 · </em>IEEE Transactions on Industrial Informatics</span><i class="scie">SCIE</i><a class="dl" href="data.html#d-ladder" data-ko="공개 데이터 →" data-en="Open data →">공개 데이터 →</a></div></div>
+      <div class="p" id="ladder"><span class="pill s-sub" data-ko="접수 완료" data-en="Received">접수 완료</span><div><b>Conformance checking of polled controller bit logs against the controller's own ladder program</b><span class="jr"><em>2026.10.26 · </em>IEEE Transactions on Industrial Informatics</span><i class="scie">SCIE</i><a class="dl" href="data.html#d-ladder" data-ko="공개 데이터 →" data-en="Open data →">공개 데이터 →</a></div></div>
+      <div class="p" id="sttt"><span class="pill s-sub" data-ko="접수 완료" data-en="Received">접수 완료</span><div><b>Explaining bounded ambiguity and selecting observations for ladder-program logs</b><span class="jr"><em>2026.10.24 · </em>International Journal on Software Tools for Technology Transfer</span><i class="scie">SCIE</i></div></div>
       <div class="ck sub" data-ko="특허 4건 · 발명자 안창한" data-en="FOUR PATENTS · INVENTOR CHANGHAN AHN">특허 4건 · 발명자 안창한</div>
       <div class="p pt" id="pat-1588140"><span class="pill s-pat" data-ko="등록" data-en="Granted">등록</span><div><b data-ko="가전제품 및 그의 등록방법" data-en="Home appliance and its registration method">가전제품 및 그의 등록방법</b><span class="jr"><em>2016 · 10-1588140</em> · LG Electronics</span><span class="sm" data-ko="가전이 보안 ID로 에너지 미터에 등록하고, 응답이 없으면 다른 방법이나 외부 서버로 등록합니다." data-en="The appliance registers with the energy meter using a security ID and falls back to another method or an external server.">가전이 보안 ID로 에너지 미터에 등록하고, 응답이 없으면 다른 방법이나 외부 서버로 등록합니다.</span></div></div>
       <div class="p pt" id="pat-1728729"><span class="pill s-pat" data-ko="등록" data-en="Granted">등록</span><div><b data-ko="음료 저장 용기 및 그 제어 방법" data-en="Beverage container and its control method">음료 저장 용기 및 그 제어 방법</b><span class="jr"><em>2017 · 10-1728729</em> · LG Electronics</span><span class="sm" data-ko="광원과 분광 센서로 음료의 오염도를 재서 알리고, UV로 살균합니다." data-en="A light source and spectral sensor measure drink contamination, warn the user and trigger UV sterilisation.">광원과 분광 센서로 음료의 오염도를 재서 알리고, UV로 살균합니다.</span></div></div>
@@ -139,7 +142,6 @@
         <div class="g"><div data-ko="삼성미래기술육성사업 2027 상반기<small>촬영 조건 변화와 판정 유지 범위 · 표면 검사</small>" data-en="Samsung Science and Technology Foundation · 2027 H1<small>surface inspection as shooting conditions change</small>">삼성미래기술육성사업 2027 상반기<small>촬영 조건 변화와 판정 유지 범위 · 표면 검사</small></div><span class="pill s-sub" data-ko="제출 완료" data-en="Submitted">제출 완료</span></div>
         <div class="g"><div data-ko="해외 재단·기업 연구과제 9건 제출<small>Cisco · Foresight · GTR · Sentient · Mozilla 2 · OpenMined · Renaissance · Microsoft</small>" data-en="Overseas foundation and corporate grants: 9 submitted<small>Cisco · Foresight · GTR · Sentient · Mozilla 2 · OpenMined · Renaissance · Microsoft</small>">해외 재단·기업 연구과제 9건 제출<small>Cisco · Foresight · GTR · Sentient · Mozilla 2 · OpenMined · Renaissance · Microsoft</small></div><span class="pill s-sub" data-ko="제출 완료" data-en="Submitted">제출 완료</span></div>
         <div class="g"><div><span data-ko="KETEP 2027 에너지인력양성 연구개발과제 기획단" data-en="KETEP 2027 energy-workforce R&amp;D planning group">KETEP 2027 에너지인력양성 연구개발과제 기획단</span><small data-ko="기획위원 지원서 제출" data-en="planning-member application sent">기획위원 지원서 제출</small></div><span class="pill s-sub" data-ko="제출 완료" data-en="Submitted">제출 완료</span></div>
-        <div class="g"><div data-ko="한전 전력연구원 2차 사외공모<small>11/4 접수 · 고전력반도체 신뢰성 평가 인증체계 · 공동 제안 준비</small>" data-en="KEPCO Research Institute 2nd open call<small>due 4 Nov · power-semiconductor reliability certification · joint proposal</small>">한전 전력연구원 2차 사외공모<small>11/4 접수 · 고전력반도체 신뢰성 평가 인증체계 · 공동 제안 준비</small></div><span class="pill s-pre" data-ko="준비" data-en="Preparing">준비</span></div>
         <div class="g"><div data-ko="산업부 기계장비 AI 품질검사<small>11/20 접수 · 범용화·패키지화 · 참여기관 협의</small>" data-en="MOTIE machinery call · AI quality inspection<small>due 20 Nov · generalised, packaged inspection · partner talks</small>">산업부 기계장비 AI 품질검사<small>11/20 접수 · 범용화·패키지화 · 참여기관 협의</small></div><span class="pill s-pre" data-ko="준비" data-en="Preparing">준비</span></div>
         <div class="g"><div data-ko="NRF 2027 개인기초연구<small>배전망 운전가능영역 · 연구계획서 작성</small>" data-en="NRF 2027 basic research<small>distribution-network operating envelope · plan drafting</small>">NRF 2027 개인기초연구<small>배전망 운전가능영역 · 연구계획서 작성</small></div><span class="pill s-pre" data-ko="준비" data-en="Preparing">준비</span></div>
       </div>
@@ -150,39 +152,49 @@
     <div class="vbox">
       <div class="vhead"><div><div class="ck" data-ko="논문 소개 영상" data-en="PAPER VIDEO" data-ja="論文紹介動画" data-zh="论文介绍视频">논문 소개 영상</div><b id="vtitle"></b><small id="vjr"></small></div><button class="vx" type="button" id="vclose" aria-label="Close">×</button></div>
       <div class="vfsbox" id="vwrap"><div class="vwrap"><div class="vstage"><video id="vplayer" playsinline preload="metadata"></video><div class="vcap" id="vcap" aria-live="polite"><span></span></div></div></div><div class="vctl"><button class="vic" type="button" id="vplay" aria-label="Play"><svg viewBox="0 0 14 14" aria-hidden="true"><path class="i-play" d="M3.5 2v10l8.5-5z" fill="currentColor"/><g class="i-pause" fill="currentColor"><rect x="3" y="2" width="3" height="10"/><rect x="8" y="2" width="3" height="10"/></g></svg></button><span class="vt" id="vtime">0:00 / 0:00</span><input type="range" id="vseek" min="0" max="1000" value="0" step="1" aria-label="Seek"><button class="vic" type="button" id="vmute" aria-label="Mute"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5h2.5L8 2v10L4.5 9H2z" fill="currentColor"/><path class="i-wave" d="M10 4.5a3.5 3.5 0 0 1 0 5" stroke="currentColor" stroke-width="1.3" fill="none"/><path class="i-x" d="M9.5 5l3.5 4M13 5l-3.5 4" stroke="currentColor" stroke-width="1.3"/></svg></button></div></div>
-      <div class="vfoot"><span class="ck" data-ko="자막" data-en="CAPTIONS" data-ja="字幕" data-zh="字幕">자막</span><div class="vlang" id="vlang" role="tablist"></div><span class="vnote" data-ko="음성과 영상 속 자막은 영어입니다. 다른 언어 자막은 눌러서 켭니다." data-en="Narration and the captions in the video are English. Other captions switch on when pressed." data-ja="音声と動画内の字幕は英語です。他の言語の字幕はボタンで表示します。" data-zh="旁白与视频内嵌字幕为英语。其他语言字幕按下后显示。">음성과 영상 속 자막은 영어입니다. 다른 언어 자막은 눌러서 켭니다.</span><button class="vfs" type="button" id="vfs" data-ko="전체 화면" data-en="Full screen" data-ja="全画面" data-zh="全屏">전체 화면</button></div>
+      <div class="vfoot"><span class="ck" data-ko="자막" data-en="CAPTIONS" data-ja="字幕" data-zh="字幕">자막</span><div class="vlang" id="vlang" role="group"></div><span class="vnote" data-v="inline" data-ko="음성은 영어입니다. 언어를 누르면 그 자막이 나오고, 다시 누르면 꺼집니다." data-en="Narration is in English. Press a language for its captions; press it again to turn captions off." data-ja="音声は英語です。言語を押すとその字幕が表示され、もう一度押すと消えます。" data-zh="旁白为英语。按下语言显示该字幕，再按一次关闭。">음성은 영어입니다. 언어를 누르면 그 자막이 나오고, 다시 누르면 꺼집니다.</span><span class="vnote" data-v="maia" hidden data-ko="음성은 영어이고, 영어 자막은 영상에 들어 있습니다. 언어를 누르면 번역 자막이 그 위에 나오고, 다시 누르면 꺼집니다." data-en="Narration is in English, with English captions in the video. Press a language for a translation above them; press it again to turn it off." data-ja="音声は英語で、英語字幕は動画に入っています。言語を押すと翻訳字幕がその上に表示され、もう一度押すと消えます。" data-zh="旁白为英语，英语字幕已在视频中。按下语言在其上方显示译文字幕，再按一次关闭。">음성은 영어이고, 영어 자막은 영상에 들어 있습니다. 언어를 누르면 번역 자막이 그 위에 나오고, 다시 누르면 꺼집니다.</span><button class="vfs" type="button" id="vfs" data-ko="전체 화면" data-en="Full screen" data-ja="全画面" data-zh="全屏">전체 화면</button></div>
     </div>
   </div>
 
-  <div class="foot"><a href="index.html" data-ko="← 홈으로" data-en="← Home">← 홈으로</a><span>Esc</span><span class="r" data-ko="2026년 10월 29일 기준" data-en="As of 29 October 2026">2026년 10월 29일 기준</span></div>
+  <div class="foot"><a href="index.html" data-ko="← 홈으로" data-en="← Home">← 홈으로</a><span>Esc</span><span class="r" data-asof data-ko="2026년 10월 29일 기준" data-en="As of 29 October 2026">2026년 11월 5일 기준</span></div>
 
 </div></div>
-<script src="assets/i18n.js?v=20261029a"></script>
-<script src="assets/site.js?v=20261024a"></script>
+<script src="assets/i18n.js?v=20261031a"></script>
+<script src="assets/site.js?v=20261031a"></script>
 <script>
 (function(){
+  // inline: the lab-site cut has no burned captions, so all four languages are tracks here.
+  // maia: English is burned into the video; KO/JA/ZH sit just above it, placed by the band track.
   const V={
-    inline:{src:'media/inline-video.mp4',poster:'media/inline-video.jpg',vtt:'media/inline-video',row:'inline'},
-    maia:{src:'media/maia-video.mp4',poster:'media/maia-video.jpg',vtt:'media/maia-video',row:'maia-index'}
+    inline:{src:'media/inline-video-v10.mp4',poster:'media/inline-video.jpg',vtt:'media/inline-video',row:'inline',langs:['en','ko','ja','zh']},
+    maia:{src:'media/maia-video.mp4',poster:'media/maia-video.jpg',vtt:'media/maia-video',row:'maia-index',langs:['ko','ja','zh'],band:true}
   };
-  // captions stay off until the viewer picks a language; the video carries its own English captions
-  const CL=[['off','OFF','자막 없음 · No captions'],['ko','KO','한국어'],['ja','JA','日本語'],['zh','ZH','简体中文']];
+  // captions start off; pressing a language shows it, pressing the lit one again turns captions off
+  const CL=[['en','EN','English'],['ko','KO','한국어'],['ja','JA','日本語'],['zh','ZH','简体中文']];
   const m=document.getElementById('vmodal'),v=document.getElementById('vplayer'),cap=document.getElementById('vcap'),
         bar=document.getElementById('vlang'),wrap=document.getElementById('vwrap');
-  let cl='off',opener=null;
-  bar.innerHTML=CL.map(c=>'<button type="button" role="tab" data-c="'+c[0]+'" title="'+c[2]+'">'+c[1]+'</button>').join('');
+  let cl='off',opener=null,band=null,cur=V.inline;
+  // the cue for the current time, read from the cue list itself: activeCues lags while the video is paused
+  function cueAt(t){
+    const now=v.currentTime,cues=t&&t.cues?[...t.cues].filter(c=>c.startTime<=now&&now<c.endTime):[];
+    return cues[cues.length-1];
+  }
   function show(){
-    // the cue for the current time, read from the cue list itself: activeCues lags while the video is paused
-    const t=[...v.textTracks].find(t=>t.language===cl),now=v.currentTime;
-    const cues=t&&t.cues?[...t.cues].filter(c=>c.startTime<=now&&now<c.endTime):[];
-    const c=cues[cues.length-1];
-    cap.firstChild.textContent=c?c.text:'';
+    const tracks=[...v.textTracks];
+    // a translated cue spans a whole sentence, so it can outlast the burned cue under it: keep the last place
+    if(cur.band){const b=cueAt(tracks.find(t=>t.kind==='metadata'));if(b)band=JSON.parse(b.text)}
+    const c=cl==='off'?null:cueAt(tracks.find(t=>t.language===cl));
     cap.classList.toggle('on',!!c);
+    cap.firstChild.textContent=c?c.text:'';
+    cap.style.bottom=cur.band&&band?(100-band.y+.6)+'%':'';
   }
   function pick(c){
     cl=c;
-    [...v.textTracks].forEach(t=>{t.mode=t.language===cl?'hidden':'disabled';t.oncuechange=t.language===cl?show:null});
-    bar.querySelectorAll('button').forEach(b=>{const on=b.dataset.c===cl;b.classList.toggle('on',on);b.setAttribute('aria-selected',on)});
+    [...v.textTracks].forEach(t=>{
+      const use=t.kind==='metadata'||t.language===cl;
+      t.mode=use?'hidden':'disabled';t.oncuechange=use?show:null;
+    });
+    bar.querySelectorAll('button').forEach(b=>{const on=b.dataset.c===cl;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on)});
     show();
   }
   function open(key,btn){
@@ -191,7 +203,14 @@
     document.getElementById('vtitle').textContent=row.querySelector('b').textContent;
     document.getElementById('vjr').textContent=row.querySelector('.jr').textContent;
     v.innerHTML='';v.poster=d.poster;v.src=d.src;seek.value=0;time.textContent='0:00 / 0:00';play.classList.remove('on');
-    ['ko','ja','zh'].forEach(l=>{const k=document.createElement('track');k.kind='subtitles';k.srclang=l;k.src=d.vtt+'.'+l+'.vtt';k.label=l;k.addEventListener('load',show);v.appendChild(k)});
+    band=null;cur=d;
+    bar.innerHTML=CL.filter(c=>d.langs.includes(c[0])).map(c=>'<button type="button" data-c="'+c[0]+'" title="'+c[2]+'" aria-pressed="false">'+c[1]+'</button>').join('');
+    document.querySelectorAll('.vnote').forEach(n=>{n.hidden=n.dataset.v!==key});
+    d.langs.concat(d.band?['band']:[]).forEach(l=>{
+      const k=document.createElement('track');
+      if(l==='band')k.kind='metadata';else{k.kind='subtitles';k.srclang=l;k.label=l}
+      k.src=d.vtt+'.'+l+'.vtt';k.addEventListener('load',show);v.appendChild(k);
+    });
     m.hidden=false;
     pick('off');
     document.getElementById('vclose').focus();
@@ -213,7 +232,7 @@
   });
   document.getElementById('vclose').addEventListener('click',close);
   m.addEventListener('click',e=>{if(e.target===m)close()});
-  bar.addEventListener('click',e=>{const b=e.target.closest('button');if(b)pick(b.dataset.c)});
+  bar.addEventListener('click',e=>{const b=e.target.closest('button');if(b)pick(b.dataset.c===cl?'off':b.dataset.c)});
   document.getElementById('vfs').addEventListener('click',()=>{
     if(document.fullscreenElement)document.exitFullscreen();else if(wrap.requestFullscreen)wrap.requestFullscreen();
   });
@@ -231,7 +250,6 @@
   window.addEventListener('keydown',e=>{if(!m.hidden&&e.key===' '&&!e.target.closest('button,input')){e.preventDefault();toggle()}});
   // Esc closes the video first; site.js would otherwise leave for the home page
   window.addEventListener('keydown',e=>{if(e.key==='Escape'&&!m.hidden){e.stopPropagation();if(!document.fullscreenElement)close()}},true);
-  window.LAB.onLang.push(()=>{if(m.hidden)cl='off'});
 })();
 </script>
 </body>

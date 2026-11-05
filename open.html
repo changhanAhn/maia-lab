@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko">
+<html data-published="2026-11-05" lang="ko">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,172 +20,84 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="assets/site.css?v=20261024a">
 <script src="pulse.js"></script>
-<script src="assets/progress.js?v=20261029a"></script>
+<script src="assets/progress.js?v=20261031a"></script>
 <style>
 .head{position:absolute;left:56px;top:68px;width:1168px}
-.upd{position:absolute;right:0;top:0;font-size:11px;color:var(--mute);font-weight:600;text-align:right}
-/* projects and their steps */
-.track{position:absolute;left:56px;top:178px;width:784px;height:478px;display:flex;flex-direction:column}
-.rows{display:flex;flex-direction:column;margin-top:8px}
-.pr{display:grid;grid-template-columns:232px 1fr;gap:12px;align-items:center;min-height:35px;padding:2px 0;border-top:1px solid rgba(236,232,225,.07)}
-.pr .nm{display:flex;align-items:center;gap:9px;font-size:12.5px;font-weight:600;color:#e2e8f0;line-height:1.3}
-.pr .nm i{flex:none;width:7px;height:7px;border-radius:50%}
-.pr .nm a{color:inherit}
-.chain{display:flex;align-items:center;gap:4px 6px;flex-wrap:wrap}
-.stp{display:flex;align-items:baseline;gap:5px;font-size:11.5px;color:var(--mute);white-space:nowrap}
-.stp b{font-weight:500}
-.stp small{font-family:var(--mono);font-size:10.5px;color:#6b7078}
-.chain .sep{font-style:normal;color:#4b5058}
-.stp.done b{color:#b4b1aa}
-.stp.now b{color:var(--acc);font-weight:700}
-.stp.now{padding:1px 7px;border:1px solid color-mix(in srgb,var(--acc) 55%,transparent);border-radius:3px}
-.stp.next{opacity:.55}
-/* recent outputs and the commit record */
-.side{position:absolute;left:856px;top:178px;width:368px;height:478px;display:flex;flex-direction:column;gap:12px}
-.recent{flex:1;min-height:0}
-.ev{display:grid;grid-template-columns:44px 1fr;gap:10px;padding:7px 0;border-top:1px solid rgba(236,232,225,.07);font-size:12px;line-height:1.4}
-.ev em{font-style:normal;font-family:var(--mono);font-size:11px;color:var(--acc)}
-.ev b{font-weight:600;color:#e2e8f0}
-.ev span{color:var(--mute)}
-.work{height:176px;display:flex;flex-direction:column}
-.work .fresh{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--mute);margin-top:6px}
-.status-dot{width:7px;height:7px;border-radius:50%;background:var(--mute)}
-.status-dot[data-state="current"]{background:var(--sage)}
-.status-dot[data-state="delayed"]{background:var(--brass)}
-.status-dot[data-state="error"]{background:var(--hu)}
-.work svg{flex:1;width:100%;margin-top:6px}
-@media (max-width:900px),(max-height:500px){
-  .upd{position:static;text-align:left;margin-top:6px}
-  .pr{grid-template-columns:1fr;gap:6px;padding:10px 0}
-  .pr .nm a{display:inline-block;padding:8px 0}
-  .side{gap:14px}
-  .work{height:auto}
-  .work svg{flex:none;height:140px}
+.head-side{position:absolute;right:0;top:2px;width:350px;text-align:right}
+.head-side .lead{margin:0;font-size:12.5px;line-height:1.55;text-wrap:balance;word-break:keep-all}
+.meta-row{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:4px 12px;margin-top:8px}
+.board-meta{font-size:10.5px;color:var(--mute)}
+.fresh{display:flex;align-items:center;gap:6px;font-size:10.5px;color:var(--mute)}
+.fresh[hidden]{display:none}
+.status-dot{width:5px;height:5px;border-radius:50%;background:var(--mute);flex:none}
+.status-dot[data-state=current]{background:var(--sage)}
+.status-dot[data-state=delayed]{background:var(--brass)}
+.status-dot[data-state=error]{background:var(--hu)}
+.board-layout{position:absolute;left:56px;top:146px;width:1168px;height:516px}
+#boardEmpty{font-size:12px;color:var(--mute);line-height:1.7;margin:15px 0}
+.layer-map{display:block;overflow:visible}
+.layer-map text{fill:#e3ddcf}
+.layer-map .lm-name{font-size:14px;font-weight:600}
+.layer-map .lm-sub,.layer-map .lm-bsub,.layer-map .lm-meta,.layer-map .lm-leg{fill:#959a9f}
+.layer-map .lm-sub{font-size:11px}
+.layer-map .lm-band{font-size:13px;font-weight:500;fill:#d7d0bf}
+.layer-map .lm-bsub,.layer-map .lm-meta,.layer-map .lm-leg{font-size:10.5px}
+.layer-map .lm-nm{font-size:12.5px;font-weight:500}
+.layer-map .lm-nm.cold{fill:#bdb7a9}
+.layer-map .lm-st{font-size:11.5px;font-weight:600}
+.layer-map .lm-mini{font-size:11px;fill:#bdb6a6}
+.layer-map .lm-pap{font-size:12px}
+.layer-map .lm-badge{font-size:11px;font-weight:700}
+.layer-map .pend{fill:var(--sage)}
+.pulse{animation:lm-ring 3.6s ease-in-out infinite}
+@keyframes lm-ring{0%,100%{stroke-opacity:.2}50%{stroke-opacity:.9}}
+.blip{animation:lm-blip 3s ease-in-out infinite}
+@keyframes lm-blip{0%,100%{opacity:.3}50%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.pulse,.blip{animation:none!important}}
+.layer-list{display:none}
+@media(max-width:900px),(max-height:500px){
+ .head-side{position:static;width:auto;text-align:left;margin-top:12px}
+ .head-side .lead{font-size:14px}
+ .board-meta{font-size:12px}
+ .meta-row{justify-content:flex-start}
+ .fresh{font-size:12px}
+ .layer-map{display:none}
+ .layer-list{display:block}
+ .ll-area{border-top:1px solid var(--line);padding:14px 0 10px}
+ .ll-area h3{display:flex;flex-wrap:wrap;align-items:center;gap:4px 9px;margin:0 0 8px;font-size:16px;font-weight:600;color:var(--c,var(--txt))}
+ .ll-area h3 i{font-style:normal;font-size:12px;font-weight:700;width:24px;height:24px;border:1px solid var(--c);border-radius:50%;display:inline-grid;place-items:center}
+ .ll-area h3 small{flex-basis:100%;font-size:12.5px;font-weight:400;color:var(--mute)}
+ .ll-band{display:grid;grid-template-columns:88px minmax(0,1fr);gap:10px;padding:7px 0;border-top:1px dashed rgba(236,232,225,.07)}
+ .ll-band>span{font-size:12.5px;color:#a9a397}
+ .ll-area ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+ .ll-area li{font-size:14px;line-height:1.45;color:#e3ddcf;min-width:0}
+ .ll-area li em{font-style:normal;font-weight:600;font-size:13px;color:var(--c);margin-left:7px}
+ .ll-area li small{display:block;font-size:12px;color:var(--mute)}
+ .ll-strip li{border-left:2px solid var(--c);padding-left:10px}
 }
 </style>
 </head>
 <body data-page="open">
 <div class="stage" id="stage"><div class="page" id="page">
-
-  <div class="head">
-    <div class="ck" data-ko="개발 현황" data-en="DEVELOPMENT">개발 현황</div>
-    <div class="h2" data-ko="무엇을 <em>어디까지</em> 했나" data-en="What is under way, and <em>how far</em> it has come">무엇을 <em>어디까지</em> 했나</div>
-    <p class="lead" data-ko="과제마다 지금 단계를 보여 줍니다. 실적·공개 자료 페이지와 같은 사실과 날짜만 씁니다." data-en="Each project and the step it has reached, using only the facts and dates on the record and data pages.">과제마다 지금 단계를 보여 줍니다. 실적·공개 자료 페이지와 같은 사실과 날짜만 씁니다.</p>
-    <div class="upd" id="upd"></div>
+ <div class="head">
+  <div class="ck" data-ko="개발 현황" data-en="DEVELOPMENT" data-ja="開発状況" data-zh="开发进展">개발 현황</div>
+  <div class="h2" data-ko="연구 진행, <em>작업의 현재 위치</em>" data-en="Research, <em>layer by layer</em>" data-ja="研究の進行、<em>作業の現在位置</em>" data-zh="研究进展，<em>工作的当前位置</em>">연구 진행, <em>작업의 현재 위치</em></div>
+  <div class="head-side">
+   <p class="lead" data-ko="다섯 연구영역이 현장·코드·실측·성과 네 작업 층 중 어디에서 진행되는지 표시합니다." data-en="Where each of the five research areas is at work: on site, in code, in measurement, or in published outputs." data-ja="5つの研究領域が、現場・コード・実測・成果の4つの作業層のどこで進んでいるかを示します。" data-zh="显示五个研究方向分别在现场、代码、实测、成果四个工作层中的哪一层推进。">다섯 연구영역이 현장·코드·실측·성과 네 작업 층 중 어디에서 진행되는지 표시합니다.</p>
+   <div class="meta-row"><div class="board-meta" id="boardFresh" aria-live="polite"></div><div class="fresh"><span class="status-dot" id="freshDot"></span><span id="freshLabel"></span></div></div>
   </div>
-
-  <div class="card track rise">
-    <div class="ck" data-ko="과제 · 진행 단계" data-en="PROJECTS · STEPS">과제 · 진행 단계</div>
-    <div class="rows" id="rows"><div class="pr"><div class="nm">인라인 검사 엔진</div><div class="chain"><span class="stp done"><b>라인 실측</b> <small>2026-10-15</small></span> → <span class="stp done"><b>데이터 공개</b> <small>2026-10-15</small></span> → <span class="stp done"><b>투고</b> <small>2026-10-15</small></span> → <span class="stp now"><b>심사 중</b></span></div></div><div class="pr"><div class="nm">반복 검사 정밀도</div><div class="chain"><span class="stp done"><b>데이터 공개</b> <small>2026-10-11</small></span> → <span class="stp done"><b>투고</b> <small>2026-10-25</small></span> → <span class="stp now"><b>접수</b></span></div></div><div class="pr"><div class="nm">래더 적합성 검사</div><div class="chain"><span class="stp done"><b>사전등록</b></span> → <span class="stp done"><b>라인 실측</b> <small>2026-10-17</small></span> → <span class="stp done"><b>데이터 공개</b> <small>2026-10-17</small></span> → <span class="stp done"><b>투고</b> <small>2026-10-26</small></span> → <span class="stp now"><b>심사 중</b></span></div></div><div class="pr"><div class="nm">MAIA 적용성 지수</div><div class="chain"><span class="stp done"><b>투고</b> <small>2026-09-19</small></span> → <span class="stp now"><b>수정 중</b></span></div></div><div class="pr"><div class="nm">비보상 관문 계약</div><div class="chain"><span class="stp done"><b>투고</b> <small>2026-09-20</small></span> → <span class="stp now"><b>접수</b></span></div></div><div class="pr"><div class="nm">마이크로그리드 계층형 에너지 관리</div><div class="chain"><span class="stp done"><b>투고</b> <small>2026-09-25</small></span> → <span class="stp now"><b>심사 중</b></span></div></div><div class="pr"><div class="nm">공정 이벤트 동기 전력 분해</div><div class="chain"><span class="stp now"><b>설계</b></span> → <span class="stp next"><b>실측</b></span></div></div><div class="pr"><div class="nm">PV·ESS·라인 부하 트윈</div><div class="chain"><span class="stp now"><b>진행 중</b></span></div></div><div class="pr"><div class="nm">엣지 AI 부하 전력 계측</div><div class="chain"><span class="stp now"><b>진행 중</b></span></div></div><div class="pr"><div class="nm">코인셀 시험 라인</div><div class="chain"><span class="stp now"><b>운영 중</b></span></div></div><div class="pr"><div class="nm">비전공자 PLC·비전·데이터 실습</div><div class="chain"><span class="stp now"><b>운영 중</b></span></div></div></div>
-  </div>
-
-  <div class="side">
-    <div class="card recent rise" style="animation-delay:.08s">
-      <div class="ck" data-ko="최근 산출물" data-en="RECENT OUTPUTS">최근 산출물</div>
-      <div id="recent"></div>
-    </div>
-    <div class="card work rise" style="animation-delay:.16s">
-      <div class="ck" data-ko="작업 기록 · 최근 14일 커밋" data-en="WORK LOG · COMMITS, LAST 14 DAYS">작업 기록 · 최근 14일 커밋</div>
-      <div class="fresh"><span class="status-dot" id="freshDot"></span><span id="freshLabel"></span></div>
-      <svg id="cCom" viewBox="0 0 330 100" preserveAspectRatio="none"></svg>
-    </div>
-  </div>
-
-  <div class="foot"><a href="index.html" data-ko="← 홈으로" data-en="← Home">← 홈으로</a><span>Esc</span><span class="r" data-ko="단계는 실적·공개 자료와 같은 기준 · 커밋은 하루 1회 갱신" data-en="Steps follow the record and data pages · commits refresh once a day">단계는 실적·공개 자료와 같은 기준 · 커밋은 하루 1회 갱신</span></div>
-
+ </div>
+ <div class="board-layout">
+  <p id="boardEmpty" data-ko="작업 기록 확인 중" data-en="Loading work records" data-ja="作業記録を確認中" data-zh="正在读取工作记录">작업 기록 확인 중</p>
+  <svg class="layer-map" id="layerMap" role="img" aria-labelledby="layerTitle"></svg>
+  <div class="layer-list" id="layerList"></div>
+  <div class="sr"><div id="rows"><div class="pr"><div class="nm">인라인 검사 엔진</div><div class="chain"><span class="stp done"><b>라인 실측</b> <small>2026-10-15</small></span> → <span class="stp done"><b>데이터 공개</b> <small>2026-10-15</small></span> → <span class="stp done"><b>투고</b> <small>2026-10-15</small></span> → <span class="stp now"><b>심사 중</b></span></div></div><div class="pr"><div class="nm">반복 검사 정밀도</div><div class="chain"><span class="stp done"><b>데이터 공개</b> <small>2026-10-11</small></span> → <span class="stp done"><b>투고</b> <small>2026-10-25</small></span> → <span class="stp now"><b>초기 검토 중</b></span></div></div><div class="pr"><div class="nm">래더 적합성 검사</div><div class="chain"><span class="stp done"><b>사전등록</b></span> → <span class="stp done"><b>라인 실측</b> <small>2026-10-17</small></span> → <span class="stp done"><b>데이터 공개</b> <small>2026-10-17</small></span> → <span class="stp done"><b>투고</b> <small>2026-10-26</small></span> → <span class="stp now"><b>접수 완료</b></span></div></div><div class="pr"><div class="nm">MAIA 적용성 지수</div><div class="chain"><span class="stp done"><b>투고</b> <small>2026-09-19</small></span> → <span class="stp now"><b>수정 중</b></span></div></div><div class="pr"><div class="nm">비보상 관문 계약</div><div class="chain"><span class="stp done"><b>투고</b> <small>2026-09-20</small></span> → <span class="stp now"><b>초기 검수 중</b></span></div></div><div class="pr"><div class="nm">마이크로그리드 계층형 에너지 관리</div><div class="chain"><span class="stp done"><b>투고</b> <small>2026-09-25</small></span> → <span class="stp now"><b>편집 검토 중</b></span></div></div><div class="pr"><div class="nm">래더 로그 모호성·관측 선택</div><div class="chain"><span class="stp done"><b>투고</b> <small>2026-10-24</small></span> → <span class="stp now"><b>접수 완료</b></span></div></div><div class="pr"><div class="nm">공정 이벤트 동기 전력 분해</div><div class="chain"><span class="stp now"><b>설계</b></span> → <span class="stp next"><b>실측</b></span></div></div><div class="pr"><div class="nm">PV·ESS·라인 부하 트윈</div><div class="chain"><span class="stp now"><b>진행 중</b></span></div></div><div class="pr"><div class="nm">엣지 AI 부하 전력 계측</div><div class="chain"><span class="stp now"><b>진행 중</b></span></div></div><div class="pr"><div class="nm">코인셀 시험 라인</div><div class="chain"><span class="stp now"><b>운영 중</b></span></div></div><div class="pr"><div class="nm">PLC·비전·데이터 실습</div><div class="chain"><span class="stp now"><b>운영 중</b></span></div></div><div class="pr"><div class="nm">중진공 재직자 로봇 PLC 교육 11.19</div><div class="chain"><span class="stp now"><b>예정</b></span></div></div><div class="pr"><div class="nm">캡스톤 작품대회 최우수상</div><div class="chain"><span class="stp done"><b>최우수상</b> <small>2026-10-27</small></span> → <span class="stp now"><b>본선 진출 · 11월 말 예정</b></span></div></div></div></div>
+ </div>
+ <div class="foot"><a href="index.html" data-ko="← 홈으로" data-en="← Home" data-ja="← ホームへ" data-zh="← 返回首页">← 홈으로</a><span>Esc</span></div>
 </div></div>
-<script src="assets/research.js?v=20261029a"></script>
-<script src="assets/i18n.js?v=20261024a"></script>
-<script src="assets/site.js?v=20261024a"></script>
-<script>
-(function(){
-const L=window.LAB,NS='http://www.w3.org/2000/svg',G=window.PROGRESS,R=window.RESEARCH;
-const tr=a=>L.T(a[0],a[1],a[2],a[3]);
-const md=iso=>iso?(+iso.slice(5,7))+'/'+(+iso.slice(8,10)):'';
-const STATE={done:['완료','done','完了','已完成'],now:['현재 단계','current step','現在の段階','当前阶段'],next:['예정','next','予定','计划中']};
-function drawProjects(){
-  const rows=document.getElementById('rows');rows.innerHTML='';
-  G.projects.forEach(p=>{
-    const area=R.areas.find(a=>a.id===p.leaf[0]),row=document.createElement('div');row.className='pr';
-    // a paper links to its row on the record page, anything else to its research area
-    const u=new URL(p.rec?'record.html#'+p.rec:area.href,location.href);u.searchParams.set('lang',L.lang());
-    row.innerHTML='<div class="nm"><i style="background:'+area.c+'"></i><a></a></div><div class="chain"></div>';
-    const a=row.querySelector('a');a.href=u.href;a.textContent=tr(p.name);
-    const chain=row.querySelector('.chain');
-    p.steps.forEach(([k,date,state],i)=>{
-      if(i){const sep=document.createElement('i');sep.className='sep';sep.textContent='→';sep.setAttribute('aria-hidden','true');chain.appendChild(sep)}
-      const s=document.createElement('span');s.className='stp '+state;
-      // screen readers hear whether a step is done, current or still ahead
-      s.innerHTML='<b></b>'+(date?'<small>'+md(date)+'</small>':'')+'<span class="sr"></span>';s.querySelector('b').textContent=tr(G.steps[k]);
-      s.querySelector('.sr').textContent=' ('+tr(STATE[state])+')';if(state==='now')s.setAttribute('aria-current','step');chain.appendChild(s)});
-    rows.appendChild(row);
-  });
-  // newest dated steps across all projects; one line per project and day
-  const ev=[];G.projects.forEach(p=>p.steps.forEach(([k,date,state])=>{if(!date||state==='next')return;
-    const same=ev.find(e=>e.date===date&&e.p===p);if(same)same.step+=' · '+tr(G.steps[k]);else ev.push({date,p,name:tr(p.name),step:tr(G.steps[k])})}));
-  ev.sort((a,b)=>a.date<b.date?1:a.date>b.date?-1:0);
-  const box=document.getElementById('recent');box.innerHTML='';
-  ev.slice(0,6).forEach(e=>{const d=document.createElement('div');d.className='ev';d.innerHTML='<em></em><div><b></b> <span></span></div>';
-    d.querySelector('em').textContent=md(e.date);d.querySelector('b').textContent=e.name;d.querySelector('span').textContent='· '+e.step;box.appendChild(d)});
-  document.getElementById('upd').textContent=L.T('단계 기준 ','Steps as of ','段階の基準日 ','阶段基准日 ')+G.asof;
-}
-let P=window.PULSE,reloadFailed=false;
-function valid(p){
-  const iso=s=>typeof s==='string'&&Number.isFinite(Date.parse(s));
-  return p&&p.schema_version===2&&p.commits&&p.period
-    &&[p.commits.total,p.commits.day,p.commits.week].every(n=>Number.isFinite(n)&&n>=0)
-    &&Array.isArray(p.commits.spark14)&&p.commits.spark14.length===14&&p.commits.spark14.every(n=>Number.isFinite(n)&&n>=0)
-    &&iso(p.generated_at)&&iso(p.period.end);
-}
-if(!valid(P))P=null;
-function el(tag,attrs,parent){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e}
-// Day labels follow the snapshot's own calendar date, not the visitor's time zone.
-function dayLabel(i){const [y,m,dd]=P.period.end.slice(0,10).split('-').map(Number),d=new Date(Date.UTC(y,m-1,dd)-(13-i)*86400000);return (d.getUTCMonth()+1)+'/'+d.getUTCDate()}
-function bars(svg,values,W,Hh){
-  svg.innerHTML='';const n=values.length,max=Math.max(1,...values),bw=W/n,base=Hh-16;
-  for(let i=0;i<n;i++){const h=(base-4)*values[i]/max;
-    el('rect',{x:i*bw+bw*.2,y:base-h,width:bw*.6,height:Math.max(0,h),rx:2,fill:'#8fae9a',opacity:i===n-1?1:.7},svg);
-    // the last label is anchored at the right edge so it is never cut off
-    if(i%3===1||i===n-1){const last=i===n-1,t=el('text',{x:last?W-1:i*bw+bw/2,y:Hh-3,'text-anchor':last?'end':'middle','font-size':10,fill:last?'#ece8e1':'#6b7078'},svg);t.textContent=dayLabel(i)}}
-}
-function drawWork(){
-  const cc=document.getElementById('cCom');
-  if(!P){cc.innerHTML='';tick();return}
-  // draw at the chart's own size so the axis text is never stretched
-  const cw=Math.max(200,Math.round(cc.clientWidth||330)),ch=Math.max(80,Math.round(cc.clientHeight||100));cc.setAttribute('viewBox','0 0 '+cw+' '+ch);
-  bars(cc,P.commits.spark14,cw,ch);
-  tick();
-}
-function tick(){
-  const state=reloadFailed?'error':L.freshness(P);
-  document.getElementById('freshDot').dataset.state=state;
-  const labels={current:['최근 집계','Recent snapshot'],delayed:['갱신 지연','Update delayed'],stale:['오래된 집계','Old snapshot'],unknown:['집계 확인 불가','Snapshot unavailable'],error:['재독 실패 · 이전 집계','Reload failed · previous snapshot']};
-  const c=P&&P.commits,ago=P?L.ago(P.generated_at):'';
-  // the age is how old today's snapshot is; the snapshot itself is made once a day
-  document.getElementById('freshLabel').textContent=(c?L.T('7일 '+c.week+'회','7 days: '+c.week,'7日 '+c.week+'件','7天 '+c.week+'次')+' · ':'')+L.T(...labels[state])+(c?' '+ago:'');
-}
-setInterval(tick,15000);
-// Read a new snapshot without losing the previous valid one on network/schema errors.
-let refreshing=false;
-async function refresh(){
-  if(refreshing)return;refreshing=true;
-  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),15000);
-  try{
-    const response=await fetch('pulse.js?ts='+Date.now(),{cache:'no-store',signal:controller.signal});
-    if(!response.ok)throw new Error('snapshot request failed');
-    const text=await response.text(),match=text.match(/^\s*window\.PULSE\s*=\s*([\s\S]*);\s*$/);
-    const next=match?JSON.parse(match[1]):null;
-    if(controller.signal.aborted||!valid(next)||L.freshness(next)==='unknown')throw new Error('invalid snapshot');
-    const changed=!P||next.generated_at!==P.generated_at;P=next;window.PULSE=P;reloadFailed=false;
-    if(changed)drawWork();
-  }catch(_){reloadFailed=true}
-  finally{clearTimeout(timer);refreshing=false;tick()}
-}
-setInterval(refresh,300000);
-L.onLang.push(()=>{drawProjects();drawWork()});
-// redraw the chart at its new size after a resize or rotation
-let resizing=null;window.addEventListener('resize',()=>{clearTimeout(resizing);resizing=setTimeout(drawWork,150)});
-})();
-</script>
+<script src="assets/research.js?v=20261031a"></script>
+<script src="assets/i18n.js?v=20261031a"></script>
+<script src="assets/site.js?v=20261031a"></script>
+<script src="assets/development.js?v=20261031a"></script>
 </body>
 </html>

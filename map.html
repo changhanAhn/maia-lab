@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko">
+<html data-published="2026-11-05" lang="ko">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -84,9 +84,9 @@
   <div class="foot"><a href="index.html" data-ko="← 홈으로" data-en="← Home">← 홈으로</a><span>Esc</span><span class="r" data-ko="각 연구 분야는 MAIA 판단 기준으로 검증합니다. 모든 연구가 MAIA에서 나온 것은 아닙니다." data-en="Each research area is checked against the MAIA rule; not every area originates from MAIA.">각 연구 분야는 MAIA 판단 기준으로 검증합니다. 모든 연구가 MAIA에서 나온 것은 아닙니다.</span></div>
 
 </div></div>
-<script src="assets/research.js?v=20261029a"></script>
-<script src="assets/i18n.js?v=20261024a"></script>
-<script src="assets/site.js?v=20261024a"></script>
+<script src="assets/research.js?v=20261031a"></script>
+<script src="assets/i18n.js?v=20261031a"></script>
+<script src="assets/site.js?v=20261031a"></script>
 <script>
 (function(){
 const L=window.LAB,NS='http://www.w3.org/2000/svg',svg=document.getElementById('arch');
@@ -159,14 +159,17 @@ function legend(){
    +'<div><b>'+L.T('데이터','DATA')+'</b><span>'+L.T('현장 데이터 · 계측 기록 · 문헌과 표준','Field data · measurement logs · literature')+'</span></div>'
    +'</div><div class="more">'+L.T('분야를 선택하면 연구 내용과 산출물이 표시됩니다.','Select an area to show its work and outputs.')+'</div>';
 }
+// the pinned area rides in the address, so coming back from another page finds it still open
+function remember(id){try{const u=new URL(location.href),q=new URLSearchParams(u.search);q.delete('area');  // area first, as area pages link here
+  u.search=[id?'area='+id:'',String(q)].filter(Boolean).join('&');history.replaceState(history.state,'',u)}catch(e){}}
 function show(t,pin){
-  if(pin)pinned=t;if(pinned&&pinned!==t&&!pin)return;
+  if(pin){pinned=t;remember(t.id)}if(pinned&&pinned!==t&&!pin)return;
   TR.forEach(x=>{x.g.classList.toggle('sel',x===t);x.g.setAttribute('aria-pressed',String(x===t))});
   panel.innerHTML='<div class="ck" style="color:'+t.c+'">'+L.T('연구 분야 ','AREA ')+t.id+'</div><h3>'+L.T(t.ko,t.en)+'</h3><p class="q">'+L.T(t.q[0].join(' '),t.q[1].join(' '))+'</p><p class="w">'+L.T(t.wko,t.wen)+'</p><div class="lv">'
    +t.leaves.map(lf=>{const s=ST[lf[2]];const name=L.T(lf[0],lf[1]);return '<div>'+(lf[3]?'<a href="'+localHref(lf[3])+'">'+name+'</a>':'<span>'+name+'</span>')+'<span class="st" style="color:'+s[2]+';border-color:'+s[2]+'88">'+L.T(s[0],s[1])+'</span></div>'}).join('')
    +'</div><div class="more"><a class="area-detail" href="'+localHref(t.href)+'">'+L.T('분야 상세 보기 →','Explore this area →')+'</a></div>';
 }
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&pinned){pinned=null;legend();e.stopImmediatePropagation()}},true);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&pinned){pinned=null;remember(null);legend();e.stopImmediatePropagation()}},true);
 
 // build sequence: data → domain → core → tracks → outputs
 const at=(ms,f)=>setTimeout(f,ms);

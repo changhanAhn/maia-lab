@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko">
+<html data-published="2026-11-05" lang="ko">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,17 +23,17 @@
 .head{position:absolute;left:56px;top:68px;width:1168px}
 .head .ck{color:var(--acc);font-size:12px}
 /* three lists side by side; the private and survey lists scroll inside their card when long */
-.gov{position:absolute;left:56px;top:184px;width:320px;height:480px;display:flex;flex-direction:column}
-.prv{position:absolute;left:392px;top:184px;width:460px;height:478px;display:flex;flex-direction:column}
+.gov{position:absolute;left:56px;top:184px;width:364px;height:480px;display:flex;flex-direction:column}
+.prv{position:absolute;left:436px;top:184px;width:416px;height:478px;display:flex;flex-direction:column}
 .dem{position:absolute;left:868px;top:184px;width:356px;height:478px;display:flex;flex-direction:column}
 .rows{display:flex;flex-direction:column;margin-top:5px;flex:1;min-height:0;justify-content:space-between;overflow-y:auto;scrollbar-width:thin;scrollbar-color:rgba(236,232,225,.25) transparent}
-.prv .rows,.dem .rows{justify-content:flex-start;padding-right:4px}
+.gov .rows,.prv .rows,.dem .rows{justify-content:flex-start;padding-right:4px}
 .gr{display:grid;grid-template-columns:44px 1fr auto;gap:10px;align-items:center;padding:5px 0;border-top:1px solid rgba(236,232,225,.07)}
 .gr:first-child{border-top:0}
 .gr .d{font-family:var(--mono);font-size:11.5px;color:#9fb8d0}
 .gr b{display:block;font-size:12.5px;font-weight:600;color:#e2e8f0;line-height:1.3;word-break:keep-all;overflow-wrap:anywhere}
 .gr small{display:block;font-size:11px;color:var(--mute);line-height:1.35;margin-top:1px;word-break:keep-all;overflow-wrap:anywhere}
-.gr .pill{font-size:11px}
+.gr .pill{font-size:11px;white-space:nowrap}
 .prv .gr{padding:2px 0}
 .prv .gr b{font-size:12px;line-height:1.2}
 .prv .gr small{font-size:10.5px;line-height:1.25;margin-top:0}
@@ -42,9 +42,10 @@
 .dem .gr small{font-size:10.5px;margin-top:0;line-height:1.25}
 .s-sub,.s-ini,.s-loi{color:#9fb8d0;border-color:rgba(159,184,208,.5)}
 .s-rev{color:#c9a96e;border-color:rgba(201,169,110,.5)}
+.s-sel{color:#d6bf86;border-color:rgba(214,191,134,.7);background:rgba(185,163,122,.12)}
 .s-pre{color:#8fae9a;border-color:rgba(143,174,154,.5)}
 @media (max-width:900px),(max-height:500px){
-  .rows,.prv .rows,.dem .rows{overflow:visible;padding-right:0;justify-content:flex-start}
+  .rows,.gov .rows,.prv .rows,.dem .rows{overflow:visible;padding-right:0;justify-content:flex-start}
   .gr{padding:7px 0!important}
 }
 </style>
@@ -55,7 +56,7 @@
   <div class="head">
     <div class="ck" data-ko="<a class=&quot;up&quot; href=&quot;record.html&quot;>← 실적</a> · 연구과제" data-en="<a class=&quot;up&quot; href=&quot;record.html&quot;>← TRACK RECORD</a> · GRANTS"><a class="up" href="record.html">← 실적</a> · 연구과제</div>
     <div class="h2" data-ko="<em>연구과제</em> 진행 현황" data-en="<em>Grant</em> activity"><em>연구과제</em> 진행 현황</div>
-    <p class="lead" data-ko="신청·심사가 진행 중인 정부·공공·민간 과제와 제출한 기술수요조사입니다. 일정이 바뀌면 이 표를 고칩니다." data-en="Government, public and private-sector applications under way, and the technology demand surveys submitted. The tables are updated as each stage changes.">신청·심사가 진행 중인 정부·공공·민간 과제와 제출한 기술수요조사입니다. 일정이 바뀌면 이 표를 고칩니다.</p>
+    <p class="lead" data-ko="과제별 신청·보완·실측·협의 단계를 표시합니다. 연구지원 신청과 기술수요조사는 구분합니다." data-en="Application, supplement, measurement and partner-talk stages; research support and demand surveys are separate.">과제별 신청·보완·실측·협의 단계를 표시합니다. 연구지원 신청과 기술수요조사는 구분합니다.</p>
   </div>
 
   <div class="card gov rise">
@@ -73,31 +74,277 @@
     <div class="rows" id="demRows"></div>
   </div>
 
-  <div class="foot"><a href="record.html" data-ko="← 실적" data-en="← Track record">← 실적</a><span>Esc</span><span class="r" data-ko="2026년 10월 29일 기준" data-en="As of 29 October 2026">2026년 10월 29일 기준</span></div>
+  <div class="foot"><a href="record.html" data-ko="← 실적" data-en="← Track record">← 실적</a><span>Esc</span><span class="r" data-asof data-ko="2026년 10월 29일 기준" data-en="As of 29 October 2026">2026년 11월 5일 기준</span></div>
 
 </div></div>
 <script>
 // [when, ko title, en title, ko detail, en detail, status]
 const GOV = [
-  ['10/15', 'KETEP 2027 에너지인력양성 연구개발과제 기획단', 'KETEP 2027 energy-workforce planning group', '기획위원 지원서 제출', 'planning-member application sent', 'sub'],
-  ['11/04', '한전 전력연구원 2차 사외공모', 'KEPCO Research Institute 2nd open call', '고전력반도체 신뢰성 평가 인증체계 · 공동 제안 준비', 'power-semiconductor reliability scheme · joint proposal', 'pre'],
-  ['11/20', '산업부 기계장비 AI 품질검사', 'MOTIE machinery call · AI quality inspection', '품질검사 범용화·패키지화 · 참여기관 협의', 'generalised, packaged inspection · partner talks', 'pre'],
-  ['2027', 'KEIT 2027 제조AX 산업기술R&D', 'KEIT 2027 manufacturing-AX R&amp;D', '래더 역추적·가상검증 플랫폼 · 공고 대기', 'ladder tracing and virtual checks · call pending', 'pre'],
-  ['2027', 'NRF 2027 개인기초연구', 'NRF 2027 basic research', '배전망 운전가능영역 · 연구계획서 작성', 'distribution-grid operating envelope · drafting', 'pre'],
+  [
+    "10/15",
+    "KETEP 2027 에너지인력양성 연구개발과제 기획단",
+    "KETEP 2027 energy-workforce planning group",
+    "기획위원 지원서 제출",
+    "planning-member application sent",
+    "sub",
+    "KETEP-PLANNING2027"
+  ],
+  [
+    "11/20",
+    "산업부 기계장비 AI 품질검사",
+    "MOTIE machinery call · AI quality inspection",
+    "품질검사 범용화·패키지화 · 참여기관 협의",
+    "generalised, packaged inspection · partner talks",
+    "partner",
+    "KEIT661-ITEM5"
+  ],
+  [
+    "2027",
+    "KEIT 2027 제조AX 산업기술R&D",
+    "KEIT 2027 manufacturing-AX R&amp;D",
+    "래더 역추적·가상검증 플랫폼 · 공고 대기",
+    "ladder tracing and virtual checks · call pending",
+    "call",
+    "MFGAX2027"
+  ],
+  [
+    "2027",
+    "NRF 2027 개인기초연구",
+    "NRF 2027 basic research",
+    "배전망 운전가능영역 · 연구계획서 작성",
+    "distribution-grid operating envelope · drafting",
+    "pre",
+    "NRF2027"
+  ],
+  [
+    "11/16",
+    "AX실증밸리 재공고 · 배전망 동적특성 해석 기본설계",
+    "AX demonstration valley re-call · distribution-grid dynamics",
+    "실계통 데이터 기반 배전망 디지털트윈·AI 해석 · 계획서 작성",
+    "grid digital twin and AI analysis from field data · drafting",
+    "pre",
+    "AXV-REBID-3-1"
+  ],
+  [
+    "11/05",
+    "KDI 예타·사업계획 적정성 검토 외부연구진",
+    "KDI feasibility and project-plan review team",
+    "전력계통 안정화 설비 사업 · 수요 분야 외부연구진 선정",
+    "grid-stabilisation equipment project · selected for the demand analysis",
+    "sel",
+    "KDI-PREEVAL2026-2"
+  ],
+  [
+    "10/27",
+    "대구TP R&D 과제 발굴·기획 지원",
+    "Daegu TP R&D planning support",
+    "신청서 초안 작성 · 접수 가능 여부 회신 대기",
+    "application drafted · awaiting intake confirmation",
+    "wait",
+    "DGTP-PLANSUPPORT"
+  ],
+  [
+    "11/16",
+    "DIP 대구 글로벌 AI로봇 특화지구",
+    "DIP Daegu global AI-robotics district",
+    "제안 초안 작성 · 주관 로봇기업·AI 기업 협력 필요",
+    "proposal drafted · lead robot and AI partners needed",
+    "draft",
+    "DIP-AIROBOT2026"
+  ],
+  [
+    "11/05",
+    "포항TP 지역 자율형 디지털 혁신프로젝트",
+    "Pohang TP regional digital project",
+    "제안 초안 작성 · 경북 공급기업·수요처 협력 필요",
+    "proposal drafted · Gyeongbuk supplier and user partners needed",
+    "draft",
+    "PTP-DIGITAL2027"
+  ]
 ];
 const PRV = [
-  ['10/26', '삼성미래기술육성사업 2027 상반기', 'Samsung Science and Technology Foundation · 2027 H1', '촬영 조건 변화와 판정 유지 범위 · 표면 검사', 'surface inspection as shooting conditions change', 'sub'],
-  ['10/26', 'GTR Foundation · Sentient Foundation', 'GTR Foundation · Sentient Foundation', 'AI 에이전트 감독이 실제로 작동하는 조건 시험', 'when human oversight of AI agents actually works', 'sub'],
-  ['10/26', 'Foresight Institute · AI for Science and Safety', 'Foresight Institute · AI for Science and Safety', '산업제어 코드를 쓰는 AI 에이전트 감독 규칙 시험', 'tested rules for overseeing code-writing AI agents', 'sub'],
-  ['10/26', 'Cisco Research · 반도체 신뢰성 RFP', 'Cisco Research · Semiconductor Reliability RFP', '전력반도체 마모·잔여수명 예측과 보정된 불확실도', 'power-device wear-out and remaining life', 'sub'],
-  ['10/26', 'Mozilla Foundation · Human-Scale AI Incubator', 'Mozilla Foundation · Human-Scale AI Incubator', '교육생에게 재촬영 시점을 알리는 소형 비전 검사', 'local vision check that tells trainees to re-shoot', 'ini'],
-  ['10/26', 'OpenMined · Research Grants', 'OpenMined · Research Grants', '불일치할 때만 판정 모델을 부르는 앙상블 라우팅', 'ensemble routing with a judge only on disagreement', 'sub'],
-  ['10/26', 'Renaissance Philanthropy · AI for Math Fund', 'Renaissance Philanthropy · AI for Math Fund', '이산 전이계 불변량 합성의 기계 검증 공개 벤치마크', 'machine-checked invariant synthesis benchmark', 'sub'],
-  ['10/28', 'Microsoft · AI Economy Institute Cohort 4', 'Microsoft · AI Economy Institute Cohort 4', 'AI 보조와 신입 제조 기술자의 첫 단계 · 무작위 연구', 'does AI assistance build or replace the first rung?', 'sub'],
-  ['10/28', 'Mozilla Fellowship 2027 · Track II', 'Mozilla Fellowship 2027 · Track II', 'LadderWatch · 승인한 로직대로 PLC를 검사', 'LadderWatch: checking PLCs against approved logic', 'loi'],
-  ['11/05', 'Amazon Research Awards · Automated Reasoning', 'Amazon Research Awards · Automated Reasoning', '부분 관측 아래 적합성 검사 · 증명 동반 판정', 'conformance verdicts that carry their proof', 'pre'],
-  ['12/15', 'IHS · AI and the Workforce', 'IHS · AI and the Workforce', '공장 기술자가 AI에 넘기는 일 · 2차 과업 패널 조사', 'what technicians hand to AI: a two-wave task panel', 'pre'],
-  ['12/15', "Lloyd's Register Foundation · Small Grants", "Lloyd's Register Foundation · Small Grants", '소규모 자동화 라인의 에너지 차단·정지 교육 모듈', 'energy-isolation and stop training for small lines', 'pre'],
+  [
+    "10/26",
+    "삼성미래기술육성사업 2027 상반기",
+    "Samsung Science and Technology Foundation · 2027 H1",
+    "촬영 조건 변화와 판정 유지 범위 · 표면 검사",
+    "surface inspection as shooting conditions change",
+    "sub",
+    "SAMSUNG_STF_2027"
+  ],
+  [
+    "10/26",
+    "GTR Foundation · AI Safety Fund",
+    "GTR Foundation · AI Safety Fund",
+    "AI 에이전트 감독이 실제로 작동하는 조건 시험",
+    "when human oversight of AI agents actually works",
+    "sub",
+    "GTR-AISAFETY2026"
+  ],
+  [
+    "10/26",
+    "Foresight Institute · AI for Science and Safety",
+    "Foresight Institute · AI for Science and Safety",
+    "산업제어 코드를 쓰는 AI 에이전트 감독 규칙 시험",
+    "tested rules for overseeing code-writing AI agents",
+    "sub",
+    "FORESIGHT-NODES2026"
+  ],
+  [
+    "10/26",
+    "Cisco Research · 반도체 신뢰성 RFP",
+    "Cisco Research · Semiconductor Reliability RFP",
+    "전력반도체 마모·잔여수명 예측과 보정된 불확실도",
+    "power-device wear-out and remaining life",
+    "sub",
+    "CISCO-SEMIREL"
+  ],
+  [
+    "10/26",
+    "Mozilla Foundation · Human-Scale AI Incubator",
+    "Mozilla Foundation · Human-Scale AI Incubator",
+    "교육생에게 재촬영 시점을 알리는 소형 비전 검사",
+    "local vision check that tells trainees to re-shoot",
+    "ini",
+    "MOZILLA-HSAI2027"
+  ],
+  [
+    "10/26",
+    "Renaissance Philanthropy · AI for Math Fund",
+    "Renaissance Philanthropy · AI for Math Fund",
+    "이산 전이계 불변량 합성의 기계 검증 공개 벤치마크",
+    "machine-checked invariant synthesis benchmark",
+    "sub",
+    "RENAISSANCE-AIMATH2026"
+  ],
+  [
+    "10/28",
+    "Microsoft · AI Economy Institute Cohort 4",
+    "Microsoft · AI Economy Institute Cohort 4",
+    "AI 보조와 신입 제조 기술자의 첫 단계 · 무작위 연구",
+    "does AI assistance build or replace the first rung?",
+    "sub",
+    "AIEI4-2026"
+  ],
+  [
+    "10/28",
+    "Mozilla Fellowship 2027 · Track II",
+    "Mozilla Fellowship 2027 · Track II",
+    "LadderWatch · 승인한 로직대로 PLC를 검사",
+    "LadderWatch: checking PLCs against approved logic",
+    "loi",
+    "MOZILLA-FELLOW2027"
+  ],
+  [
+    "11/04",
+    "Amazon Research Awards · Automated Reasoning",
+    "Amazon Research Awards · Automated Reasoning",
+    "자동 추론 연구 제안서 제출 · 심사 결과 대기",
+    "automated-reasoning proposal submitted · awaiting review",
+    "sub",
+    "AMAZON-ARA-FALL2026"
+  ],
+  [
+    "12/15",
+    "IHS · AI and the Workforce",
+    "IHS · AI and the Workforce",
+    "공장 기술자가 AI에 넘기는 일 · 2차 과업 패널 조사",
+    "what technicians hand to AI: a two-wave task panel",
+    "draft",
+    "IHS-AIWORKFORCE2026"
+  ],
+  [
+    "12/15",
+    "Lloyd's Register Foundation · Small Grants",
+    "Lloyd's Register Foundation · Small Grants",
+    "소규모 자동화 라인의 에너지 차단·정지 교육 모듈",
+    "energy-isolation and stop training for small lines",
+    "draft",
+    "LRF-SMALL2026"
+  ],
+  [
+    "10/26",
+    "Sentient Foundation · Open Source AGI Grant",
+    "Sentient Foundation · Open Source AGI Grant",
+    "산업제어 AI 에이전트 감독 테스트베드",
+    "industrial-control AI-agent oversight testbed",
+    "sub",
+    "SENTIENT-OPENAGI2026"
+  ],
+  [
+    "10/26",
+    "LS전선 · Open R&D",
+    "LS Cable & System · Open R&D",
+    "자율공모 제안 메일 발송 · 회신 대기",
+    "open-call proposal emailed · awaiting reply",
+    "wait",
+    "LS-OPENRND2027"
+  ],
+  [
+    "10/28",
+    "Alfred P. Sloan Foundation · Technology",
+    "Alfred P. Sloan Foundation · Technology",
+    "래더 검증 공개 벤치마크 · 의향서 초안·공식 조건 확인 중",
+    "open ladder benchmark · LOI draft and terms verification",
+    "draft",
+    "SLOAN-TECH2027"
+  ],
+  [
+    "10/30",
+    "Corrigibility Research Fund · Round 2",
+    "Corrigibility Research Fund · Round 2",
+    "신청서 제출 · 심사 결과 대기",
+    "application submitted · awaiting decision",
+    "sub",
+    "CRF-ROUND2"
+  ],
+  [
+    "10/28",
+    "Ethereum Foundation · ESP",
+    "Ethereum Foundation · ESP",
+    "형식검증 트랙 영문 제안서 초안 · 미제출",
+    "formal-verification proposal drafted · not submitted",
+    "draft",
+    "ETH-ESP2026"
+  ],
+  [
+    "11/05",
+    "Mazak Foundation · 연구개발 조성",
+    "Mazak Foundation · R&amp;D grant",
+    "제조 교육 라인 실측 기반 제안서 초안 · 미제출",
+    "proposal drafted from measurements on our training line · not yet submitted",
+    "draft",
+    "MAZAK-RD2026"
+  ]
+];
+const SUP = [
+  [
+    "10/28",
+    "Anthropic · AI for Science",
+    "Anthropic · AI for Science",
+    "API 크레딧 신청 제출 · 심사 결과 대기",
+    "API-credit application submitted · awaiting decision",
+    "sub",
+    "ANTHROPIC-AIS2026"
+  ],
+  [
+    "10/28",
+    "Google · Gemini Academic Program",
+    "Google · Gemini Academic Program",
+    "API 크레딧 신청 제출 · 심사 결과 대기",
+    "API-credit application submitted · awaiting decision",
+    "sub",
+    "GEMINI-ACAD2026"
+  ],
+  [
+    "10/30",
+    "OpenAI · Researcher Access Program",
+    "OpenAI · Researcher Access Program",
+    "API 크레딧 신청 제출 · 심사 결과 대기",
+    "API-credit application submitted · awaiting decision",
+    "sub",
+    "OPENAI-RAP2026"
+  ]
 ];
 const DEM = [
   ['08/23', 'KEIT 제조AX', 'KEIT manufacturing AX', '자율제조 명령 허용성 판정·가상검증 런타임', 'Admissibility and virtual checks of commands'],
@@ -116,19 +363,19 @@ const DEM = [
   ['10/26', '국방기술품질원 민·군규격표준화', 'DTaQ civil-military standards', '리튬이차전지 직류 보호 퓨즈링크 규격 통일', 'One fuse-link standard for DC battery systems'],
   ['10/26', 'KIRIA 로봇 플래그쉽 지역거점', 'KIRIA robot flagship hub', '이차전지 조립·검사 로봇 공동활용 거점', 'Shared robot hub for battery assembly and QC'],
 ];
-const ST = {sub:['제출 완료','Submitted'], ini:['1차 제출','Stage 1'], loi:['의향서','LOI'], rev:['평가 완료','Reviewed'], pre:['준비','Preparing']};
+const ST = {"sub": ["제출 완료", "Submitted"], "ini": ["1차 제출", "Stage 1"], "loi": ["의향서", "LOI"], "pre": ["준비", "Preparing"], "draft": ["초안 작성", "Drafted"], "wait": ["회신 대기", "Awaiting reply"], "partner": ["기관 협의", "Partner talks"], "call": ["공고 대기", "Call pending"], "supp": ["보완 중", "Supplementing"], "sel": ["선정", "Selected"], "measure": ["실측 중", "Measuring"], "plan": ["신청 예정", "Planned"]};
 document.getElementById('govHead').outerHTML = '<div class="ck" data-ko="정부·공공 과제 ' + GOV.length + '건" data-en="GOVERNMENT AND PUBLIC · ' + GOV.length + '" data-ja="政府・公共の課題 ' + GOV.length + '件" data-zh="政府与公共项目 ' + GOV.length + '项">정부·공공 과제 ' + GOV.length + '건</div>';
 document.getElementById('prvHead').outerHTML = '<div class="ck" data-ko="민간·재단 과제 ' + PRV.length + '건" data-en="PRIVATE AND FOUNDATIONS · ' + PRV.length + '" data-ja="民間・財団の課題 ' + PRV.length + '件" data-zh="民间与基金会项目 ' + PRV.length + '项">민간·재단 과제 ' + PRV.length + '건</div>';
 document.getElementById('demHead').outerHTML = '<div class="ck" data-ko="기술수요조사 제출 ' + DEM.length + '건 · 2026" data-en="DEMAND SURVEYS SUBMITTED · ' + DEM.length + ' · 2026" data-ja="技術需要調査 提出 ' + DEM.length + '件 · 2026" data-zh="技术需求调查 已提交' + DEM.length + '项 · 2026">기술수요조사 제출 ' + DEM.length + '건 · 2026</div>';
 const row = r =>
-  '<div class="gr"><span class="d">' + r[0] + '</span><div><b data-ko="' + r[1] + '" data-en="' + r[2] + '">' + r[1] + '</b><small data-ko="' + r[3] + '" data-en="' + r[4] + '">' + r[3] + '</small></div>' +
+  '<div class="gr" id="' + r[6] + '"><span class="d">' + r[0] + '</span><div><b data-ko="' + r[1] + '" data-en="' + r[2] + '">' + r[1] + '</b><small data-ko="' + r[3] + '" data-en="' + r[4] + '">' + r[3] + '</small></div>' +
   '<span class="pill s-' + r[5] + '" data-ko="' + ST[r[5]][0] + '" data-en="' + ST[r[5]][1] + '">' + ST[r[5]][0] + '</span></div>';
 document.getElementById('govRows').innerHTML = GOV.map(row).join('');
-document.getElementById('prvRows').innerHTML = PRV.map(row).join('');
+document.getElementById('prvRows').innerHTML = PRV.map(row).join('') + '<div class="ck" data-ko="연구지원 · API 크레딧 3건" data-en="Research support · 3 API-credit applications">연구지원 · API 크레딧 3건</div>' + SUP.map(row).join('');
 document.getElementById('demRows').innerHTML = DEM.map(r =>
   '<div class="gr"><span class="d">' + r[0] + '</span><div><b data-ko="' + r[1] + '" data-en="' + r[2] + '">' + r[1] + '</b><small data-ko="' + r[3] + '" data-en="' + r[4] + '">' + r[3] + '</small></div></div>').join('');
 </script>
-<script src="assets/i18n.js?v=20261029a"></script>
-<script src="assets/site.js?v=20261024a"></script>
+<script src="assets/i18n.js?v=20261031a"></script>
+<script src="assets/site.js?v=20261031a"></script>
 </body>
 </html>

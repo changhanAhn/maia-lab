@@ -1,0 +1,2657 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-05T22:12:20+09:00",
+  "content_updated_at": "2026-11-05T21:58:57+09:00",
+  "source_revision": "3f0813fc7bf77f05975efc2e5deb7073576f8d11",
+  "cards": [
+    {
+      "id": "inline",
+      "group": "papers",
+      "name": [
+        "인라인 검사 엔진",
+        "Inline inspection engine",
+        "インライン検査エンジン",
+        "在线检测引擎"
+      ],
+      "now": [
+        "심사 중",
+        "In review",
+        "査読中",
+        "审稿中"
+      ],
+      "last": [
+        "투고",
+        "Submitted",
+        "投稿",
+        "投稿"
+      ],
+      "next": [
+        "심사 결과·수정 요청 확인",
+        "Review decision or revision request",
+        "査読結果・修正依頼の確認",
+        "查看审稿结果或修改要求"
+      ],
+      "href": "record.html#inline",
+      "date": "2026-10-15",
+      "fingerprint": "1fac3c8564b68bfb"
+    },
+    {
+      "id": "repeat",
+      "group": "papers",
+      "name": [
+        "반복 검사 정밀도",
+        "Repeat-inspection precision",
+        "繰り返し検査の精度",
+        "重复检测精度"
+      ],
+      "now": [
+        "초기 검토 중",
+        "In screening",
+        "初期確認中",
+        "初步筛查中"
+      ],
+      "last": [
+        "투고",
+        "Submitted",
+        "投稿",
+        "投稿"
+      ],
+      "next": [
+        "초기 검토 결과 확인",
+        "Screening outcome",
+        "初期確認の結果確認",
+        "查看初步筛查结果"
+      ],
+      "href": "record.html#repeat",
+      "date": "2026-10-25",
+      "fingerprint": "447902d31a23fd18"
+    },
+    {
+      "id": "ladder",
+      "group": "papers",
+      "name": [
+        "래더 적합성 검사",
+        "Ladder conformance checking",
+        "ラダー適合性検査",
+        "梯形图符合性检查"
+      ],
+      "now": [
+        "접수 완료",
+        "Received",
+        "受付",
+        "已受理"
+      ],
+      "last": [
+        "투고",
+        "Submitted",
+        "投稿",
+        "投稿"
+      ],
+      "next": [
+        "편집부 진행 상태 확인",
+        "Editorial status confirmation",
+        "編集部の進行状況確認",
+        "核实编辑部处理进展"
+      ],
+      "href": "record.html#ladder",
+      "date": "2026-10-26",
+      "fingerprint": "c9b9ece86fb73162"
+    },
+    {
+      "id": "maia-index",
+      "group": "papers",
+      "name": [
+        "MAIA 적용성 지수",
+        "MAIA applicability index",
+        "MAIA適用性指数",
+        "MAIA适用性指数"
+      ],
+      "now": [
+        "수정 중",
+        "Revising",
+        "修正中",
+        "修改中"
+      ],
+      "last": [
+        "투고",
+        "Submitted",
+        "投稿",
+        "投稿"
+      ],
+      "next": [
+        "윤리 심의·개정 자료 준비",
+        "Ethics review and revision material",
+        "倫理審査・改訂資料の準備",
+        "伦理审查与修订材料准备"
+      ],
+      "href": "record.html#maia-index",
+      "date": "2026-09-19",
+      "fingerprint": "953bcdc447704c83"
+    },
+    {
+      "id": "hari",
+      "group": "papers",
+      "name": [
+        "비보상 관문 계약",
+        "Non-compensatory gate contract",
+        "非補償ゲート契約",
+        "非补偿门控契约"
+      ],
+      "now": [
+        "초기 검수 중",
+        "Initial checks",
+        "初期検査中",
+        "初始检查中"
+      ],
+      "last": [
+        "투고",
+        "Submitted",
+        "投稿",
+        "投稿"
+      ],
+      "next": [
+        "초기 검수·편집자 배정 확인",
+        "Checks and editor assignment",
+        "初期検査・編集者選任の確認",
+        "核实初始检查与编辑指派"
+      ],
+      "href": "record.html#hari",
+      "date": "2026-09-20",
+      "fingerprint": "da7b0786250d65ac"
+    },
+    {
+      "id": "energy",
+      "group": "papers",
+      "name": [
+        "마이크로그리드 계층형 에너지 관리",
+        "Microgrid energy management",
+        "マイクログリッドの階層型エネルギー管理",
+        "微电网分层能量管理"
+      ],
+      "now": [
+        "편집 검토 중",
+        "With editor",
+        "編集者確認中",
+        "编辑审阅中"
+      ],
+      "last": [
+        "투고",
+        "Submitted",
+        "投稿",
+        "投稿"
+      ],
+      "next": [
+        "편집 검토 결과 확인",
+        "Editorial outcome",
+        "編集確認の結果確認",
+        "查看编辑审阅结果"
+      ],
+      "href": "record.html#energy",
+      "date": "2026-09-25",
+      "fingerprint": "5e5235244f1f754d"
+    },
+    {
+      "id": "sttt",
+      "group": "papers",
+      "name": [
+        "래더 로그 모호성·관측 선택",
+        "Ladder-log ambiguity and observation selection",
+        "ラダーログの曖昧性・観測選択",
+        "梯形图日志歧义与观测选择"
+      ],
+      "now": [
+        "접수 완료",
+        "Received",
+        "受付",
+        "已受理"
+      ],
+      "last": [
+        "투고",
+        "Submitted",
+        "投稿",
+        "投稿"
+      ],
+      "next": [
+        "편집부 진행 상태 확인",
+        "Editorial status confirmation",
+        "編集部の進行状況確認",
+        "核实编辑部处理进展"
+      ],
+      "href": "record.html#sttt",
+      "date": "2026-10-24",
+      "fingerprint": "a186ff74ea7f9ecd"
+    },
+    {
+      "id": "research-D-0",
+      "group": "research",
+      "name": [
+        "공정 이벤트 동기 전력 분해",
+        "Power split by process event",
+        "工程イベント同期の電力分解",
+        "工序事件同步的电力分解"
+      ],
+      "now": [
+        "설계",
+        "Design",
+        "設計",
+        "设计"
+      ],
+      "last": [
+        "단계 기록 확인",
+        "Stage recorded; no dated milestone",
+        "段階記録あり・日付なし",
+        "已有阶段记录，暂无里程碑日期"
+      ],
+      "next": [
+        "전력 계측·분석 절차 확인",
+        "Check power-measurement procedure",
+        "電力計測・分析手順の確認",
+        "核实电力测量与分析流程"
+      ],
+      "href": "research-energy-manufacturing.html",
+      "date": "",
+      "fingerprint": "f1a63df59c87d91a"
+    },
+    {
+      "id": "research-C-1",
+      "group": "research",
+      "name": [
+        "PV·ESS·라인 부하 트윈",
+        "PV · storage · line-load twin",
+        "PV・ESS・ライン負荷ツイン",
+        "PV·ESS·产线负荷孪生"
+      ],
+      "now": [
+        "진행 중",
+        "In progress",
+        "進行中",
+        "进行中"
+      ],
+      "last": [
+        "단계 기록 확인",
+        "Stage recorded; no dated milestone",
+        "段階記録あり・日付なし",
+        "已有阶段记录，暂无里程碑日期"
+      ],
+      "next": [
+        "다음 실험·검증",
+        "Next experiment or check",
+        "次の実験・検証",
+        "下一项实验或验证"
+      ],
+      "href": "research-energy.html",
+      "date": "",
+      "fingerprint": "5a76d5071bcf2847"
+    },
+    {
+      "id": "research-C-2",
+      "group": "research",
+      "name": [
+        "엣지 AI 부하 전력 계측",
+        "Edge-AI load power measurement",
+        "エッジAI負荷の電力計測",
+        "边缘AI负荷电力测量"
+      ],
+      "now": [
+        "진행 중",
+        "In progress",
+        "進行中",
+        "进行中"
+      ],
+      "last": [
+        "단계 기록 확인",
+        "Stage recorded; no dated milestone",
+        "段階記録あり・日付なし",
+        "已有阶段记录，暂无里程碑日期"
+      ],
+      "next": [
+        "다음 실험·검증",
+        "Next experiment or check",
+        "次の実験・検証",
+        "下一项实验或验证"
+      ],
+      "href": "research-energy.html",
+      "date": "",
+      "fingerprint": "004cd3eee3f0e003"
+    },
+    {
+      "id": "research-B-3",
+      "group": "research",
+      "name": [
+        "코인셀 시험 라인",
+        "Coin-cell test line",
+        "コインセル試験ライン",
+        "纽扣电池试验线"
+      ],
+      "now": [
+        "운영 중",
+        "In use",
+        "運用中",
+        "运行中"
+      ],
+      "last": [
+        "단계 기록 확인",
+        "Stage recorded; no dated milestone",
+        "段階記録あり・日付なし",
+        "已有阶段记录，暂无里程碑日期"
+      ],
+      "next": [
+        "다음 실험·검증",
+        "Next experiment or check",
+        "次の実験・検証",
+        "下一项实验或验证"
+      ],
+      "href": "research-manufacturing.html",
+      "date": "",
+      "fingerprint": "3e721c3ccdb012d6"
+    },
+    {
+      "id": "research-E-0",
+      "group": "research",
+      "name": [
+        "PLC·비전·데이터 실습",
+        "PLC, vision and data practice",
+        "PLC・ビジョン・データ実習",
+        "PLC、视觉与数据实训"
+      ],
+      "now": [
+        "운영 중",
+        "In use",
+        "運用中",
+        "运行中"
+      ],
+      "last": [
+        "단계 기록 확인",
+        "Stage recorded; no dated milestone",
+        "段階記録あり・日付なし",
+        "已有阶段记录，暂无里程碑日期"
+      ],
+      "next": [
+        "다음 실험·검증",
+        "Next experiment or check",
+        "次の実験・検証",
+        "下一项实验或验证"
+      ],
+      "href": "research-education.html",
+      "date": "",
+      "fingerprint": "4e5621c76b2b04f4"
+    },
+    {
+      "id": "research-E-2",
+      "group": "research",
+      "name": [
+        "중진공 재직자 로봇 PLC 교육 11.19",
+        "KOSME robot PLC course for workers, 19 Nov",
+        "中小企業振興公団 在職者ロボットPLC研修 11.19",
+        "中小企业振兴公团 在职人员机器人PLC培训 11.19"
+      ],
+      "now": [
+        "예정",
+        "Scheduled",
+        "予定",
+        "计划中"
+      ],
+      "last": [
+        "단계 기록 확인",
+        "Stage recorded; no dated milestone",
+        "段階記録あり・日付なし",
+        "已有阶段记录，暂无里程碑日期"
+      ],
+      "next": [
+        "다음 실험·검증",
+        "Next experiment or check",
+        "次の実験・検証",
+        "下一项实验或验证"
+      ],
+      "href": "research-education.html",
+      "date": "",
+      "fingerprint": "b5211d2b324b8b76"
+    },
+    {
+      "id": "research-E-3",
+      "group": "research",
+      "name": [
+        "캡스톤 작품대회 최우수상",
+        "Capstone competition top award",
+        "キャップストーン作品大会 最優秀賞",
+        "毕业设计作品大赛 最优秀奖"
+      ],
+      "now": [
+        "본선 진출 · 11월 말 예정",
+        "Through to the final, late November",
+        "本選進出・11月下旬予定",
+        "晋级决赛 · 11月下旬"
+      ],
+      "last": [
+        "최우수상",
+        "Top award",
+        "最優秀賞",
+        "最优秀奖"
+      ],
+      "next": [
+        "다음 실험·검증",
+        "Next experiment or check",
+        "次の実験・検証",
+        "下一项实验或验证"
+      ],
+      "href": "research-education.html",
+      "date": "2026-10-27",
+      "fingerprint": "a28e6eb2a1e97e20"
+    },
+    {
+      "id": "KETEP-PLANNING2027",
+      "group": "grants",
+      "name": [
+        "KETEP 2027 에너지인력양성 연구개발과제 기획단",
+        "KETEP 2027 energy-workforce planning group",
+        "KETEP 2027 エネルギー人材育成 研究開発課題企画委員会",
+        "KETEP 2027 能源人才培养 研发项目规划组"
+      ],
+      "now": [
+        "제출 완료",
+        "Submitted",
+        "提出済み",
+        "已提交"
+      ],
+      "last": [
+        "신청 제출",
+        "Application submitted",
+        "申請提出",
+        "已提交申请"
+      ],
+      "next": [
+        "심사·선정 결과 확인",
+        "Application decision",
+        "審査・採択結果の確認",
+        "查看评审或遴选结果"
+      ],
+      "href": "grants.html#KETEP-PLANNING2027",
+      "date": "2026-10-15",
+      "fingerprint": "07afb775f11f6455"
+    },
+    {
+      "id": "KEIT661-ITEM5",
+      "group": "grants",
+      "name": [
+        "산업부 기계장비 AI 품질검사",
+        "MOTIE machinery call · AI quality inspection",
+        "産業通商部 機械装備 AI品質検査",
+        "产业通商部 机械装备 AI质量检测"
+      ],
+      "now": [
+        "기관 협의",
+        "Partner talks",
+        "機関連携協議",
+        "机构协商"
+      ],
+      "last": [
+        "품질검사 범용화·패키지화 · 참여기관 협의",
+        "generalised, packaged inspection · partner talks",
+        "品質検査の汎用化・パッケージ化 · 参加機関と協議中",
+        "质量检测通用化与打包 · 与参与单位协商中"
+      ],
+      "next": [
+        "참여기관·역할 협의",
+        "Agree partners and roles",
+        "参加機関・役割の協議",
+        "商定参与机构与分工"
+      ],
+      "href": "grants.html#KEIT661-ITEM5",
+      "date": "",
+      "fingerprint": "547b0b09887d6f02"
+    },
+    {
+      "id": "MFGAX2027",
+      "group": "grants",
+      "name": [
+        "KEIT 2027 제조AX 산업기술R&D",
+        "KEIT 2027 manufacturing-AX R&amp;D",
+        "KEIT 2027 製造AX 産業技術R&D",
+        "KEIT 2027 制造AX 产业技术研发"
+      ],
+      "now": [
+        "공고 대기",
+        "Call pending",
+        "公募待ち",
+        "等待公告"
+      ],
+      "last": [
+        "래더 역추적·가상검증 플랫폼 · 공고 대기",
+        "ladder tracing and virtual checks · call pending",
+        "ラダー逆追跡・仮想検証プラットフォーム · 公募待ち",
+        "梯形图回溯与虚拟验证平台 · 等待公告"
+      ],
+      "next": [
+        "공고·공식 양식 확인",
+        "Check call and official form",
+        "公募・公式様式の確認",
+        "查看公告与官方格式"
+      ],
+      "href": "grants.html#MFGAX2027",
+      "date": "",
+      "fingerprint": "163816bbb65ea180"
+    },
+    {
+      "id": "NRF2027",
+      "group": "grants",
+      "name": [
+        "NRF 2027 개인기초연구",
+        "NRF 2027 basic research",
+        "NRF 2027 個人基礎研究",
+        "NRF 2027 个人基础研究"
+      ],
+      "now": [
+        "준비",
+        "Preparing",
+        "準備中",
+        "准备中"
+      ],
+      "last": [
+        "배전망 운전가능영역 · 연구계획서 작성",
+        "distribution-grid operating envelope · drafting",
+        "配電網の運転可能領域 · 研究計画書作成中",
+        "配电网可运行域 · 撰写研究计划书"
+      ],
+      "next": [
+        "연구계획서 작성·검토",
+        "Draft and check research plan",
+        "研究計画の作成・確認",
+        "撰写并检查研究计划"
+      ],
+      "href": "grants.html#NRF2027",
+      "date": "",
+      "fingerprint": "cfebeb3872267e83"
+    },
+    {
+      "id": "AXV-REBID-3-1",
+      "group": "grants",
+      "name": [
+        "AX실증밸리 재공고 · 배전망 동적특성 해석 기본설계",
+        "AX demonstration valley re-call · distribution-grid dynamics",
+        "AX実証バレー再公募 · 配電網の動特性解析の基本設計",
+        "AX实证谷再次公告 · 配电网动态特性分析基本设计"
+      ],
+      "now": [
+        "준비",
+        "Preparing",
+        "準備中",
+        "准备中"
+      ],
+      "last": [
+        "실계통 데이터 기반 배전망 디지털트윈·AI 해석 · 계획서 작성",
+        "grid digital twin and AI analysis from field data · drafting",
+        "実系統データに基づく配電網デジタルツイン・AI解析 · 計画書作成中",
+        "基于实际电网数据的配电网数字孪生与AI分析 · 撰写计划书"
+      ],
+      "next": [
+        "연구계획서 작성·검토",
+        "Draft and check research plan",
+        "研究計画の作成・確認",
+        "撰写并检查研究计划"
+      ],
+      "href": "grants.html#AXV-REBID-3-1",
+      "date": "",
+      "fingerprint": "318d142312329df2"
+    },
+    {
+      "id": "KDI-PREEVAL2026-2",
+      "group": "grants",
+      "name": [
+        "KDI 예타·사업계획 적정성 검토 외부연구진",
+        "KDI feasibility and project-plan review team",
+        "KDI 予備妥当性・事業計画適正性検討 外部研究者",
+        "KDI 预可研与项目计划适当性审查外部研究人员"
+      ],
+      "now": [
+        "선정",
+        "Selected",
+        "選定",
+        "入选"
+      ],
+      "last": [
+        "외부연구진 신청 제출",
+        "External research-team application sent",
+        "外部研究者の申請送付",
+        "已发送外部研究人员申请"
+      ],
+      "next": [
+        "계약·착수 준비",
+        "Contract and start-up",
+        "契約・着手の準備",
+        "准备签约与启动"
+      ],
+      "href": "grants.html#KDI-PREEVAL2026-2",
+      "date": "2026-10-28",
+      "fingerprint": "5dcff4e71e45042b"
+    },
+    {
+      "id": "DGTP-PLANSUPPORT",
+      "group": "grants",
+      "name": [
+        "대구TP R&D 과제 발굴·기획 지원",
+        "Daegu TP R&D planning support",
+        "大邱TP R&D課題発掘・企画支援",
+        "大邱TP研发项目发掘与规划支持"
+      ],
+      "now": [
+        "회신 대기",
+        "Awaiting reply",
+        "回答待ち",
+        "等待回复"
+      ],
+      "last": [
+        "신청서 초안 작성 · 접수 가능 여부 회신 대기",
+        "application drafted · awaiting intake confirmation",
+        "申請書の草稿作成 · 受付可否の回答待ち",
+        "已撰写申请草稿 · 等待受理条件答复"
+      ],
+      "next": [
+        "기관 회신 확인",
+        "Check partner reply",
+        "機関からの回答確認",
+        "查看机构回复"
+      ],
+      "href": "grants.html#DGTP-PLANSUPPORT",
+      "date": "",
+      "fingerprint": "ab3a073829c40d23"
+    },
+    {
+      "id": "DIP-AIROBOT2026",
+      "group": "grants",
+      "name": [
+        "DIP 대구 글로벌 AI로봇 특화지구",
+        "DIP Daegu global AI-robotics district",
+        "DIP 大邱グローバルAIロボット特化地区",
+        "DIP大邱全球AI机器人特色区"
+      ],
+      "now": [
+        "초안 작성",
+        "Drafted",
+        "草稿作成",
+        "草稿已编写"
+      ],
+      "last": [
+        "제안 초안 작성 · 주관 로봇기업·AI 기업 협력 필요",
+        "proposal drafted · lead robot and AI partners needed",
+        "提案草稿作成 · 主幹ロボット企業・AI企業との連携が必要",
+        "已撰写提案草稿 · 需落实牵头机器人企业与AI企业"
+      ],
+      "next": [
+        "신청 조건 확인·제안 검토",
+        "Check terms and proposal",
+        "申請条件・提案の確認",
+        "核实申请条件并检查提案"
+      ],
+      "href": "grants.html#DIP-AIROBOT2026",
+      "date": "",
+      "fingerprint": "61d38b7247bca568"
+    },
+    {
+      "id": "PTP-DIGITAL2027",
+      "group": "grants",
+      "name": [
+        "포항TP 지역 자율형 디지털 혁신프로젝트",
+        "Pohang TP regional digital project",
+        "浦項TP 地域自律型デジタル事業",
+        "浦项TP区域自主数字化项目"
+      ],
+      "now": [
+        "초안 작성",
+        "Drafted",
+        "草稿作成",
+        "草稿已编写"
+      ],
+      "last": [
+        "제안 초안 작성 · 경북 공급기업·수요처 협력 필요",
+        "proposal drafted · Gyeongbuk supplier and user partners needed",
+        "提案草稿作成 · 慶北の供給企業・需要先との連携が必要",
+        "已撰写提案草稿 · 需落实庆北供应企业与需求方"
+      ],
+      "next": [
+        "신청 조건 확인·제안 검토",
+        "Check terms and proposal",
+        "申請条件・提案の確認",
+        "核实申请条件并检查提案"
+      ],
+      "href": "grants.html#PTP-DIGITAL2027",
+      "date": "",
+      "fingerprint": "2057fd471109dd49"
+    },
+    {
+      "id": "SAMSUNG_STF_2027",
+      "group": "grants",
+      "name": [
+        "삼성미래기술육성사업 2027 상반기",
+        "Samsung Science and Technology Foundation · 2027 H1",
+        "サムスン未来技術育成事業 2027年上半期",
+        "三星未来技术培育项目 2027年上半年"
+      ],
+      "now": [
+        "제출 완료",
+        "Submitted",
+        "提出済み",
+        "已提交"
+      ],
+      "last": [
+        "신청 제출",
+        "Application submitted",
+        "申請提出",
+        "已提交申请"
+      ],
+      "next": [
+        "심사·선정 결과 확인",
+        "Application decision",
+        "審査・採択結果の確認",
+        "查看评审或遴选结果"
+      ],
+      "href": "grants.html#SAMSUNG_STF_2027",
+      "date": "2026-10-26",
+      "fingerprint": "36c2dcf1d589e10e"
+    },
+    {
+      "id": "GTR-AISAFETY2026",
+      "group": "grants",
+      "name": [
+        "GTR Foundation · AI Safety Fund",
+        "GTR Foundation · AI Safety Fund",
+        "GTR Foundation · AI Safety Fund",
+        "GTR Foundation · AI Safety Fund"
+      ],
+      "now": [
+        "제출 완료",
+        "Submitted",
+        "提出済み",
+        "已提交"
+      ],
+      "last": [
+        "신청 제출",
+        "Application submitted",
+        "申請提出",
+        "已提交申请"
+      ],
+      "next": [
+        "심사·선정 결과 확인",
+        "Application decision",
+        "審査・採択結果の確認",
+        "查看评审或遴选结果"
+      ],
+      "href": "grants.html#GTR-AISAFETY2026",
+      "date": "2026-10-26",
+      "fingerprint": "8882fa12eee26d36"
+    },
+    {
+      "id": "FORESIGHT-NODES2026",
+      "group": "grants",
+      "name": [
+        "Foresight Institute · AI for Science and Safety",
+        "Foresight Institute · AI for Science and Safety",
+        "Foresight Institute · AI for Science and Safety",
+        "Foresight Institute · AI for Science and Safety"
+      ],
+      "now": [
+        "제출 완료",
+        "Submitted",
+        "提出済み",
+        "已提交"
+      ],
+      "last": [
+        "신청 제출",
+        "Application submitted",
+        "申請提出",
+        "已提交申请"
+      ],
+      "next": [
+        "심사·선정 결과 확인",
+        "Application decision",
+        "審査・採択結果の確認",
+        "查看评审或遴选结果"
+      ],
+      "href": "grants.html#FORESIGHT-NODES2026",
+      "date": "2026-10-26",
+      "fingerprint": "ea20d105a8190be3"
+    },
+    {
+      "id": "CISCO-SEMIREL",
+      "group": "grants",
+      "name": [
+        "Cisco Research · 반도체 신뢰성 RFP",
+        "Cisco Research · Semiconductor Reliability RFP",
+        "Cisco Research · 半導体信頼性 RFP",
+        "Cisco Research · 半导体可靠性 RFP"
+      ],
+      "now": [
+        "제출 완료",
+        "Submitted",
+        "提出済み",
+        "已提交"
+      ],
+      "last": [
+        "신청 제출",
+        "Application submitted",
+        "申請提出",
+        "已提交申请"
+      ],
+      "next": [
+        "심사·선정 결과 확인",
+        "Application decision",
+        "審査・採択結果の確認",
+        "查看评审或遴选结果"
+      ],
+      "href": "grants.html#CISCO-SEMIREL",
+      "date": "2026-10-26",
+      "fingerprint": "24ce776c88c883af"
+    },
+    {
+      "id": "MOZILLA-HSAI2027",
+      "group": "grants",
+      "name": [
+        "Mozilla Foundation · Human-Scale AI Incubator",
+        "Mozilla Foundation · Human-Scale AI Incubator",
+        "Mozilla Foundation · Human-Scale AI Incubator",
+        "Mozilla Foundation · Human-Scale AI Incubator"
+      ],
+      "now": [
+        "1차 제출",
+        "Stage 1",
+        "一次提出",
+        "初次提交"
+      ],
+      "last": [
+        "신청 제출",
+        "Application submitted",
+        "申請提出",
+        "已提交申请"
+      ],
+      "next": [
+        "다음 단계 초청 확인",
+        "Invitation to next stage",
+        "次段階への招待確認",
+        "查看下一阶段邀请"
+      ],
+      "href": "grants.html#MOZILLA-HSAI2027",
+      "date": "2026-10-26",
+      "fingerprint": "234a3c469375a68d"
+    },
+    {
+      "id": "RENAISSANCE-AIMATH2026",
+      "group": "grants",
+      "name": [
+        "Renaissance Philanthropy · AI for Math Fund",
+        "Renaissance Philanthropy · AI for Math Fund",
+        "Renaissance Philanthropy · AI for Math Fund",
+        "Renaissance Philanthropy · AI for Math Fund"
+      ],
+      "now": [
+        "제출 완료",
+        "Submitted",
+        "提出済み",
+        "已提交"
+      ],
+      "last": [
+        "신청 제출",
+        "Application submitted",
+        "申請提出",
+        "已提交申请"
+      ],
+      "next": [
+        "심사·선정 결과 확인",
+        "Application decision",
+        "審査・採択結果の確認",
+        "查看评审或遴选结果"
+      ],
+      "href": "grants.html#RENAISSANCE-AIMATH2026",
+      "date": "2026-10-26",
+      "fingerprint": "87d0399190b110ae"
+    },
+    {
+      "id": "AIEI4-2026",
+      "group": "grants",
+      "name": [
+        "Microsoft · AI Economy Institute Cohort 4",
+        "Microsoft · AI Economy Institute Cohort 4",
+        "Microsoft · AI Economy Institute Cohort 4",
+        "Microsoft · AI Economy Institute Cohort 4"
+      ],
+      "now": [
+        "제출 완료",
+        "Submitted",
+        "提出済み",
+        "已提交"
+      ],
+      "last": [
+        "신청 제출",
+        "Application submitted",
+        "申請提出",
+        "已提交申请"
+      ],
+      "next": [
+        "심사·선정 결과 확인",
+        "Application decision",
+        "審査・採択結果の確認",
+        "查看评审或遴选结果"
+      ],
+      "href": "grants.html#AIEI4-2026",
+      "date": "2026-10-28",
+      "fingerprint": "d76c42c68cf96000"
+    },
+    {
+      "id": "MOZILLA-FELLOW2027",
+      "group": "grants",
+      "name": [
+        "Mozilla Fellowship 2027 · Track II",
+        "Mozilla Fellowship 2027 · Track II",
+        "Mozilla Fellowship 2027 · Track II",
+        "Mozilla Fellowship 2027 · Track II"
+      ],
+      "now": [
+        "의향서",
+        "LOI",
+        "意向書",
+        "意向书"
+      ],
+      "last": [
+        "신청 제출",
+        "Application submitted",
+        "申請提出",
+        "已提交申请"
+      ],
+      "next": [
+        "본신청 초청 확인",
+        "Full-application invitation",
+        "本申請への招待確認",
+        "查看正式申请邀请"
+      ],
+      "href": "grants.html#MOZILLA-FELLOW2027",
+      "date": "2026-10-28",
+      "fingerprint": "c2e5d33aacb5195a"
+    },
+    {
+      "id": "AMAZON-ARA-FALL2026",
+      "group": "grants",
+      "name": [
+        "Amazon Research Awards · Automated Reasoning",
+        "Amazon Research Awards · Automated Reasoning",
+        "Amazon Research Awards · Automated Reasoning",
+        "Amazon Research Awards · Automated Reasoning"
+      ],
+      "now": [
+        "제출 완료",
+        "Submitted",
+        "提出済み",
+        "已提交"
+      ],
+      "last": [
+        "포털 초안·파일 업로드",
+        "Portal draft and files uploaded",
+        "ポータル草稿・ファイル登録",
+        "已保存门户草稿并上传文件"
+      ],
+      "next": [
+        "심사·선정 결과 확인",
+        "Application decision",
+        "審査・採択結果の確認",
+        "查看评审或遴选结果"
+      ],
+      "href": "grants.html#AMAZON-ARA-FALL2026",
+      "date": "2026-10-26",
+      "fingerprint": "9c1d94aef64823cb"
+    },
+    {
+      "id": "IHS-AIWORKFORCE2026",
+      "group": "grants",
+      "name": [
+        "IHS · AI and the Workforce",
+        "IHS · AI and the Workforce",
+        "IHS · AI and the Workforce",
+        "IHS · AI and the Workforce"
+      ],
+      "now": [
+        "초안 작성",
+        "Drafted",
+        "草稿作成",
+        "草稿已编写"
+      ],
+      "last": [
+        "공장 기술자가 AI에 넘기는 일 · 2차 과업 패널 조사",
+        "what technicians hand to AI: a two-wave task panel",
+        "工場技術者がAIに委ねる仕事 · 2回の業務パネル調査",
+        "工厂技术员交给AI的工作 · 两轮任务面板调查"
+      ],
+      "next": [
+        "신청 조건 확인·제안 검토",
+        "Check terms and proposal",
+        "申請条件・提案の確認",
+        "核实申请条件并检查提案"
+      ],
+      "href": "grants.html#IHS-AIWORKFORCE2026",
+      "date": "",
+      "fingerprint": "b1816723c62277b5"
+    },
+    {
+      "id": "LRF-SMALL2026",
+      "group": "grants",
+      "name": [
+        "Lloyd's Register Foundation · Small Grants",
+        "Lloyd's Register Foundation · Small Grants",
+        "Lloyd's Register Foundation · Small Grants",
+        "Lloyd's Register Foundation · Small Grants"
+      ],
+      "now": [
+        "초안 작성",
+        "Drafted",
+        "草稿作成",
+        "草稿已编写"
+      ],
+      "last": [
+        "소규모 자동화 라인의 에너지 차단·정지 교육 모듈",
+        "energy-isolation and stop training for small lines",
+        "小規模自動化ラインのエネルギー遮断・停止教育モジュール",
+        "小型自动化产线的能量隔离与停止培训模块"
+      ],
+      "next": [
+        "신청 조건 확인·제안 검토",
+        "Check terms and proposal",
+        "申請条件・提案の確認",
+        "核实申请条件并检查提案"
+      ],
+      "href": "grants.html#LRF-SMALL2026",
+      "date": "",
+      "fingerprint": "a379c75e332c83ab"
+    },
+    {
+      "id": "SENTIENT-OPENAGI2026",
+      "group": "grants",
+      "name": [
+        "Sentient Foundation · Open Source AGI Grant",
+        "Sentient Foundation · Open Source AGI Grant",
+        "Sentient Foundation · Open Source AGI Grant",
+        "Sentient Foundation · Open Source AGI Grant"
+      ],
+      "now": [
+        "제출 완료",
+        "Submitted",
+        "提出済み",
+        "已提交"
+      ],
+      "last": [
+        "신청 제출",
+        "Application submitted",
+        "申請提出",
+        "已提交申请"
+      ],
+      "next": [
+        "심사·선정 결과 확인",
+        "Application decision",
+        "審査・採択結果の確認",
+        "查看评审或遴选结果"
+      ],
+      "href": "grants.html#SENTIENT-OPENAGI2026",
+      "date": "2026-10-26",
+      "fingerprint": "f81bf2fd807a227c"
+    },
+    {
+      "id": "LS-OPENRND2027",
+      "group": "grants",
+      "name": [
+        "LS전선 · Open R&D",
+        "LS Cable & System · Open R&D",
+        "LS Cable & System · Open R&D",
+        "LS Cable & System · Open R&D"
+      ],
+      "now": [
+        "회신 대기",
+        "Awaiting reply",
+        "回答待ち",
+        "等待回复"
+      ],
+      "last": [
+        "자율공모 제안 메일 발송",
+        "Open-call proposal emailed",
+        "自由公募の提案メール送付",
+        "已发送自主征集提案邮件"
+      ],
+      "next": [
+        "기관 회신 확인",
+        "Check partner reply",
+        "機関からの回答確認",
+        "查看机构回复"
+      ],
+      "href": "grants.html#LS-OPENRND2027",
+      "date": "2026-10-26",
+      "fingerprint": "c644d717f43a8519"
+    },
+    {
+      "id": "SLOAN-TECH2027",
+      "group": "grants",
+      "name": [
+        "Alfred P. Sloan Foundation · Technology",
+        "Alfred P. Sloan Foundation · Technology",
+        "Alfred P. Sloan Foundation · Technology",
+        "Alfred P. Sloan Foundation · Technology"
+      ],
+      "now": [
+        "초안 작성",
+        "Drafted",
+        "草稿作成",
+        "草稿已编写"
+      ],
+      "last": [
+        "래더 검증 공개 벤치마크 · 의향서 초안·공식 조건 확인 중",
+        "open ladder benchmark · LOI draft and terms verification",
+        "ラダー検証の公開ベンチマーク · 意向書草稿・公式条件を確認中",
+        "梯形图验证公开基准 · 意向书草稿与官方条件核实中"
+      ],
+      "next": [
+        "신청 조건 확인·제안 검토",
+        "Check terms and proposal",
+        "申請条件・提案の確認",
+        "核实申请条件并检查提案"
+      ],
+      "href": "grants.html#SLOAN-TECH2027",
+      "date": "",
+      "fingerprint": "653caf77a13e8ca1"
+    },
+    {
+      "id": "CRF-ROUND2",
+      "group": "grants",
+      "name": [
+        "Corrigibility Research Fund · Round 2",
+        "Corrigibility Research Fund · Round 2",
+        "Corrigibility Research Fund · Round 2",
+        "Corrigibility Research Fund · Round 2"
+      ],
+      "now": [
+        "제출 완료",
+        "Submitted",
+        "提出済み",
+        "已提交"
+      ],
+      "last": [
+        "신청서 제출 · 심사 결과 대기",
+        "application submitted · awaiting decision",
+        "申請書提出済み · 審査結果待ち",
+        "已提交申请书 · 等待评审结果"
+      ],
+      "next": [
+        "심사·선정 결과 확인",
+        "Application decision",
+        "審査・採択結果の確認",
+        "查看评审或遴选结果"
+      ],
+      "href": "grants.html#CRF-ROUND2",
+      "date": "",
+      "fingerprint": "82d4be879df37bba"
+    },
+    {
+      "id": "ETH-ESP2026",
+      "group": "grants",
+      "name": [
+        "Ethereum Foundation · ESP",
+        "Ethereum Foundation · ESP",
+        "Ethereum Foundation · ESP",
+        "Ethereum Foundation · ESP"
+      ],
+      "now": [
+        "초안 작성",
+        "Drafted",
+        "草稿作成",
+        "草稿已编写"
+      ],
+      "last": [
+        "형식검증 트랙 영문 제안서 초안 · 미제출",
+        "formal-verification proposal drafted · not submitted",
+        "形式検証の英文提案草稿 · 未提出",
+        "形式化验证英文提案草稿 · 尚未提交"
+      ],
+      "next": [
+        "신청 조건 확인·제안 검토",
+        "Check terms and proposal",
+        "申請条件・提案の確認",
+        "核实申请条件并检查提案"
+      ],
+      "href": "grants.html#ETH-ESP2026",
+      "date": "",
+      "fingerprint": "3814daa2de382758"
+    },
+    {
+      "id": "MAZAK-RD2026",
+      "group": "grants",
+      "name": [
+        "Mazak Foundation · 연구개발 조성",
+        "Mazak Foundation · R&amp;D grant",
+        "Mazak Foundation · 研究開発助成",
+        "Mazak Foundation · 研发资助"
+      ],
+      "now": [
+        "초안 작성",
+        "Drafted",
+        "草稿作成",
+        "草稿已编写"
+      ],
+      "last": [
+        "제조 교육 라인 실측 기반 제안서 초안 · 미제출",
+        "proposal drafted from measurements on our training line · not yet submitted",
+        "製造教育ラインの実測に基づく提案書草稿 · 未提出",
+        "基于制造教学产线实测的提案草稿 · 尚未提交"
+      ],
+      "next": [
+        "신청 조건 확인·제안 검토",
+        "Check terms and proposal",
+        "申請条件・提案の確認",
+        "核实申请条件并检查提案"
+      ],
+      "href": "grants.html#MAZAK-RD2026",
+      "date": "",
+      "fingerprint": "f37d7dfbe98040e2"
+    },
+    {
+      "id": "ANTHROPIC-AIS2026",
+      "group": "support",
+      "name": [
+        "Anthropic · AI for Science",
+        "Anthropic · AI for Science",
+        "Anthropic · AI for Science",
+        "Anthropic · AI for Science"
+      ],
+      "now": [
+        "제출 완료",
+        "Submitted",
+        "提出済み",
+        "已提交"
+      ],
+      "last": [
+        "연구지원 신청 제출",
+        "Research-support application sent",
+        "研究支援申請を提出",
+        "已提交研究支持申请"
+      ],
+      "next": [
+        "심사·선정 결과 확인",
+        "Application decision",
+        "審査・採択結果の確認",
+        "查看评审或遴选结果"
+      ],
+      "href": "grants.html#ANTHROPIC-AIS2026",
+      "date": "2026-10-28",
+      "fingerprint": "dae01a2510d8d8fa"
+    },
+    {
+      "id": "GEMINI-ACAD2026",
+      "group": "support",
+      "name": [
+        "Google · Gemini Academic Program",
+        "Google · Gemini Academic Program",
+        "Google · Gemini Academic Program",
+        "Google · Gemini Academic Program"
+      ],
+      "now": [
+        "제출 완료",
+        "Submitted",
+        "提出済み",
+        "已提交"
+      ],
+      "last": [
+        "연구지원 신청 제출",
+        "Research-support application sent",
+        "研究支援申請を提出",
+        "已提交研究支持申请"
+      ],
+      "next": [
+        "심사·선정 결과 확인",
+        "Application decision",
+        "審査・採択結果の確認",
+        "查看评审或遴选结果"
+      ],
+      "href": "grants.html#GEMINI-ACAD2026",
+      "date": "2026-10-28",
+      "fingerprint": "890dcd1b32663702"
+    },
+    {
+      "id": "OPENAI-RAP2026",
+      "group": "support",
+      "name": [
+        "OpenAI · Researcher Access Program",
+        "OpenAI · Researcher Access Program",
+        "OpenAI · Researcher Access Program",
+        "OpenAI · Researcher Access Program"
+      ],
+      "now": [
+        "제출 완료",
+        "Submitted",
+        "提出済み",
+        "已提交"
+      ],
+      "last": [
+        "API 크레딧 신청 제출 · 심사 결과 대기",
+        "API-credit application submitted · awaiting decision",
+        "APIクレジット申請済み · 審査結果待ち",
+        "已提交API额度申请 · 等待评审结果"
+      ],
+      "next": [
+        "심사·선정 결과 확인",
+        "Application decision",
+        "審査・採択結果の確認",
+        "查看评审或遴选结果"
+      ],
+      "href": "grants.html#OPENAI-RAP2026",
+      "date": "",
+      "fingerprint": "b5696688db32ab84"
+    }
+  ],
+  "events": [
+    {
+      "id": "AMAZON-ARA-FALL2026",
+      "date": "2026-10-29",
+      "name": [
+        "Amazon Research Awards · Automated Reasoning",
+        "Amazon Research Awards · Automated Reasoning",
+        "Amazon Research Awards · Automated Reasoning",
+        "Amazon Research Awards · Automated Reasoning"
+      ],
+      "text": [
+        "B3 실측 진행 상태 확인",
+        "B3 measurement confirmed under way",
+        "B3実測の進行を確認",
+        "已确认B3实测正在进行"
+      ],
+      "href": "grants.html#AMAZON-ARA-FALL2026"
+    },
+    {
+      "id": "MOZILLA-FELLOW2027",
+      "date": "2026-10-28",
+      "name": [
+        "Mozilla Fellowship 2027 · Track II",
+        "Mozilla Fellowship 2027 · Track II",
+        "Mozilla Fellowship 2027 · Track II",
+        "Mozilla Fellowship 2027 · Track II"
+      ],
+      "text": [
+        "신청 제출",
+        "Application submitted",
+        "申請提出",
+        "已提交申请"
+      ],
+      "href": "grants.html#MOZILLA-FELLOW2027"
+    },
+    {
+      "id": "KDI-PREEVAL2026-2",
+      "date": "2026-10-28",
+      "name": [
+        "KDI 예타·사업계획 적정성 검토 외부연구진",
+        "KDI feasibility and project-plan review team",
+        "KDI 予備妥当性・事業計画適正性検討 外部研究者",
+        "KDI 预可研与项目计划适当性审查外部研究人员"
+      ],
+      "text": [
+        "외부연구진 신청 제출",
+        "External research-team application sent",
+        "外部研究者の申請送付",
+        "已发送外部研究人员申请"
+      ],
+      "href": "grants.html#KDI-PREEVAL2026-2"
+    },
+    {
+      "id": "GEMINI-ACAD2026",
+      "date": "2026-10-28",
+      "name": [
+        "Google · Gemini Academic Program",
+        "Google · Gemini Academic Program",
+        "Google · Gemini Academic Program",
+        "Google · Gemini Academic Program"
+      ],
+      "text": [
+        "연구지원 신청 제출",
+        "Research-support application sent",
+        "研究支援申請を提出",
+        "已提交研究支持申请"
+      ],
+      "href": "grants.html#GEMINI-ACAD2026"
+    },
+    {
+      "id": "ANTHROPIC-AIS2026",
+      "date": "2026-10-28",
+      "name": [
+        "Anthropic · AI for Science",
+        "Anthropic · AI for Science",
+        "Anthropic · AI for Science",
+        "Anthropic · AI for Science"
+      ],
+      "text": [
+        "연구지원 신청 제출",
+        "Research-support application sent",
+        "研究支援申請を提出",
+        "已提交研究支持申请"
+      ],
+      "href": "grants.html#ANTHROPIC-AIS2026"
+    },
+    {
+      "id": "AIEI4-2026",
+      "date": "2026-10-28",
+      "name": [
+        "Microsoft · AI Economy Institute Cohort 4",
+        "Microsoft · AI Economy Institute Cohort 4",
+        "Microsoft · AI Economy Institute Cohort 4",
+        "Microsoft · AI Economy Institute Cohort 4"
+      ],
+      "text": [
+        "신청 제출",
+        "Application submitted",
+        "申請提出",
+        "已提交申请"
+      ],
+      "href": "grants.html#AIEI4-2026"
+    },
+    {
+      "id": "research-E-3",
+      "date": "2026-10-27",
+      "name": [
+        "캡스톤 작품대회 최우수상",
+        "Capstone competition top award",
+        "キャップストーン作品大会 最優秀賞",
+        "毕业设计作品大赛 最优秀奖"
+      ],
+      "text": [
+        "최우수상",
+        "Top award",
+        "最優秀賞",
+        "最优秀奖"
+      ],
+      "href": "research-education.html"
+    },
+    {
+      "id": "ladder",
+      "date": "2026-10-26",
+      "name": [
+        "래더 적합성 검사",
+        "Ladder conformance checking",
+        "ラダー適合性検査",
+        "梯形图符合性检查"
+      ],
+      "text": [
+        "투고",
+        "Submitted",
+        "投稿",
+        "投稿"
+      ],
+      "href": "record.html#ladder"
+    },
+    {
+      "id": "SENTIENT-OPENAGI2026",
+      "date": "2026-10-26",
+      "name": [
+        "Sentient Foundation · Open Source AGI Grant",
+        "Sentient Foundation · Open Source AGI Grant",
+        "Sentient Foundation · Open Source AGI Grant",
+        "Sentient Foundation · Open Source AGI Grant"
+      ],
+      "text": [
+        "신청 제출",
+        "Application submitted",
+        "申請提出",
+        "已提交申请"
+      ],
+      "href": "grants.html#SENTIENT-OPENAGI2026"
+    },
+    {
+      "id": "SAMSUNG_STF_2027",
+      "date": "2026-10-26",
+      "name": [
+        "삼성미래기술육성사업 2027 상반기",
+        "Samsung Science and Technology Foundation · 2027 H1",
+        "サムスン未来技術育成事業 2027年上半期",
+        "三星未来技术培育项目 2027年上半年"
+      ],
+      "text": [
+        "신청 제출",
+        "Application submitted",
+        "申請提出",
+        "已提交申请"
+      ],
+      "href": "grants.html#SAMSUNG_STF_2027"
+    },
+    {
+      "id": "RENAISSANCE-AIMATH2026",
+      "date": "2026-10-26",
+      "name": [
+        "Renaissance Philanthropy · AI for Math Fund",
+        "Renaissance Philanthropy · AI for Math Fund",
+        "Renaissance Philanthropy · AI for Math Fund",
+        "Renaissance Philanthropy · AI for Math Fund"
+      ],
+      "text": [
+        "신청 제출",
+        "Application submitted",
+        "申請提出",
+        "已提交申请"
+      ],
+      "href": "grants.html#RENAISSANCE-AIMATH2026"
+    },
+    {
+      "id": "MOZILLA-HSAI2027",
+      "date": "2026-10-26",
+      "name": [
+        "Mozilla Foundation · Human-Scale AI Incubator",
+        "Mozilla Foundation · Human-Scale AI Incubator",
+        "Mozilla Foundation · Human-Scale AI Incubator",
+        "Mozilla Foundation · Human-Scale AI Incubator"
+      ],
+      "text": [
+        "신청 제출",
+        "Application submitted",
+        "申請提出",
+        "已提交申请"
+      ],
+      "href": "grants.html#MOZILLA-HSAI2027"
+    },
+    {
+      "id": "LS-OPENRND2027",
+      "date": "2026-10-26",
+      "name": [
+        "LS전선 · Open R&D",
+        "LS Cable & System · Open R&D",
+        "LS Cable & System · Open R&D",
+        "LS Cable & System · Open R&D"
+      ],
+      "text": [
+        "자율공모 제안 메일 발송",
+        "Open-call proposal emailed",
+        "自由公募の提案メール送付",
+        "已发送自主征集提案邮件"
+      ],
+      "href": "grants.html#LS-OPENRND2027"
+    },
+    {
+      "id": "GTR-AISAFETY2026",
+      "date": "2026-10-26",
+      "name": [
+        "GTR Foundation · AI Safety Fund",
+        "GTR Foundation · AI Safety Fund",
+        "GTR Foundation · AI Safety Fund",
+        "GTR Foundation · AI Safety Fund"
+      ],
+      "text": [
+        "신청 제출",
+        "Application submitted",
+        "申請提出",
+        "已提交申请"
+      ],
+      "href": "grants.html#GTR-AISAFETY2026"
+    },
+    {
+      "id": "FORESIGHT-NODES2026",
+      "date": "2026-10-26",
+      "name": [
+        "Foresight Institute · AI for Science and Safety",
+        "Foresight Institute · AI for Science and Safety",
+        "Foresight Institute · AI for Science and Safety",
+        "Foresight Institute · AI for Science and Safety"
+      ],
+      "text": [
+        "신청 제출",
+        "Application submitted",
+        "申請提出",
+        "已提交申请"
+      ],
+      "href": "grants.html#FORESIGHT-NODES2026"
+    },
+    {
+      "id": "CISCO-SEMIREL",
+      "date": "2026-10-26",
+      "name": [
+        "Cisco Research · 반도체 신뢰성 RFP",
+        "Cisco Research · Semiconductor Reliability RFP",
+        "Cisco Research · 半導体信頼性 RFP",
+        "Cisco Research · 半导体可靠性 RFP"
+      ],
+      "text": [
+        "신청 제출",
+        "Application submitted",
+        "申請提出",
+        "已提交申请"
+      ],
+      "href": "grants.html#CISCO-SEMIREL"
+    },
+    {
+      "id": "AMAZON-ARA-FALL2026",
+      "date": "2026-10-26",
+      "name": [
+        "Amazon Research Awards · Automated Reasoning",
+        "Amazon Research Awards · Automated Reasoning",
+        "Amazon Research Awards · Automated Reasoning",
+        "Amazon Research Awards · Automated Reasoning"
+      ],
+      "text": [
+        "포털 초안·파일 업로드",
+        "Portal draft and files uploaded",
+        "ポータル草稿・ファイル登録",
+        "已保存门户草稿并上传文件"
+      ],
+      "href": "grants.html#AMAZON-ARA-FALL2026"
+    },
+    {
+      "id": "repeat",
+      "date": "2026-10-25",
+      "name": [
+        "반복 검사 정밀도",
+        "Repeat-inspection precision",
+        "繰り返し検査の精度",
+        "重复检测精度"
+      ],
+      "text": [
+        "투고",
+        "Submitted",
+        "投稿",
+        "投稿"
+      ],
+      "href": "record.html#repeat"
+    },
+    {
+      "id": "sttt",
+      "date": "2026-10-24",
+      "name": [
+        "래더 로그 모호성·관측 선택",
+        "Ladder-log ambiguity and observation selection",
+        "ラダーログの曖昧性・観測選択",
+        "梯形图日志歧义与观测选择"
+      ],
+      "text": [
+        "투고",
+        "Submitted",
+        "投稿",
+        "投稿"
+      ],
+      "href": "record.html#sttt"
+    },
+    {
+      "id": "inline",
+      "date": "2026-10-15",
+      "name": [
+        "인라인 검사 엔진",
+        "Inline inspection engine",
+        "インライン検査エンジン",
+        "在线检测引擎"
+      ],
+      "text": [
+        "투고",
+        "Submitted",
+        "投稿",
+        "投稿"
+      ],
+      "href": "record.html#inline"
+    },
+    {
+      "id": "KETEP-PLANNING2027",
+      "date": "2026-10-15",
+      "name": [
+        "KETEP 2027 에너지인력양성 연구개발과제 기획단",
+        "KETEP 2027 energy-workforce planning group",
+        "KETEP 2027 エネルギー人材育成 研究開発課題企画委員会",
+        "KETEP 2027 能源人才培养 研发项目规划组"
+      ],
+      "text": [
+        "신청 제출",
+        "Application submitted",
+        "申請提出",
+        "已提交申请"
+      ],
+      "href": "grants.html#KETEP-PLANNING2027"
+    },
+    {
+      "id": "energy",
+      "date": "2026-09-25",
+      "name": [
+        "마이크로그리드 계층형 에너지 관리",
+        "Microgrid energy management",
+        "マイクログリッドの階層型エネルギー管理",
+        "微电网分层能量管理"
+      ],
+      "text": [
+        "투고",
+        "Submitted",
+        "投稿",
+        "投稿"
+      ],
+      "href": "record.html#energy"
+    },
+    {
+      "id": "hari",
+      "date": "2026-09-20",
+      "name": [
+        "비보상 관문 계약",
+        "Non-compensatory gate contract",
+        "非補償ゲート契約",
+        "非补偿门控契约"
+      ],
+      "text": [
+        "투고",
+        "Submitted",
+        "投稿",
+        "投稿"
+      ],
+      "href": "record.html#hari"
+    },
+    {
+      "id": "maia-index",
+      "date": "2026-09-19",
+      "name": [
+        "MAIA 적용성 지수",
+        "MAIA applicability index",
+        "MAIA適用性指数",
+        "MAIA适用性指数"
+      ],
+      "text": [
+        "투고",
+        "Submitted",
+        "投稿",
+        "投稿"
+      ],
+      "href": "record.html#maia-index"
+    }
+  ],
+  "focus": [
+    "AMAZON-ARA-FALL2026",
+    "KDI-PREEVAL2026-2",
+    "repeat",
+    "research-D-0",
+    "ANTHROPIC-AIS2026"
+  ],
+  "content_hash": "bcf45b48fdfd7727",
+  "work": {
+    "collected_at": "2026-11-05T22:12:20+09:00",
+    "period_days": 14,
+    "scope": "versioned changes in public research topics",
+    "topics": [
+      {
+        "id": "grants",
+        "name": [
+          "정부·민간 과제",
+          "Public and private applications",
+          "政府・民間研究申請",
+          "政府与民间项目申请"
+        ],
+        "pending": 5,
+        "last_at": "2026-11-05T22:07:13+09:00"
+      },
+      {
+        "id": "web",
+        "name": [
+          "연구실 웹페이지",
+          "Lab website",
+          "研究室ウェブサイト",
+          "研究室网页"
+        ],
+        "pending": 0,
+        "last_at": "2026-11-05T22:11:07+09:00"
+      },
+      {
+        "id": "runtime",
+        "name": [
+          "검사·계측 런타임",
+          "Inspection and measurement runtime",
+          "検査・計測ランタイム",
+          "检测与测量运行环境"
+        ],
+        "pending": 0,
+        "last_at": "2026-11-05T16:26:39+09:00"
+      },
+      {
+        "id": "amazon",
+        "name": [
+          "Amazon 실측·제안",
+          "Amazon measurements and proposal",
+          "Amazon 実測・提案",
+          "Amazon实测与提案"
+        ],
+        "pending": 0,
+        "last_at": "2026-11-05T16:24:31+09:00"
+      },
+      {
+        "id": "ladder",
+        "name": [
+          "래더 적합성 검증",
+          "Ladder conformance",
+          "ラダー適合性検証",
+          "梯形图符合性验证"
+        ],
+        "pending": 0,
+        "last_at": "2026-11-03T20:31:01+09:00"
+      },
+      {
+        "id": "maia",
+        "name": [
+          "AI 업무분담 연구",
+          "AI task-allocation research",
+          "AI作業分担研究",
+          "AI任务分配研究"
+        ],
+        "pending": 0,
+        "last_at": "2026-10-29T19:21:11+09:00"
+      },
+      {
+        "id": "inline",
+        "name": [
+          "인라인 비전검사",
+          "Inline vision inspection",
+          "インライン検査",
+          "在线视觉检测"
+        ],
+        "pending": 0,
+        "last_at": "2026-10-28T09:10:10+09:00"
+      },
+      {
+        "id": "energy",
+        "name": [
+          "에너지 관리",
+          "Energy management",
+          "エネルギー管理",
+          "能源管理"
+        ],
+        "pending": 0,
+        "last_at": "2026-10-26T11:10:43+09:00"
+      },
+      {
+        "id": "repeat",
+        "name": [
+          "반복 비전검사",
+          "Repeat vision inspection",
+          "反復ビジョン検査",
+          "重复视觉检测"
+        ],
+        "pending": 0,
+        "last_at": "2026-10-25T20:08:44+09:00"
+      }
+    ],
+    "entries": [
+      {
+        "id": "7cd4c40097036a21",
+        "at": "2026-11-05T22:11:07+09:00",
+        "topic": "web",
+        "kinds": [
+          "data"
+        ],
+        "files": 1
+      },
+      {
+        "id": "de1c8e77d10610f5",
+        "at": "2026-11-05T22:07:13+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data"
+        ],
+        "files": 1
+      },
+      {
+        "id": "d9c481ea332533ec",
+        "at": "2026-11-05T22:06:38+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "data",
+          "document"
+        ],
+        "files": 12
+      },
+      {
+        "id": "3f3b43a69ac505a9",
+        "at": "2026-11-05T22:05:30+09:00",
+        "topic": "web",
+        "kinds": [
+          "code",
+          "data"
+        ],
+        "files": 6
+      },
+      {
+        "id": "ad863be7c8619e13",
+        "at": "2026-11-05T21:56:31+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data"
+        ],
+        "files": 1
+      },
+      {
+        "id": "353c154df6cf8cc8",
+        "at": "2026-11-05T21:56:09+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 6
+      },
+      {
+        "id": "a929b59a05060976",
+        "at": "2026-11-05T21:54:20+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "data",
+          "document"
+        ],
+        "files": 6
+      },
+      {
+        "id": "825f37db592dfc29",
+        "at": "2026-11-05T21:53:05+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data"
+        ],
+        "files": 2
+      },
+      {
+        "id": "a7a95e9ae47650d5",
+        "at": "2026-11-05T21:52:18+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "3be5287710ae63b5",
+        "at": "2026-11-05T21:35:51+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data"
+        ],
+        "files": 1
+      },
+      {
+        "id": "bd97c38a2dfb10cf",
+        "at": "2026-11-05T21:35:23+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "88c8eaeb64b95ddf",
+        "at": "2026-11-05T21:35:04+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 5
+      },
+      {
+        "id": "e38afc6a305c23b9",
+        "at": "2026-11-05T21:28:52+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 4
+      },
+      {
+        "id": "affa981f2420eca4",
+        "at": "2026-11-05T21:18:17+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "data",
+          "document"
+        ],
+        "files": 38
+      },
+      {
+        "id": "f9a384d14dc6a036",
+        "at": "2026-11-05T21:11:16+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "document"
+        ],
+        "files": 4
+      },
+      {
+        "id": "9497dc4e045a8b17",
+        "at": "2026-11-05T21:05:45+09:00",
+        "topic": "web",
+        "kinds": [
+          "data"
+        ],
+        "files": 1
+      },
+      {
+        "id": "90529ec52580c3df",
+        "at": "2026-11-05T21:05:45+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 3
+      },
+      {
+        "id": "629b2dc3dbe7dc43",
+        "at": "2026-11-05T21:04:35+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 13
+      },
+      {
+        "id": "3c77a7ed1ceb58f1",
+        "at": "2026-11-05T21:02:46+09:00",
+        "topic": "web",
+        "kinds": [
+          "code",
+          "data"
+        ],
+        "files": 2
+      },
+      {
+        "id": "02f02f5cd999e617",
+        "at": "2026-11-05T21:02:46+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 6
+      },
+      {
+        "id": "ba88580734ecb235",
+        "at": "2026-11-05T20:00:35+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 4
+      },
+      {
+        "id": "aff1a7d773af813b",
+        "at": "2026-11-05T19:58:48+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "document"
+        ],
+        "files": 5
+      },
+      {
+        "id": "73e9ecdd985e41e2",
+        "at": "2026-11-05T19:58:27+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "data",
+          "document"
+        ],
+        "files": 20
+      },
+      {
+        "id": "bce730508690871c",
+        "at": "2026-11-05T19:56:37+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "data",
+          "document"
+        ],
+        "files": 11
+      },
+      {
+        "id": "1796d9f650288d74",
+        "at": "2026-11-05T19:51:43+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 5
+      },
+      {
+        "id": "2c961bd1f3f9dc54",
+        "at": "2026-11-05T19:50:54+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "data",
+          "document"
+        ],
+        "files": 58
+      },
+      {
+        "id": "07ffac1dd0ea775d",
+        "at": "2026-11-05T19:48:24+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 3
+      },
+      {
+        "id": "0a41d9a62d678645",
+        "at": "2026-11-05T19:42:09+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "361a7e2148143a89",
+        "at": "2026-11-05T17:01:57+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "cb0f603212f2da44",
+        "at": "2026-11-05T16:27:28+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "70240f81d17d9d8d",
+        "at": "2026-11-05T16:26:39+09:00",
+        "topic": "runtime",
+        "kinds": [
+          "code",
+          "data",
+          "document",
+          "figure"
+        ],
+        "files": 82
+      },
+      {
+        "id": "f9a4d2a594bcd1cf",
+        "at": "2026-11-05T16:24:31+09:00",
+        "topic": "amazon",
+        "kinds": [
+          "document"
+        ],
+        "files": 3
+      },
+      {
+        "id": "7f12abb27646b5d8",
+        "at": "2026-11-05T16:24:31+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code"
+        ],
+        "files": 1
+      },
+      {
+        "id": "f6255d399bfc1e3c",
+        "at": "2026-11-05T16:23:03+09:00",
+        "topic": "runtime",
+        "kinds": [
+          "code"
+        ],
+        "files": 2
+      },
+      {
+        "id": "f896aec0d54d10b0",
+        "at": "2026-11-05T16:22:08+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "d31eba3aa0a2ff2f",
+        "at": "2026-11-05T16:16:23+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "0599892327c81ae4",
+        "at": "2026-11-04T17:37:19+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "bd3b717de5eb5c17",
+        "at": "2026-11-04T17:11:14+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 4
+      },
+      {
+        "id": "d7ebf97fad83ae3a",
+        "at": "2026-11-04T17:00:22+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "2984ee231e858d17",
+        "at": "2026-11-04T16:56:27+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "659958ef54e43f8b",
+        "at": "2026-11-04T16:53:33+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "0656957ee04e1431",
+        "at": "2026-11-04T15:48:54+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "data",
+          "document"
+        ],
+        "files": 12
+      },
+      {
+        "id": "959ca272a7dd5f06",
+        "at": "2026-11-04T15:35:28+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 31
+      },
+      {
+        "id": "3e8905a6d1be94fb",
+        "at": "2026-11-04T15:20:06+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "document"
+        ],
+        "files": 26
+      },
+      {
+        "id": "f8f9b093155a3f67",
+        "at": "2026-11-04T15:03:41+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "ae12a5d315d80d6d",
+        "at": "2026-11-04T14:49:15+09:00",
+        "topic": "amazon",
+        "kinds": [
+          "document"
+        ],
+        "files": 13
+      },
+      {
+        "id": "251a7520a30355b7",
+        "at": "2026-11-04T14:49:15+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data"
+        ],
+        "files": 1
+      },
+      {
+        "id": "8d14b0c1f4cd14f2",
+        "at": "2026-11-04T14:44:12+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "af82a6646b495fe4",
+        "at": "2026-11-04T14:35:05+09:00",
+        "topic": "runtime",
+        "kinds": [
+          "document"
+        ],
+        "files": 4
+      },
+      {
+        "id": "c6d46e2d99799574",
+        "at": "2026-11-04T14:33:57+09:00",
+        "topic": "runtime",
+        "kinds": [
+          "code",
+          "data",
+          "document"
+        ],
+        "files": 3
+      },
+      {
+        "id": "47eb5aecab18c7cc",
+        "at": "2026-11-04T14:32:09+09:00",
+        "topic": "runtime",
+        "kinds": [
+          "code",
+          "data",
+          "document",
+          "figure"
+        ],
+        "files": 19
+      },
+      {
+        "id": "a18e4d85b0fc15f9",
+        "at": "2026-11-04T14:31:40+09:00",
+        "topic": "runtime",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "13f88a55f6334b99",
+        "at": "2026-11-04T14:30:27+09:00",
+        "topic": "runtime",
+        "kinds": [
+          "code",
+          "data",
+          "document"
+        ],
+        "files": 26
+      },
+      {
+        "id": "ebe69def421b98ca",
+        "at": "2026-11-04T14:25:15+09:00",
+        "topic": "amazon",
+        "kinds": [
+          "code",
+          "document"
+        ],
+        "files": 25
+      },
+      {
+        "id": "e77a5c6a71a9cda3",
+        "at": "2026-11-04T14:25:15+09:00",
+        "topic": "runtime",
+        "kinds": [
+          "code",
+          "data",
+          "document",
+          "figure"
+        ],
+        "files": 54
+      },
+      {
+        "id": "c1653f8de26cf108",
+        "at": "2026-11-04T14:05:11+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "459f3e1b1244b8a5",
+        "at": "2026-11-04T14:02:49+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "9632b70b2fed48f6",
+        "at": "2026-11-04T14:01:46+09:00",
+        "topic": "runtime",
+        "kinds": [
+          "code",
+          "document"
+        ],
+        "files": 5
+      },
+      {
+        "id": "74b3b45339839fd6",
+        "at": "2026-11-04T14:00:39+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "4eb1d580803f60ca",
+        "at": "2026-11-04T13:55:49+09:00",
+        "topic": "runtime",
+        "kinds": [
+          "code",
+          "document"
+        ],
+        "files": 7
+      },
+      {
+        "id": "9e337c1985cff4a5",
+        "at": "2026-11-04T13:49:56+09:00",
+        "topic": "runtime",
+        "kinds": [
+          "code",
+          "data",
+          "document"
+        ],
+        "files": 12
+      },
+      {
+        "id": "eb32d08ab42ab8f2",
+        "at": "2026-11-04T13:45:57+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "45fb1c36e7888fdb",
+        "at": "2026-11-04T13:42:50+09:00",
+        "topic": "runtime",
+        "kinds": [
+          "data"
+        ],
+        "files": 1
+      },
+      {
+        "id": "b796333b85cf2031",
+        "at": "2026-11-04T13:35:17+09:00",
+        "topic": "runtime",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "6a3b8582a64187c6",
+        "at": "2026-11-04T13:33:44+09:00",
+        "topic": "runtime",
+        "kinds": [
+          "code",
+          "data",
+          "document"
+        ],
+        "files": 14
+      },
+      {
+        "id": "6ba65c953dfdad7d",
+        "at": "2026-11-04T13:26:00+09:00",
+        "topic": "runtime",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 4
+      },
+      {
+        "id": "f875b6e4c2dd6fca",
+        "at": "2026-11-04T13:12:21+09:00",
+        "topic": "runtime",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 5
+      },
+      {
+        "id": "7a57cc3b24b9a645",
+        "at": "2026-11-04T13:08:56+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "9c37ecbcfa17df06",
+        "at": "2026-11-04T13:01:18+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "066c301750bdd540",
+        "at": "2026-11-04T12:37:53+09:00",
+        "topic": "runtime",
+        "kinds": [
+          "data"
+        ],
+        "files": 1
+      },
+      {
+        "id": "2f95ff4c16d8708a",
+        "at": "2026-11-04T12:37:42+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "507dd85fa331f747",
+        "at": "2026-11-04T12:08:04+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "4e904e64f54bc758",
+        "at": "2026-11-04T12:03:19+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "8aed1734e8b81c6e",
+        "at": "2026-11-04T12:00:05+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "df346e45362ab24e",
+        "at": "2026-11-04T11:58:04+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 3
+      },
+      {
+        "id": "0b5d450a20e174d1",
+        "at": "2026-11-04T11:54:52+09:00",
+        "topic": "runtime",
+        "kinds": [
+          "data"
+        ],
+        "files": 3
+      },
+      {
+        "id": "d7a80404c769db72",
+        "at": "2026-11-04T11:52:17+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "7ae5da9eec167f79",
+        "at": "2026-11-04T11:21:39+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 6
+      },
+      {
+        "id": "097484aca16cb8d7",
+        "at": "2026-11-04T11:20:23+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 6
+      },
+      {
+        "id": "b3f3f4b732d3fdb2",
+        "at": "2026-11-04T11:10:11+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 14
+      }
+    ],
+    "pending_files": 5
+  }
+}

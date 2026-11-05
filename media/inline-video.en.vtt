@@ -1,0 +1,201 @@
+WEBVTT
+
+1
+00:00:03.180 --> 00:00:05.560
+Two inspection engines.
+
+2
+00:00:05.560 --> 00:00:09.220
+The same verdict on every comparable
+frame.
+
+3
+00:00:09.220 --> 00:00:11.550
+Both passed this defect.
+
+4
+00:00:12.110 --> 00:00:15.310
+When an inspection engine on a production
+line is
+
+5
+00:00:15.310 --> 00:00:18.880
+replaced by a faster one, three questions
+follow.
+
+6
+00:00:19.450 --> 00:00:24.990
+On this coin-cell station, two cameras
+inspect the top and bottom faces.
+
+7
+00:00:24.990 --> 00:00:28.850
+The PLC keeps control: it latches the
+verdict and grants
+
+8
+00:00:28.850 --> 00:00:32.540
+the tray move, and the PC may write only 4
+bits.
+
+9
+00:00:33.110 --> 00:00:38.130
+The new engine changes 4 stages and keeps
+the decision model.
+
+10
+00:00:38.130 --> 00:00:42.310
+The main change replaces a
+singular-value-decomposition illumination
+
+11
+00:00:42.310 --> 00:00:45.930
+fit with regularized normal equations.
+
+12
+00:00:45.930 --> 00:00:51.170
+In an offline benchmark, the decision path
+drops from 4,542
+
+13
+00:00:51.170 --> 00:00:55.110
+to 769 milliseconds per frame.
+
+14
+00:00:55.680 --> 00:01:00.140
+The paper adds three things: latency seen
+through the PLC,
+
+15
+00:01:00.140 --> 00:01:04.740
+with every started cycle accounted for;
+equivalence reported in layers,
+
+16
+00:01:04.740 --> 00:01:09.410
+with margins; and engine agreement kept
+apart from detection fitness.
+
+17
+00:01:09.980 --> 00:01:13.360
+Equivalence is checked in 3 layers.
+
+18
+00:01:13.360 --> 00:01:18.140
+On 276 development frames, 256 pairs are
+
+19
+00:01:18.140 --> 00:01:22.780
+comparable, and the feature bounds hold
+for only 3 of 11 features.
+
+20
+00:01:22.780 --> 00:01:26.080
+Yet all 256 pairs keep the same verdict
+
+21
+00:01:26.080 --> 00:01:29.710
+and the same driving feature, under both
+decision models.
+
+22
+00:01:29.710 --> 00:01:34.050
+9 pairs lie closer to a threshold than the
+largest score change.
+
+23
+00:01:34.610 --> 00:01:37.630
+Can a failure become a pass?
+
+24
+00:01:37.630 --> 00:01:42.630
+Three failure classes were injected in
+software at the top view: a missing region
+
+25
+00:01:42.630 --> 00:01:47.250
+of interest, a decision exception, and a
+simulated camera time-out.
+
+26
+00:01:47.250 --> 00:01:50.490
+Each ended in a hold, with no verdict
+written.
+
+27
+00:01:50.490 --> 00:01:55.080
+With one run per class, this shows the
+behaviour, not a failure rate.
+
+28
+00:01:55.650 --> 00:02:00.630
+How long does the verdict take, seen from
+the PC that polls the PLC?
+
+29
+00:02:00.630 --> 00:02:05.560
+In 20 valid cycles of one session, from
+conveyor stop to verdict latch:
+
+30
+00:02:05.560 --> 00:02:09.620
+on the early-reject path, 22 to 54
+milliseconds,
+
+31
+00:02:09.620 --> 00:02:13.550
+which is the write and its latch, of the
+order of the polling gap.
+
+32
+00:02:13.550 --> 00:02:16.940
+On the bottom-view path, a median of 18
+seconds,
+
+33
+00:02:16.940 --> 00:02:20.500
+a quarter of the PLC cycle, dominated by
+the robot transfer.
+
+34
+00:02:21.080 --> 00:02:24.380
+This does not establish detection fitness,
+
+35
+00:02:24.380 --> 00:02:27.690
+a failure rate, or the line effect of the
+old engine.
+
+36
+00:02:28.250 --> 00:02:31.710
+No pass was written in the measured line
+runs, because the
+
+37
+00:02:31.710 --> 00:02:35.270
+deployed model judged every bottom view as
+defective.
+
+38
+00:02:35.270 --> 00:02:38.690
+Scored afterwards on 186 labeled face
+
+39
+00:02:38.690 --> 00:02:43.090
+acquisitions, with the bottom-view prior
+matched to the current optics,
+
+40
+00:02:43.090 --> 00:02:47.150
+both engines agreed on every verdict, yet
+both passed 29
+
+41
+00:02:47.150 --> 00:02:50.690
+of 48 confirmed-defect face acquisitions.
+
+42
+00:02:50.690 --> 00:02:53.460
+Agreement does not establish detection
+fitness.
+
