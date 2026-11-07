@@ -1,5 +1,5 @@
 <!doctype html>
-<html data-published="2026-11-07" lang="ko">
+<html data-published="2026-11-08" lang="ko">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -61,6 +61,16 @@ h1 em{font-style:normal;color:var(--brass)}
 .demo{font-size:10.5px;fill:var(--mute);letter-spacing:.3px}
 .flow{stroke-dasharray:2 8;animation:flow 3s linear infinite}
 @keyframes flow{to{stroke-dashoffset:-20}}
+.recent{position:absolute;right:0;top:-36px;display:flex;align-items:center;gap:12px;font-size:12px;color:#b4b1aa;white-space:nowrap}
+.recent[hidden]{display:none}
+.recent .rk{font-size:10.5px;font-weight:600;letter-spacing:2.4px;color:var(--brass);display:flex;align-items:center;gap:7px}
+.recent .rk:before{content:'';width:6px;height:6px;border-radius:50%;background:#8fae9a}
+.recent .rt b{font-weight:500;color:#cfcbc4}
+.recent .rt small,.recent .rn{font-family:var(--mono);font-size:11px;color:var(--mute);margin-left:6px}
+.recent .rn{margin-left:0}
+.recent .sep{color:var(--line)}
+.recent svg{width:56px;height:14px;display:block}
+.recent:hover .rt b{color:var(--txt);text-decoration:underline;text-underline-offset:3px}
 .strip{position:absolute;left:56px;right:56px;bottom:12px;height:40px;display:flex;align-items:center;gap:10px;border-top:1px solid var(--line);padding-top:10px}
 .strip .sk{font-size:10.5px;font-weight:600;letter-spacing:2.4px;color:var(--brass);margin-right:10px;white-space:nowrap}
 .br{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:500;padding:4px 14px 4px 0;margin-right:4px;color:#cfcbc4;white-space:nowrap;border-right:1px solid var(--line)}
@@ -75,6 +85,9 @@ h1 em{font-style:normal;color:var(--brass)}
   h1{font-size:30px;letter-spacing:-.5px}
   .sub{font-size:15px;line-height:1.6}
   .strip{flex-direction:column;align-items:stretch;gap:0;padding-top:14px}
+  .recent{position:static;flex-wrap:wrap;white-space:normal;gap:6px 12px;margin-top:14px;font-size:13.5px}
+  .recent .rk{width:100%}
+  .recent .sep{display:none}
   .strip .sk{margin:0 0 4px;padding:9px 0}
   .br{border-right:0;border-bottom:1px solid var(--line);padding:13px 0;margin:0;font-size:14.5px}
   .strip .go{margin:18px 0 0;flex-direction:column}
@@ -87,6 +100,7 @@ h1 em{font-style:normal;color:var(--brass)}
 
   <div class="head">
     <div class="kicker" data-ko="에너지 · 제조 · AI" data-en="ENERGY · MANUFACTURING · AI">에너지 · 제조 · AI</div>
+    <a class="recent" id="recent" href="open.html" hidden></a>
     <h1 data-ko="에너지·제조 현장에서 AI에 무엇을, <em>어디까지</em> 맡길까" data-en="In energy and manufacturing, what should AI be <em>trusted with?</em>">에너지·제조 현장에서 AI에 무엇을, <em>어디까지</em> 맡길까</h1>
     <p class="sub" data-ko="작업 단위로 AI 적용 범위를 진단하고, 그 결과를 실제 설비에서 검증합니다." data-en="We assess, task by task, where AI can be applied and verify the assessment on real equipment.">작업 단위로 AI 적용 범위를 진단하고, 그 결과를 실제 설비에서 검증합니다.</p>
   </div>
@@ -125,6 +139,32 @@ h1 em{font-style:normal;color:var(--brass)}
 <script src="assets/research.js?v=20261031a"></script>
 <script src="assets/i18n.js?v=20261031a"></script>
 <script src="assets/site.js?v=20261031a"></script>
+<script src="recent.js"></script>
+<script>
+/* recent work: built with activity.json at publish time (tools/build_activity.py recent) */
+(function(){
+const L=window.LAB,R=window.RECENT,box=document.getElementById('recent'),NS='http://www.w3.org/2000/svg';
+if(!box||!R||!Array.isArray(R.topics)||!R.topics.length||!R.topics.every(t=>Array.isArray(t.name)&&t.name.length===4&&Number.isFinite(Date.parse(t.last_at))))return;
+const day=iso=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul'}).format(new Date(iso)).slice(5).replace('-','.');
+const make=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e};
+function draw(){
+  box.textContent='';
+  box.append(make('span','rk',L.T('최근 작업','RECENT WORK','最近の作業','最近工作')));
+  R.topics.forEach((t,i)=>{if(i)box.append(make('span','sep','·'));const r=make('span','rt');r.append(make('b','',L.T(...t.name)),make('small','',day(t.last_at)));box.append(r)});
+  const s=R.spark14;
+  if(Array.isArray(s)&&s.length===14&&s.every(n=>Number.isInteger(n)&&n>=0)){
+    const svg=document.createElementNS(NS,'svg'),max=Math.max(1,...s);svg.setAttribute('viewBox','0 0 56 14');svg.setAttribute('aria-hidden','true');
+    s.forEach((n,i)=>{const h=Math.max(1,Math.round(n/max*13)),r=document.createElementNS(NS,'rect');
+      r.setAttribute('x',i*4);r.setAttribute('y',14-h);r.setAttribute('width',3);r.setAttribute('height',h);r.setAttribute('fill',i===13?'#b9a37a':'rgba(236,232,225,.45)');svg.append(r)});
+    const total=s.reduce((a,b)=>a+b,0);
+    box.append(make('span','sep','·'),svg,make('span','rn',L.T('14일 '+L.num(total)+'건','14 days · '+L.num(total)+' changes','14日 '+L.num(total)+'件','14天 '+L.num(total)+'次')));
+  }
+  box.title=L.T('저장소에 기록된 변경 · 개발 현황 보기','Changes recorded in the repository · open Development','リポジトリに記録された変更・開発状況を見る','仓库中记录的修改 · 查看开发进展');
+  box.hidden=false;
+}
+L.onLang.push(draw);
+})();
+</script>
 <script>
 (function(){
 const NS='http://www.w3.org/2000/svg',L=window.LAB;
