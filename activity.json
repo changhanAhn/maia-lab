@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-08T07:33:39+09:00",
+  "generated_at": "2026-11-08T09:16:30+09:00",
   "content_updated_at": "2026-11-07T21:26:12+09:00",
-  "source_revision": "44559ead7e42a1a2f4651ce5651bbf006b334110",
+  "source_revision": "993bde5022619b53b0ca14b3c990fa2b9786be2b",
   "cards": [
     {
       "id": "inline",
@@ -1788,7 +1788,7 @@
   ],
   "content_hash": "34452146bb30e31c",
   "work": {
-    "collected_at": "2026-11-08T07:33:39+09:00",
+    "collected_at": "2026-11-08T09:16:30+09:00",
     "period_days": 14,
     "scope": "versioned changes in public research topics",
     "topics": [
@@ -1801,7 +1801,7 @@
           "研究室网页"
         ],
         "pending": 0,
-        "last_at": "2026-11-08T07:33:10+09:00"
+        "last_at": "2026-11-08T09:15:51+09:00"
       },
       {
         "id": "grants",
@@ -1893,6 +1893,33 @@
       }
     ],
     "entries": [
+      {
+        "id": "a42a102e348c29c2",
+        "at": "2026-11-08T09:15:51+09:00",
+        "topic": "web",
+        "kinds": [
+          "code"
+        ],
+        "files": 1
+      },
+      {
+        "id": "2c547eab7645d2e8",
+        "at": "2026-11-08T09:15:51+09:00",
+        "topic": "web",
+        "kinds": [
+          "code"
+        ],
+        "files": 5
+      },
+      {
+        "id": "0e4d3b9bc9eaa36d",
+        "at": "2026-11-08T09:15:51+09:00",
+        "topic": "web",
+        "kinds": [
+          "code"
+        ],
+        "files": 1
+      },
       {
         "id": "cfb61360fc152fb0",
         "at": "2026-11-08T07:33:10+09:00",
@@ -2657,33 +2684,6 @@
           "data"
         ],
         "files": 2
-      },
-      {
-        "id": "a7a95e9ae47650d5",
-        "at": "2026-11-05T21:52:18+09:00",
-        "topic": "grants",
-        "kinds": [
-          "document"
-        ],
-        "files": 1
-      },
-      {
-        "id": "3be5287710ae63b5",
-        "at": "2026-11-05T21:35:51+09:00",
-        "topic": "grants",
-        "kinds": [
-          "data"
-        ],
-        "files": 1
-      },
-      {
-        "id": "bd97c38a2dfb10cf",
-        "at": "2026-11-05T21:35:23+09:00",
-        "topic": "grants",
-        "kinds": [
-          "document"
-        ],
-        "files": 1
       }
     ],
     "pending_files": 0
