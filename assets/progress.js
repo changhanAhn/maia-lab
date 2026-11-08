@@ -25,7 +25,8 @@ const DATA=
     "run": ["운영 중", "In use", "運用中", "运行中"],
     "sched": ["예정", "Scheduled", "予定", "计划中"],
     "award": ["최우수상", "Top award", "最優秀賞", "最优秀奖"],
-    "final": ["본선 진출 · 11월 말 예정", "Through to the final, late November", "本選進出・11月下旬予定", "晋级决赛 · 11月下旬"]
+    "final": ["본선 진출 · 11월 말 예정", "Through to the final, late November", "本選進出・11月下旬予定", "晋级决赛 · 11月下旬"],
+    "shown": ["전시", "Exhibited", "展示", "展出"]
   },
   "projects": [
     {"leaf": ["B", 0], "st": "rev", "rec": "inline", "name": ["인라인 검사 엔진", "Inline inspection engine", "インライン検査エンジン", "在线检测引擎"],
@@ -42,12 +43,16 @@ const DATA=
      "steps": [["sub", "2026-09-25", "done"], ["editor", "", "now"]]},
     {"leaf": ["B", 4], "st": "sub", "rec": "sttt", "name": ["래더 로그 모호성·관측 선택", "Ladder-log ambiguity and observation selection", "ラダーログの曖昧性・観測選択", "梯形图日志歧义与观测选择"],
      "steps": [["sub", "2026-10-24", "done"], ["received", "", "now"]]},
+    {"leaf": ["B", 5], "st": "sub", "rec": "cellcontract", "name": ["로봇–PLC 통합 로직 계약 판정기", "Contract oracle for robot–PLC integration logic", "ロボット–PLC統合ロジックの契約判定器", "机器人–PLC集成逻辑契约判定器"],
+     "steps": [["sub", "2026-11-06", "done"], ["received", "", "now"]]},
     {"leaf": ["D", 0], "st": "dev", "name": ["공정 이벤트 동기 전력 분해", "Power split by process event", "工程イベント同期の電力分解", "工序事件同步的电力分解"],
      "steps": [["design", "", "now"], ["measure", "", "next"]]},
     {"leaf": ["C", 1], "st": "dev", "name": ["PV·ESS·라인 부하 트윈", "PV · storage · line-load twin", "PV・ESS・ライン負荷ツイン", "PV·ESS·产线负荷孪生"],
      "steps": [["dev", "", "now"]]},
     {"leaf": ["C", 2], "st": "dev", "name": ["엣지 AI 부하 전력 계측", "Edge-AI load power measurement", "エッジAI負荷の電力計測", "边缘AI负荷电力测量"],
      "steps": [["dev", "", "now"]]},
+    {"leaf": ["C", 3], "st": "dev", "name": ["직류 배전 단락전류 계산 검증 · 48 V 축소 시험대", "DC short-circuit current check · 48 V scaled testbed", "直流配電の短絡電流計算の検証・48 V縮小試験台", "直流配电短路电流计算验证 · 48 V缩比试验台"],
+     "steps": [["design", "", "now"], ["measure", "", "next"]]},
     {"leaf": ["B", 3], "st": "run", "name": ["코인셀 시험 라인", "Coin-cell test line", "コインセル試験ライン", "纽扣电池试验线"],
      "steps": [["run", "", "now"]]},
     {"leaf": ["E", 0], "st": "run", "name": ["PLC·비전·데이터 실습", "PLC, vision and data practice", "PLC・ビジョン・データ実習", "PLC、视觉与数据实训"],
@@ -55,7 +60,9 @@ const DATA=
     {"leaf": ["E", 2], "st": "run", "name": ["중진공 재직자 로봇 PLC 교육 11.19", "KOSME robot PLC course for workers, 19 Nov", "中小企業振興公団 在職者ロボットPLC研修 11.19", "中小企业振兴公团 在职人员机器人PLC培训 11.19"],
      "steps": [["sched", "", "now"]]},
     {"leaf": ["E", 3], "st": "win", "name": ["캡스톤 작품대회 최우수상", "Capstone competition top award", "キャップストーン作品大会 最優秀賞", "毕业设计作品大赛 最优秀奖"],
-     "steps": [["award", "2026-10-27", "done"], ["final", "", "now"]]}
+     "steps": [["award", "2026-10-27", "done"], ["final", "", "now"]]},
+    {"leaf": ["E", 4], "st": "open", "name": ["교내 융합프로젝트 전시 11.05", "In-school project exhibition, 5 Nov", "学内融合プロジェクト展示 11.05", "校内融合项目展览 11.05"],
+     "steps": [["shown", "", "now"]]}
   ]
 }
 ;

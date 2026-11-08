@@ -7,16 +7,16 @@ const TR=[
    leaves:[['MAIA 적용성 지수','MAIA applicability index','fix'],['비보상 관문 계약','Non-compensatory gate contract','check'],['MAIA 진단 체험','Try the MAIA check','open','maia.html']],short:[['MAIA 지수','MAIA index'],['비보상 관문','Gate contract'],['MAIA 진단','MAIA check']]},
   {id:'B',c:'#a3b5c6',ko:'제조·피지컬 AI',en:'Physical AI',q:[['현장 AI 판정의','안전 확보'],['Safe AI decisions','on the shop floor']],
    wko:'AI는 판정만 하고, 제어는 PLC가 맡는 구조를 실제 라인에서 시험합니다.',wen:'AI only judges and the PLC keeps control — tested on a real line.',
-   leaves:[['인라인 검사: 차단 경로와 PLC 관측 지연','Inline inspection: fail-closed routing and PLC-observed latency','rev'],['고정 검사의 반복 정밀도','Precision of a frozen inspection procedure','screen'],['래더 프로그램 적합성 검사','Ladder-program conformance checking','sub'],['코인셀 시험 라인','Coin-cell test line','run'],['래더 로그 모호성·관측 선택','Ladder-log ambiguity and observation selection','sub']],short:[['인라인 검사','Inline inspection'],['반복 정밀도','Repeat precision'],['래더 적합성','Ladder conformance'],['코인셀 시험 라인','Coin-cell test line'],['로그 모호성','Log ambiguity']]},
+   leaves:[['인라인 검사: 차단 경로와 PLC 관측 지연','Inline inspection: fail-closed routing and PLC-observed latency','rev'],['고정 검사의 반복 정밀도','Precision of a frozen inspection procedure','screen'],['래더 프로그램 적합성 검사','Ladder-program conformance checking','sub'],['코인셀 시험 라인','Coin-cell test line','run'],['래더 로그 모호성·관측 선택','Ladder-log ambiguity and observation selection','sub'],['로봇–PLC 통합 로직 계약 판정기','Contract oracle for robot–PLC integration logic','sub']],short:[['인라인 검사','Inline inspection'],['반복 정밀도','Repeat precision'],['래더 적합성','Ladder conformance'],['코인셀 시험 라인','Coin-cell test line'],['로그 모호성','Log ambiguity'],['계약 판정기','Contract oracle']]},
   {id:'D',c:'#b0a690',ko:'에너지×제조',en:'Energy × mfg',q:[['전력과 품질의','동시 분석'],['Joint analysis of','power and quality']],
    wko:'공정 이벤트와 전력을 동기화해 분석하는 연구 절차를 설계합니다.',wen:'We design a procedure to align process events and power records for analysis.',
    leaves:[['공정 이벤트 동기 전력 분해','Event-synchronized power disaggregation','dev']],short:[['공정 동기 전력 분해','Event-synced power']]},
   {id:'C',c:'#b9976a',ko:'에너지·계통',en:'Energy & grid',q:[['전력 제약 하의','의사결정'],['Decisions under','power constraints']],
    wko:'요금 구간 제어와 순간 보호를 나눠 공장 마이크로그리드를 운영합니다.',wen:'Billing-window control and instant protection, kept in separate layers.',
-   leaves:[['로봇 공장 마이크로그리드 계층형 에너지 관리','Hierarchical energy management for a robotic factory microgrid','editor'],['PV·ESS·라인 부하 트윈','PV · storage · line-load twin','dev'],['엣지 AI 부하 전력 계측','Edge-AI load power measurement','dev']],short:[['마이크로그리드 EMS','Microgrid EMS'],['PV·ESS 트윈','PV·ESS twin'],['엣지 AI 부하','Edge-AI load']]},
+   leaves:[['로봇 공장 마이크로그리드 계층형 에너지 관리','Hierarchical energy management for a robotic factory microgrid','editor'],['PV·ESS·라인 부하 트윈','PV · storage · line-load twin','dev'],['엣지 AI 부하 전력 계측','Edge-AI load power measurement','dev'],['직류 배전 단락전류 계산 검증(48 V 축소 시험대)','DC short-circuit current calculation check (48 V scaled testbed)','dev']],short:[['마이크로그리드 EMS','Microgrid EMS'],['PV·ESS 트윈','PV·ESS twin'],['엣지 AI 부하','Edge-AI load'],['직류 단락전류','DC short circuit']]},
   {id:'E',c:'#8fae9a',ko:'교육·기술이전',en:'Education',q:[['판단 기준의','교육·이전'],['Teaching and','transferring the rules']],
    wko:'검증된 방법을 수업과 실습으로 옮깁니다.',wen:'We turn verified methods into courses and hands-on work.',
-   leaves:[['PLC·비전·데이터 실습','Hands-on PLC, vision and data','run'],['학생 포트폴리오','Student portfolios','run'],['재직자·직업계고 PLC 교육(중소벤처기업진흥공단)','PLC training for workers and vocational students (KOSME)','run'],['폴리텍Ⅵ대학 캡스톤 작품대회 최우수상(10.27) · 법인 본선(11월 말 예정)','Capstone project competition, Korea Polytechnic VI: top award (27 Oct), national final (late November)','win']],short:[['PLC·비전 실습','Hands-on courses'],['학생 포트폴리오','Student portfolios'],['재직자 교육','Industry training'],['캡스톤 최우수상','Capstone award']]}
+   leaves:[['PLC·비전·데이터 실습','Hands-on PLC, vision and data','run'],['학생 포트폴리오','Student portfolios','run'],['재직자·직업계고 PLC 교육(중소벤처기업진흥공단)','PLC training for workers and vocational students (KOSME)','run'],['폴리텍Ⅵ대학 캡스톤 작품대회 최우수상(10.27) · 법인 본선(11월 말 예정)','Capstone project competition, Korea Polytechnic VI: top award (27 Oct), national final (late November)','win'],['교내 융합프로젝트 전시(11.05) · 롤프레스 Y-Δ 전환 인터록','In-school project exhibition (5 Nov): roll-press star-delta interlock','open']],short:[['PLC·비전 실습','Hands-on courses'],['학생 포트폴리오','Student portfolios'],['재직자 교육','Industry training'],['캡스톤 최우수상','Capstone award'],['교내 전시','Exhibition']]}
 ];
 
 
@@ -77,7 +77,8 @@ const EXTRA={
       "record.html#repeat",
       "record.html#ladder",
       null,
-      "record.html#sttt"
+      "record.html#sttt",
+      "record.html#cellcontract"
     ],
     "action": [
       "data.html",
@@ -107,6 +108,7 @@ const EXTRA={
     ],
     "links": [
       "record.html#energy",
+      null,
       null,
       null
     ],
@@ -166,6 +168,7 @@ const EXTRA={
       "These are teaching, practice and outside training cases. Learning outputs are distinct from evidence of equipment performance."
     ],
     "links": [
+      null,
       null,
       null,
       null,

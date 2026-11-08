@@ -36,14 +36,14 @@ const AREAS=[
  {id:'A',w:196,sub:['MAIA 지수 · 비보상 관문','MAIA index · gate contract','MAIA指数・非補償ゲート','MAIA指数 · 非补偿门控'],
   tool:['t:maia','t:hari'],papers:['maia-index','hari']},
  {id:'B',w:294,sub:['인라인·반복 검사 · 래더 · 시험 라인','Inline and repeat inspection · ladder · test line','インライン・反復検査・ラダー・試験ライン','在线与重复检测 · 梯形图 · 试验线'],
-  field:['c:research-B-3'],tool:['t:ladder','t:runtime','t:inline','t:repeat'],meas:['c:AMAZON-ARA-FALL2026','t:amazon'],
-  papers:['inline','repeat','ladder','sttt'],dataset:true},
+  field:['c:research-B-3'],tool:['t:ladder','t:runtime','t:inline','t:repeat','t:cellcontract'],meas:['c:AMAZON-ARA-FALL2026','t:amazon'],
+  papers:['inline','repeat','ladder','sttt','cellcontract'],dataset:true},
  {id:'C',w:222,sub:['마이크로그리드 EMS · PV/ESS','Microgrid EMS · PV/ESS','マイクログリッドEMS・PV/ESS','微电网EMS · PV/ESS'],
-  tool:['t:energy'],meas:['c:research-C-1','c:research-C-2'],papers:['energy']},
+  tool:['t:energy','t:dcfault','c:research-C-3'],meas:['c:research-C-1','c:research-C-2'],papers:['energy']},
  {id:'D',w:148,sub:['공정 이벤트 동기 전력','Event-synced power','工程イベント同期電力','工序事件同步电力'],tool:['c:research-D-0']},
- {id:'E',w:152,sub:['PLC · 비전 · 데이터 실습','PLC · vision · data','PLC・ビジョン・データ実習','PLC · 视觉 · 数据实训'],field:['c:research-E-0','c:research-E-2'],papers:['research-E-3']}
+ {id:'E',w:152,sub:['PLC · 비전 · 데이터 실습','PLC · vision · data','PLC・ビジョン・データ実習','PLC · 视觉 · 数据实训'],field:['c:research-E-0','c:research-E-2'],papers:['research-E-3','research-E-4']}
 ];
-const TOPIC_AREA={ladder:'B',inline:'B',repeat:'B',runtime:'B',amazon:'B',maia:'A',hari:'A',energy:'C'};
+const TOPIC_AREA={ladder:'B',inline:'B',repeat:'B',runtime:'B',amazon:'B',cellcontract:'B',maia:'A',hari:'A',energy:'C',dcfault:'C'};
 const BANDS=[
  {id:'field',name:['현장·운영','On site','現場・運用','现场与运行'],sub:['설비·실습 운영','Equipment and classes in use','設備・実習の運用','设备与实训运行']},
  {id:'tool',name:['코드·도구','Code & tools','コード・ツール','代码与工具'],sub:['바뀌는 코드·자료','Code and data in change','更新中のコード・資料','修改中的代码与资料']},
@@ -111,6 +111,12 @@ const FONT={name:[14,600],sub:[11,400],band:[13,500],bsub:[10.5,400],nm:[12.5,50
 const pen=document.createElement('canvas').getContext('2d');let family='sans-serif';
 function wd(s,k){const f=FONT[k];pen.font=f[1]+' '+f[0]+'px '+family;return pen.measureText(s).width}
 function fit(s,k,max){if(wd(s,k)<=max)return s;while(s&&wd(s+'…',k)>max)s=s.slice(0,-1);return s.trimEnd()+'…'}
+/* two lines instead of an ellipsis: break at a space, or between characters for ja/zh (2026-11-08 "잘리면 안 돼") */
+function wrap2(s,k,max){if(wd(s,k)<=max)return [s];const w=s.split(' ');let a='',i=0;
+ for(;i<w.length;i++){const t=a?a+' '+w[i]:w[i];if(wd(t,k)>max&&a)break;a=t}
+ let b=w.slice(i).join(' ');
+ if(!b||wd(a,k)>max){let j=s.length;while(j>1&&wd(s.slice(0,j),k)>max)j--;a=s.slice(0,j);b=s.slice(j).trim()}
+ return b?[a,fit(b,k,max)]:[a]}
 // Spaces separate words; a word wider than the line (Japanese, Chinese) breaks per character.
 function wrap(s,k,max,lim){
  const units=[];s.split(' ').forEach((w,i)=>{if(wd(w,k)>max)[...w].forEach((ch,j)=>units.push((i&&!j?' ':'')+ch));else units.push((i?' ':'')+w)});
@@ -156,9 +162,11 @@ function drawMap(m){
  m.areas.forEach(a=>{
   el('circle',{cx:a.x+11,cy:12,r:10.5,fill:'none',stroke:a.c,'stroke-opacity':.75},fg);
   tx(a.id,'badge',{x:a.x+11,y:16,'text-anchor':'middle',fill:a.c},fg);
-  const nm=fit(a.name,'name',a.w-44);tx(nm,'name',{x:a.x+28,y:17,fill:a.c},fg);
-  tx(fit(a.sub,'sub',a.w-4),'sub',{x:a.x,y:37},fg);
-  if(a.hot)el('circle',{cx:a.x+28+wd(nm,'name')+9,cy:12,r:3.6,fill:a.c,class:'blip'},fg);
+  // too wide for the column: narrow the glyphs a little rather than cut the name (2026-11-08)
+  const squeeze=(s,k,max)=>wd(s,k)>max?{textLength:max,lengthAdjust:'spacingAndGlyphs'}:{};
+  const nm=a.name,nw=Math.min(wd(nm,'name'),a.w-44);tx(nm,'name',Object.assign({x:a.x+28,y:17,fill:a.c},squeeze(nm,'name',a.w-44)),fg);
+  tx(a.sub,'sub',Object.assign({x:a.x,y:37},squeeze(a.sub,'sub',a.w-4)),fg);
+  if(a.hot)el('circle',{cx:a.x+28+nw+9,cy:12,r:3.6,fill:a.c,class:'blip'},fg);
   const pw=a.w-24,px=a.x+12,pcx=px+pw/2,pcy=68,ph=14;
   el('polygon',{points:[[px,pcy],[pcx,pcy-ph],[px+pw,pcy],[pcx,pcy+ph]].join(' '),fill:a.c,'fill-opacity':.05,stroke:a.c,'stroke-opacity':.5},bg);
   el('polygon',{points:[[px,pcy],[pcx,pcy+ph],[px+pw,pcy],[px+pw,pcy+5],[pcx,pcy+ph+5],[px,pcy+5]].join(' '),fill:a.c,'fill-opacity':.09},bg);
@@ -195,7 +203,7 @@ function drawMap(m){
     el('circle',{cx:ix-9,cy:yy-4,r:2.6,fill:a.c,'fill-opacity':it.card||it.hot?1:.5},node);
     if(it.focus)el('circle',{cx:ix-9,cy:yy-4,r:5.4,fill:'none',stroke:a.c,'stroke-width':1.3,class:'pulse'},node);
     if(it.card){
-     const lines=wrap(it.name,'nm',maxw,2);lines.forEach((s,j)=>tx(s,'nm',{x:ix,y:yy+j*15},node));
+     const lines=wrap(it.name,'nm',maxw,3);lines.forEach((s,j)=>tx(s,'nm',{x:ix,y:yy+j*15},node));
      let by=yy+(lines.length-1)*15,bx=ix+wd(lines[lines.length-1],'nm')+8;
      const need=wd(it.state,'st')+(it.meta?8+wd(it.meta,'meta'):0);
      if(bx+need>ix+maxw){by+=15;bx=ix}
@@ -203,10 +211,10 @@ function drawMap(m){
      if(it.meta)tx(fit(it.meta,'meta',ix+maxw-bx-wd(it.state,'st')-8),'meta',{x:bx+wd(it.state,'st')+8,y:by},node);
      yy=by+21;
     }else{
-     const mw=wd(it.meta,'meta'),one=wd(it.name,'nm')+12+mw<=maxw;
-     tx(one?it.name:fit(it.name,'nm',maxw),'nm',{x:ix,y:yy,class:'lm-nm'+(it.hot?'':' cold')},node);
-     tx(it.meta,'meta',{x:one?ix+maxw:ix,y:one?yy:yy+14,'text-anchor':one?'end':null,fill:it.hot?a.c:null,class:'lm-meta meta'},node);
-     yy+=one?19:33;
+     const mw=wd(it.meta,'meta'),one=wd(it.name,'nm')+12+mw<=maxw,nl=one?[it.name]:wrap(it.name,'nm',maxw,3);
+     nl.forEach((line,j)=>tx(line,'nm',{x:ix,y:yy+15*j,class:'lm-nm'+(it.hot?'':' cold')},node));
+     tx(it.meta,'meta',{x:one?ix+maxw:ix,y:one?yy:yy+14+15*(nl.length-1),'text-anchor':one?'end':null,fill:it.hot?a.c:null,class:'lm-meta meta'},node);
+     yy+=one?19:33+15*(nl.length-1);
     }
    });
    h=Math.max(h,yy-6);
@@ -226,14 +234,17 @@ function drawMap(m){
  el('line',{x1:0,y1:S,x2:VW,y2:S,stroke:'#efe6d0','stroke-opacity':.16},bg);
  tx(tr(T.changes),'band',{x:0,y:S+19},strip);
  if(m.lastDay){el('circle',{cx:4,cy:S+31,r:3.4,fill:'#b9a37a',class:'blip'},strip);tx(tr(T.latest)+m.lastDay,'meta',{x:13,y:S+35},strip)}
- const n=Math.max(1,m.topics.length),cw=(VW-X0-6*(n-1))/n;let bottom=S+50;
+ const n=Math.max(1,m.topics.length),cw=(VW-X0-6*(n-1))/n;
+ const names=m.topics.map(t=>wrap2(t.name,'nm',cw-12)),kinds=m.topics.map(t=>wrap2(t.kinds,'meta',cw-12));
+ const dy=14*(Math.max(1,...names.map(x=>x.length))-1),dk=13*(Math.max(1,...kinds.map(x=>x.length))-1);
+ let bottom=S+50+dy+dk;
  m.topics.forEach((t,i)=>{
   const cx=X0+i*(cw+6),node=el('g',{'data-topic':t.id},strip);
-  el('rect',{x:cx,y:S+7,width:2.5,height:t.pending?58:44,fill:t.c,'fill-opacity':t.hot?.9:.35},node);
-  tx(fit(t.name,'nm',cw-12),'nm',{x:cx+9,y:S+19,class:'lm-nm'+(t.hot?'':' cold')},node);
-  tx(t.time||'—','meta',{x:cx+9,y:S+34,fill:t.hot?t.c:null},node);
-  tx(fit(t.kinds,'meta',cw-12),'meta',{x:cx+9,y:S+48},node);
-  if(t.pending){tx(T.editing(t.pending),'meta',{x:cx+9,y:S+62,class:'lm-meta pend'},node);bottom=S+66}
+  el('rect',{x:cx,y:S+7,width:2.5,height:(t.pending?58:44)+dy+dk,fill:t.c,'fill-opacity':t.hot?.9:.35},node);
+  names[i].forEach((line,j)=>tx(line,'nm',{x:cx+9,y:S+19+14*j,class:'lm-nm'+(t.hot?'':' cold')},node));
+  tx(t.time||'—','meta',{x:cx+9,y:S+34+dy,fill:t.hot?t.c:null},node);
+  kinds[i].forEach((line,j)=>tx(line,'meta',{x:cx+9,y:S+48+dy+13*j},node));
+  if(t.pending){tx(T.editing(t.pending),'meta',{x:cx+9,y:S+62+dy+dk,class:'lm-meta pend'},node);bottom=S+66+dy+dk}
  });
  const H=Math.ceil(bottom);
  svg.setAttribute('viewBox','0 0 '+VW+' '+H);svg.setAttribute('width',VW);svg.setAttribute('height',Math.min(H,MAXH));

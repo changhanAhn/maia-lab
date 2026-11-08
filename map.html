@@ -48,6 +48,8 @@
 .lv{margin-top:14px;display:flex;flex-direction:column;gap:9px}
 .lv div{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;font-size:13px;color:#ece8e1;padding-bottom:9px;border-bottom:1px solid var(--line)}
 .lv div:last-child{border-bottom:0}
+.lv.many{margin-top:10px;gap:5px}
+.lv.many div{font-size:12px;line-height:1.35;padding-bottom:5px}
 .lv a{color:#ece8e1;border-bottom:1px solid rgba(185,163,122,.6)}
 .st{font-size:10.5px;font-weight:600;padding:2px 8px;border:1px solid;border-radius:2px;white-space:nowrap}
 .legend{margin-top:12px;display:flex;flex-direction:column;gap:12px}
@@ -139,9 +141,11 @@ TR.forEach((t,i)=>{
   const n=t.leaves.length;
   const pc=tx(x+COLW/2,Y.trk[1]-14,'산출물 '+n,n+(n>1?' outputs':' output'),'pcount',g);pc.dataset.ja='成果物 '+n;pc.dataset.zh='产出 '+n;
   // output blocks above the pillar, coloured by status
-  t.outs=t.leaves.map((lf,j)=>{const s=ST[lf[2]];const bh=24,yy=Y.out[1]-(j+1)*(bh+6);const r=el('g',{class:'out'},og);
+  // blocks shrink with the busiest column so all of them stay inside the outputs band (2026-11-08)
+  const most=Math.max(...TR.map(x=>x.leaves.length)),step=Math.min(30,(Y.out[1]-Y.out[0])/most),bh=step-(step<30?4:6),fs=bh>=22?11:10;
+  t.outs=t.leaves.map((lf,j)=>{const s=ST[lf[2]];const yy=Y.out[1]-(j+1)*step;const r=el('g',{class:'out'},og);
     el('rect',{x,y:yy,width:COLW,height:bh,fill:'rgba(236,232,225,.02)',stroke:s[2],'stroke-opacity':.45},r);el('rect',{x,y:yy,width:3,height:bh,fill:s[2]},r);
-    tx(x+12,yy+16,t.short[j][0],t.short[j][1],'',r,{'font-size':11,fill:'#cfcbc4'});return r});
+    tx(x+12,yy+bh/2+fs*.36,t.short[j][0],t.short[j][1],'',r,{'font-size':fs,fill:'#cfcbc4'});return r});
   g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show(t,true)}});
   g.addEventListener('mouseenter',()=>show(t));g.addEventListener('click',()=>show(t,true));
 });
@@ -165,7 +169,7 @@ function remember(id){try{const u=new URL(location.href),q=new URLSearchParams(u
 function show(t,pin){
   if(pin){pinned=t;remember(t.id)}if(pinned&&pinned!==t&&!pin)return;
   TR.forEach(x=>{x.g.classList.toggle('sel',x===t);x.g.setAttribute('aria-pressed',String(x===t))});
-  panel.innerHTML='<div class="ck" style="color:'+t.c+'">'+L.T('연구 분야 ','AREA ')+t.id+'</div><h3>'+L.T(t.ko,t.en)+'</h3><p class="q">'+L.T(t.q[0].join(' '),t.q[1].join(' '))+'</p><p class="w">'+L.T(t.wko,t.wen)+'</p><div class="lv">'
+  panel.innerHTML='<div class="ck" style="color:'+t.c+'">'+L.T('연구 분야 ','AREA ')+t.id+'</div><h3>'+L.T(t.ko,t.en)+'</h3><p class="q">'+L.T(t.q[0].join(' '),t.q[1].join(' '))+'</p><p class="w">'+L.T(t.wko,t.wen)+'</p><div class="lv'+(t.leaves.length>4?' many':'')+'">'
    +t.leaves.map(lf=>{const s=ST[lf[2]];const name=L.T(lf[0],lf[1]);return '<div>'+(lf[3]?'<a href="'+localHref(lf[3])+'">'+name+'</a>':'<span>'+name+'</span>')+'<span class="st" style="color:'+s[2]+';border-color:'+s[2]+'88">'+L.T(s[0],s[1])+'</span></div>'}).join('')
    +'</div><div class="more"><a class="area-detail" href="'+localHref(t.href)+'">'+L.T('분야 상세 보기 →','Explore this area →')+'</a></div>';
 }
