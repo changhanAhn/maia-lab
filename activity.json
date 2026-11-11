@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-08T10:42:36+09:00",
-  "content_updated_at": "2026-11-08T10:42:36+09:00",
-  "source_revision": "6dfd9e85d42a7a41ec7d9fb6d1aba52fd8ff0826",
+  "generated_at": "2026-11-11T14:54:01+09:00",
+  "content_updated_at": "2026-11-08T16:54:03+09:00",
+  "source_revision": "40f22c8a0521106ce7949336ffd64b610f4c17ef",
   "cards": [
     {
       "id": "inline",
@@ -45,10 +45,10 @@
         "重复检测精度"
       ],
       "now": [
-        "초기 검토 중",
-        "In screening",
-        "初期確認中",
-        "初步筛查中"
+        "심사 중",
+        "In review",
+        "査読中",
+        "审稿中"
       ],
       "last": [
         "투고",
@@ -64,7 +64,7 @@
       ],
       "href": "record.html#repeat",
       "date": "2026-10-25",
-      "fingerprint": "447902d31a23fd18"
+      "fingerprint": "981bb440f91b67e0"
     },
     {
       "id": "ladder",
@@ -76,10 +76,10 @@
         "梯形图符合性检查"
       ],
       "now": [
-        "접수 완료",
-        "Received",
-        "受付",
-        "已受理"
+        "심사 중",
+        "In review",
+        "査読中",
+        "审稿中"
       ],
       "last": [
         "투고",
@@ -95,7 +95,7 @@
       ],
       "href": "record.html#ladder",
       "date": "2026-10-26",
-      "fingerprint": "c9b9ece86fb73162"
+      "fingerprint": "638b658233214ffb"
     },
     {
       "id": "maia-index",
@@ -1896,23 +1896,12 @@
     "research-D-0",
     "ANTHROPIC-AIS2026"
   ],
-  "content_hash": "7ff1bfdf3d4742b7",
+  "content_hash": "aec1bc9619c44cba",
   "work": {
-    "collected_at": "2026-11-08T10:42:36+09:00",
+    "collected_at": "2026-11-11T14:54:01+09:00",
     "period_days": 14,
     "scope": "versioned changes in public research topics",
     "topics": [
-      {
-        "id": "web",
-        "name": [
-          "연구실 웹페이지",
-          "Lab website",
-          "研究室ウェブサイト",
-          "研究室网页"
-        ],
-        "pending": 0,
-        "last_at": "2026-11-08T09:47:49+09:00"
-      },
       {
         "id": "grants",
         "name": [
@@ -1922,7 +1911,7 @@
           "政府与民间项目申请"
         ],
         "pending": 0,
-        "last_at": "2026-11-07T23:22:35+09:00"
+        "last_at": "2026-11-11T14:44:45+09:00"
       },
       {
         "id": "dcfault",
@@ -1933,7 +1922,29 @@
           "直流短路电流验证"
         ],
         "pending": 0,
-        "last_at": "2026-11-07T23:00:43+09:00"
+        "last_at": "2026-11-11T14:34:39+09:00"
+      },
+      {
+        "id": "energy",
+        "name": [
+          "에너지 관리",
+          "Energy management",
+          "エネルギー管理",
+          "能源管理"
+        ],
+        "pending": 0,
+        "last_at": "2026-11-11T13:54:17+09:00"
+      },
+      {
+        "id": "web",
+        "name": [
+          "연구실 웹페이지",
+          "Lab website",
+          "研究室ウェブサイト",
+          "研究室网页"
+        ],
+        "pending": 0,
+        "last_at": "2026-11-09T06:41:01+09:00"
       },
       {
         "id": "ladder",
@@ -1989,109 +2000,23 @@
         ],
         "pending": 0,
         "last_at": "2026-10-29T19:21:11+09:00"
-      },
-      {
-        "id": "inline",
-        "name": [
-          "인라인 비전검사",
-          "Inline vision inspection",
-          "インライン検査",
-          "在线视觉检测"
-        ],
-        "pending": 0,
-        "last_at": "2026-10-28T09:10:10+09:00"
-      },
-      {
-        "id": "energy",
-        "name": [
-          "에너지 관리",
-          "Energy management",
-          "エネルギー管理",
-          "能源管理"
-        ],
-        "pending": 0,
-        "last_at": "2026-10-26T11:10:43+09:00"
-      },
-      {
-        "id": "repeat",
-        "name": [
-          "반복 비전검사",
-          "Repeat vision inspection",
-          "反復ビジョン検査",
-          "重复视觉检测"
-        ],
-        "pending": 0,
-        "last_at": "2026-10-25T20:08:44+09:00"
       }
     ],
     "entries": [
       {
-        "id": "a9bec515001be0a7",
-        "at": "2026-11-08T09:47:49+09:00",
-        "topic": "web",
+        "id": "61d06df7bb6df2dc",
+        "at": "2026-11-11T14:44:45+09:00",
+        "topic": "grants",
         "kinds": [
           "code",
-          "data"
+          "data",
+          "document"
         ],
-        "files": 10
+        "files": 32
       },
       {
-        "id": "6bd42637f32d8942",
-        "at": "2026-11-08T09:47:48+09:00",
-        "topic": "web",
-        "kinds": [
-          "code"
-        ],
-        "files": 3
-      },
-      {
-        "id": "a42a102e348c29c2",
-        "at": "2026-11-08T09:15:51+09:00",
-        "topic": "web",
-        "kinds": [
-          "code"
-        ],
-        "files": 1
-      },
-      {
-        "id": "2c547eab7645d2e8",
-        "at": "2026-11-08T09:15:51+09:00",
-        "topic": "web",
-        "kinds": [
-          "code"
-        ],
-        "files": 5
-      },
-      {
-        "id": "0e4d3b9bc9eaa36d",
-        "at": "2026-11-08T09:15:51+09:00",
-        "topic": "web",
-        "kinds": [
-          "code"
-        ],
-        "files": 1
-      },
-      {
-        "id": "cfb61360fc152fb0",
-        "at": "2026-11-08T07:33:10+09:00",
-        "topic": "web",
-        "kinds": [
-          "data"
-        ],
-        "files": 1
-      },
-      {
-        "id": "d20e7bb743a8c8ca",
-        "at": "2026-11-07T23:29:12+09:00",
-        "topic": "web",
-        "kinds": [
-          "code"
-        ],
-        "files": 6
-      },
-      {
-        "id": "5022ba551aab58c0",
-        "at": "2026-11-07T23:22:35+09:00",
+        "id": "2cb466ef67fe86dc",
+        "at": "2026-11-11T14:35:09+09:00",
         "topic": "grants",
         "kinds": [
           "code",
@@ -2099,11 +2024,11 @@
           "document",
           "figure"
         ],
-        "files": 42
+        "files": 20
       },
       {
-        "id": "da29d6f75479315f",
-        "at": "2026-11-07T23:00:43+09:00",
+        "id": "daf8409c52125bbd",
+        "at": "2026-11-11T14:34:39+09:00",
         "topic": "dcfault",
         "kinds": [
           "document"
@@ -2111,121 +2036,75 @@
         "files": 1
       },
       {
-        "id": "eed72b595c70f1d2",
-        "at": "2026-11-07T22:59:33+09:00",
-        "topic": "grants",
-        "kinds": [
-          "code",
-          "data",
-          "document"
-        ],
-        "files": 13
-      },
-      {
-        "id": "e96f8cb089aeb55d",
-        "at": "2026-11-07T22:50:02+09:00",
-        "topic": "grants",
-        "kinds": [
-          "code",
-          "data",
-          "document"
-        ],
-        "files": 16
-      },
-      {
-        "id": "6c954bb1ce1f1415",
-        "at": "2026-11-07T22:47:22+09:00",
-        "topic": "dcfault",
-        "kinds": [
-          "code",
-          "data",
-          "document"
-        ],
-        "files": 8
-      },
-      {
-        "id": "6845dfe7e0f045d1",
-        "at": "2026-11-07T22:24:10+09:00",
-        "topic": "grants",
-        "kinds": [
-          "code",
-          "data",
-          "document",
-          "figure"
-        ],
-        "files": 9
-      },
-      {
-        "id": "64ca7f6bd4025639",
-        "at": "2026-11-07T21:54:03+09:00",
-        "topic": "dcfault",
-        "kinds": [
-          "code",
-          "data",
-          "document"
-        ],
-        "files": 5
-      },
-      {
-        "id": "a24aada1f2598af1",
-        "at": "2026-11-07T21:53:31+09:00",
-        "topic": "dcfault",
-        "kinds": [
-          "document"
-        ],
-        "files": 2
-      },
-      {
-        "id": "13a813b3ec3f589f",
-        "at": "2026-11-07T21:53:31+09:00",
-        "topic": "web",
-        "kinds": [
-          "code",
-          "data"
-        ],
-        "files": 4
-      },
-      {
-        "id": "f4919275482a1777",
-        "at": "2026-11-07T21:53:30+09:00",
-        "topic": "dcfault",
-        "kinds": [
-          "document"
-        ],
-        "files": 4
-      },
-      {
-        "id": "ac201667dca2da97",
-        "at": "2026-11-07T21:53:30+09:00",
+        "id": "5ad92e6a42459e86",
+        "at": "2026-11-11T14:18:17+09:00",
         "topic": "grants",
         "kinds": [
           "data",
-          "document"
-        ],
-        "files": 8
-      },
-      {
-        "id": "76874ab1993cba92",
-        "at": "2026-11-07T21:53:30+09:00",
-        "topic": "dcfault",
-        "kinds": [
-          "document",
-          "figure"
-        ],
-        "files": 4
-      },
-      {
-        "id": "13a92d3b92b118c2",
-        "at": "2026-11-07T21:53:30+09:00",
-        "topic": "dcfault",
-        "kinds": [
           "document"
         ],
         "files": 3
       },
       {
-        "id": "429e3b14b8ea525c",
-        "at": "2026-11-07T21:53:29+09:00",
+        "id": "0851bb77f0aa00c6",
+        "at": "2026-11-11T14:15:11+09:00",
+        "topic": "dcfault",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "de8645812a32bd9d",
+        "at": "2026-11-11T14:14:51+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "data",
+          "document",
+          "figure"
+        ],
+        "files": 28
+      },
+      {
+        "id": "2e5030a2728baa8f",
+        "at": "2026-11-11T14:07:37+09:00",
+        "topic": "dcfault",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "2814a2e67989739d",
+        "at": "2026-11-11T13:57:31+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "fd0f6688ad356fdc",
+        "at": "2026-11-11T13:54:17+09:00",
+        "topic": "energy",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "b256993da0612ad9",
+        "at": "2026-11-11T13:54:17+09:00",
+        "topic": "dcfault",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "79a7c02afd9eef13",
+        "at": "2026-11-11T12:59:51+09:00",
         "topic": "grants",
         "kinds": [
           "data",
@@ -2234,92 +2113,253 @@
         "files": 2
       },
       {
-        "id": "3f3d5d97fac38ef1",
-        "at": "2026-11-07T21:53:29+09:00",
-        "topic": "dcfault",
+        "id": "06f6e429ddd86a74",
+        "at": "2026-11-11T11:51:42+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "0137333cc5f891fa",
+        "at": "2026-11-11T11:48:34+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document",
+          "figure"
+        ],
+        "files": 8
+      },
+      {
+        "id": "9b9dfd6250931cc9",
+        "at": "2026-11-11T11:43:35+09:00",
+        "topic": "grants",
         "kinds": [
           "code",
           "data",
-          "document"
+          "document",
+          "figure"
         ],
-        "files": 16
+        "files": 25
       },
       {
-        "id": "21e18349cfe5f184",
-        "at": "2026-11-07T21:53:29+09:00",
+        "id": "e2415e96839a6c3b",
+        "at": "2026-11-11T11:41:28+09:00",
         "topic": "grants",
         "kinds": [
+          "code",
+          "data",
+          "document",
+          "figure"
+        ],
+        "files": 48
+      },
+      {
+        "id": "c2062e27acd00b42",
+        "at": "2026-11-11T11:28:52+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "data",
+          "document",
+          "figure"
+        ],
+        "files": 11
+      },
+      {
+        "id": "1f2785183e96ca8b",
+        "at": "2026-11-11T11:26:48+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "data",
+          "document",
+          "figure"
+        ],
+        "files": 67
+      },
+      {
+        "id": "91212b10a50dc455",
+        "at": "2026-11-11T11:25:32+09:00",
+        "topic": "energy",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "276479009ecdca92",
+        "at": "2026-11-11T11:13:10+09:00",
+        "topic": "energy",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "37f711b657081a8a",
+        "at": "2026-11-11T11:05:05+09:00",
+        "topic": "energy",
+        "kinds": [
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "845c60237cfa05c0",
+        "at": "2026-11-11T10:55:02+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 5
+      },
+      {
+        "id": "305156bfd261eca0",
+        "at": "2026-11-11T10:50:04+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "6992d2557fc34abf",
+        "at": "2026-11-11T10:42:48+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
           "data",
           "document"
         ],
         "files": 10
       },
       {
-        "id": "e01567307055cef0",
-        "at": "2026-11-07T21:53:28+09:00",
+        "id": "c057cfe4916c711b",
+        "at": "2026-11-11T10:34:40+09:00",
         "topic": "grants",
         "kinds": [
-          "data",
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "edb9332ee68ffe64",
+        "at": "2026-11-11T10:34:22+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "c23a0ceeab5fe156",
+        "at": "2026-11-11T10:33:54+09:00",
+        "topic": "grants",
+        "kinds": [
           "document"
         ],
         "files": 2
       },
       {
-        "id": "1faae746539bb0ef",
-        "at": "2026-11-07T21:53:28+09:00",
-        "topic": "grants",
+        "id": "10df355beb52f271",
+        "at": "2026-11-11T10:29:32+09:00",
+        "topic": "energy",
         "kinds": [
-          "data",
           "document"
         ],
-        "files": 6
+        "files": 2
       },
       {
-        "id": "0a4434439c1d4ad3",
-        "at": "2026-11-07T21:53:28+09:00",
-        "topic": "dcfault",
+        "id": "08b1cf1c8833f763",
+        "at": "2026-11-11T10:27:27+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data"
+        ],
+        "files": 3
+      },
+      {
+        "id": "d81583eefaadbcc2",
+        "at": "2026-11-11T10:26:17+09:00",
+        "topic": "grants",
         "kinds": [
           "code",
           "data",
           "document",
           "figure"
         ],
-        "files": 45
+        "files": 20
       },
       {
-        "id": "dc9ab3929f888265",
-        "at": "2026-11-07T21:53:27+09:00",
+        "id": "704aaeb95a9e4f67",
+        "at": "2026-11-11T10:11:31+09:00",
         "topic": "grants",
         "kinds": [
           "data",
-          "document"
-        ],
-        "files": 2
-      },
-      {
-        "id": "ad76fcfed2d00148",
-        "at": "2026-11-07T21:53:27+09:00",
-        "topic": "grants",
-        "kinds": [
           "document"
         ],
         "files": 5
       },
       {
-        "id": "bed6d42eb41642b7",
-        "at": "2026-11-07T21:53:26+09:00",
-        "topic": "dcfault",
+        "id": "c1c318c9b22e0328",
+        "at": "2026-11-11T10:06:22+09:00",
+        "topic": "energy",
         "kinds": [
           "code",
           "data",
-          "document",
-          "figure"
+          "document"
+        ],
+        "files": 5
+      },
+      {
+        "id": "322ce5fb052ba68d",
+        "at": "2026-11-11T09:21:00+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data"
+        ],
+        "files": 1
+      },
+      {
+        "id": "bd0f03c98641f33f",
+        "at": "2026-11-11T09:00:57+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "2481adc0fe5dcf7d",
+        "at": "2026-11-11T09:00:57+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "data",
+          "document"
         ],
         "files": 14
       },
       {
-        "id": "7ef819a51d183f2a",
-        "at": "2026-11-07T21:53:26+09:00",
+        "id": "ccd298d7734c0f0a",
+        "at": "2026-11-11T09:00:56+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "data",
+          "document",
+          "figure"
+        ],
+        "files": 39
+      },
+      {
+        "id": "9d8afcfac1509fe5",
+        "at": "2026-11-11T09:00:56+09:00",
         "topic": "grants",
         "kinds": [
           "data",
@@ -2328,171 +2368,176 @@
         "files": 7
       },
       {
-        "id": "f1e68b100d56f944",
-        "at": "2026-11-07T21:53:25+09:00",
-        "topic": "dcfault",
+        "id": "0d4956f6d53385df",
+        "at": "2026-11-11T09:00:56+09:00",
+        "topic": "grants",
         "kinds": [
           "code",
+          "data",
+          "document",
+          "figure"
+        ],
+        "files": 13
+      },
+      {
+        "id": "4350807176a69019",
+        "at": "2026-11-11T09:00:55+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "data",
+          "document",
+          "figure"
+        ],
+        "files": 64
+      },
+      {
+        "id": "1c744233d1bd7515",
+        "at": "2026-11-11T09:00:55+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 8
+      },
+      {
+        "id": "43364afc4629ddcb",
+        "at": "2026-11-10T20:24:14+09:00",
+        "topic": "energy",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "6d81e21228dfb322",
+        "at": "2026-11-10T18:07:02+09:00",
+        "topic": "energy",
+        "kinds": [
+          "code",
+          "data",
+          "document",
+          "figure"
+        ],
+        "files": 46
+      },
+      {
+        "id": "c97424694e675e27",
+        "at": "2026-11-10T17:48:06+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document",
+          "figure"
+        ],
+        "files": 16
+      },
+      {
+        "id": "9f2a267e8a3dcccf",
+        "at": "2026-11-10T17:34:38+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "data",
+          "document"
+        ],
+        "files": 10
+      },
+      {
+        "id": "6fc1eaa632502956",
+        "at": "2026-11-10T17:21:18+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
           "document"
         ],
         "files": 2
       },
       {
-        "id": "eb2709f862f98d71",
-        "at": "2026-11-07T21:53:25+09:00",
+        "id": "be4bd6a135f18465",
+        "at": "2026-11-10T16:53:53+09:00",
         "topic": "grants",
         "kinds": [
-          "code",
-          "data",
-          "document",
-          "figure"
-        ],
-        "files": 6
-      },
-      {
-        "id": "baba275ec1c438de",
-        "at": "2026-11-07T21:53:25+09:00",
-        "topic": "grants",
-        "kinds": [
-          "code",
-          "data",
-          "document",
-          "figure"
-        ],
-        "files": 6
-      },
-      {
-        "id": "87ee888e0e69520a",
-        "at": "2026-11-07T21:53:25+09:00",
-        "topic": "grants",
-        "kinds": [
-          "code",
-          "data",
-          "document",
-          "figure"
-        ],
-        "files": 6
-      },
-      {
-        "id": "89c304b4b89086a2",
-        "at": "2026-11-07T21:53:24+09:00",
-        "topic": "grants",
-        "kinds": [
-          "code",
-          "data",
-          "document",
-          "figure"
-        ],
-        "files": 10
-      },
-      {
-        "id": "55dff718cca3b705",
-        "at": "2026-11-07T21:53:24+09:00",
-        "topic": "dcfault",
-        "kinds": [
-          "code",
           "data",
           "document"
         ],
         "files": 15
       },
       {
-        "id": "ba4b4664a54bee23",
-        "at": "2026-11-07T21:53:21+09:00",
+        "id": "0d8ca224b2eba1b1",
+        "at": "2026-11-10T16:39:30+09:00",
         "topic": "grants",
         "kinds": [
           "code",
-          "data",
-          "document",
-          "figure"
-        ],
-        "files": 6
-      },
-      {
-        "id": "727dec0806d047d5",
-        "at": "2026-11-07T21:53:21+09:00",
-        "topic": "grants",
-        "kinds": [
-          "code",
-          "data",
-          "document",
-          "figure"
-        ],
-        "files": 6
-      },
-      {
-        "id": "7ab074b9925b0980",
-        "at": "2026-11-07T21:53:19+09:00",
-        "topic": "grants",
-        "kinds": [
-          "code"
-        ],
-        "files": 1
-      },
-      {
-        "id": "50e6ba16a4245192",
-        "at": "2026-11-07T21:53:18+09:00",
-        "topic": "grants",
-        "kinds": [
-          "code"
-        ],
-        "files": 1
-      },
-      {
-        "id": "e593171c26d11493",
-        "at": "2026-11-07T21:53:17+09:00",
-        "topic": "grants",
-        "kinds": [
-          "code",
-          "data",
-          "document",
-          "figure"
-        ],
-        "files": 10
-      },
-      {
-        "id": "db0ed2737f2e6d54",
-        "at": "2026-11-07T21:53:17+09:00",
-        "topic": "grants",
-        "kinds": [
           "data",
           "document"
         ],
-        "files": 12
+        "files": 25
       },
       {
-        "id": "0830b3de0fbd2db0",
-        "at": "2026-11-07T21:53:17+09:00",
+        "id": "4d64ffffd46aa9fb",
+        "at": "2026-11-10T16:14:03+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "data",
+          "document"
+        ],
+        "files": 44
+      },
+      {
+        "id": "1222fca4c20dd244",
+        "at": "2026-11-10T15:20:25+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "data",
+          "document"
+        ],
+        "files": 47
+      },
+      {
+        "id": "961ca599872378a6",
+        "at": "2026-11-10T14:00:19+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data"
+        ],
+        "files": 1
+      },
+      {
+        "id": "b12ebf011a304142",
+        "at": "2026-11-10T13:50:44+09:00",
         "topic": "grants",
         "kinds": [
           "data",
-          "document",
-          "figure"
-        ],
-        "files": 10
-      },
-      {
-        "id": "e313865c0a3c907c",
-        "at": "2026-11-07T21:53:16+09:00",
-        "topic": "grants",
-        "kinds": [
           "document"
         ],
         "files": 2
       },
       {
-        "id": "bb3bc91c38208beb",
-        "at": "2026-11-07T21:53:15+09:00",
-        "topic": "grants",
+        "id": "4535b846e78e558c",
+        "at": "2026-11-10T12:58:33+09:00",
+        "topic": "energy",
         "kinds": [
           "document"
         ],
-        "files": 2
+        "files": 1
       },
       {
-        "id": "9c10c69d68dba151",
-        "at": "2026-11-07T21:53:14+09:00",
-        "topic": "grants",
+        "id": "6b10a3addd2b2357",
+        "at": "2026-11-10T12:39:20+09:00",
+        "topic": "energy",
+        "kinds": [
+          "document"
+        ],
+        "files": 5
+      },
+      {
+        "id": "bb43bfb5a86afc97",
+        "at": "2026-11-10T12:31:48+09:00",
+        "topic": "energy",
         "kinds": [
           "data",
           "document"
@@ -2500,59 +2545,236 @@
         "files": 8
       },
       {
-        "id": "345bbc85e3568e0d",
-        "at": "2026-11-07T21:53:14+09:00",
-        "topic": "grants",
+        "id": "b5f3a506d04cb703",
+        "at": "2026-11-10T12:18:33+09:00",
+        "topic": "energy",
         "kinds": [
-          "data",
           "document"
         ],
-        "files": 5
+        "files": 2
       },
       {
-        "id": "bd67c16f34922238",
-        "at": "2026-11-07T21:53:13+09:00",
-        "topic": "grants",
+        "id": "fce5a040772b5bcf",
+        "at": "2026-11-10T12:11:58+09:00",
+        "topic": "energy",
         "kinds": [
-          "data",
           "document"
         ],
         "files": 3
       },
       {
-        "id": "b31ac7782b8d4b8a",
-        "at": "2026-11-07T21:53:10+09:00",
-        "topic": "dcfault",
+        "id": "c6166fd06ead188c",
+        "at": "2026-11-10T11:57:09+09:00",
+        "topic": "energy",
+        "kinds": [
+          "document"
+        ],
+        "files": 7
+      },
+      {
+        "id": "87c7b68f9852f270",
+        "at": "2026-11-10T09:59:24+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "835399fd3ec1e84c",
+        "at": "2026-11-10T09:34:56+09:00",
+        "topic": "energy",
+        "kinds": [
+          "document"
+        ],
+        "files": 5
+      },
+      {
+        "id": "21be28dd0d16ae5b",
+        "at": "2026-11-10T09:34:55+09:00",
+        "topic": "energy",
+        "kinds": [
+          "document"
+        ],
+        "files": 4
+      },
+      {
+        "id": "a7ecc63757baf969",
+        "at": "2026-11-09T22:51:28+09:00",
+        "topic": "grants",
         "kinds": [
           "code",
           "data",
           "document"
+        ],
+        "files": 8
+      },
+      {
+        "id": "0e115b3f580ead25",
+        "at": "2026-11-09T22:47:44+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data"
+        ],
+        "files": 1
+      },
+      {
+        "id": "dd64d68b91a565e2",
+        "at": "2026-11-09T22:46:50+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "document"
+        ],
+        "files": 25
+      },
+      {
+        "id": "ee67e13a8024d10c",
+        "at": "2026-11-09T22:20:13+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "data",
+          "document"
+        ],
+        "files": 29
+      },
+      {
+        "id": "dd3fd3d2cda10def",
+        "at": "2026-11-09T21:13:26+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "ab1b835eca9e5496",
+        "at": "2026-11-09T21:03:44+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data"
+        ],
+        "files": 1
+      },
+      {
+        "id": "cfb4e355284dbb26",
+        "at": "2026-11-09T20:45:43+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "ef20004d643ee7f4",
+        "at": "2026-11-09T20:43:35+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "32637061ef83f4df",
+        "at": "2026-11-09T20:35:31+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "document",
+          "figure"
+        ],
+        "files": 5
+      },
+      {
+        "id": "1aee73a47ecc39ab",
+        "at": "2026-11-09T20:33:50+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "document",
+          "figure"
+        ],
+        "files": 5
+      },
+      {
+        "id": "03991d9f458cb6b4",
+        "at": "2026-11-09T20:32:39+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "document",
+          "figure"
+        ],
+        "files": 5
+      },
+      {
+        "id": "db1b0676a9cd4729",
+        "at": "2026-11-09T20:28:30+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "data",
+          "document",
+          "figure"
+        ],
+        "files": 6
+      },
+      {
+        "id": "a33e10aace88ac6d",
+        "at": "2026-11-09T20:23:44+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "data",
+          "document",
+          "figure"
         ],
         "files": 9
       },
       {
-        "id": "951a0d567ec23536",
-        "at": "2026-11-07T21:53:10+09:00",
-        "topic": "dcfault",
+        "id": "f71c70a7894acab3",
+        "at": "2026-11-09T19:10:06+09:00",
+        "topic": "grants",
         "kinds": [
           "document"
         ],
         "files": 1
       },
       {
-        "id": "f69984c939de37b8",
-        "at": "2026-11-07T21:53:07+09:00",
-        "topic": "dcfault",
+        "id": "5eea35b65b77e9af",
+        "at": "2026-11-09T19:08:19+09:00",
+        "topic": "energy",
         "kinds": [
-          "code",
+          "document"
+        ],
+        "files": 4
+      },
+      {
+        "id": "da1999f5802869b3",
+        "at": "2026-11-09T18:36:20+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data"
+        ],
+        "files": 1
+      },
+      {
+        "id": "a3f6f217a8b2ba56",
+        "at": "2026-11-09T18:13:12+09:00",
+        "topic": "grants",
+        "kinds": [
           "data",
           "document"
         ],
-        "files": 8
+        "files": 6
       },
       {
-        "id": "15a0191632499fe9",
-        "at": "2026-11-07T08:57:26+09:00",
+        "id": "18662564f772ac93",
+        "at": "2026-11-09T17:30:30+09:00",
         "topic": "grants",
         "kinds": [
           "data",
@@ -2561,287 +2783,33 @@
         "files": 2
       },
       {
-        "id": "75ed92a26e88756c",
-        "at": "2026-11-07T07:37:48+09:00",
-        "topic": "dcfault",
+        "id": "13a51936a686c35b",
+        "at": "2026-11-09T16:56:16+09:00",
+        "topic": "grants",
         "kinds": [
-          "code",
           "data",
           "document"
-        ],
-        "files": 7
-      },
-      {
-        "id": "0351c21f52590313",
-        "at": "2026-11-07T07:16:32+09:00",
-        "topic": "dcfault",
-        "kinds": [
-          "code",
-          "data",
-          "document"
-        ],
-        "files": 8
-      },
-      {
-        "id": "3e38265d2831a0ea",
-        "at": "2026-11-07T07:15:09+09:00",
-        "topic": "web",
-        "kinds": [
-          "code"
-        ],
-        "files": 1
-      },
-      {
-        "id": "c523e7f07f07425f",
-        "at": "2026-11-07T07:05:08+09:00",
-        "topic": "web",
-        "kinds": [
-          "code"
-        ],
-        "files": 1
-      },
-      {
-        "id": "b27a1850e49f4109",
-        "at": "2026-11-07T06:54:53+09:00",
-        "topic": "dcfault",
-        "kinds": [
-          "document"
-        ],
-        "files": 6
-      },
-      {
-        "id": "eaa50dcf35367f6b",
-        "at": "2026-11-07T06:47:50+09:00",
-        "topic": "dcfault",
-        "kinds": [
-          "document"
-        ],
-        "files": 9
-      },
-      {
-        "id": "310876222666f53a",
-        "at": "2026-11-07T01:05:13+09:00",
-        "topic": "dcfault",
-        "kinds": [
-          "code",
-          "data",
-          "document"
-        ],
-        "files": 5
-      },
-      {
-        "id": "be88f91ef2ece6f8",
-        "at": "2026-11-07T00:47:51+09:00",
-        "topic": "dcfault",
-        "kinds": [
-          "code",
-          "data",
-          "document"
-        ],
-        "files": 6
-      },
-      {
-        "id": "0fab5a9a802af1db",
-        "at": "2026-11-07T00:05:04+09:00",
-        "topic": "web",
-        "kinds": [
-          "code"
         ],
         "files": 2
       },
       {
-        "id": "d23d21bf8fb691ea",
-        "at": "2026-11-06T23:54:33+09:00",
-        "topic": "ladder",
-        "kinds": [
-          "document"
-        ],
-        "files": 3
-      },
-      {
-        "id": "8d87820ca20dd892",
-        "at": "2026-11-06T23:48:34+09:00",
-        "topic": "dcfault",
-        "kinds": [
-          "code",
-          "data",
-          "document"
-        ],
-        "files": 6
-      },
-      {
-        "id": "a4c294e2eb53e112",
-        "at": "2026-11-06T23:45:31+09:00",
-        "topic": "ladder",
-        "kinds": [
-          "document"
-        ],
-        "files": 1
-      },
-      {
-        "id": "70e5f586b7e83190",
-        "at": "2026-11-06T23:42:30+09:00",
-        "topic": "cellcontract",
-        "kinds": [
-          "document"
-        ],
-        "files": 3
-      },
-      {
-        "id": "894835d00b8b8360",
-        "at": "2026-11-06T23:26:23+09:00",
-        "topic": "dcfault",
-        "kinds": [
-          "document"
-        ],
-        "files": 1
-      },
-      {
-        "id": "26fcfe611e0cf5d9",
-        "at": "2026-11-06T23:06:22+09:00",
-        "topic": "dcfault",
-        "kinds": [
-          "code",
-          "data",
-          "document"
-        ],
-        "files": 6
-      },
-      {
-        "id": "44f65c67f4ea5a61",
-        "at": "2026-11-06T22:50:01+09:00",
-        "topic": "cellcontract",
+        "id": "d42c43534ff7a184",
+        "at": "2026-11-09T16:52:08+09:00",
+        "topic": "grants",
         "kinds": [
           "document"
         ],
         "files": 5
       },
       {
-        "id": "00f01c718f160e7f",
-        "at": "2026-11-06T22:48:16+09:00",
-        "topic": "cellcontract",
-        "kinds": [
-          "data",
-          "document"
-        ],
-        "files": 6
-      },
-      {
-        "id": "14cc47b1b6cd0d84",
-        "at": "2026-11-06T22:43:24+09:00",
-        "topic": "dcfault",
-        "kinds": [
-          "code",
-          "data",
-          "document"
-        ],
-        "files": 4
-      },
-      {
-        "id": "518e51708a983a06",
-        "at": "2026-11-06T22:43:10+09:00",
-        "topic": "cellcontract",
-        "kinds": [
-          "code",
-          "data",
-          "document"
-        ],
-        "files": 10
-      },
-      {
-        "id": "a0af72ff08584b73",
-        "at": "2026-11-06T22:37:38+09:00",
-        "topic": "cellcontract",
-        "kinds": [
-          "code",
-          "data",
-          "document"
-        ],
-        "files": 11
-      },
-      {
-        "id": "820d3a0a37c05818",
-        "at": "2026-11-06T22:34:02+09:00",
-        "topic": "dcfault",
-        "kinds": [
-          "code",
-          "data",
-          "document"
-        ],
-        "files": 8
-      },
-      {
-        "id": "03147c4c8f17a770",
-        "at": "2026-11-06T22:21:32+09:00",
-        "topic": "cellcontract",
-        "kinds": [
-          "document"
-        ],
-        "files": 6
-      },
-      {
-        "id": "d424cc1d0022bc27",
-        "at": "2026-11-06T22:18:23+09:00",
-        "topic": "cellcontract",
-        "kinds": [
-          "data",
-          "document"
-        ],
-        "files": 10
-      },
-      {
-        "id": "b4fa7dac45baca15",
-        "at": "2026-11-06T22:11:48+09:00",
-        "topic": "cellcontract",
-        "kinds": [
-          "data",
-          "document"
-        ],
-        "files": 7
-      },
-      {
-        "id": "6894a6ce0e623db4",
-        "at": "2026-11-06T22:06:52+09:00",
+        "id": "403e33ba9dad2612",
+        "at": "2026-11-09T16:39:20+09:00",
         "topic": "grants",
         "kinds": [
           "data",
           "document"
         ],
-        "files": 4
-      },
-      {
-        "id": "f174ae462e4cefcb",
-        "at": "2026-11-06T22:01:12+09:00",
-        "topic": "grants",
-        "kinds": [
-          "code",
-          "data",
-          "document",
-          "figure"
-        ],
-        "files": 5
-      },
-      {
-        "id": "4344b71e1c9113da",
-        "at": "2026-11-06T22:00:54+09:00",
-        "topic": "grants",
-        "kinds": [
-          "data",
-          "document"
-        ],
-        "files": 4
-      },
-      {
-        "id": "8f32dbe427607318",
-        "at": "2026-11-06T21:47:57+09:00",
-        "topic": "grants",
-        "kinds": [
-          "code",
-          "data",
-          "document",
-          "figure"
-        ],
-        "files": 7
+        "files": 3
       }
     ],
     "pending_files": 0
