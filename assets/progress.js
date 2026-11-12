@@ -24,9 +24,8 @@ const DATA=
     "dev": ["진행 중", "In progress", "進行中", "进行中"],
     "run": ["운영 중", "In use", "運用中", "运行中"],
     "sched": ["예정", "Scheduled", "予定", "计划中"],
-    "award": ["최우수상", "Top award", "最優秀賞", "最优秀奖"],
-    "final": ["본선 진출 · 11월 말 예정", "Through to the final, late November", "本選進出・11月下旬予定", "晋级决赛 · 11月下旬"],
-    "shown": ["전시", "Exhibited", "展示", "展出"]
+    "award": ["수상", "Award", "受賞", "获奖"],
+    "final": ["본선 진출 · 11월 말 예정", "Through to the final, late November", "本選進出・11月下旬予定", "晋级决赛 · 11月下旬"]
   },
   "projects": [
     {"leaf": ["B", 0], "st": "rev", "rec": "inline", "name": ["인라인 검사 엔진", "Inline inspection engine", "インライン検査エンジン", "在线检测引擎"],
@@ -68,7 +67,7 @@ const DATA=
     {"leaf": ["E", 5], "st": "win", "name": ["MECA KOREA CUP 미쓰비시전기 최우수상", "MECA KOREA CUP Mitsubishi Electric top award", "MECA KOREA CUP 三菱電機 最優秀賞", "MECA KOREA CUP 三菱电机 最优秀奖"],
      "steps": [["award", "2026-08-06", "now"]]},
     {"leaf": ["E", 4], "st": "win", "name": ["교내 융합프로젝트 경진대회 은상", "In-school project competition silver award", "学内融合プロジェクト競技大会 銀賞", "校内融合项目竞赛 银奖"],
-     "steps": [["shown", "", "now"]]}
+     "steps": [["award", "2026-11-08", "now"]]}
   ]
 }
 ;
