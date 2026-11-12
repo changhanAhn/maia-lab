@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-12T15:57:56+09:00",
-  "content_updated_at": "2026-11-12T15:27:06+09:00",
-  "source_revision": "7b8764bb3d89caddae36028638ea9b374e6fde48",
+  "generated_at": "2026-11-12T16:28:02+09:00",
+  "content_updated_at": "2026-11-12T16:07:15+09:00",
+  "source_revision": "bb7ec1435975cf83eba0ed5e111edca961c17fae",
   "cards": [
     {
       "id": "inline",
@@ -561,6 +561,37 @@
       "href": "research-education.html",
       "date": "2026-10-27",
       "fingerprint": "a28e6eb2a1e97e20"
+    },
+    {
+      "id": "research-E-5",
+      "group": "research",
+      "name": [
+        "MECA KOREA CUP 미쓰비시전기 최우수상",
+        "MECA KOREA CUP Mitsubishi Electric top award",
+        "MECA KOREA CUP 三菱電機 最優秀賞",
+        "MECA KOREA CUP 三菱电机 最优秀奖"
+      ],
+      "now": [
+        "최우수상",
+        "Top award",
+        "最優秀賞",
+        "最优秀奖"
+      ],
+      "last": [
+        "단계 기록 확인",
+        "Stage recorded; no dated milestone",
+        "段階記録あり・日付なし",
+        "已有阶段记录，暂无里程碑日期"
+      ],
+      "next": [
+        "다음 실험·검증",
+        "Next experiment or check",
+        "次の実験・検証",
+        "下一项实验或验证"
+      ],
+      "href": "research-education.html",
+      "date": "",
+      "fingerprint": "6edf0044759248a6"
     },
     {
       "id": "research-E-4",
@@ -1958,12 +1989,23 @@
     "research-D-0",
     "ANTHROPIC-AIS2026"
   ],
-  "content_hash": "2deeb6148fc80a85",
+  "content_hash": "d730c22859b32e69",
   "work": {
-    "collected_at": "2026-11-12T15:57:56+09:00",
+    "collected_at": "2026-11-12T16:28:02+09:00",
     "period_days": 14,
     "scope": "versioned changes in public research topics",
     "topics": [
+      {
+        "id": "grants",
+        "name": [
+          "정부·민간 과제",
+          "Public and private applications",
+          "政府・民間研究申請",
+          "政府与民间项目申请"
+        ],
+        "pending": 4,
+        "last_at": "2026-11-12T16:05:19+09:00"
+      },
       {
         "id": "hari",
         "name": [
@@ -1976,17 +2018,6 @@
         "last_at": "2026-11-12T15:54:20+09:00"
       },
       {
-        "id": "grants",
-        "name": [
-          "정부·민간 과제",
-          "Public and private applications",
-          "政府・民間研究申請",
-          "政府与民间项目申请"
-        ],
-        "pending": 4,
-        "last_at": "2026-11-12T15:54:20+09:00"
-      },
-      {
         "id": "web",
         "name": [
           "연구실 웹페이지",
@@ -1995,7 +2026,7 @@
           "研究室网页"
         ],
         "pending": 0,
-        "last_at": "2026-11-12T15:57:42+09:00"
+        "last_at": "2026-11-12T16:27:45+09:00"
       },
       {
         "id": "energy",
@@ -2076,6 +2107,26 @@
       }
     ],
     "entries": [
+      {
+        "id": "2c43e9ebb2f6f561",
+        "at": "2026-11-12T16:27:45+09:00",
+        "topic": "web",
+        "kinds": [
+          "code"
+        ],
+        "files": 9
+      },
+      {
+        "id": "4a9baa32f0eb8f44",
+        "at": "2026-11-12T16:05:19+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "data",
+          "document"
+        ],
+        "files": 28
+      },
       {
         "id": "629be993b103c2a3",
         "at": "2026-11-12T15:57:42+09:00",
@@ -2861,26 +2912,6 @@
           "document"
         ],
         "files": 5
-      },
-      {
-        "id": "403e33ba9dad2612",
-        "at": "2026-11-09T16:39:20+09:00",
-        "topic": "grants",
-        "kinds": [
-          "data",
-          "document"
-        ],
-        "files": 3
-      },
-      {
-        "id": "dfe2da7148dab236",
-        "at": "2026-11-09T15:06:17+09:00",
-        "topic": "grants",
-        "kinds": [
-          "data",
-          "document"
-        ],
-        "files": 2
       }
     ],
     "pending_files": 11

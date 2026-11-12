@@ -65,6 +65,8 @@ const DATA=
      "steps": [["sched", "", "now"]]},
     {"leaf": ["E", 3], "st": "win", "name": ["캡스톤 작품대회 최우수상", "Capstone competition top award", "キャップストーン作品大会 最優秀賞", "毕业设计作品大赛 最优秀奖"],
      "steps": [["award", "2026-10-27", "done"], ["final", "", "now"]]},
+    {"leaf": ["E", 5], "st": "win", "name": ["MECA KOREA CUP 미쓰비시전기 최우수상", "MECA KOREA CUP Mitsubishi Electric top award", "MECA KOREA CUP 三菱電機 最優秀賞", "MECA KOREA CUP 三菱电机 最优秀奖"],
+     "steps": [["award", "2026-08-06", "now"]]},
     {"leaf": ["E", 4], "st": "win", "name": ["교내 융합프로젝트 경진대회 은상", "In-school project competition silver award", "学内融合プロジェクト競技大会 銀賞", "校内融合项目竞赛 银奖"],
      "steps": [["shown", "", "now"]]}
   ]

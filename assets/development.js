@@ -41,7 +41,7 @@ const AREAS=[
  {id:'C',w:222,sub:['마이크로그리드 EMS · PV/ESS','Microgrid EMS · PV/ESS','マイクログリッドEMS・PV/ESS','微电网EMS · PV/ESS'],
   tool:['t:energy','t:dcfault','c:research-C-3','c:research-C-4','c:research-C-5'],meas:['c:research-C-1','c:research-C-2'],papers:['energy']},
  {id:'D',w:148,sub:['공정 이벤트 동기 전력','Event-synced power','工程イベント同期電力','工序事件同步电力'],tool:['c:research-D-0']},
- {id:'E',w:152,sub:['PLC · 비전 · 데이터 실습','PLC · vision · data','PLC・ビジョン・データ実習','PLC · 视觉 · 数据实训'],field:['c:research-E-0','c:research-E-2'],papers:['research-E-3','research-E-4']}
+ {id:'E',w:152,sub:['PLC · 비전 · 데이터 실습','PLC · vision · data','PLC・ビジョン・データ実習','PLC · 视觉 · 数据实训'],field:['c:research-E-0','c:research-E-2'],papers:['research-E-3','research-E-4','research-E-5']}
 ];
 const TOPIC_AREA={ladder:'B',inline:'B',repeat:'B',runtime:'B',amazon:'B',cellcontract:'B',maia:'A',hari:'A',energy:'C',dcfault:'C'};
 const BANDS=[

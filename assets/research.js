@@ -16,7 +16,7 @@ const TR=[
    leaves:[['로봇 공장 마이크로그리드 계층형 에너지 관리','Hierarchical energy management for a robotic factory microgrid','sub'],['PV·ESS·라인 부하 트윈','PV · storage · line-load twin','dev'],['엣지 AI 부하 전력 계측','Edge-AI load power measurement','dev'],['직류 배전 단락전류 계산 검증(48 V 축소 시험대)','DC short-circuit current calculation check (48 V scaled testbed)','dev'],['실계통 데이터 기반 배전망 동적특성 해석(디지털트윈·AI 서로게이트)','Grid dynamics: digital twin · AI surrogate','dev'],['분산자원 배전망 운전가능영역','Grid operating envelope with DERs','dev']],short:[['마이크로그리드 EMS','Microgrid EMS'],['PV·ESS 트윈','PV·ESS twin'],['엣지 AI 부하','Edge-AI load'],['직류 단락전류','DC short circuit'],['배전망 동특성','Grid dynamics'],['운전가능영역','Operating envelope']]},
   {id:'E',c:'#8fae9a',ko:'교육·기술이전',en:'Education',q:[['판단 기준의','교육·이전'],['Teaching and','transferring the rules']],
    wko:'검증된 방법을 수업과 실습으로 옮깁니다.',wen:'We turn verified methods into courses and hands-on work.',
-   leaves:[['PLC·비전·데이터 실습','Hands-on PLC, vision and data','run'],['학생 포트폴리오','Student portfolios','run'],['재직자·직업계고 PLC 교육(중소벤처기업진흥공단)','PLC training for workers and vocational students (KOSME)','run'],['폴리텍Ⅵ대학 캡스톤 작품대회 최우수상(10.27) · 법인 본선(11월 말 예정)','Capstone project competition, Korea Polytechnic VI: top award (27 Oct), national final (late November)','win'],['교내 융합프로젝트 경진대회 은상(11.08) · 롤프레스 Y-Δ 전환 인터록','In-school project competition: silver award · roll-press star-delta interlock','win']],short:[['PLC·비전 실습','Hands-on courses'],['학생 포트폴리오','Student portfolios'],['재직자 교육','Industry training'],['캡스톤 최우수상','Capstone award'],['융합 은상','Silver award']]}
+   leaves:[['PLC·비전·데이터 실습','Hands-on PLC, vision and data','run'],['학생 포트폴리오','Student portfolios','run'],['재직자·직업계고 PLC 교육(중소벤처기업진흥공단)','PLC training for workers and vocational students (KOSME)','run'],['폴리텍Ⅵ대학 캡스톤 작품대회 최우수상(10.27) · 법인 본선(11월 말 예정)','Capstone competition, Korea Polytechnic VI: top award (27 Oct), final late Nov','win'],['교내 융합프로젝트 경진대회 은상(11.08) · 롤프레스 Y-Δ 전환 인터록','In-school competition silver award · roll-press star-delta interlock','win'],['MECA KOREA CUP 미쓰비시전기 최우수상(08.06)','MECA KOREA CUP top award (6 Aug)','win']],short:[['PLC·비전 실습','Hands-on courses'],['학생 포트폴리오','Student portfolios'],['재직자 교육','Industry training'],['캡스톤 최우수상','Capstone award'],['융합 은상','Silver award'],['MECA 최우수상','MECA top award']]}
 ];
 
 
@@ -170,6 +170,7 @@ const EXTRA={
       "These are teaching, practice and outside training cases. Learning outputs are distinct from evidence of equipment performance."
     ],
     "links": [
+      null,
       null,
       null,
       null,
