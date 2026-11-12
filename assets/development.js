@@ -39,7 +39,7 @@ const AREAS=[
   field:['c:research-B-3'],tool:['t:ladder','t:runtime','t:inline','t:repeat','t:cellcontract'],meas:['c:AMAZON-ARA-FALL2026','t:amazon'],
   papers:['inline','repeat','ladder','sttt','cellcontract'],dataset:true},
  {id:'C',w:222,sub:['마이크로그리드 EMS · PV/ESS','Microgrid EMS · PV/ESS','マイクログリッドEMS・PV/ESS','微电网EMS · PV/ESS'],
-  tool:['t:energy','t:dcfault','c:research-C-3'],meas:['c:research-C-1','c:research-C-2'],papers:['energy']},
+  tool:['t:energy','t:dcfault','c:research-C-3','c:research-C-4','c:research-C-5'],meas:['c:research-C-1','c:research-C-2'],papers:['energy']},
  {id:'D',w:148,sub:['공정 이벤트 동기 전력','Event-synced power','工程イベント同期電力','工序事件同步电力'],tool:['c:research-D-0']},
  {id:'E',w:152,sub:['PLC · 비전 · 데이터 실습','PLC · vision · data','PLC・ビジョン・データ実習','PLC · 视觉 · 数据实训'],field:['c:research-E-0','c:research-E-2'],papers:['research-E-3','research-E-4']}
 ];
