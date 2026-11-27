@@ -35,8 +35,8 @@ function validBoard(b){
 const AREAS=[
  {id:'A',w:196,sub:['MAIA 지수 · 비보상 관문','MAIA index · gate contract','MAIA指数・非補償ゲート','MAIA指数 · 非补偿门控'],
   tool:['t:maia','t:hari'],papers:['maia-index','hari']},
- {id:'B',w:294,sub:['인라인·반복 검사 · 래더 · 시험 라인','Inline and repeat inspection · ladder · test line','インライン・反復検査・ラダー・試験ライン','在线与重复检测 · 梯形图 · 试验线'],
-  field:['c:research-B-3'],tool:['t:ladder','t:runtime','t:inline','t:repeat','t:cellcontract'],meas:['c:AMAZON-ARA-FALL2026','t:amazon'],
+ {id:'B',w:294,sub:['인라인·반복 검사 · 래더 · 시험 라인 · 스마트안경','Inline and repeat inspection · ladder · test line · smart glasses','インライン・反復検査・ラダー・試験ライン・スマートグラス','在线与重复检测 · 梯形图 · 试验线 · 智能眼镜'],
+  field:['c:research-B-3'],tool:['t:ladder','t:runtime','t:inline','t:repeat','t:cellcontract','c:research-B-6'],meas:['c:AMAZON-ARA-FALL2026','t:amazon'],
   papers:['inline','repeat','ladder','sttt','cellcontract'],dataset:true},
  {id:'C',w:222,sub:['마이크로그리드 EMS · PV/ESS','Microgrid EMS · PV/ESS','マイクログリッドEMS・PV/ESS','微电网EMS · PV/ESS'],
   tool:['t:energy','t:dcfault','c:research-C-3','c:research-C-4','c:research-C-5'],meas:['c:research-C-1','c:research-C-2'],papers:['energy']},

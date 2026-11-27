@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-14T22:00:21+09:00",
-  "content_updated_at": "2026-11-12T16:47:52+09:00",
-  "source_revision": "24b0262711ad3225ebfecae60c958acf3e63c84d",
+  "generated_at": "2026-11-27T11:31:09+09:00",
+  "content_updated_at": "2026-11-27T11:14:41+09:00",
+  "source_revision": "2d6bc410a6cc7f4c7a6582d54e8f3c59d3afd340",
   "cards": [
     {
       "id": "inline",
@@ -107,26 +107,26 @@
         "MAIA适用性指数"
       ],
       "now": [
-        "수정 중",
-        "Revising",
-        "修正中",
-        "修改中"
+        "심사 중",
+        "In review",
+        "査読中",
+        "审稿中"
       ],
       "last": [
-        "투고",
-        "Submitted",
-        "投稿",
-        "投稿"
+        "재투고",
+        "Resubmitted",
+        "再投稿",
+        "重新投稿"
       ],
       "next": [
-        "윤리 심의·개정 자료 준비",
-        "Ethics review and revision material",
-        "倫理審査・改訂資料の準備",
-        "伦理审查与修订材料准备"
+        "심사 결과 확인",
+        "Review decision",
+        "査読結果の確認",
+        "查看审稿结果"
       ],
       "href": "record.html#maia-index",
-      "date": "2026-09-19",
-      "fingerprint": "953bcdc447704c83"
+      "date": "2026-11-15",
+      "fingerprint": "f6caf01c3e15c56d"
     },
     {
       "id": "hari",
@@ -138,10 +138,10 @@
         "非补偿门控契约"
       ],
       "now": [
-        "수정 중",
-        "Revising",
-        "修正中",
-        "修改中"
+        "심사 중",
+        "In review",
+        "査読中",
+        "审稿中"
       ],
       "last": [
         "투고",
@@ -156,8 +156,8 @@
         "核实初始检查与编辑指派"
       ],
       "href": "record.html#hari",
-      "date": "2026-09-20",
-      "fingerprint": "e156f0f4ec63e933"
+      "date": "2026-11-12",
+      "fingerprint": "bfe25fc86d1f6611"
     },
     {
       "id": "energy",
@@ -169,10 +169,10 @@
         "微电网分层能量管理"
       ],
       "now": [
-        "접수 완료",
-        "Received",
-        "受付",
-        "已受理"
+        "편집 검토 중",
+        "With editor",
+        "編集者確認中",
+        "编辑审阅中"
       ],
       "last": [
         "투고",
@@ -188,7 +188,7 @@
       ],
       "href": "record.html#energy",
       "date": "2026-11-11",
-      "fingerprint": "0c7408b42bad203e"
+      "fingerprint": "692b4a9e37c55ac2"
     },
     {
       "id": "sttt",
@@ -251,6 +251,37 @@
       "href": "record.html#cellcontract",
       "date": "2026-11-06",
       "fingerprint": "15c55221e93dc10d"
+    },
+    {
+      "id": "research-B-6",
+      "group": "research",
+      "name": [
+        "작업자 스마트안경 · 공정 상태·검사 근거 표시",
+        "Operator smart glasses · process state and inspection evidence",
+        "作業者スマートグラス・工程状態と検査根拠の表示",
+        "作业员智能眼镜 · 工序状态与检测依据显示"
+      ],
+      "now": [
+        "진행 중",
+        "In progress",
+        "進行中",
+        "进行中"
+      ],
+      "last": [
+        "단계 기록 확인",
+        "Stage recorded; no dated milestone",
+        "段階記録あり・日付なし",
+        "已有阶段记录，暂无里程碑日期"
+      ],
+      "next": [
+        "다음 실험·검증",
+        "Next experiment or check",
+        "次の実験・検証",
+        "下一项实验或验证"
+      ],
+      "href": "research-manufacturing.html",
+      "date": "",
+      "fingerprint": "af819d645863831c"
     },
     {
       "id": "research-D-0",
@@ -541,10 +572,10 @@
         "毕业设计作品大赛 最优秀奖"
       ],
       "now": [
-        "본선 진출 · 11월 말 예정",
-        "Through to the final, late November",
-        "本選進出・11月下旬予定",
-        "晋级决赛 · 11月下旬"
+        "전국 본선 12.11 · 지역 1위 8팀",
+        "National final, 11 Dec · eight regional winners",
+        "全国本選 12.11・地域1位の8チーム",
+        "全国决赛 12.11 · 8支地区冠军队"
       ],
       "last": [
         "수상",
@@ -560,7 +591,7 @@
       ],
       "href": "research-education.html",
       "date": "2026-10-27",
-      "fingerprint": "a5c75ea34fd1988a"
+      "fingerprint": "9e99cc6ef5a86c29"
     },
     {
       "id": "research-E-5",
@@ -634,26 +665,26 @@
         "KDI 预可研与项目计划适当性审查外部研究人员"
       ],
       "now": [
-        "선정",
-        "Selected",
-        "選定",
-        "入选"
+        "착수",
+        "Under way",
+        "着手",
+        "启动"
       ],
       "last": [
-        "전력계통 안정화 설비 사업 · 수요 분야 외부연구진 선정",
-        "Grid-stabilisation equipment project · selected for the demand analysis",
-        "電力系統安定化設備事業・需要分野の外部研究者に選定",
-        "电网稳定化设备项目·入选需求领域外部研究人员"
+        "전력계통 안정화 설비 사업 · 수요 분야 · 11/25 착수회의",
+        "Grid-stabilisation equipment project · demand analysis · kickoff 25 Nov",
+        "電力系統安定化設備事業・需要分野・11/25 キックオフ会議",
+        "电网稳定化设备项目·需求领域·11/25 启动会议"
       ],
       "next": [
-        "계약·착수 준비",
-        "Contract and start-up",
-        "契約・着手の準備",
-        "准备签约与启动"
+        "수요 분석 수행",
+        "Demand analysis under way",
+        "需要分析の実施",
+        "开展需求分析"
       ],
       "href": "grants.html#KDI-PREEVAL2026-2",
-      "date": "2026-11-05",
-      "fingerprint": "81d0b93c86a4e520"
+      "date": "2026-11-25",
+      "fingerprint": "5705f58c01f2e2b3"
     },
     {
       "id": "KETEP-PLANNING2027",
@@ -716,6 +747,68 @@
       "href": "grants.html#KERI-ACDC2026",
       "date": "",
       "fingerprint": "456b93d213ad09b7"
+    },
+    {
+      "id": "GBTP-TECHDOCTOR",
+      "group": "grants",
+      "name": [
+        "경북테크노파크 · 기술닥터제 현장애로기술 지원",
+        "Gyeongbuk Technopark · technology-doctor field support",
+        "慶北テクノパーク・技術ドクター制度による現場課題の技術支援",
+        "庆北科技园 · 技术医生制度现场技术难题支援"
+      ],
+      "now": [
+        "준비",
+        "Preparing",
+        "準備中",
+        "准备中"
+      ],
+      "last": [
+        "경북 제조기업 현장 애로기술 지원 · 신청서 준비",
+        "field problem-solving for a Gyeongbuk manufacturer · application in preparation",
+        "慶北の製造企業の現場課題を技術支援・申請書準備",
+        "为庆北制造企业解决现场技术难题 · 准备申请书"
+      ],
+      "next": [
+        "연구계획서 작성·검토",
+        "Draft and check research plan",
+        "研究計画の作成・確認",
+        "撰写并检查研究计划"
+      ],
+      "href": "grants.html#GBTP-TECHDOCTOR",
+      "date": "",
+      "fingerprint": "0a542c8e0c1dea15"
+    },
+    {
+      "id": "GRAIL-GENESIS-T8",
+      "group": "grants",
+      "name": [
+        "EU Horizon GRAIL Genesis 공모 · 주제 8",
+        "EU Horizon GRAIL Genesis open call · topic 8",
+        "EU Horizon GRAIL Genesis 公募・テーマ8",
+        "EU Horizon GRAIL Genesis 公开征集 · 主题8"
+      ],
+      "now": [
+        "준비",
+        "Preparing",
+        "準備中",
+        "准备中"
+      ],
+      "last": [
+        "일반화 스트레스 벤치마크 공개 도구 · 제안 준비",
+        "open generalisation-stress benchmarking kit · proposal in preparation",
+        "汎化ストレスベンチマークの公開ツール・提案準備",
+        "泛化压力基准测试开放工具 · 准备提案"
+      ],
+      "next": [
+        "연구계획서 작성·검토",
+        "Draft and check research plan",
+        "研究計画の作成・確認",
+        "撰写并检查研究计划"
+      ],
+      "href": "grants.html#GRAIL-GENESIS-T8",
+      "date": "",
+      "fingerprint": "78c431ba425d5cba"
     },
     {
       "id": "KEIT661-ITEM5",
@@ -809,37 +902,6 @@
       "href": "grants.html#NRF2027",
       "date": "",
       "fingerprint": "cfebeb3872267e83"
-    },
-    {
-      "id": "AXV-REBID-3-1",
-      "group": "grants",
-      "name": [
-        "AX실증밸리 재공고 · 배전망 동적특성 해석 기본설계",
-        "AX demonstration valley re-call · distribution-grid dynamics",
-        "AX実証バレー再公募 · 配電網の動特性解析の基本設計",
-        "AX实证谷再次公告 · 配电网动态特性分析基本设计"
-      ],
-      "now": [
-        "준비",
-        "Preparing",
-        "準備中",
-        "准备中"
-      ],
-      "last": [
-        "실계통 데이터 기반 배전망 디지털트윈·AI 해석 · 계획서 작성",
-        "grid digital twin and AI analysis from field data · drafting",
-        "実系統データに基づく配電網デジタルツイン・AI解析 · 計画書作成中",
-        "基于实际电网数据的配电网数字孪生与AI分析 · 撰写计划书"
-      ],
-      "next": [
-        "연구계획서 작성·검토",
-        "Draft and check research plan",
-        "研究計画の作成・確認",
-        "撰写并检查研究计划"
-      ],
-      "href": "grants.html#AXV-REBID-3-1",
-      "date": "",
-      "fingerprint": "318d142312329df2"
     },
     {
       "id": "DGTP-PLANSUPPORT",
@@ -1588,6 +1650,57 @@
   ],
   "events": [
     {
+      "id": "KDI-PREEVAL2026-2",
+      "date": "2026-11-25",
+      "name": [
+        "KDI 예타·사업계획 적정성 검토 외부연구진",
+        "KDI feasibility and project-plan review team",
+        "KDI 予備妥当性・事業計画適正性検討 外部研究者",
+        "KDI 预可研与项目计划适当性审查外部研究人员"
+      ],
+      "text": [
+        "전력계통 안정화 설비 사업 · 수요 분야 · 11/25 착수회의",
+        "Grid-stabilisation equipment project · demand analysis · kickoff 25 Nov",
+        "電力系統安定化設備事業・需要分野・11/25 キックオフ会議",
+        "电网稳定化设备项目·需求领域·11/25 启动会议"
+      ],
+      "href": "grants.html#KDI-PREEVAL2026-2"
+    },
+    {
+      "id": "maia-index",
+      "date": "2026-11-15",
+      "name": [
+        "MAIA 적용성 지수",
+        "MAIA applicability index",
+        "MAIA適用性指数",
+        "MAIA适用性指数"
+      ],
+      "text": [
+        "재투고",
+        "Resubmitted",
+        "再投稿",
+        "重新投稿"
+      ],
+      "href": "record.html#maia-index"
+    },
+    {
+      "id": "hari",
+      "date": "2026-11-12",
+      "name": [
+        "비보상 관문 계약",
+        "Non-compensatory gate contract",
+        "非補償ゲート契約",
+        "非补偿门控契约"
+      ],
+      "text": [
+        "투고",
+        "Submitted",
+        "投稿",
+        "投稿"
+      ],
+      "href": "record.html#hari"
+    },
+    {
       "id": "energy",
       "date": "2026-11-11",
       "name": [
@@ -1620,23 +1733,6 @@
         "投稿"
       ],
       "href": "record.html#cellcontract"
-    },
-    {
-      "id": "KDI-PREEVAL2026-2",
-      "date": "2026-11-05",
-      "name": [
-        "KDI 예타·사업계획 적정성 검토 외부연구진",
-        "KDI feasibility and project-plan review team",
-        "KDI 予備妥当性・事業計画適正性検討 外部研究者",
-        "KDI 预可研与项目计划适当性审查外部研究人员"
-      ],
-      "text": [
-        "전력계통 안정화 설비 사업 · 수요 분야 외부연구진 선정",
-        "Grid-stabilisation equipment project · selected for the demand analysis",
-        "電力系統安定化設備事業・需要分野の外部研究者に選定",
-        "电网稳定化设备项目·入选需求领域外部研究人员"
-      ],
-      "href": "grants.html#KDI-PREEVAL2026-2"
     },
     {
       "id": "AMAZON-ARA-FALL2026",
@@ -1977,40 +2073,6 @@
         "已提交申请"
       ],
       "href": "grants.html#KETEP-PLANNING2027"
-    },
-    {
-      "id": "hari",
-      "date": "2026-09-20",
-      "name": [
-        "비보상 관문 계약",
-        "Non-compensatory gate contract",
-        "非補償ゲート契約",
-        "非补偿门控契约"
-      ],
-      "text": [
-        "투고",
-        "Submitted",
-        "投稿",
-        "投稿"
-      ],
-      "href": "record.html#hari"
-    },
-    {
-      "id": "maia-index",
-      "date": "2026-09-19",
-      "name": [
-        "MAIA 적용성 지수",
-        "MAIA applicability index",
-        "MAIA適用性指数",
-        "MAIA适用性指数"
-      ],
-      "text": [
-        "투고",
-        "Submitted",
-        "投稿",
-        "投稿"
-      ],
-      "href": "record.html#maia-index"
     }
   ],
   "focus": [
@@ -2020,22 +2082,33 @@
     "research-D-0",
     "ANTHROPIC-AIS2026"
   ],
-  "content_hash": "19a6d64e622380d2",
+  "content_hash": "1d2168925a893f65",
   "work": {
-    "collected_at": "2026-11-14T22:00:21+09:00",
+    "collected_at": "2026-11-27T11:31:09+09:00",
     "period_days": 14,
     "scope": "versioned changes in public research topics",
     "topics": [
       {
-        "id": "grants",
+        "id": "dcfault",
         "name": [
-          "정부·민간 과제",
-          "Public and private applications",
-          "政府・民間研究申請",
-          "政府与民间项目申请"
+          "직류 단락전류 검증",
+          "DC short-circuit check",
+          "直流短絡電流の検証",
+          "直流短路电流验证"
         ],
         "pending": 0,
-        "last_at": "2026-11-14T17:19:49+09:00"
+        "last_at": "2026-11-27T11:23:19+09:00"
+      },
+      {
+        "id": "web",
+        "name": [
+          "연구실 웹페이지",
+          "Lab website",
+          "研究室ウェブサイト",
+          "研究室网页"
+        ],
+        "pending": 0,
+        "last_at": "2026-11-27T11:22:43+09:00"
       },
       {
         "id": "runtime",
@@ -2046,18 +2119,29 @@
           "检测与测量运行环境"
         ],
         "pending": 0,
-        "last_at": "2026-11-13T18:03:54+09:00"
+        "last_at": "2026-11-27T11:15:12+09:00"
       },
       {
-        "id": "repeat",
+        "id": "grants",
         "name": [
-          "반복 비전검사",
-          "Repeat vision inspection",
-          "反復ビジョン検査",
-          "重复视觉检测"
+          "정부·민간 과제",
+          "Public and private applications",
+          "政府・民間研究申請",
+          "政府与民间项目申请"
         ],
         "pending": 0,
-        "last_at": "2026-11-13T18:03:54+09:00"
+        "last_at": "2026-11-27T11:11:52+09:00"
+      },
+      {
+        "id": "energy",
+        "name": [
+          "에너지 관리",
+          "Energy management",
+          "エネルギー管理",
+          "能源管理"
+        ],
+        "pending": 0,
+        "last_at": "2026-11-20T10:07:21+09:00"
       },
       {
         "id": "maia",
@@ -2066,6 +2150,17 @@
           "AI task-allocation research",
           "AI作業分担研究",
           "AI任务分配研究"
+        ],
+        "pending": 0,
+        "last_at": "2026-11-17T23:43:30+09:00"
+      },
+      {
+        "id": "repeat",
+        "name": [
+          "반복 비전검사",
+          "Repeat vision inspection",
+          "反復ビジョン検査",
+          "重复视觉检测"
         ],
         "pending": 0,
         "last_at": "2026-11-13T18:03:54+09:00"
@@ -2102,67 +2197,172 @@
         ],
         "pending": 0,
         "last_at": "2026-11-13T18:03:54+09:00"
-      },
-      {
-        "id": "inline",
-        "name": [
-          "인라인 비전검사",
-          "Inline vision inspection",
-          "インライン検査",
-          "在线视觉检测"
-        ],
-        "pending": 0,
-        "last_at": "2026-11-13T07:06:40+09:00"
-      },
-      {
-        "id": "dcfault",
-        "name": [
-          "직류 단락전류 검증",
-          "DC short-circuit check",
-          "直流短絡電流の検証",
-          "直流短路电流验证"
-        ],
-        "pending": 0,
-        "last_at": "2026-11-12T19:16:16+09:00"
-      },
-      {
-        "id": "web",
-        "name": [
-          "연구실 웹페이지",
-          "Lab website",
-          "研究室ウェブサイト",
-          "研究室网页"
-        ],
-        "pending": 0,
-        "last_at": "2026-11-12T17:57:13+09:00"
-      },
-      {
-        "id": "energy",
-        "name": [
-          "에너지 관리",
-          "Energy management",
-          "エネルギー管理",
-          "能源管理"
-        ],
-        "pending": 0,
-        "last_at": "2026-11-11T17:48:42+09:00"
-      },
-      {
-        "id": "amazon",
-        "name": [
-          "Amazon 실측·제안",
-          "Amazon measurements and proposal",
-          "Amazon 実測・提案",
-          "Amazon实测与提案"
-        ],
-        "pending": 0,
-        "last_at": "2026-11-05T16:24:31+09:00"
       }
     ],
     "entries": [
       {
-        "id": "da8639e5fb29acf4",
-        "at": "2026-11-14T17:19:49+09:00",
+        "id": "42d2833662fb7f5d",
+        "at": "2026-11-27T11:23:19+09:00",
+        "topic": "dcfault",
+        "kinds": [
+          "code",
+          "document"
+        ],
+        "files": 4
+      },
+      {
+        "id": "941332ea93de4f37",
+        "at": "2026-11-27T11:22:43+09:00",
+        "topic": "web",
+        "kinds": [
+          "code"
+        ],
+        "files": 2
+      },
+      {
+        "id": "fb08113b66c853ff",
+        "at": "2026-11-27T11:20:02+09:00",
+        "topic": "dcfault",
+        "kinds": [
+          "code"
+        ],
+        "files": 2
+      },
+      {
+        "id": "ec1260351f5b5077",
+        "at": "2026-11-27T11:15:45+09:00",
+        "topic": "dcfault",
+        "kinds": [
+          "code",
+          "data",
+          "document"
+        ],
+        "files": 5
+      },
+      {
+        "id": "3cebb44af731ee12",
+        "at": "2026-11-27T11:15:12+09:00",
+        "topic": "runtime",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "7f04d71f655080b0",
+        "at": "2026-11-27T11:11:52+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 6
+      },
+      {
+        "id": "f2533c59facb5088",
+        "at": "2026-11-27T11:03:53+09:00",
+        "topic": "dcfault",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "762c27d3e78a3bf6",
+        "at": "2026-11-26T22:52:53+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "bc48f1f1fb0b5025",
+        "at": "2026-11-26T22:50:45+09:00",
+        "topic": "dcfault",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "a5141873aab40398",
+        "at": "2026-11-26T21:50:31+09:00",
+        "topic": "dcfault",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "65c4da665bcb5ba3",
+        "at": "2026-11-26T17:51:40+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "986f882b2bf2c2f9",
+        "at": "2026-11-26T16:57:56+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "e84e39706d1c24b3",
+        "at": "2026-11-26T16:49:19+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "21089c8309f035eb",
+        "at": "2026-11-26T16:46:34+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "6a2d741c01b0255a",
+        "at": "2026-11-26T16:33:03+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "93ad1e7e7eeb16da",
+        "at": "2026-11-26T16:25:55+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 9
+      },
+      {
+        "id": "3fdceaf13c9d478e",
+        "at": "2026-11-26T16:08:49+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "0f04367fdcb60eb0",
+        "at": "2026-11-26T16:07:49+09:00",
         "topic": "grants",
         "kinds": [
           "code"
@@ -2170,8 +2370,18 @@
         "files": 1
       },
       {
-        "id": "75ae56d8d25c1640",
-        "at": "2026-11-14T17:19:49+09:00",
+        "id": "232425afbc329490",
+        "at": "2026-11-26T15:59:18+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "9058edbc0f8ff2ca",
+        "at": "2026-11-26T15:30:03+09:00",
         "topic": "grants",
         "kinds": [
           "document"
@@ -2179,40 +2389,71 @@
         "files": 1
       },
       {
-        "id": "d8b58a40c849e6ad",
-        "at": "2026-11-14T17:00:27+09:00",
+        "id": "b4b7e9863647c1ff",
+        "at": "2026-11-26T14:09:57+09:00",
         "topic": "grants",
         "kinds": [
-          "data",
           "document"
         ],
-        "files": 2
+        "files": 1
       },
       {
-        "id": "7b7da804ab17752e",
-        "at": "2026-11-14T16:53:12+09:00",
+        "id": "d434d547283d25fa",
+        "at": "2026-11-26T14:09:11+09:00",
         "topic": "grants",
         "kinds": [
-          "code",
-          "data",
           "document"
         ],
-        "files": 17
+        "files": 1
       },
       {
-        "id": "2c2fec977e504cf8",
-        "at": "2026-11-14T16:45:51+09:00",
+        "id": "4de5eae9f2b6be8b",
+        "at": "2026-11-26T13:49:09+09:00",
         "topic": "grants",
         "kinds": [
-          "code",
-          "data",
           "document"
         ],
-        "files": 12
+        "files": 1
       },
       {
-        "id": "a1bd4d130e04f60b",
-        "at": "2026-11-14T16:40:12+09:00",
+        "id": "b15d2155c4c90746",
+        "at": "2026-11-26T13:48:59+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "f665d6792942b72c",
+        "at": "2026-11-26T13:43:12+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 3
+      },
+      {
+        "id": "1dffa56293286b25",
+        "at": "2026-11-26T12:32:24+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "c356d3044cb75a11",
+        "at": "2026-11-26T12:16:06+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "946cd2eff88dd12d",
+        "at": "2026-11-26T12:14:36+09:00",
         "topic": "grants",
         "kinds": [
           "document"
@@ -2220,414 +2461,191 @@
         "files": 4
       },
       {
-        "id": "0a109a8083ea1f98",
-        "at": "2026-11-14T16:37:42+09:00",
+        "id": "19bb9b52b6b7133d",
+        "at": "2026-11-26T12:02:34+09:00",
         "topic": "grants",
         "kinds": [
           "data",
-          "document"
-        ],
-        "files": 13
-      },
-      {
-        "id": "579f967e2e514ff5",
-        "at": "2026-11-14T16:36:51+09:00",
-        "topic": "grants",
-        "kinds": [
-          "code",
-          "document"
-        ],
-        "files": 5
-      },
-      {
-        "id": "b63ccdaf714e44b6",
-        "at": "2026-11-14T16:32:07+09:00",
-        "topic": "grants",
-        "kinds": [
-          "code",
-          "data",
-          "document"
-        ],
-        "files": 13
-      },
-      {
-        "id": "72cf9192ce968ca0",
-        "at": "2026-11-14T16:28:34+09:00",
-        "topic": "grants",
-        "kinds": [
-          "data",
-          "document"
-        ],
-        "files": 2
-      },
-      {
-        "id": "010ee663a4d84595",
-        "at": "2026-11-14T16:25:22+09:00",
-        "topic": "grants",
-        "kinds": [
-          "data",
-          "document"
-        ],
-        "files": 4
-      },
-      {
-        "id": "5069385336607ff0",
-        "at": "2026-11-14T16:06:59+09:00",
-        "topic": "grants",
-        "kinds": [
-          "code",
-          "data",
-          "document"
-        ],
-        "files": 11
-      },
-      {
-        "id": "2f10ad3283fb8478",
-        "at": "2026-11-14T16:01:14+09:00",
-        "topic": "grants",
-        "kinds": [
-          "data",
-          "document"
-        ],
-        "files": 11
-      },
-      {
-        "id": "86e12bddfaf5def3",
-        "at": "2026-11-14T15:58:36+09:00",
-        "topic": "grants",
-        "kinds": [
-          "code",
-          "data",
-          "document"
-        ],
-        "files": 12
-      },
-      {
-        "id": "39803a1658ba3b7d",
-        "at": "2026-11-14T15:56:15+09:00",
-        "topic": "grants",
-        "kinds": [
-          "document"
-        ],
-        "files": 1
-      },
-      {
-        "id": "1c8cf7e0441cff94",
-        "at": "2026-11-14T15:54:18+09:00",
-        "topic": "grants",
-        "kinds": [
-          "document"
-        ],
-        "files": 1
-      },
-      {
-        "id": "03c9d37a354313cc",
-        "at": "2026-11-14T15:49:28+09:00",
-        "topic": "grants",
-        "kinds": [
-          "code",
-          "data",
-          "document"
-        ],
-        "files": 17
-      },
-      {
-        "id": "fa45b559fe0f6588",
-        "at": "2026-11-14T15:46:48+09:00",
-        "topic": "grants",
-        "kinds": [
-          "document"
-        ],
-        "files": 2
-      },
-      {
-        "id": "87eed7679cb80544",
-        "at": "2026-11-14T14:40:18+09:00",
-        "topic": "grants",
-        "kinds": [
-          "data",
-          "document"
-        ],
-        "files": 22
-      },
-      {
-        "id": "337a6bd21d5ad1a4",
-        "at": "2026-11-14T13:49:22+09:00",
-        "topic": "grants",
-        "kinds": [
-          "document"
-        ],
-        "files": 2
-      },
-      {
-        "id": "ac3cc344650651ac",
-        "at": "2026-11-14T13:46:09+09:00",
-        "topic": "grants",
-        "kinds": [
-          "data",
-          "document"
-        ],
-        "files": 3
-      },
-      {
-        "id": "6195bdc5aae8f481",
-        "at": "2026-11-14T13:00:02+09:00",
-        "topic": "grants",
-        "kinds": [
-          "data",
-          "document"
-        ],
-        "files": 18
-      },
-      {
-        "id": "501235a80ba1942c",
-        "at": "2026-11-14T13:00:02+09:00",
-        "topic": "grants",
-        "kinds": [
-          "document"
-        ],
-        "files": 4
-      },
-      {
-        "id": "4644f22a841f6173",
-        "at": "2026-11-14T12:57:06+09:00",
-        "topic": "grants",
-        "kinds": [
-          "data",
-          "document"
-        ],
-        "files": 2
-      },
-      {
-        "id": "565d8d8b6bfaee65",
-        "at": "2026-11-14T12:55:03+09:00",
-        "topic": "grants",
-        "kinds": [
-          "code",
-          "data",
-          "document",
-          "figure"
-        ],
-        "files": 15
-      },
-      {
-        "id": "f62ed9345c6518c7",
-        "at": "2026-11-14T12:52:58+09:00",
-        "topic": "grants",
-        "kinds": [
-          "data",
-          "document"
-        ],
-        "files": 5
-      },
-      {
-        "id": "57a43946573e6839",
-        "at": "2026-11-14T12:48:30+09:00",
-        "topic": "grants",
-        "kinds": [
-          "document"
-        ],
-        "files": 2
-      },
-      {
-        "id": "c95bb3bfeaad6eea",
-        "at": "2026-11-14T12:45:42+09:00",
-        "topic": "grants",
-        "kinds": [
-          "document"
-        ],
-        "files": 1
-      },
-      {
-        "id": "52ce2da0dbe92df4",
-        "at": "2026-11-14T12:43:53+09:00",
-        "topic": "grants",
-        "kinds": [
-          "document"
-        ],
-        "files": 3
-      },
-      {
-        "id": "e082091b8d41aa0e",
-        "at": "2026-11-14T12:36:25+09:00",
-        "topic": "grants",
-        "kinds": [
-          "document"
-        ],
-        "files": 1
-      },
-      {
-        "id": "8d89c941662f811a",
-        "at": "2026-11-14T12:36:25+09:00",
-        "topic": "grants",
-        "kinds": [
-          "data",
-          "document"
-        ],
-        "files": 6
-      },
-      {
-        "id": "e0e97323bd30537f",
-        "at": "2026-11-14T12:36:24+09:00",
-        "topic": "grants",
-        "kinds": [
-          "code",
-          "data",
-          "document"
-        ],
-        "files": 26
-      },
-      {
-        "id": "b70fddc0a895536a",
-        "at": "2026-11-14T12:36:24+09:00",
-        "topic": "grants",
-        "kinds": [
-          "data",
-          "document"
-        ],
-        "files": 3
-      },
-      {
-        "id": "2fdd94b6db95e956",
-        "at": "2026-11-14T12:36:24+09:00",
-        "topic": "grants",
-        "kinds": [
-          "data",
-          "document"
-        ],
-        "files": 3
-      },
-      {
-        "id": "0d1f1467d201808e",
-        "at": "2026-11-14T12:36:24+09:00",
-        "topic": "grants",
-        "kinds": [
-          "code",
-          "data",
-          "document"
-        ],
-        "files": 11
-      },
-      {
-        "id": "1a2ac4f01e367254",
-        "at": "2026-11-14T08:57:15+09:00",
-        "topic": "grants",
-        "kinds": [
-          "data",
-          "document"
-        ],
-        "files": 2
-      },
-      {
-        "id": "47c4aa8d313c938e",
-        "at": "2026-11-14T07:41:07+09:00",
-        "topic": "grants",
-        "kinds": [
-          "document"
-        ],
-        "files": 1
-      },
-      {
-        "id": "e554c0ad41292288",
-        "at": "2026-11-14T07:35:44+09:00",
-        "topic": "grants",
-        "kinds": [
-          "code",
-          "document"
-        ],
-        "files": 6
-      },
-      {
-        "id": "1da11ab1d79e5a76",
-        "at": "2026-11-13T22:50:02+09:00",
-        "topic": "grants",
-        "kinds": [
           "document"
         ],
         "files": 8
       },
       {
-        "id": "620a00f2f847a75a",
-        "at": "2026-11-13T22:21:49+09:00",
-        "topic": "grants",
-        "kinds": [
-          "document"
-        ],
-        "files": 2
-      },
-      {
-        "id": "3e29db8f68b227c2",
-        "at": "2026-11-13T22:15:49+09:00",
-        "topic": "grants",
-        "kinds": [
-          "document"
-        ],
-        "files": 2
-      },
-      {
-        "id": "5c1d155cc9f043dd",
-        "at": "2026-11-13T21:44:54+09:00",
+        "id": "f772037112cfb33f",
+        "at": "2026-11-26T12:00:07+09:00",
         "topic": "grants",
         "kinds": [
           "data",
-          "document",
-          "figure"
+          "document"
+        ],
+        "files": 3
+      },
+      {
+        "id": "f6b8613ce3e6f9b3",
+        "at": "2026-11-26T11:40:57+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 8
+      },
+      {
+        "id": "d5718b099f420862",
+        "at": "2026-11-26T11:39:18+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 9
+      },
+      {
+        "id": "8cb60db857bd3e23",
+        "at": "2026-11-26T11:36:22+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "242041493a1aace5",
+        "at": "2026-11-26T11:31:51+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 11
+      },
+      {
+        "id": "33761e44c720aeb4",
+        "at": "2026-11-26T11:23:50+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 6
+      },
+      {
+        "id": "bc3a5342600843e4",
+        "at": "2026-11-26T11:20:38+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 3
+      },
+      {
+        "id": "f60fdb75b40c1c00",
+        "at": "2026-11-25T22:05:54+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "ddedd86a8ba216be",
+        "at": "2026-11-25T22:04:40+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "5469a3ccf8ced7f8",
+        "at": "2026-11-25T21:59:29+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "4d0de16b56252afb",
+        "at": "2026-11-25T21:56:46+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "fd45a5a0efc01aba",
+        "at": "2026-11-25T21:41:41+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "4e6fd5caa510f479",
+        "at": "2026-11-25T21:36:16+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "8acf3d4ccb909ee5",
+        "at": "2026-11-25T21:26:56+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "f6dc7611bc2afa62",
+        "at": "2026-11-25T21:26:35+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
         ],
         "files": 14
       },
       {
-        "id": "e289a7d6404d501d",
-        "at": "2026-11-13T21:42:17+09:00",
+        "id": "f38b9f77a2312b5f",
+        "at": "2026-11-25T21:23:44+09:00",
         "topic": "grants",
         "kinds": [
           "data",
-          "document",
-          "figure"
-        ],
-        "files": 15
-      },
-      {
-        "id": "4914baba648341c1",
-        "at": "2026-11-13T20:50:04+09:00",
-        "topic": "grants",
-        "kinds": [
-          "code",
-          "data",
-          "document",
-          "figure"
-        ],
-        "files": 35
-      },
-      {
-        "id": "81e9ebdac2068705",
-        "at": "2026-11-13T20:49:39+09:00",
-        "topic": "grants",
-        "kinds": [
-          "document"
-        ],
-        "files": 1
-      },
-      {
-        "id": "b570afdaf77d3422",
-        "at": "2026-11-13T20:32:28+09:00",
-        "topic": "grants",
-        "kinds": [
-          "document"
-        ],
-        "files": 4
-      },
-      {
-        "id": "0bc0cc395be2e1ef",
-        "at": "2026-11-13T20:23:00+09:00",
-        "topic": "grants",
-        "kinds": [
           "document"
         ],
         "files": 2
       },
       {
-        "id": "14a22a6a499df8c2",
-        "at": "2026-11-13T20:16:07+09:00",
+        "id": "b3e9e7a9091afa9c",
+        "at": "2026-11-25T21:23:08+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data"
+        ],
+        "files": 1
+      },
+      {
+        "id": "1677501d88f19f52",
+        "at": "2026-11-25T21:21:26+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data"
+        ],
+        "files": 2
+      },
+      {
+        "id": "f8baa2c455a90a17",
+        "at": "2026-11-25T21:20:14+09:00",
         "topic": "grants",
         "kinds": [
           "document"
@@ -2635,88 +2653,59 @@
         "files": 1
       },
       {
-        "id": "f043b833f62fc472",
-        "at": "2026-11-13T20:15:35+09:00",
+        "id": "7c4470b59b3f25af",
+        "at": "2026-11-25T21:19:26+09:00",
         "topic": "grants",
-        "kinds": [
-          "document"
-        ],
-        "files": 1
-      },
-      {
-        "id": "4a5c2b914e9b48ac",
-        "at": "2026-11-13T20:12:11+09:00",
-        "topic": "grants",
-        "kinds": [
-          "document"
-        ],
-        "files": 3
-      },
-      {
-        "id": "e365f41dde650a51",
-        "at": "2026-11-13T18:03:54+09:00",
-        "topic": "runtime",
         "kinds": [
           "data",
           "document",
           "figure"
         ],
-        "files": 17
+        "files": 6
       },
       {
-        "id": "da6b6dd5a9c1f1c8",
-        "at": "2026-11-13T18:03:54+09:00",
+        "id": "f9b289ba0cd4fab4",
+        "at": "2026-11-25T21:11:03+09:00",
         "topic": "grants",
         "kinds": [
-          "code",
+          "data",
           "document"
         ],
         "files": 11
       },
       {
-        "id": "acaea33649a3516b",
-        "at": "2026-11-13T18:03:54+09:00",
-        "topic": "cellcontract",
+        "id": "1dc646216765227a",
+        "at": "2026-11-25T21:02:50+09:00",
+        "topic": "grants",
         "kinds": [
-          "document",
-          "figure"
-        ],
-        "files": 18
-      },
-      {
-        "id": "88be6923d98dc8fc",
-        "at": "2026-11-13T18:03:54+09:00",
-        "topic": "hari",
-        "kinds": [
-          "document"
-        ],
-        "files": 1
-      },
-      {
-        "id": "79c0b19165d1d38f",
-        "at": "2026-11-13T18:03:54+09:00",
-        "topic": "maia",
-        "kinds": [
-          "code",
           "data",
-          "document",
-          "figure"
-        ],
-        "files": 33
-      },
-      {
-        "id": "458f1cac910faad2",
-        "at": "2026-11-13T18:03:54+09:00",
-        "topic": "repeat",
-        "kinds": [
           "document"
         ],
-        "files": 8
+        "files": 2
       },
       {
-        "id": "0d6b5f7f3f58ae07",
-        "at": "2026-11-13T18:03:54+09:00",
-        "topic": "ladder",
+        "id": "1f771f3fa075b03d",
+        "at": "2026-11-25T20:19:36+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 13
+      },
+      {
+        "id": "72b8a6ceb70a6217",
+        "at": "2026-11-25T20:15:22+09:00",
+        "topic": "web",
+        "kinds": [
+          "code"
+        ],
+        "files": 3
+      },
+      {
+        "id": "ca07c2dd9abe6037",
+        "at": "2026-11-25T17:18:23+09:00",
+        "topic": "grants",
         "kinds": [
           "data",
           "document"
@@ -2724,48 +2713,94 @@
         "files": 3
       },
       {
-        "id": "7a7a2f2cd5d13695",
-        "at": "2026-11-13T18:02:10+09:00",
-        "topic": "runtime",
+        "id": "b4eee60c52693023",
+        "at": "2026-11-25T10:17:26+09:00",
+        "topic": "grants",
         "kinds": [
           "document"
         ],
-        "files": 2
+        "files": 5
       },
       {
-        "id": "7c857ce1cef46a83",
-        "at": "2026-11-13T17:59:37+09:00",
-        "topic": "runtime",
-        "kinds": [
-          "data",
-          "document"
-        ],
-        "files": 2
-      },
-      {
-        "id": "da53b63a67eb7833",
-        "at": "2026-11-13T17:59:29+09:00",
-        "topic": "runtime",
-        "kinds": [
-          "document"
-        ],
-        "files": 2
-      },
-      {
-        "id": "ea7c3b400d194222",
-        "at": "2026-11-13T17:52:25+09:00",
-        "topic": "runtime",
+        "id": "61b8f40c131194ca",
+        "at": "2026-11-25T10:07:06+09:00",
+        "topic": "web",
         "kinds": [
           "code",
           "data",
-          "document",
           "figure"
         ],
-        "files": 100
+        "files": 16
       },
       {
-        "id": "6fcbb5dbd40e0310",
-        "at": "2026-11-13T17:41:21+09:00",
+        "id": "59241a9b230626af",
+        "at": "2026-11-25T10:07:06+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data"
+        ],
+        "files": 1
+      },
+      {
+        "id": "f6c2d269c87886d7",
+        "at": "2026-11-24T21:49:17+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 6
+      },
+      {
+        "id": "0b57884b820e3631",
+        "at": "2026-11-24T18:15:07+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code"
+        ],
+        "files": 1
+      },
+      {
+        "id": "18e9b66d30b4b0e7",
+        "at": "2026-11-24T18:09:29+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code"
+        ],
+        "files": 1
+      },
+      {
+        "id": "69904a47fd20b549",
+        "at": "2026-11-24T18:05:35+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "document"
+        ],
+        "files": 8
+      },
+      {
+        "id": "ec5b93d07600309e",
+        "at": "2026-11-24T18:01:24+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "document"
+        ],
+        "files": 8
+      },
+      {
+        "id": "baba0fb44792f9f0",
+        "at": "2026-11-24T17:53:27+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "document"
+        ],
+        "files": 12
+      },
+      {
+        "id": "86023d14761be42b",
+        "at": "2026-11-24T17:53:27+09:00",
         "topic": "grants",
         "kinds": [
           "document"
@@ -2773,72 +2808,17 @@
         "files": 1
       },
       {
-        "id": "d57e7b00fc23f755",
-        "at": "2026-11-13T17:39:44+09:00",
-        "topic": "runtime",
+        "id": "31b6ae097a68deb6",
+        "at": "2026-11-24T17:53:27+09:00",
+        "topic": "grants",
         "kinds": [
-          "code",
-          "data",
           "document"
         ],
-        "files": 6
+        "files": 1
       },
       {
-        "id": "57a8251cb2e82d07",
-        "at": "2026-11-13T17:36:56+09:00",
-        "topic": "runtime",
-        "kinds": [
-          "code",
-          "data",
-          "figure"
-        ],
-        "files": 5
-      },
-      {
-        "id": "c8d71cacc68fd7fa",
-        "at": "2026-11-13T17:28:38+09:00",
-        "topic": "runtime",
-        "kinds": [
-          "code",
-          "data",
-          "document"
-        ],
-        "files": 5
-      },
-      {
-        "id": "4afd2236a6a439f0",
-        "at": "2026-11-13T17:26:30+09:00",
-        "topic": "runtime",
-        "kinds": [
-          "code",
-          "data",
-          "document"
-        ],
-        "files": 5
-      },
-      {
-        "id": "eef738a0b8f9f65f",
-        "at": "2026-11-13T16:59:35+09:00",
-        "topic": "runtime",
-        "kinds": [
-          "data",
-          "document"
-        ],
-        "files": 8
-      },
-      {
-        "id": "c4465cefb0a50252",
-        "at": "2026-11-13T16:56:16+09:00",
-        "topic": "runtime",
-        "kinds": [
-          "data",
-          "document"
-        ],
-        "files": 7
-      },
-      {
-        "id": "7853f00bd8597e67",
-        "at": "2026-11-13T16:55:23+09:00",
+        "id": "fcf93a8ea91692b9",
+        "at": "2026-11-24T16:58:20+09:00",
         "topic": "grants",
         "kinds": [
           "data",
@@ -2847,119 +2827,138 @@
         "files": 2
       },
       {
-        "id": "1cbaadc5dfeb6bdb",
-        "at": "2026-11-13T16:52:06+09:00",
-        "topic": "runtime",
-        "kinds": [
-          "data",
-          "document"
-        ],
-        "files": 4
-      },
-      {
-        "id": "f1379e5f3182b698",
-        "at": "2026-11-13T16:45:19+09:00",
-        "topic": "runtime",
-        "kinds": [
-          "document"
-        ],
-        "files": 2
-      },
-      {
-        "id": "61cf7b3128570e0e",
-        "at": "2026-11-13T16:00:58+09:00",
-        "topic": "runtime",
-        "kinds": [
-          "document"
-        ],
-        "files": 2
-      },
-      {
-        "id": "3411219df9f6c126",
-        "at": "2026-11-13T15:58:20+09:00",
-        "topic": "runtime",
+        "id": "e49600afe387cbfc",
+        "at": "2026-11-24T15:39:15+09:00",
+        "topic": "grants",
         "kinds": [
           "code",
-          "data",
-          "document"
-        ],
-        "files": 6
-      },
-      {
-        "id": "bdcd4c308ffcee46",
-        "at": "2026-11-13T15:55:26+09:00",
-        "topic": "runtime",
-        "kinds": [
-          "code",
-          "data",
-          "document",
-          "figure"
-        ],
-        "files": 4
-      },
-      {
-        "id": "014c3199c08a00ea",
-        "at": "2026-11-13T15:52:13+09:00",
-        "topic": "runtime",
-        "kinds": [
-          "code",
-          "data",
-          "document",
-          "figure"
-        ],
-        "files": 11
-      },
-      {
-        "id": "a1775f00c099de76",
-        "at": "2026-11-13T15:47:58+09:00",
-        "topic": "runtime",
-        "kinds": [
-          "code",
-          "data",
-          "document",
-          "figure"
-        ],
-        "files": 8
-      },
-      {
-        "id": "6cc2868d68a866bb",
-        "at": "2026-11-13T15:12:43+09:00",
-        "topic": "runtime",
-        "kinds": [
-          "data",
-          "document"
-        ],
-        "files": 4
-      },
-      {
-        "id": "18a36cbda776dffb",
-        "at": "2026-11-13T15:11:32+09:00",
-        "topic": "runtime",
-        "kinds": [
-          "document"
-        ],
-        "files": 3
-      },
-      {
-        "id": "4c6df82a6dd8a9e7",
-        "at": "2026-11-13T15:09:17+09:00",
-        "topic": "runtime",
-        "kinds": [
-          "data",
           "document"
         ],
         "files": 5
       },
       {
-        "id": "4d557dcf331dd1f4",
-        "at": "2026-11-13T15:04:52+09:00",
+        "id": "6ed783a06698a86f",
+        "at": "2026-11-24T15:00:21+09:00",
         "topic": "grants",
         "kinds": [
           "code",
+          "document"
+        ],
+        "files": 6
+      },
+      {
+        "id": "fc9c425527657ff1",
+        "at": "2026-11-24T14:46:23+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "document"
+        ],
+        "files": 8
+      },
+      {
+        "id": "f35c026fcc758529",
+        "at": "2026-11-24T14:46:23+09:00",
+        "topic": "grants",
+        "kinds": [
           "data",
           "document"
         ],
-        "files": 10
+        "files": 2
+      },
+      {
+        "id": "e38c4312de2e3139",
+        "at": "2026-11-24T14:46:23+09:00",
+        "topic": "runtime",
+        "kinds": [
+          "code"
+        ],
+        "files": 1
+      },
+      {
+        "id": "bcac0da6b4413f09",
+        "at": "2026-11-24T14:46:23+09:00",
+        "topic": "runtime",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "a68d050ef33453ae",
+        "at": "2026-11-24T14:46:23+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data"
+        ],
+        "files": 1
+      },
+      {
+        "id": "bf71b95e3c902f8a",
+        "at": "2026-11-24T13:00:50+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "22a063c9b7a6ff25",
+        "at": "2026-11-24T10:34:31+09:00",
+        "topic": "dcfault",
+        "kinds": [
+          "document"
+        ],
+        "files": 1
+      },
+      {
+        "id": "3c2a756f2a104a90",
+        "at": "2026-11-24T08:56:19+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "08f50231eb2c7dcf",
+        "at": "2026-11-23T19:29:22+09:00",
+        "topic": "grants",
+        "kinds": [
+          "code",
+          "document"
+        ],
+        "files": 21
+      },
+      {
+        "id": "c64e5f7b5fcc012b",
+        "at": "2026-11-23T18:12:33+09:00",
+        "topic": "grants",
+        "kinds": [
+          "data",
+          "document"
+        ],
+        "files": 2
+      },
+      {
+        "id": "142a5f517dbe6509",
+        "at": "2026-11-23T18:10:02+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 6
+      },
+      {
+        "id": "255c5021ed0a85f6",
+        "at": "2026-11-23T18:07:53+09:00",
+        "topic": "grants",
+        "kinds": [
+          "document"
+        ],
+        "files": 2
       }
     ],
     "pending_files": 0

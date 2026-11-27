@@ -114,6 +114,8 @@ html[lang="zh-Hans"] body{font-family:"Noto Sans SC","PingFang SC","Microsoft Ya
 .area-output{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:start;border-bottom:1px solid var(--line);padding-bottom:12px;font-size:13px;line-height:1.5}
 .area-output a{text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--acc) 60%,transparent);text-underline-offset:4px}
 .area-output .pill{font-size:10px;padding:2px 6px}
+#area-products.dense{gap:7px;margin-top:14px}
+#area-products.dense .area-output{padding-bottom:7px;font-size:12.5px;line-height:1.45}
 .area-products>.contact-link{margin-top:auto;align-self:flex-start}
 .p:target{outline:1px solid var(--acc);outline-offset:2px}
 
@@ -180,7 +182,7 @@ body[data-area="E"]{--acc:#aa9cc6}
   .foot a{display:inline-block;padding:9px 0}
   .ck a{display:inline-block;padding:9px 0}
   .area-output a{display:inline-block;padding:6px 0}
-  .work-flow a,.dl,.meta a{display:inline-block;padding:8px 0}
+  .work-flow a,.dl,.meta a{display:inline-block;padding:9px 0}
   .h2{font-size:27px;letter-spacing:-.5px}
   .lead{font-size:14.5px}
   .card{padding:16px}

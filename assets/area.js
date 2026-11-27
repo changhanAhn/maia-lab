@@ -32,6 +32,8 @@
       li.append(small,strong);steps.appendChild(li);
     });
     const products=document.getElementById('area-products');products.replaceChildren();
+    // six or more outputs share the fixed 428 px card, so rows sit closer together
+    products.classList.toggle('dense',area.leaves.length>=6);
     area.leaves.forEach((leaf,i)=>{
       const row=document.createElement('div');row.className='area-output';
       const name=document.createElement(area.links[i]?'a':'span');name.textContent=L.T(leaf[0],leaf[1]);

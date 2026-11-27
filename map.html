@@ -1,5 +1,5 @@
 <!doctype html>
-<html data-published="2026-11-14" lang="ko">
+<html data-published="2026-11-27" lang="ko">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,6 +50,8 @@
 .lv div:last-child{border-bottom:0}
 .lv.many{margin-top:10px;gap:5px}
 .lv.many div{font-size:12px;line-height:1.35;padding-bottom:5px}
+.lv.lots{margin-top:8px;gap:3px}
+.lv.lots div{font-size:11.5px;line-height:1.3;padding-bottom:3px}
 .lv a{color:#ece8e1;border-bottom:1px solid rgba(185,163,122,.6)}
 .st{font-size:10.5px;font-weight:600;padding:2px 8px;border:1px solid;border-radius:2px;white-space:nowrap}
 .legend{margin-top:12px;display:flex;flex-direction:column;gap:12px}
@@ -169,7 +171,7 @@ function remember(id){try{const u=new URL(location.href),q=new URLSearchParams(u
 function show(t,pin){
   if(pin){pinned=t;remember(t.id)}if(pinned&&pinned!==t&&!pin)return;
   TR.forEach(x=>{x.g.classList.toggle('sel',x===t);x.g.setAttribute('aria-pressed',String(x===t))});
-  panel.innerHTML='<div class="ck" style="color:'+t.c+'">'+L.T('연구 분야 ','AREA ')+t.id+'</div><h3>'+L.T(t.ko,t.en)+'</h3><p class="q">'+L.T(t.q[0].join(' '),t.q[1].join(' '))+'</p><p class="w">'+L.T(t.wko,t.wen)+'</p><div class="lv'+(t.leaves.length>4?' many':'')+'">'
+  panel.innerHTML='<div class="ck" style="color:'+t.c+'">'+L.T('연구 분야 ','AREA ')+t.id+'</div><h3>'+L.T(t.ko,t.en)+'</h3><p class="q">'+L.T(t.q[0].join(' '),t.q[1].join(' '))+'</p><p class="w">'+L.T(t.wko,t.wen)+'</p><div class="lv'+(t.leaves.length>4?' many':'')+(t.leaves.length>6?' lots':'')+'">'
    +t.leaves.map(lf=>{const s=ST[lf[2]];const name=L.T(lf[0],lf[1]);return '<div>'+(lf[3]?'<a href="'+localHref(lf[3])+'">'+name+'</a>':'<span>'+name+'</span>')+'<span class="st" style="color:'+s[2]+';border-color:'+s[2]+'88">'+L.T(s[0],s[1])+'</span></div>'}).join('')
    +'</div><div class="more"><a class="area-detail" href="'+localHref(t.href)+'">'+L.T('분야 상세 보기 →','Explore this area →')+'</a></div>';
 }
